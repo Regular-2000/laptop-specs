@@ -70,6 +70,7 @@
   .photo.noimg img{display:none}
   .photo.noimg .ph-fallback{display:block}
   .phcap{color:var(--dim);font-size:11px;text-align:center;margin:-4px 0 8px}
+  .linklabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin-bottom:4px}
   .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
   .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
   .links .ext:hover{border-color:var(--accent)}
@@ -294,19 +295,25 @@ function render(){
   apply();
 }
 
+// PSREF splits many models into separate Intel/AMD pages with no derivable rule
+// (T14 Gen 5 needs _Intel, but T16 Gen 3 uses the bare name). So instead of guessing
+// the slug, use DuckDuckGo's "I'm feeling lucky" (\ bang), which jumps straight to the
+// model's official Lenovo PSREF spec sheet — and degrades gracefully for vintage models.
+function tpProduct(nm){
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ psref.lenovo.com ThinkPad '+nm);
+}
+
 function select(d,el){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
   const w11=d.w11===0?0:1;
-  const nm=d.m.split(' / ')[0].trim();       // first model in a "T14 / T14s / T16" group
+  const models=d.m.split(' / ').map(s=>s.trim()); // a chip may group several models
+  const nm=models[0];
   const q=encodeURIComponent('Lenovo ThinkPad '+nm+' laptop');
   const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
   const imgSearch='https://www.bing.com/images/search?q='+q;
-  // direct PSREF product page for modern models; search fallback for pre-2012 (not in PSREF)
-  const slug='ThinkPad_'+nm.replace(/\s+/g,'_');
-  const psref=(d.y>=2012)
-    ?'https://psref.lenovo.com/Product/ThinkPad/'+slug
-    :'https://psref.lenovo.com/search?kw='+encodeURIComponent(nm);
+  // one direct PSREF product-page link per model in the chip
+  const linkHtml=models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noopener">'+mm+' ↗</a>').join('');
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[curSeries].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
@@ -315,7 +322,8 @@ function select(d,el){
       '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
     '<div class="phcap">tap image for more photos ↗</div>'+
-    '<div class="links"><a class="ext" href="'+psref+'" target="_blank" rel="noopener">Lenovo product page ↗</a></div>'+
+    '<div class="linklabel">Official Lenovo spec sheet'+(models.length>1?'s':'')+':</div>'+
+    '<div class="links">'+linkHtml+'</div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
