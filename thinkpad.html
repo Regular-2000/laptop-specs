@@ -34,6 +34,10 @@
   .tab.active{color:var(--text);border-bottom-color:var(--accent)}
   .tab small{font-weight:normal;opacity:.6}
   .tab .tier{color:#e5b567;font-weight:800;letter-spacing:-1.5px;margin-right:5px;font-size:12px}
+  .tab.all{margin-left:8px;padding-left:16px;border-left:1px solid var(--line);color:#9db4ff}
+  .tab.all.active{color:#c3d2ff;border-bottom-color:#7d97ff}
+  #grid.allmode{min-width:1120px}
+  #grid.allmode th{font-size:11px}
   .laddercap{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;display:flex;align-items:center;gap:6px}
   .laddercap .bar{flex:0 0 60px;height:3px;border-radius:2px;background:linear-gradient(90deg,#5a6b4e,#e5b567)}
   .wrap{flex:1;min-height:0;display:flex;gap:0}
@@ -111,8 +115,8 @@
 <main>
   <div class="seriesnote" id="seriesnote"></div>
   <table id="grid">
-    <colgroup><col class="cy"><col></colgroup>
-    <thead><tr><th>Year</th><th id="colhead">Models</th></tr></thead>
+    <colgroup id="cols"><col class="cy"><col></colgroup>
+    <thead id="thead"><tr><th>Year</th><th>Models</th></tr></thead>
     <tbody id="tbody"></tbody>
   </table>
   <footer>
@@ -257,6 +261,9 @@ const SERIES={
 const tabsEl=document.getElementById('tabs');
 const tbody=document.getElementById('tbody');
 const noteEl=document.getElementById('seriesnote');
+const grid=document.getElementById('grid');
+const colsEl=document.getElementById('cols');
+const theadEl=document.getElementById('thead');
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let curSeries="T", selEl=null, allChips=[];
 // tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
@@ -277,33 +284,67 @@ order.forEach(k=>{
   b.onclick=()=>{curSeries=k;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));b.classList.add('active');render();};
   tabsEl.appendChild(b);
 });
+// "All series" combined-matrix view (wide screens)
+const allTab=document.createElement('button');
+allTab.className='tab all'+(curSeries==="ALL"?' active':'');
+allTab.title="Show every series at once, side by side (best on a wide monitor)";
+allTab.innerHTML='▦ All series';
+allTab.onclick=()=>{curSeries="ALL";document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));allTab.classList.add('active');render();};
+tabsEl.appendChild(allTab);
+
+function makeChip(d,sk){
+  const ch=document.createElement('div');
+  ch.className='chip '+d.gen+(d.sold?' soldered':'');
+  ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
+  ch.onclick=()=>select(d,ch,sk);
+  ch.dataset.model=d.m.toLowerCase();
+  ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
+  allChips.push({el:ch,d});
+  return ch;
+}
+function win11Row(span){
+  const lr=document.createElement('tr'); lr.className='win11line';
+  lr.innerHTML='<td colspan="'+span+'">▲ generally Windows 11 eligible (Intel 8th gen+ / Ryzen 2000+) · ▼ below = not eligible</td>';
+  return lr;
+}
 
 function render(){
-  const S=SERIES[curSeries];
-  noteEl.textContent=S.note;
   tbody.innerHTML=''; allChips=[];
   if(selEl){panel.classList.remove('show');selEl=null;}
+
+  if(curSeries==="ALL"){
+    grid.classList.add('allmode');
+    noteEl.textContent="All series side by side, budget → premium (best on a wide monitor). Columns = series, rows = year. Click any model for details.";
+    colsEl.innerHTML='<col class="cy">'+order.map(()=>'<col>').join('');
+    theadEl.innerHTML='<tr><th>Year</th>'+order.map(k=>'<th><span class="tier">'+TIER[k]+'</span> '+SERIES[k].label+'</th>').join('')+'</tr>';
+    const allYears=[...new Set(order.flatMap(k=>SERIES[k].models.map(m=>m.y)))].sort((a,b)=>b-a);
+    allYears.forEach(yr=>{
+      const tr=document.createElement('tr');
+      const yc=document.createElement('td'); yc.className='year'; yc.textContent=yr; tr.appendChild(yc);
+      order.forEach(k=>{
+        const td=document.createElement('td');
+        SERIES[k].models.filter(d=>d.y===yr).forEach(d=>td.appendChild(makeChip(d,k)));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+      if(yr===2019) tbody.appendChild(win11Row(order.length+1));
+    });
+    apply(); return;
+  }
+
+  grid.classList.remove('allmode');
+  colsEl.innerHTML='<col class="cy"><col>';
+  theadEl.innerHTML='<tr><th>Year</th><th>Models</th></tr>';
+  const S=SERIES[curSeries];
+  noteEl.textContent=S.note;
   const years=[...new Set(S.models.map(d=>d.y))].sort((a,b)=>b-a);
   years.forEach(yr=>{
     const tr=document.createElement('tr');
     const td=document.createElement('td'); td.className='year'; td.textContent=yr; tr.appendChild(td);
     const cell=document.createElement('td');
-    S.models.filter(d=>d.y===yr).forEach(d=>{
-      const ch=document.createElement('div');
-      ch.className='chip '+d.gen+(d.sold?' soldered':'');
-      ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
-      ch.onclick=()=>select(d,ch);
-      ch.dataset.model=d.m.toLowerCase();
-      ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
-      cell.appendChild(ch); allChips.push({el:ch,d});
-    });
+    S.models.filter(d=>d.y===yr).forEach(d=>cell.appendChild(makeChip(d,curSeries)));
     tr.appendChild(cell); tbody.appendChild(tr);
-    // Win 11 line: after 2018 row (8th-gen boundary)
-    if(yr===2019){
-      const lr=document.createElement('tr'); lr.className='win11line';
-      lr.innerHTML='<td colspan="2">▲ generally Windows 11 eligible (Intel 8th gen+ / Ryzen 2000+) · ▼ below = not eligible</td>';
-      tbody.appendChild(lr);
-    }
+    if(yr===2019) tbody.appendChild(win11Row(2));
   });
   apply();
 }
@@ -316,7 +357,7 @@ function tpProduct(nm){
   return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ psref.lenovo.com ThinkPad '+nm);
 }
 
-function select(d,el){
+function select(d,el,sk){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
   const w11=d.w11===0?0:1;
@@ -328,7 +369,7 @@ function select(d,el){
   // one direct PSREF product-page link per model in the chip
   const linkHtml=models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
   pC.innerHTML=
-    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[curSeries].label+'</div>'+
+    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[sk].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
     (d.sold?'<span class="badge b-sold">Soldered / non-standard RAM</span>':'')+'</div>'+
     '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
