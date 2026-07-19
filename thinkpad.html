@@ -33,6 +33,9 @@
   .tab:hover{color:var(--text)}
   .tab.active{color:var(--text);border-bottom-color:var(--accent)}
   .tab small{font-weight:normal;opacity:.6}
+  .tab .tier{color:#e5b567;font-weight:800;letter-spacing:-1.5px;margin-right:5px;font-size:12px}
+  .laddercap{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;display:flex;align-items:center;gap:6px}
+  .laddercap .bar{flex:0 0 60px;height:3px;border-radius:2px;background:linear-gradient(90deg,#5a6b4e,#e5b567)}
   .wrap{flex:1;min-height:0;display:flex;gap:0}
   main{flex:1;overflow:auto;padding:0 12px 60px}
   .seriesnote{color:var(--dim);font-size:12px;padding:8px 4px 2px;font-style:italic}
@@ -100,6 +103,7 @@
       <span class="hint">🔒 dashed = soldered RAM · click for details</span>
     </div>
   </div>
+  <div class="laddercap">budget <span class="bar"></span> premium <span style="text-transform:none;letter-spacing:0;margin-left:6px;">· $ = rough price · hover a tab for who it's for</span></div>
   <div class="tabs" id="tabs"></div>
 </header>
 
@@ -255,12 +259,21 @@ const tbody=document.getElementById('tbody');
 const noteEl=document.getElementById('seriesnote');
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let curSeries="T", selEl=null, allChips=[];
-const order=["T","X","X1","L","E","P"];
+// tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
+const order=["E","L","T","X","X1","P"];
+const TIER={E:"$",L:"$$",T:"$$$",X:"$$$",X1:"$$$$",P:"$$$$$"};
+const POS ={E:"Entry / budget line — cheapest, plastic-heavier",
+            L:"Value line — cheaper than T, still user-upgradeable",
+            T:"Mainstream workhorse — the default business ThinkPad",
+            X:"Ultraportable — small & light, travel-focused",
+            X1:"Premium flagship — thin, light, executive (soldered RAM)",
+            P:"Mobile workstation — most powerful & priciest, pro GPUs"};
 
 order.forEach(k=>{
   const b=document.createElement('button');
   b.className='tab'+(k===curSeries?' active':'');
-  b.innerHTML=SERIES[k].label+' <small>('+SERIES[k].models.length+')</small>';
+  b.title=POS[k];
+  b.innerHTML='<span class="tier">'+TIER[k]+'</span>'+SERIES[k].label+' <small>('+SERIES[k].models.length+')</small>';
   b.onclick=()=>{curSeries=k;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));b.classList.add('active');render();};
   tabsEl.appendChild(b);
 });
