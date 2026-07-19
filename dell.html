@@ -320,13 +320,13 @@ const els=[];
 
 const COLS=[15,14,13,12];
 function mnum(m){const x=(m.replace(/[^0-9]/g,'').match(/\d+/)||[0])[0];return parseInt(x)||0;}
-// Which sub-column (tier) a model belongs to: 0=3000, 1=5000/6000, 2=7000/Pro Plus, 3=9000.
+// Which sub-column (tier) a model belongs to: 0=3000, 1=5000, 2=6000 (legacy E6xxx), 3=7000/Pro Plus, 4=9000.
 // Rugged and legacy (D/C/E4000) return -1 and simply flow after the aligned slots.
 function slotOf(d){
   if(/rugged/i.test(d.m)) return -1;
-  if(/pro plus/i.test(d.m)) return 2;
+  if(/pro plus/i.test(d.m)) return 3;
   const f=Math.floor(mnum(d.m)/1000);
-  if(f===3) return 0; if(f===5||f===6) return 1; if(f===7) return 2; if(f===9) return 3;
+  if(f===3) return 0; if(f===5) return 1; if(f===6) return 2; if(f===7) return 3; if(f===9) return 4;
   return -1;
 }
 // per size-column, which tier slots are ever used → keeps sub-series vertically aligned
