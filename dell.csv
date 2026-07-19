@@ -1,0 +1,147 @@
+brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
+dell,,Pro Plus 16,2025,15,16″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230/2280 PCIe NVMe,,2025 rename: 'Dell Pro 16 Plus' (PB16250) replaces Latitude 5xxx/7xxx naming.
+dell,,Pro Plus 14,2025,14,14″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230/2280 PCIe NVMe,,2025 rename: 'Dell Pro 14 Plus' (PB14250). Copilot+ PC.
+dell,,Pro Plus 13,2025,13,13″,Intel Core Ultra 200V (Lunar Lake),ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,2025 rename: 'Dell Pro 13 Plus'.
+dell,,5550,2024,15,15.6″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,⚠ Name reused — a 2015 Latitude E5550 also exists (sold as '5550'). Check CPU gen in the listing.
+dell,,5450,2024,14,14″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,⚠ Name reused — 2015 Latitude E5450 also sold as '5450'. Check CPU gen.
+dell,,5350,2024,13,13.3″,Intel Core Ultra 5/7 (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,Also sold as 2-in-1.
+dell,,7350,2024,13,13.3″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",64 GB,1,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,Premium (7000) ultralight 13.3″. Also exists as 7350 Detachable.
+dell,,5540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2230 + M.2 2280 PCIe NVMe,,
+dell,,5440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2230 PCIe NVMe (2280 on some),,
+dell,,5340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,Also sold as 2-in-1.
+dell,,5530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,
+dell,,5430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,A separate 'Latitude 5430 Rugged' also exists — different machine.
+dell,,5330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,Also sold as 2-in-1.
+dell,,7230,2022,12,12″,Intel 12th gen U (Alder Lake),ddr5,LPDDR5-5200,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe (removable),,"Rugged Extreme Tablet — IP-65, MIL-STD-810H."
+dell,,5520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,
+dell,,5420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,
+dell,,5320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280/2230 PCIe NVMe,,Also sold as 2-in-1.
+dell,,7320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-4267,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280/2230 PCIe NVMe,,Premium (7000) 13.3″ laptop. '7320 Detachable' is a different 13″ tablet.
+dell,,5510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,
+dell,,5410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,
+dell,,5310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280/2230 PCIe NVMe,,Also sold as 2-in-1.
+dell,,7210,2020,12,12.3″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,2-in-1 detachable tablet (Surface Pro style).
+dell,,5500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 NVMe or 2.5″ SATA,,
+dell,,5400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 NVMe or 2.5″ SATA,,"Purdue's table swapped 5400/5300 — 5400 is the 14″, 5300 is the 13.3″."
+dell,,5300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Also sold as 2-in-1. Purdue's table swapped 5400/5300.
+dell,,7200,2019,12,12.3″,Intel 8th gen (Whiskey Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,2-in-1 detachable tablet.
+dell,,5590,2018,15,15.6″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 SATA/NVMe or 2.5″ SATA,,
+dell,,5490,2018,14,14″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 SATA/NVMe,,
+dell,,7390,2018,13,13.3″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 SATA/NVMe,,'7390 2-in-1' is a different machine with soldered LPDDR3 (max 16 GB).
+dell,,7290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 SATA/NVMe,,
+dell,,5580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2.5″ SATA or M.2 2280 SATA/NVMe,,
+dell,,5480,2017,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2.5″ SATA or M.2 2280 SATA/NVMe,,
+dell,,7480,2017,14,14″,Intel 6th/7th gen (Kaby Lake),ddr4,DDR4-2133/2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,
+dell,,5570,2016,15,15.6″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,2.5″ SATA (M.2 PCIe option on some),,
+dell,,5470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,2.5″ SATA,,
+dell,,7470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB (32 unofficial),,0,SATA/NVMe,M.2 2280 SATA/NVMe,,
+dell,,E5550,2015,15,15.6″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA,,⚠ Name reused by the 2024 Latitude 5550 (DDR5 era) — check CPU gen in listings.
+dell,,E5450,2015,14,14″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA (7 mm),,⚠ Name reused by the 2024 Latitude 5450 — check CPU gen in listings.
+dell,,E7450,2015,14,14″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA or M.2 2280 SATA,,
+dell,,E7250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,M.2 2280 SATA,,
+dell,,E6540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E6440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E7440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA (7 mm) or M.2 2280 SATA,,
+dell,,E7240,2013,12,12.5″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,M.2 SATA (2280 + 2242 slots),,
+dell,,E6530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E6430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E6330,2012,13,13.3″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E6230,2012,12,12.5″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,2.5″ SATA + mSATA option,,
+dell,,E6520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,2.5″ SATA,,
+dell,,E6420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,2.5″ SATA,,
+dell,,E6320,2011,13,13.3″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,2.5″ SATA (mSATA in WWAN slot),,
+dell,,E6220,2011,12,12.5″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,2.5″ SATA (mSATA in WWAN slot),,
+dell,,E6510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,
+dell,,E6410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,
+dell,,E4310,2010,13,13.3″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,
+dell,,Latitude 13,2010,13,13.3″,Core 2 Duo ULV (SU7300),ddr3,DDR3-1066 SODIMM,1× SODIMM,4 GB,,0,SATA,2.5″ SATA,,
+dell,,E6500,2009,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Launched 2008; Purdue lists 2009.
+dell,,E6400,2009,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Launched 2008; Purdue lists 2009.
+dell,,E4300,2009,13,13.3″,Core 2 Duo (Penryn SP9x00),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Early DDR3 adopter — unusual for its era.
+dell,,E4200,2009,12,12.1″,Core 2 Duo ULV (SU9x00),ddr3,DDR3-1066 (1 GB onboard + 1 slot),1 GB soldered + 1× SODIMM,5 GB,1,0,1.8″ SSD,1.8″ uSATA SSD,,Uses uncommon 1.8″ uSATA SSDs — check drive health before buying.
+dell,,D830,2007,15,15.4″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,2.5″ SATA,,
+dell,,D630,2007,14,14.1″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,2.5″ SATA,,
+dell,,D430,2007,12,12.1″,Core 2 Duo ULV,ddr2,DDR2-533 SODIMM,1× SODIMM,2 GB,,0,1.8″ IDE,1.8″ PATA (ZIF),,1.8″ ZIF drives are slow and scarce — mSATA/CF adapters exist.
+dell,,D820,2006,15,15.4″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,2.5″ SATA,,
+dell,,D620,2006,14,14.1″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,2.5″ SATA,,
+dell,,D520,2006,14,15″,Celeron M / Core Duo,ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB (~3.3 usable),,0,SATA,2.5″ SATA (SATA-150),,
+dell,,D420,2006,12,12.1″,Core Solo/Duo ULV,ddr2,DDR2-533 (512 MB onboard + 1 slot),512 MB soldered + 1× SODIMM,2 GB usable (chipset limit),1,0,1.8″ IDE,1.8″ PATA (ZIF),,
+dell,,D810,2005,15,15.4″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D610,2005,14,14.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D510,2005,14,15″,Pentium M / Celeron M,ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D410,2005,12,12.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D505,2004,14,15″,Pentium M (Dothan),ddr1,DDR-333 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D400,2004,12,12.1″,Pentium M (Banias),ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D800,2003,15,15.4″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D600,2003,14,14.1″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,D500,2003,14,14.1″,Pentium M / Celeron M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,C640,2002,14,14.1″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,1 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,C400,2002,12,12.1″,Pentium III-M,sdr,PC133 SDRAM SODIMM,2× SODIMM,1 GB,,0,IDE,2.5″ IDE (PATA),,
+dell,,7490,2018,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Premium (7000) 14″ ultrabook — successor to E7470. Missing from the Purdue table.
+dell,,7400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Premium ultralight. Also a 7400 2-in-1 convertible.
+dell,,7410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Premium; RAM soldered. Also a 7410 2-in-1.
+dell,,7420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-3733 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Premium carbon-fibre; soldered. Also a 7420 2-in-1.
+dell,,7430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,DDR4-3200 or LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Premium; soldered. Also a 7430 2-in-1.
+dell,,7440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800 soldered,"soldered, no slots",64 GB (std 32),1,1,NVMe,M.2 2230 PCIe NVMe,,Premium; soldered LPDDR5. Also 7440 2-in-1 and 7440 Ultralight.
+dell,,7450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,Premium; soldered LPDDR5x. Also 7450 2-in-1 and 7450 Ultralight.
+dell,,7370,2016,13,13.3″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,Premium 13.3″ (7000).
+dell,,7380,2017,13,13.3″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133,1× SODIMM,16 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,Premium 13.3″ (7000).
+dell,,7300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Premium 13.3″ (7000).
+dell,,7310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Premium 13.3″; soldered. Also a 7310 2-in-1.
+dell,,7330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Premium 13.3″ laptop; soldered. (The 7330 Rugged Extreme is a different machine.)
+dell,,7340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,Premium 13.3″ (7000); soldered.
+dell,,E7270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,Premium 12.5″ ultraportable (7000).
+dell,,7280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4,1× SODIMM,16 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,Premium 12.5″ ultraportable (7000).
+dell,,9410,2020,14,14″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Flagship (9000); soldered. Also a 9410 2-in-1.
+dell,,9420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Flagship (9000); soldered. Also a 9420 2-in-1.
+dell,,9430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,Flagship (9000); soldered. Also a 9430 2-in-1.
+dell,,9440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,M.2 2230 PCIe NVMe,,Flagship 9440 2-in-1; soldered LPDDR5x.
+dell,,9450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-7467 soldered,"soldered, no slots",64 GB,1,1,NVMe,M.2 2230 PCIe NVMe (Gen 4),,Flagship 9450 2-in-1; soldered LPDDR5x.
+dell,,9510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Flagship 15″ (9000); soldered. Also a 9510 2-in-1.
+dell,,9520,2021,15,15″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Flagship 15″ (9000); soldered. Also a 9520 2-in-1.
+dell,,9330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr5,LPDDR5-5200 soldered,"soldered, no slots",32 GB,1,1,NVMe,M.2 2280 PCIe NVMe (up to 1 TB),,"Flagship 13.3″ 2-in-1 (9000); QHD+ touch, thinnest Latitude ever made."
+dell,,3480,2016,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,2.5″ SATA + M.2 2280,,Budget / education line (3000).
+dell,,3490,2017,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,SATA/NVMe,2.5″ SATA + M.2 2280,,Budget (3000).
+dell,,3400,2018,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget (3000).
+dell,,3410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget (3000).
+dell,,3420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget (3000).
+dell,,3430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget (3000).
+dell,,3440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget (3000).
+dell,,3450,2024,14,14″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget (3000).
+dell,,3580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,2.5″ SATA + M.2 2280,,Budget 15″ (3000).
+dell,,3590,2018,15,15.6″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget 15″ (3000).
+dell,,3500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget 15″ (3000).
+dell,,3520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,2.5″ SATA + M.2 2280,,Budget 15″ (3000).
+dell,,3530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget 15″ (3000).
+dell,,3540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget 15″ (3000).
+dell,,3550,2024,15,15.6″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget 15″ (3000).
+dell,,3380,2016,13,13.3″,Intel 6th/7th gen,ddr4,DDR4 SODIMM,1× SODIMM,8 GB,,0,SATA,2.5″ SATA / M.2,,Budget 13.3″ (3000/3300 education).
+dell,,3300,2017,13,13.3″,Intel 7th/8th gen,ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget 13.3″. Win 11 only with the i5-8250U (8th-gen) option.
+dell,,3310,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,M.2 2280 PCIe NVMe,,Budget 13.3″. Also a 3310 2-in-1.
+dell,,3330,2022,13,13.3″,Intel 11th/12th gen,ddr4,LPDDR4x soldered,"soldered, no slots",16 GB,1,1,NVMe,M.2 2280 PCIe NVMe,,Budget 13.3″; onboard RAM. Also a 3330 2-in-1.
+dell,,5414 Rugged,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,Removable 2.5″ SATA / M.2,,"Rugged 14″ (MIL-STD-810G, IP-52)."
+dell,,5424 Rugged,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,Removable M.2 NVMe,,Rugged 14″ (≈5490 internals).
+dell,,5430 Rugged,2022,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,Removable M.2 NVMe,,Rugged 14″. Distinct from the 5430 business laptop.
+dell,,7414 Rugged Ext.,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,Removable 2.5″ SATA,,"Rugged Extreme 14″ (MIL-STD-810G, IP-65)."
+dell,,7424 Rugged Ext.,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,Removable M.2 NVMe,,Rugged Extreme 14″.
+dell,,7330 Rugged Ext.,2022,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,32 GB,,1,NVMe,Removable M.2 NVMe,,Rugged Extreme 13.3″. Distinct from the 7330 premium laptop.
+dell,,E5400,2008,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6400.
+dell,,E5500,2008,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6500.
+dell,,E5410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6410.
+dell,,E5510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6510.
+dell,,E5420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,2.5″ SATA,,Value counterpart to the E6420 — one of the most common used Latitudes on the market.
+dell,,E5520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,2.5″ SATA,,Value counterpart to the E6520.
+dell,,E5430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6430 — very common on the used market.
+dell,,E5530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA,,Value counterpart to the E6530.
+dell,,E5440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA (7 mm) or M.2 SATA,,Value counterpart to the E6440.
+dell,,E5540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA or M.2 SATA,,Value counterpart to the E6540.
+dell,,E5250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2.5″ SATA (7 mm) or M.2 SATA,,
+dell,,E5270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,2.5″ SATA or M.2 2280 SATA/NVMe,,
+dell,,5280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,M.2 2280 SATA/NVMe,,A separate '5285' 2-in-1 detachable (distinct model number) also exists.
+dell,,5290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,M.2 2280 PCIe NVMe,,A separate '5290 2-in-1' detachable (distinct model) also exists.
+dell,,D531,2007,15,15.4″,AMD Turion 64 X2 / Sempron,ddr2,DDR2-533/667 SODIMM,2× SODIMM,4 GB,,0,SATA,2.5″ SATA,,AMD counterpart to the D620/D820-era Latitudes; also offered in a 14.1″ configuration.
+dell,,D631,2007,14,14.1″,AMD Turion 64 X2,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,2.5″ SATA,,AMD counterpart to the D630.
+dell,,D530,2007,14,15″,"Core 2 Duo (Merom, T7250)",ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB,,0,SATA,2.5″ SATA,,Last 4:3-display Latitude; direct successor to the D520.
+dell,,C610,2001,14,14.1″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,2.5″ IDE (PATA),,Successor to the C600; predates the D-series naming.
+dell,,C810,2001,15,15″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,2.5″ IDE (PATA),,High-end desktop-replacement 'three-spindle' design; successor to the C800.
+dell,,C840,2002,15,15″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,2.5″ IDE (PATA),,Successor to the C810; last fixed-optical-drive 'three-spindle' Latitude.

@@ -31,6 +31,9 @@
   table{border-collapse:collapse;width:auto;min-width:640px}
   col.cy{width:56px}
   #grid td{white-space:nowrap}
+  /* vertical separators between screen-size columns */
+  #grid td:not(:first-child),#grid th:not(:first-child){border-left:2px solid var(--line);padding-left:10px}
+  #grid td:not(:last-child),#grid th:not(:last-child){padding-right:10px}
   th{position:sticky;top:0;background:var(--bg);z-index:10;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding:8px 4px;border-bottom:1px solid var(--line);text-align:left}
   td{border-bottom:1px solid #1e2430;padding:4px;vertical-align:top}
   td.year{font-weight:bold;font-size:13px;color:var(--dim);white-space:nowrap;width:52px;padding-top:9px}
@@ -112,191 +115,11 @@
 </aside>
 </div>
 
-<script>
-// col: 15|14|13|12 ; gen: sdr ddr1..ddr5 ; sold: soldered RAM ; w11: Windows 11 eligible
-// stor: storage description ; tag: short storage tag on chip
-const D=[
-// 2025 — Latitude renamed to "Dell Pro"
-{m:"Pro Plus 16",y:2025,col:15,size:'16″',cpu:"Intel Core Ultra 200V (Lunar Lake) / 200U",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230/2280 PCIe NVMe",note:"2025 rename: 'Dell Pro 16 Plus' (PB16250) replaces Latitude 5xxx/7xxx naming."},
-{m:"Pro Plus 14",y:2025,col:14,size:'14″',cpu:"Intel Core Ultra 200V (Lunar Lake) / 200U",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230/2280 PCIe NVMe",note:"2025 rename: 'Dell Pro 14 Plus' (PB14250). Copilot+ PC."},
-{m:"Pro Plus 13",y:2025,col:13,size:'13″',cpu:"Intel Core Ultra 200V (Lunar Lake)",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2025 rename: 'Dell Pro 13 Plus'."},
-// 2024
-{m:"5550",y:2024,col:15,size:'15.6″',cpu:"Intel 13th gen / Core Ultra (Meteor Lake)",gen:"ddr5",ram:"DDR5-5200/5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"⚠ Name reused — a 2015 Latitude E5550 also exists (sold as '5550'). Check CPU gen in the listing."},
-{m:"5450",y:2024,col:14,size:'14″',cpu:"Intel 13th gen / Core Ultra (Meteor Lake)",gen:"ddr5",ram:"DDR5-5200/5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"⚠ Name reused — 2015 Latitude E5450 also sold as '5450'. Check CPU gen."},
-{m:"5350",y:2024,col:13,size:'13.3″',cpu:"Intel Core Ultra 5/7 (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-6400",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Also sold as 2-in-1."},
-{m:"7350",y:2024,col:13,size:'13.3″',cpu:"Intel Core Ultra (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-6400",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Premium (7000) ultralight 13.3″. Also exists as 7350 Detachable."},
-// 2023
-{m:"5540",y:2023,col:15,size:'15.6″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 + M.2 2280 PCIe NVMe"},
-{m:"5440",y:2023,col:14,size:'14″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (2280 on some)"},
-{m:"5340",y:2023,col:13,size:'13.3″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"LPDDR5-4800",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Also sold as 2-in-1."},
-// 2022
-{m:"5530",y:2022,col:15,size:'15.6″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
-{m:"5430",y:2022,col:14,size:'14″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"A separate 'Latitude 5430 Rugged' also exists — different machine."},
-{m:"5330",y:2022,col:13,size:'13.3″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Also sold as 2-in-1."},
-{m:"7230",y:2022,col:12,size:'12″',cpu:"Intel 12th gen U (Alder Lake)",gen:"ddr5",ram:"LPDDR5-5200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (removable)",note:"Rugged Extreme Tablet — IP-65, MIL-STD-810H."},
-// 2021
-{m:"5520",y:2021,col:15,size:'15.6″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
-{m:"5420",y:2021,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
-{m:"5320",y:2021,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"Also sold as 2-in-1."},
-{m:"7320",y:2021,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x-4267",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"Premium (7000) 13.3″ laptop. '7320 Detachable' is a different 13″ tablet."},
-// 2020
-{m:"5510",y:2020,col:15,size:'15.6″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
-{m:"5410",y:2020,col:14,size:'14″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
-{m:"5310",y:2020,col:13,size:'13.3″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"Also sold as 2-in-1."},
-{m:"7210",y:2020,col:12,size:'12.3″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr3",ram:"LPDDR3-2133",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2-in-1 detachable tablet (Surface Pro style)."},
-// 2019
-{m:"5500",y:2019,col:15,size:'15.6″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 NVMe or 2.5″ SATA"},
-{m:"5400",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 NVMe or 2.5″ SATA",note:"Purdue's table swapped 5400/5300 — 5400 is the 14″, 5300 is the 13.3″."},
-{m:"5300",y:2019,col:13,size:'13.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Also sold as 2-in-1. Purdue's table swapped 5400/5300."},
-{m:"7200",y:2019,col:12,size:'12.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr3",ram:"LPDDR3-2133",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2-in-1 detachable tablet."},
-// 2018 — Win 11 line is below this year
-{m:"5590",y:2018,col:15,size:'15.6″',cpu:"Intel 8th gen (Kaby Lake R, quad)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe or 2.5″ SATA"},
-{m:"5490",y:2018,col:14,size:'14″',cpu:"Intel 8th gen (Kaby Lake R, quad)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe"},
-{m:"7390",y:2018,col:13,size:'13.3″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe",note:"'7390 2-in-1' is a different machine with soldered LPDDR3 (max 16 GB)."},
-{m:"7290",y:2018,col:12,size:'12.5″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe"},
-// 2017
-{m:"5580",y:2017,col:15,size:'15.6″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
-{m:"5480",y:2017,col:14,size:'14″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
-{m:"7480",y:2017,col:14,size:'14″',cpu:"Intel 6th/7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2133/2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe"},
-// 2016
-{m:"5570",y:2016,col:15,size:'15.6″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (M.2 PCIe option on some)"},
-{m:"5470",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"7470",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB (32 unofficial)",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe"},
-// 2015
-{m:"E5550",y:2015,col:15,size:'15.6″',cpu:"Intel 4th/5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"⚠ Name reused by the 2024 Latitude 5550 (DDR5 era) — check CPU gen in listings."},
-{m:"E5450",y:2015,col:14,size:'14″',cpu:"Intel 4th/5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm)",note:"⚠ Name reused by the 2024 Latitude 5450 — check CPU gen in listings."},
-{m:"E7450",y:2015,col:14,size:'14″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA or M.2 2280 SATA"},
-{m:"E7250",y:2015,col:12,size:'12.5″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"M.2 SATA",stor:"M.2 2280 SATA"},
-// 2013
-{m:"E6540",y:2013,col:15,size:'15.6″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-{m:"E6440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-{m:"E7440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 2280 SATA"},
-{m:"E7240",y:2013,col:12,size:'12.5″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"M.2 SATA",stor:"M.2 SATA (2280 + 2242 slots)"},
-// 2012
-{m:"E6530",y:2012,col:15,size:'15.6″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-{m:"E6430",y:2012,col:14,size:'14″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-{m:"E6330",y:2012,col:13,size:'13.3″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-{m:"E6230",y:2012,col:12,size:'12.5″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA+mSATA",stor:"2.5″ SATA + mSATA option"},
-// 2011
-{m:"E6520",y:2011,col:15,size:'15.6″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"E6420",y:2011,col:14,size:'14″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"E6320",y:2011,col:13,size:'13.3″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA+mSATA*",stor:"2.5″ SATA (mSATA in WWAN slot)"},
-{m:"E6220",y:2011,col:12,size:'12.5″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA+mSATA*",stor:"2.5″ SATA (mSATA in WWAN slot)"},
-// 2010
-{m:"E6510",y:2010,col:15,size:'15.6″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"E6410",y:2010,col:14,size:'14.1″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"E4310",y:2010,col:13,size:'13.3″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"Latitude 13",y:2010,col:13,size:'13.3″',cpu:"Core 2 Duo ULV (SU7300)",gen:"ddr3",ram:"DDR3-1066 SODIMM",slots:"1× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-// 2009
-{m:"E6500",y:2009,col:15,size:'15.4″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Launched 2008; Purdue lists 2009."},
-{m:"E6400",y:2009,col:14,size:'14.1″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Launched 2008; Purdue lists 2009."},
-{m:"E4300",y:2009,col:13,size:'13.3″',cpu:"Core 2 Duo (Penryn SP9x00)",gen:"ddr3",ram:"DDR3-1066 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Early DDR3 adopter — unusual for its era."},
-{m:"E4200",y:2009,col:12,size:'12.1″',cpu:"Core 2 Duo ULV (SU9x00)",gen:"ddr3",ram:"DDR3-1066 (1 GB onboard + 1 slot)",slots:"1 GB soldered + 1× SODIMM",max:"5 GB",sold:1,w11:0,tag:"1.8″ SSD",stor:"1.8″ uSATA SSD",note:"Uses uncommon 1.8″ uSATA SSDs — check drive health before buying."},
-// 2007
-{m:"D830",y:2007,col:15,size:'15.4″',cpu:"Core 2 Duo (Santa Rosa)",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"8 GB (official 4)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"D630",y:2007,col:14,size:'14.1″',cpu:"Core 2 Duo (Santa Rosa)",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"8 GB (official 4)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"D430",y:2007,col:12,size:'12.1″',cpu:"Core 2 Duo ULV",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"1× SODIMM",max:"2 GB",w11:0,tag:"1.8″ IDE",stor:"1.8″ PATA (ZIF)",note:"1.8″ ZIF drives are slow and scarce — mSATA/CF adapters exist."},
-// 2006
-{m:"D820",y:2006,col:15,size:'15.4″',cpu:"Core Duo / Core 2 Duo",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"D620",y:2006,col:14,size:'14.1″',cpu:"Core Duo / Core 2 Duo",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
-{m:"D520",y:2006,col:14,size:'15″',cpu:"Celeron M / Core Duo",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"4 GB (~3.3 usable)",w11:0,tag:"SATA",stor:"2.5″ SATA (SATA-150)"},
-{m:"D420",y:2006,col:12,size:'12.1″',cpu:"Core Solo/Duo ULV",gen:"ddr2",ram:"DDR2-533 (512 MB onboard + 1 slot)",slots:"512 MB soldered + 1× SODIMM",max:"2 GB usable (chipset limit)",sold:1,w11:0,tag:"1.8″ IDE",stor:"1.8″ PATA (ZIF)"},
-// 2005
-{m:"D810",y:2005,col:15,size:'15.4″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D610",y:2005,col:14,size:'14.1″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D510",y:2005,col:14,size:'15″',cpu:"Pentium M / Celeron M",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D410",y:2005,col:12,size:'12.1″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-// 2004
-{m:"D505",y:2004,col:14,size:'15″',cpu:"Pentium M (Dothan)",gen:"ddr1",ram:"DDR-333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D400",y:2004,col:12,size:'12.1″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-// 2003
-{m:"D800",y:2003,col:15,size:'15.4″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266/333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D600",y:2003,col:14,size:'14.1″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266/333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"D500",y:2003,col:14,size:'14.1″',cpu:"Pentium M / Celeron M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-// 2002
-{m:"C640",y:2002,col:14,size:'14.1″',cpu:"Pentium 4-M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"1 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-{m:"C400",y:2002,col:12,size:'12.1″',cpu:"Pentium III-M",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"1 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
-
-// ===== 7000 series — premium ultrabook (14/13/12″) =====
-{m:"7490",y:2018,col:14,size:'14″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium (7000) 14″ ultrabook — successor to E7470. Missing from the Purdue table."},
-{m:"7400",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium ultralight. Also a 7400 2-in-1 convertible."},
-{m:"7410",y:2020,col:14,size:'14″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium; RAM soldered. Also a 7410 2-in-1."},
-{m:"7420",y:2021,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x-3733 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium carbon-fibre; soldered. Also a 7420 2-in-1."},
-{m:"7430",y:2022,col:14,size:'14″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr5",ram:"DDR4-3200 or LPDDR5 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium; soldered. Also a 7430 2-in-1."},
-{m:"7440",y:2023,col:14,size:'14″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"LPDDR5-4800 soldered",slots:"soldered, no slots",max:"64 GB (std 32)",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Premium; soldered LPDDR5. Also 7440 2-in-1 and 7440 Ultralight."},
-{m:"7450",y:2024,col:14,size:'14″',cpu:"Intel Core Ultra (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-6400 soldered",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Premium; soldered LPDDR5x. Also 7450 2-in-1 and 7450 Ultralight."},
-{m:"7370",y:2016,col:13,size:'13.3″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"Premium 13.3″ (7000)."},
-{m:"7380",y:2017,col:13,size:'13.3″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2133",slots:"1× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"Premium 13.3″ (7000)."},
-{m:"7300",y:2019,col:13,size:'13.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium 13.3″ (7000)."},
-{m:"7310",y:2020,col:13,size:'13.3″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium 13.3″; soldered. Also a 7310 2-in-1."},
-{m:"7330",y:2022,col:13,size:'13.3″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Premium 13.3″ laptop; soldered. (The 7330 Rugged Extreme is a different machine.)"},
-{m:"7340",y:2023,col:13,size:'13.3″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"LPDDR5 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Premium 13.3″ (7000); soldered."},
-{m:"E7270",y:2016,col:12,size:'12.5″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"Premium 12.5″ ultraportable (7000)."},
-{m:"7280",y:2017,col:12,size:'12.5″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4",slots:"1× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"Premium 12.5″ ultraportable (7000)."},
-
-// ===== 9000 series — ultra-premium flagship (introduced 2020) =====
-{m:"9410",y:2020,col:14,size:'14″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr3",ram:"LPDDR3-2133 soldered",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship (9000); soldered. Also a 9410 2-in-1."},
-{m:"9420",y:2021,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship (9000); soldered. Also a 9420 2-in-1."},
-{m:"9430",y:2022,col:14,size:'14″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr5",ram:"LPDDR5 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Flagship (9000); soldered. Also a 9430 2-in-1."},
-{m:"9440",y:2023,col:14,size:'14″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"LPDDR5x-6400 soldered",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Flagship 9440 2-in-1; soldered LPDDR5x."},
-{m:"9450",y:2024,col:14,size:'14″',cpu:"Intel Core Ultra (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-7467 soldered",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Flagship 9450 2-in-1; soldered LPDDR5x."},
-{m:"9510",y:2020,col:15,size:'15.6″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr3",ram:"LPDDR3-2133 soldered",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship 15″ (9000); soldered. Also a 9510 2-in-1."},
-{m:"9520",y:2021,col:15,size:'15″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship 15″ (9000); soldered. Also a 9520 2-in-1."},
-{m:"9330",y:2022,col:13,size:'13.3″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr5",ram:"LPDDR5-5200 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe (up to 1 TB)",note:"Flagship 13.3″ 2-in-1 (9000); QHD+ touch, thinnest Latitude ever made."},
-
-// ===== 3000 series — entry-level / education (from Haswell era) =====
-{m:"3480",y:2016,col:14,size:'14″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget / education line (3000)."},
-{m:"3490",y:2017,col:14,size:'14″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"SATA/NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget (3000)."},
-{m:"3400",y:2018,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget (3000)."},
-{m:"3410",y:2020,col:14,size:'14″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget (3000)."},
-{m:"3420",y:2021,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget (3000)."},
-{m:"3430",y:2022,col:14,size:'14″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget (3000)."},
-{m:"3440",y:2023,col:14,size:'14″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"DDR5-5200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget (3000)."},
-{m:"3450",y:2024,col:14,size:'14″',cpu:"Intel Core 5/7 (Meteor Lake U)",gen:"ddr5",ram:"DDR5-5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget (3000)."},
-{m:"3580",y:2017,col:15,size:'15.6″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget 15″ (3000)."},
-{m:"3590",y:2018,col:15,size:'15.6″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget 15″ (3000)."},
-{m:"3500",y:2019,col:15,size:'15.6″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget 15″ (3000)."},
-{m:"3520",y:2021,col:15,size:'15.6″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget 15″ (3000)."},
-{m:"3530",y:2022,col:15,size:'15.6″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 15″ (3000)."},
-{m:"3540",y:2023,col:15,size:'15.6″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"DDR5-5200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 15″ (3000)."},
-{m:"3550",y:2024,col:15,size:'15.6″',cpu:"Intel Core 5/7 (Meteor Lake U)",gen:"ddr5",ram:"DDR5-5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 15″ (3000)."},
-{m:"3380",y:2016,col:13,size:'13.3″',cpu:"Intel 6th/7th gen",gen:"ddr4",ram:"DDR4 SODIMM",slots:"1× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA / M.2",note:"Budget 13.3″ (3000/3300 education)."},
-{m:"3300",y:2017,col:13,size:'13.3″',cpu:"Intel 7th/8th gen",gen:"ddr4",ram:"DDR4 SODIMM",slots:"1× SODIMM",max:"16 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 13.3″. Win 11 only with the i5-8250U (8th-gen) option."},
-{m:"3310",y:2019,col:13,size:'13.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"1× SODIMM",max:"16 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 13.3″. Also a 3310 2-in-1."},
-{m:"3330",y:2022,col:13,size:'13.3″',cpu:"Intel 11th/12th gen",gen:"ddr4",ram:"LPDDR4x soldered",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Budget 13.3″; onboard RAM. Also a 3330 2-in-1."},
-
-// ===== Rugged / Rugged Extreme (field & industrial) =====
-{m:"5414 Rugged",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"Removable 2.5″ SATA / M.2",note:"Rugged 14″ (MIL-STD-810G, IP-52)."},
-{m:"5424 Rugged",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged 14″ (≈5490 internals)."},
-{m:"5430 Rugged",y:2022,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged 14″. Distinct from the 5430 business laptop."},
-{m:"7414 Rugged Ext.",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"Removable 2.5″ SATA",note:"Rugged Extreme 14″ (MIL-STD-810G, IP-65)."},
-{m:"7424 Rugged Ext.",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged Extreme 14″."},
-{m:"7330 Rugged Ext.",y:2022,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged Extreme 13.3″. Distinct from the 7330 premium laptop."},
-
-// ===== E5000/5000 series — mainstream mid-tier (parallel to E6000/6000) =====
-{m:"E5400",y:2008,col:14,size:'14.1″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6400."},
-{m:"E5500",y:2008,col:15,size:'15.4″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6500."},
-{m:"E5410",y:2010,col:14,size:'14.1″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6410."},
-{m:"E5510",y:2010,col:15,size:'15.6″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6510."},
-{m:"E5420",y:2011,col:14,size:'14″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6420 — one of the most common used Latitudes on the market."},
-{m:"E5520",y:2011,col:15,size:'15.6″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6520."},
-{m:"E5430",y:2012,col:14,size:'14″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6430 — very common on the used market."},
-{m:"E5530",y:2012,col:15,size:'15.6″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6530."},
-{m:"E5440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 SATA",note:"Value counterpart to the E6440."},
-{m:"E5540",y:2013,col:15,size:'15.6″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA or M.2 SATA",note:"Value counterpart to the E6540."},
-{m:"E5250",y:2015,col:12,size:'12.5″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 SATA"},
-{m:"E5270",y:2016,col:12,size:'12.5″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
-{m:"5280",y:2017,col:12,size:'12.5″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"A separate '5285' 2-in-1 detachable (distinct model number) also exists."},
-{m:"5290",y:2018,col:12,size:'12.5″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"A separate '5290 2-in-1' detachable (distinct model) also exists."},
-
-// ===== Legacy AMD & early C/D-series (2001–2007) =====
-{m:"D531",y:2007,col:15,size:'15.4″',cpu:"AMD Turion 64 X2 / Sempron",gen:"ddr2",ram:"DDR2-533/667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"AMD counterpart to the D620/D820-era Latitudes; also offered in a 14.1″ configuration."},
-{m:"D631",y:2007,col:14,size:'14.1″',cpu:"AMD Turion 64 X2",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"AMD counterpart to the D630."},
-{m:"D530",y:2007,col:14,size:'15″',cpu:"Core 2 Duo (Merom, T7250)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Last 4:3-display Latitude; direct successor to the D520."},
-{m:"C610",y:2001,col:14,size:'14.1″',cpu:"Pentium III-M (Tualatin)",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"512 MB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"Successor to the C600; predates the D-series naming."},
-{m:"C810",y:2001,col:15,size:'15″',cpu:"Pentium III-M (Tualatin)",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"512 MB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"High-end desktop-replacement 'three-spindle' design; successor to the C800."},
-{m:"C840",y:2002,col:15,size:'15″',cpu:"Pentium 4-M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"Successor to the C810; last fixed-optical-drive 'three-spindle' Latitude."}
-];
+<script type="module">
+// ===== Data lives in dell.csv (universal schema shared with thinkpad.csv) =====
+// Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
+import {loadCSV} from './specdata.js';
+const D=await loadCSV('dell.csv');
 
 const GENLABEL={sdr:"SDRAM (PC133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
 // OS typically shipped/preinstalled, by release year
