@@ -63,6 +63,15 @@
   .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
   .b-sold{background:#4a3b1e;color:#ffd27e}
   .note{font-size:12px;color:#ffd27e;margin-top:8px}
+  .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
+  .photo img{display:block;width:100%;height:150px;object-fit:contain;background:#fff}
+  .photo .ph-fallback{display:none;color:var(--accent);font-size:13px;padding:14px}
+  .photo.noimg{background:var(--panel2)}
+  .photo.noimg img{display:none}
+  .photo.noimg .ph-fallback{display:block}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  .links .ext:hover{border-color:var(--accent)}
   #closeP{float:right;cursor:pointer;color:var(--dim);font-size:18px;line-height:1;padding:2px 6px}
   footer{margin-top:24px;padding:12px 4px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line)}
   footer a{color:var(--accent)}
@@ -288,10 +297,21 @@ function select(d,el){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
   const w11=d.w11===0?0:1;
+  const nm=d.m.split(' / ')[0].trim();       // first model in a "T14 / T14s / T16" group
+  const q=encodeURIComponent('Lenovo ThinkPad '+nm+' laptop');
+  const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
+  const imgSearch='https://www.bing.com/images/search?q='+q;
+  const psref='https://psref.lenovo.com/search?kw='+encodeURIComponent(nm);
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[curSeries].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
     (d.sold?'<span class="badge b-sold">Soldered / non-standard RAM</span>':'')+'</div>'+
+    '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
+      '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
+      '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
+    '<div class="links">'+
+      '<a class="ext" href="'+psref+'" target="_blank" rel="noopener">Lenovo PSREF specs ↗</a>'+
+      '<a class="ext" href="'+imgSearch+'" target="_blank" rel="noopener">More photos ↗</a></div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+

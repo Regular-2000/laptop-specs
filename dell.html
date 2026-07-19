@@ -56,6 +56,15 @@
   .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
   .b-sold{background:#4a3b1e;color:#ffd27e}
   .note{font-size:12px;color:#ffd27e;margin-top:8px}
+  .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
+  .photo img{display:block;width:100%;height:150px;object-fit:contain;background:#fff}
+  .photo .ph-fallback{display:none;color:var(--accent);font-size:13px;padding:14px}
+  .photo.noimg{background:var(--panel2)}
+  .photo.noimg img{display:none}
+  .photo.noimg .ph-fallback{display:block}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  .links .ext:hover{border-color:var(--accent)}
   #closeP{float:right;cursor:pointer;color:var(--dim);font-size:18px;line-height:1;padding:2px 6px}
   footer{margin-top:24px;padding:12px 4px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line)}
   footer a{color:var(--accent)}
@@ -252,15 +261,40 @@ YEARS.forEach((yr,i)=>{
   }
 });
 
+// Build the official Dell support product-details URL from the model name.
+// Verified patterns: 5450→latitude-14-5450-laptop, 5550→latitude-15-5550-laptop, E6440→latitude-e6440-laptop.
+function dellUrl(d){
+  if(d.url) return d.url;                    // explicit override
+  let m=d.m.replace(/\s*\(.*\)/,'').trim();  // strip "(E5450)" style suffix
+  const base='https://www.dell.com/support/product-details/en-us/product/';
+  if(/^[A-Za-z]/.test(m)){                   // letter-prefixed: D630, E6440, C640
+    return base+'latitude-'+m.toLowerCase().replace(/\s+/g,'-')+'-laptop/overview';
+  }
+  if(/^\d{4}$/.test(m)){                      // modern 4-digit: 5450, 7490, 5340
+    const size={15:'15',14:'14',13:'13',12:'12'}[d.col]||'14';
+    return base+'latitude-'+size+'-'+m+'-laptop/overview';
+  }
+  return null;                                // Pro Plus / oddballs: no reliable deep link
+}
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let selEl=null;
 function select(d,el){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
+  const q=encodeURIComponent('Dell Latitude '+d.m.replace(/\s*\(.*\)/,'')+' laptop');
+  const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
+  const imgSearch='https://www.bing.com/images/search?q='+q;
+  const dell=dellUrl(d);
   pC.innerHTML=
     '<h2>Latitude '+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · '+
     (d.w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
     (d.sold?'<span class="badge b-sold">Soldered RAM</span>':'')+'</div>'+
+    '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
+      '<img src="'+imgSrc+'" alt="'+d.m+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
+      '<span class="ph-fallback">🔍 See photos of the '+d.m+' ↗</span></a>'+
+    '<div class="links">'+
+      (dell?'<a class="ext" href="'+dell+'" target="_blank" rel="noopener">Dell.com support page ↗</a>':'')+
+      '<a class="ext" href="'+imgSearch+'" target="_blank" rel="noopener">More photos ↗</a></div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
