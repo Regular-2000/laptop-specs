@@ -28,15 +28,17 @@
   #win11toggle.on{border-color:var(--accent);color:var(--accent)}
   .wrap{flex:1;min-height:0;display:flex;gap:0}
   main{flex:1;overflow:auto;padding:0 12px 60px}
-  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
+  table{border-collapse:collapse;width:auto;min-width:640px}
   col.cy{width:56px}
+  #grid td{white-space:nowrap}
   th{position:sticky;top:0;background:var(--bg);z-index:10;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding:8px 4px;border-bottom:1px solid var(--line);text-align:left}
   td{border-bottom:1px solid #1e2430;padding:4px;vertical-align:top}
   td.year{font-weight:bold;font-size:13px;color:var(--dim);white-space:nowrap;width:52px;padding-top:9px}
   tr.win11line td{border-bottom:2px solid var(--red);padding:2px 6px;font-size:11px;color:var(--red);text-align:left}
-  .chip{display:inline-flex;flex-direction:column;align-items:flex-start;margin:2px;padding:4px 8px;border-radius:7px;cursor:pointer;border:2px solid transparent;min-width:64px;transition:opacity .15s}
-  .chip b{font-size:13px;line-height:1.1}
-  .chip span{font-size:10px;opacity:.85;line-height:1.2}
+  .chip{display:inline-flex;flex-direction:column;justify-content:center;align-items:flex-start;vertical-align:top;width:92px;height:38px;box-sizing:border-box;margin:2px;padding:3px 8px;border-radius:7px;cursor:pointer;border:2px solid transparent;overflow:hidden;transition:opacity .15s}
+  .chip b{font-size:12.5px;line-height:1.15;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chip span{font-size:10px;opacity:.85;line-height:1.2;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chip.spacer{visibility:hidden;pointer-events:none}
   .chip.sdr{background:var(--sdr)} .chip.ddr1{background:var(--ddr1)} .chip.ddr2{background:var(--ddr2)}
   .chip.ddr3{background:var(--ddr3)} .chip.ddr4{background:var(--ddr4)} .chip.ddr5{background:var(--ddr5);color:#1b1b1b}
   .chip.soldered{border-style:dashed;border-color:rgba(255,255,255,.55)}
@@ -291,23 +293,47 @@ const YEARS=[...new Set(D.map(d=>d.y))].sort((a,b)=>b-a);
 const tbody=document.getElementById('tbody');
 const els=[];
 
-// sort chips in a cell by model number so tiers read 3 < 5 < 7 < 9 left-to-right
+const COLS=[15,14,13,12];
 function mnum(m){const x=(m.replace(/[^0-9]/g,'').match(/\d+/)||[0])[0];return parseInt(x)||0;}
+// Which sub-column (tier) a model belongs to: 0=3000, 1=5000/6000, 2=7000/Pro Plus, 3=9000.
+// Rugged and legacy (D/C/E4000) return -1 and simply flow after the aligned slots.
+function slotOf(d){
+  if(/rugged/i.test(d.m)) return -1;
+  if(/pro plus/i.test(d.m)) return 2;
+  const f=Math.floor(mnum(d.m)/1000);
+  if(f===3) return 0; if(f===5||f===6) return 1; if(f===7) return 2; if(f===9) return 3;
+  return -1;
+}
+// per size-column, which tier slots are ever used → keeps sub-series vertically aligned
+const activeSlots={};
+COLS.forEach(c=>{const u=new Set();D.filter(d=>d.col===c).forEach(d=>{const s=slotOf(d);if(s>=0)u.add(s);});activeSlots[c]=[...u].sort((a,b)=>a-b);});
+
+function makeChip(d){
+  const ch=document.createElement('div');
+  ch.className='chip '+d.gen+(d.sold?' soldered':'');
+  ch.title=d.m+' — '+d.ram+' · '+d.stor;
+  ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.tag+'</span>';  // storage type only (RAM gen = colour)
+  ch.onclick=()=>select(d,ch);
+  ch.dataset.model=d.m.toLowerCase();
+  ch.dataset.gen=d.gen; ch.dataset.w11=d.w11;
+  els.push({el:ch,d});
+  return ch;
+}
+function spacer(){const s=document.createElement('div');s.className='chip spacer';return s;}
+
 YEARS.forEach((yr,i)=>{
   const tr=document.createElement('tr');
   const td=document.createElement('td');
   td.className='year'; td.textContent=yr; tr.appendChild(td);
-  [15,14,13,12].forEach(c=>{
+  COLS.forEach(c=>{
     const cell=document.createElement('td');
-    D.filter(d=>d.y===yr&&d.col===c).sort((a,b)=>mnum(a.m)-mnum(b.m)).forEach(d=>{
-      const ch=document.createElement('div');
-      ch.className='chip '+d.gen+(d.sold?' soldered':'');
-      ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0]+' · '+d.tag+'</span>';
-      ch.onclick=()=>select(d,ch);
-      ch.dataset.model=d.m.toLowerCase();
-      ch.dataset.gen=d.gen; ch.dataset.w11=d.w11;
-      cell.appendChild(ch); els.push({el:ch,d});
-    });
+    const ym=D.filter(d=>d.y===yr&&d.col===c);
+    if(ym.some(m=>slotOf(m)>=0)){
+      activeSlots[c].forEach(s=>{const d=ym.find(m=>slotOf(m)===s);cell.appendChild(d?makeChip(d):spacer());});
+      ym.filter(m=>slotOf(m)<0).sort((a,b)=>mnum(a.m)-mnum(b.m)).forEach(d=>cell.appendChild(makeChip(d)));
+    }else{
+      ym.sort((a,b)=>mnum(a.m)-mnum(b.m)).forEach(d=>cell.appendChild(makeChip(d)));
+    }
     tr.appendChild(cell);
   });
   tbody.appendChild(tr);
