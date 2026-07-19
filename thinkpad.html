@@ -69,6 +69,7 @@
   .photo.noimg{background:var(--panel2)}
   .photo.noimg img{display:none}
   .photo.noimg .ph-fallback{display:block}
+  .phcap{color:var(--dim);font-size:11px;text-align:center;margin:-4px 0 8px}
   .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
   .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
   .links .ext:hover{border-color:var(--accent)}
@@ -301,7 +302,11 @@ function select(d,el){
   const q=encodeURIComponent('Lenovo ThinkPad '+nm+' laptop');
   const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
   const imgSearch='https://www.bing.com/images/search?q='+q;
-  const psref='https://psref.lenovo.com/search?kw='+encodeURIComponent(nm);
+  // direct PSREF product page for modern models; search fallback for pre-2012 (not in PSREF)
+  const slug='ThinkPad_'+nm.replace(/\s+/g,'_');
+  const psref=(d.y>=2012)
+    ?'https://psref.lenovo.com/Product/ThinkPad/'+slug
+    :'https://psref.lenovo.com/search?kw='+encodeURIComponent(nm);
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[curSeries].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
@@ -309,9 +314,8 @@ function select(d,el){
     '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
       '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
-    '<div class="links">'+
-      '<a class="ext" href="'+psref+'" target="_blank" rel="noopener">Lenovo PSREF specs ↗</a>'+
-      '<a class="ext" href="'+imgSearch+'" target="_blank" rel="noopener">More photos ↗</a></div>'+
+    '<div class="phcap">tap image for more photos ↗</div>'+
+    '<div class="links"><a class="ext" href="'+psref+'" target="_blank" rel="noopener">Lenovo product page ↗</a></div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+

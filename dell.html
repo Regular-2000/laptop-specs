@@ -62,6 +62,7 @@
   .photo.noimg{background:var(--panel2)}
   .photo.noimg img{display:none}
   .photo.noimg .ph-fallback{display:block}
+  .phcap{color:var(--dim);font-size:11px;text-align:center;margin:-4px 0 8px}
   .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
   .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
   .links .ext:hover{border-color:var(--accent)}
@@ -292,9 +293,8 @@ function select(d,el){
     '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
       '<img src="'+imgSrc+'" alt="'+d.m+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+d.m+' ↗</span></a>'+
-    '<div class="links">'+
-      (dell?'<a class="ext" href="'+dell+'" target="_blank" rel="noopener">Dell.com support page ↗</a>':'')+
-      '<a class="ext" href="'+imgSearch+'" target="_blank" rel="noopener">More photos ↗</a></div>'+
+    '<div class="phcap">tap image for more photos ↗</div>'+
+    (dell?'<div class="links"><a class="ext" href="'+dell+'" target="_blank" rel="noopener">Dell.com product page ↗</a></div>':'')+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
