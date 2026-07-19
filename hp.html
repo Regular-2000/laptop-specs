@@ -138,6 +138,17 @@
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
 import {loadCSV} from './specdata.js';
 const ALL=await loadCSV('hp.csv');
+
+const GENLABEL={sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
+// OS typically shipped/preinstalled, by release year
+const YEAROS={
+2008:"Vista Business (XP downgrade common)",2010:"Windows 7 Pro",2011:"Windows 7 Pro",
+2012:"Windows 7 Pro (Win 8 late in cycle)",2013:"Windows 7 Pro or 8/8.1 Pro",2014:"Windows 7 / 8.1 Pro",
+2015:"Windows 7 / 8.1 Pro (Win 10 from mid-2015)",2016:"Windows 10 Pro (Win 7 downgrade offered)",
+2017:"Windows 10 Pro",2018:"Windows 10 Pro",2019:"Windows 10 Pro",2020:"Windows 10 Pro",
+2021:"Windows 10 Pro (Win 11 from late 2021)",2022:"Windows 11 Pro",2023:"Windows 11 Pro",
+2024:"Windows 11 Pro",2025:"Windows 11 Pro"
+};
 // Series metadata (presentation only) — the models come from the CSV.
 const META={
 "PB":{label:"ProBook 400",note:"Budget/SMB business line — plastic-heavier but almost always 2 RAM slots. 430 (13.3″) / 440 (14″) / 450 (15.6″) with G-numbers; AMD twins are 445/455. From G8 (2021) the 2.5″ bay is gone."},
