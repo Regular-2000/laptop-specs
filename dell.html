@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dell Latitude Model Timeline — RAM & Storage Reference</title>
+<style>
+  :root{
+    --bg:#12151c; --panel:#1b1f2a; --panel2:#232937; --text:#e8ebf2; --dim:#9aa3b5;
+    --line:#333b4d; --accent:#4ea1ff; --red:#ff5c5c;
+    --sdr:#8d6e63; --ddr1:#7d8799; --ddr2:#b07aa1; --ddr3:#4e79a7; --ddr4:#59a14f; --ddr5:#f28e2b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  body{display:flex;flex-direction:column;overflow:hidden}
+  header{flex:none;padding:10px 16px 6px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--bg);z-index:20;border-bottom:1px solid var(--line)}
+  header h1{font-size:16px;margin:0;white-space:nowrap}
+  header h1 small{color:var(--dim);font-weight:normal}
+  #search{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 12px;font-size:14px;width:200px}
+  #search:focus{outline:none;border-color:var(--accent)}
+  .legend{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
+  .lg.off{opacity:.3}
+  .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
+  .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
+  .hint{color:var(--dim);font-size:12px}
+  #win11toggle{cursor:pointer;user-select:none;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--panel)}
+  #win11toggle.on{border-color:var(--accent);color:var(--accent)}
+  .wrap{flex:1;min-height:0;display:flex;gap:0}
+  main{flex:1;overflow:auto;padding:0 12px 60px}
+  table{border-collapse:collapse;width:100%;min-width:640px;table-layout:fixed}
+  col.cy{width:56px}
+  th{position:sticky;top:0;background:var(--bg);z-index:10;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding:8px 4px;border-bottom:1px solid var(--line);text-align:left}
+  td{border-bottom:1px solid #1e2430;padding:4px;vertical-align:top}
+  td.year{font-weight:bold;font-size:13px;color:var(--dim);white-space:nowrap;width:52px;padding-top:9px}
+  tr.win11line td{border-bottom:2px solid var(--red);padding:2px 6px;font-size:11px;color:var(--red);text-align:left}
+  .chip{display:inline-flex;flex-direction:column;align-items:flex-start;margin:2px;padding:4px 8px;border-radius:7px;cursor:pointer;border:2px solid transparent;min-width:64px;transition:opacity .15s}
+  .chip b{font-size:13px;line-height:1.1}
+  .chip span{font-size:10px;opacity:.85;line-height:1.2}
+  .chip.sdr{background:var(--sdr)} .chip.ddr1{background:var(--ddr1)} .chip.ddr2{background:var(--ddr2)}
+  .chip.ddr3{background:var(--ddr3)} .chip.ddr4{background:var(--ddr4)} .chip.ddr5{background:var(--ddr5);color:#1b1b1b}
+  .chip.soldered{border-style:dashed;border-color:rgba(255,255,255,.55)}
+  .chip.ddr5.soldered{border-color:rgba(0,0,0,.45)}
+  .chip.dim{opacity:.14;pointer-events:auto}
+  .chip.hit{outline:2px solid #fff;outline-offset:1px}
+  .chip.sel{border-color:#fff;border-style:solid;box-shadow:0 0 0 2px var(--accent)}
+  /* detail panel */
+  #panel{width:320px;flex:0 0 320px;border-left:1px solid var(--line);background:var(--panel);padding:14px;overflow-y:auto;display:none}
+  #panel.show{display:block}
+  #panel h2{margin:0 0 2px;font-size:19px}
+  #panel .sub{color:var(--dim);font-size:12px;margin-bottom:10px}
+  .row{margin:8px 0;padding:8px 10px;background:var(--panel2);border-radius:8px}
+  .row .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+  .row .v{font-size:13.5px;margin-top:2px}
+  .badge{display:inline-block;font-size:11px;border-radius:5px;padding:2px 7px;margin-right:5px}
+  .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
+  .b-sold{background:#4a3b1e;color:#ffd27e}
+  .note{font-size:12px;color:#ffd27e;margin-top:8px}
+  #closeP{float:right;cursor:pointer;color:var(--dim);font-size:18px;line-height:1;padding:2px 6px}
+  footer{margin-top:24px;padding:12px 4px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line)}
+  footer a{color:var(--accent)}
+  @media (max-width:900px){
+    #panel{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;flex:none;max-height:55vh;border-left:none;border-top:2px solid var(--accent);border-radius:14px 14px 0 0;z-index:40}
+    header h1{font-size:14px}
+    #search{width:140px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dell Latitude <small>· RAM &amp; storage by year</small></h1>
+  <input id="search" type="search" placeholder="Type model, e.g. 5480" autocomplete="off">
+  <div class="legend" id="legend">
+    <div class="lg sdr" data-g="sdr">SDRAM</div>
+    <div class="lg ddr1" data-g="ddr1">DDR</div>
+    <div class="lg ddr2" data-g="ddr2">DDR2</div>
+    <div class="lg ddr3" data-g="ddr3">DDR3</div>
+    <div class="lg ddr4" data-g="ddr4">DDR4</div>
+    <div class="lg ddr5" data-g="ddr5">DDR5</div>
+    <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
+    <span class="hint">🔒 + dashed border = soldered RAM (not upgradeable) · click a model for details</span>
+  </div>
+</header>
+
+<div class="wrap">
+<main>
+  <table id="grid">
+    <colgroup><col class="cy"><col><col><col><col></colgroup>
+    <thead><tr><th>Year</th><th>15–16″</th><th>14″</th><th>13″</th><th>12″</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <footer>
+    Model/year mapping based on <a href="https://service.purdue.edu/TDClient/32/Purdue/KB/PrintArticle?ID=1982" target="_blank">Purdue IT "Dell Model Years"</a> (unofficial); specs compiled from Dell spec sheets &amp; owner's manuals. Years are approximate release years. Max RAM shows practical maximums — "(official N)" means Dell's spec sheet stated less than what the hardware accepts. Verify exact config by service tag at dell.com/support.
+  </footer>
+</main>
+
+<aside id="panel">
+  <div id="closeP" title="close">✕</div>
+  <div id="pContent"></div>
+</aside>
+</div>
+
+<script>
+// col: 15|14|13|12 ; gen: sdr ddr1..ddr5 ; sold: soldered RAM ; w11: Windows 11 eligible
+// stor: storage description ; tag: short storage tag on chip
+const D=[
+// 2025 — Latitude renamed to "Dell Pro"
+{m:"Pro Plus 16",y:2025,col:15,size:'16″',cpu:"Intel Core Ultra 200V (Lunar Lake) / 200U",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230/2280 PCIe NVMe",note:"2025 rename: 'Dell Pro 16 Plus' (PB16250) replaces Latitude 5xxx/7xxx naming."},
+{m:"Pro Plus 14",y:2025,col:14,size:'14″',cpu:"Intel Core Ultra 200V (Lunar Lake) / 200U",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230/2280 PCIe NVMe",note:"2025 rename: 'Dell Pro 14 Plus' (PB14250). Copilot+ PC."},
+{m:"Pro Plus 13",y:2025,col:13,size:'13″',cpu:"Intel Core Ultra 200V (Lunar Lake)",gen:"ddr5",ram:"LPDDR5x-8533 on-package",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2025 rename: 'Dell Pro 13 Plus'."},
+// 2024
+{m:"5550",y:2024,col:15,size:'15.6″',cpu:"Intel 13th gen / Core Ultra (Meteor Lake)",gen:"ddr5",ram:"DDR5-5200/5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"⚠ Name reused — a 2015 Latitude E5550 also exists (sold as '5550'). Check CPU gen in the listing."},
+{m:"5450",y:2024,col:14,size:'14″',cpu:"Intel 13th gen / Core Ultra (Meteor Lake)",gen:"ddr5",ram:"DDR5-5200/5600 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"⚠ Name reused — 2015 Latitude E5450 also sold as '5450'. Check CPU gen."},
+{m:"5350",y:2024,col:13,size:'13.3″',cpu:"Intel Core Ultra 5/7 (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-6400",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Also sold as 2-in-1."},
+{m:"7350",y:2024,col:12,size:'13.3″',cpu:"Intel Core Ultra (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-6400",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Ultralight 13.3″ (Purdue lists it in the 12″ column). Also exists as 7350 Detachable."},
+// 2023
+{m:"5540",y:2023,col:15,size:'15.6″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 + M.2 2280 PCIe NVMe"},
+{m:"5440",y:2023,col:14,size:'14″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (2280 on some)"},
+{m:"5340",y:2023,col:13,size:'13.3″',cpu:"Intel 13th gen (Raptor Lake)",gen:"ddr5",ram:"LPDDR5-4800",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Also sold as 2-in-1."},
+// 2022
+{m:"5530",y:2022,col:15,size:'15.6″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
+{m:"5430",y:2022,col:14,size:'14″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"A separate 'Latitude 5430 Rugged' also exists — different machine."},
+{m:"5330",y:2022,col:13,size:'13.3″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr4",ram:"DDR4-3200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"Also sold as 2-in-1."},
+{m:"7230",y:2022,col:12,size:'12″',cpu:"Intel 12th gen U (Alder Lake)",gen:"ddr5",ram:"LPDDR5-5200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (removable)",note:"Rugged Extreme Tablet — IP-65, MIL-STD-810H."},
+// 2021
+{m:"5520",y:2021,col:15,size:'15.6″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
+{m:"5420",y:2021,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
+{m:"5320",y:2021,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"Also sold as 2-in-1."},
+{m:"7320",y:2021,col:12,size:'13″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x-4267",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"13″ laptop (Purdue lists in 12″ column). '7320 Detachable' is a different 13″ tablet."},
+// 2020
+{m:"5510",y:2020,col:15,size:'15.6″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
+{m:"5410",y:2020,col:14,size:'14″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe"},
+{m:"5310",y:2020,col:13,size:'13.3″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"M.2 2280/2230 PCIe NVMe",note:"Also sold as 2-in-1."},
+{m:"7210",y:2020,col:12,size:'12.3″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr3",ram:"LPDDR3-2133",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2-in-1 detachable tablet (Surface Pro style)."},
+// 2019
+{m:"5500",y:2019,col:15,size:'15.6″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 NVMe or 2.5″ SATA"},
+{m:"5400",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 NVMe or 2.5″ SATA",note:"Purdue's table swapped 5400/5300 — 5400 is the 14″, 5300 is the 13.3″."},
+{m:"5300",y:2019,col:13,size:'13.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4-2666 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Also sold as 2-in-1. Purdue's table swapped 5400/5300."},
+{m:"7200",y:2019,col:12,size:'12.3″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr3",ram:"LPDDR3-2133",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe",note:"2-in-1 detachable tablet."},
+// 2018 — Win 11 line is below this year
+{m:"5590",y:2018,col:15,size:'15.6″',cpu:"Intel 8th gen (Kaby Lake R, quad)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe or 2.5″ SATA"},
+{m:"5490",y:2018,col:14,size:'14″',cpu:"Intel 8th gen (Kaby Lake R, quad)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe"},
+{m:"7390",y:2018,col:13,size:'13.3″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe",note:"'7390 2-in-1' is a different machine with soldered LPDDR3 (max 16 GB)."},
+{m:"7290",y:2018,col:12,size:'12.5″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 SATA/NVMe"},
+// 2017
+{m:"5580",y:2017,col:15,size:'15.6″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
+{m:"5480",y:2017,col:14,size:'14″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
+{m:"7480",y:2017,col:14,size:'14″',cpu:"Intel 6th/7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2133/2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe"},
+// 2016
+{m:"5570",y:2016,col:15,size:'15.6″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (M.2 PCIe option on some)"},
+{m:"5470",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"7470",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB (32 unofficial)",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe"},
+// 2015
+{m:"E5550",y:2015,col:15,size:'15.6″',cpu:"Intel 4th/5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"⚠ Name reused by the 2024 Latitude 5550 (DDR5 era) — check CPU gen in listings."},
+{m:"E5450",y:2015,col:14,size:'14″',cpu:"Intel 4th/5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm)",note:"⚠ Name reused by the 2024 Latitude 5450 — check CPU gen in listings."},
+{m:"E7450",y:2015,col:14,size:'14″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA or M.2 2280 SATA"},
+{m:"E7250",y:2015,col:12,size:'12.5″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"M.2 SATA",stor:"M.2 2280 SATA"},
+// 2013
+{m:"E6540",y:2013,col:15,size:'15.6″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+{m:"E6440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+{m:"E7440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 2280 SATA"},
+{m:"E7240",y:2013,col:12,size:'12.5″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"M.2 SATA",stor:"M.2 SATA (2280 + 2242 slots)"},
+// 2012
+{m:"E6530",y:2012,col:15,size:'15.6″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+{m:"E6430",y:2012,col:14,size:'14″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+{m:"E6330",y:2012,col:13,size:'13.3″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+{m:"E6230",y:2012,col:12,size:'12.5″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA + mSATA option"},
+// 2011
+{m:"E6520",y:2011,col:15,size:'15.6″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"E6420",y:2011,col:14,size:'14″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"E6320",y:2011,col:13,size:'13.3″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA (mSATA in WWAN slot)"},
+{m:"E6220",y:2011,col:12,size:'12.5″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA (mSATA in WWAN slot)"},
+// 2010
+{m:"E6510",y:2010,col:15,size:'15.6″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"E6410",y:2010,col:14,size:'14.1″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"E4310",y:2010,col:13,size:'13.3″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"Latitude 13",y:2010,col:13,size:'13.3″',cpu:"Core 2 Duo ULV (SU7300)",gen:"ddr3",ram:"DDR3-1066 SODIMM",slots:"1× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+// 2009
+{m:"E6500",y:2009,col:15,size:'15.4″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Launched 2008; Purdue lists 2009."},
+{m:"E6400",y:2009,col:14,size:'14.1″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Launched 2008; Purdue lists 2009."},
+{m:"E4300",y:2009,col:13,size:'13.3″',cpu:"Core 2 Duo (Penryn SP9x00)",gen:"ddr3",ram:"DDR3-1066 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Early DDR3 adopter — unusual for its era."},
+{m:"E4200",y:2009,col:12,size:'12.1″',cpu:"Core 2 Duo ULV (SU9x00)",gen:"ddr3",ram:"DDR3-1066 (1 GB onboard + 1 slot)",slots:"1 GB soldered + 1× SODIMM",max:"5 GB",sold:1,w11:0,tag:"1.8″ SSD",stor:"1.8″ uSATA SSD",note:"Uses uncommon 1.8″ uSATA SSDs — check drive health before buying."},
+// 2007
+{m:"D830",y:2007,col:15,size:'15.4″',cpu:"Core 2 Duo (Santa Rosa)",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"8 GB (official 4)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"D630",y:2007,col:14,size:'14.1″',cpu:"Core 2 Duo (Santa Rosa)",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"8 GB (official 4)",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"D430",y:2007,col:12,size:'12.1″',cpu:"Core 2 Duo ULV",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"1× SODIMM",max:"2 GB",w11:0,tag:"1.8″ IDE",stor:"1.8″ PATA (ZIF)",note:"1.8″ ZIF drives are slow and scarce — mSATA/CF adapters exist."},
+// 2006
+{m:"D820",y:2006,col:15,size:'15.4″',cpu:"Core Duo / Core 2 Duo",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"D620",y:2006,col:14,size:'14.1″',cpu:"Core Duo / Core 2 Duo",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA"},
+{m:"D520",y:2006,col:14,size:'15″',cpu:"Celeron M / Core Duo",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"4 GB (~3.3 usable)",w11:0,tag:"SATA",stor:"2.5″ SATA (SATA-150)"},
+{m:"D420",y:2006,col:12,size:'12.1″',cpu:"Core Solo/Duo ULV",gen:"ddr2",ram:"DDR2-533 (512 MB onboard + 1 slot)",slots:"512 MB soldered + 1× SODIMM",max:"2 GB usable (chipset limit)",sold:1,w11:0,tag:"1.8″ IDE",stor:"1.8″ PATA (ZIF)"},
+// 2005
+{m:"D810",y:2005,col:15,size:'15.4″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D610",y:2005,col:14,size:'14.1″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D510",y:2005,col:14,size:'15″',cpu:"Pentium M / Celeron M",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D410",y:2005,col:12,size:'12.1″',cpu:"Pentium M (Sonoma)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+// 2004
+{m:"D505",y:2004,col:14,size:'15″',cpu:"Pentium M (Dothan)",gen:"ddr1",ram:"DDR-333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D400",y:2004,col:12,size:'12.1″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+// 2003
+{m:"D800",y:2003,col:15,size:'15.4″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266/333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D600",y:2003,col:14,size:'14.1″',cpu:"Pentium M (Banias)",gen:"ddr1",ram:"DDR-266/333 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"D500",y:2003,col:14,size:'14.1″',cpu:"Pentium M / Celeron M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+// 2002
+{m:"C640",y:2002,col:14,size:'14.1″',cpu:"Pentium 4-M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"1 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"},
+{m:"C400",y:2002,col:12,size:'12.1″',cpu:"Pentium III-M",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"1 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)"}
+];
+
+const GENLABEL={sdr:"SDRAM (PC133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
+// OS typically shipped/preinstalled, by release year
+const YEAROS={
+ 2002:"Windows 2000 / XP Pro",
+ 2003:"Windows XP Pro", 2004:"Windows XP Pro", 2005:"Windows XP Pro", 2006:"Windows XP Pro",
+ 2007:"Windows XP Pro or Vista Business",
+ 2009:"Vista Business (XP downgrade common); Win 7 late in cycle",
+ 2010:"Windows 7 Pro", 2011:"Windows 7 Pro",
+ 2012:"Windows 7 Pro (Win 8 late in cycle)",
+ 2013:"Windows 7 Pro or 8/8.1 Pro",
+ 2015:"Windows 7 / 8.1 Pro (Win 10 from mid-2015)",
+ 2016:"Windows 10 Pro (Win 7 downgrade offered)",
+ 2017:"Windows 10 Pro", 2018:"Windows 10 Pro", 2019:"Windows 10 Pro", 2020:"Windows 10 Pro",
+ 2021:"Windows 10 Pro (Win 11 from late 2021)",
+ 2022:"Windows 11 Pro", 2023:"Windows 11 Pro", 2024:"Windows 11 Pro", 2025:"Windows 11 Pro"
+};
+const YEARS=[...new Set(D.map(d=>d.y))].sort((a,b)=>b-a);
+const tbody=document.getElementById('tbody');
+const els=[];
+
+YEARS.forEach((yr,i)=>{
+  const tr=document.createElement('tr');
+  const td=document.createElement('td');
+  td.className='year'; td.textContent=yr; tr.appendChild(td);
+  [15,14,13,12].forEach(c=>{
+    const cell=document.createElement('td');
+    D.filter(d=>d.y===yr&&d.col===c).forEach(d=>{
+      const ch=document.createElement('div');
+      ch.className='chip '+d.gen+(d.sold?' soldered':'');
+      ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0]+' · '+d.tag+'</span>';
+      ch.onclick=()=>select(d,ch);
+      ch.dataset.model=d.m.toLowerCase();
+      ch.dataset.gen=d.gen; ch.dataset.w11=d.w11;
+      cell.appendChild(ch); els.push({el:ch,d});
+    });
+    tr.appendChild(cell);
+  });
+  tbody.appendChild(tr);
+  if(yr===2018){
+    const lr=document.createElement('tr');
+    lr.className='win11line';
+    lr.innerHTML='<td colspan="5">▲ Windows 11 eligible (Intel 8th gen+) · ▼ not eligible</td>';
+    tbody.appendChild(lr);
+  }
+});
+
+const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
+let selEl=null;
+function select(d,el){
+  if(selEl)selEl.classList.remove('sel');
+  selEl=el; el.classList.add('sel');
+  pC.innerHTML=
+    '<h2>Latitude '+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · '+
+    (d.w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
+    (d.sold?'<span class="badge b-sold">Soldered RAM</span>':'')+'</div>'+
+    '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
+    '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
+    '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
+    '<div class="row"><div class="k">Shipped OS (typical)</div><div class="v">'+(d.os||YEAROS[d.y]||'—')+'</div></div>'+
+    '<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
+    (d.note?'<div class="note">'+d.note+'</div>':'');
+  panel.classList.add('show');
+}
+document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if(selEl)selEl.classList.remove('sel');selEl=null;};
+
+// filters
+const genOff=new Set(); let w11Only=false;
+const q=document.getElementById('search');
+function apply(){
+  const s=q.value.trim().toLowerCase();
+  let firstHit=null;
+  els.forEach(({el,d})=>{
+    const genOk=!genOff.has(d.gen);
+    const wOk=!w11Only||d.w11;
+    const sOk=!s||el.dataset.model.includes(s);
+    const show=genOk&&wOk&&sOk;
+    el.classList.toggle('dim',!show);
+    el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
+    if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;
+  });
+  if(firstHit)firstHit.scrollIntoView({block:'center',behavior:'smooth'});
+}
+q.addEventListener('input',apply);
+document.querySelectorAll('.lg').forEach(lg=>{
+  lg.onclick=()=>{
+    const g=lg.dataset.g;
+    if(genOff.has(g)){genOff.delete(g);lg.classList.remove('off')}
+    else{genOff.add(g);lg.classList.add('off')}
+    apply();
+  };
+});
+const wt=document.getElementById('win11toggle');
+wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
+</script>
+</body>
+</html>
