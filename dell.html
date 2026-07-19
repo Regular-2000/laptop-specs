@@ -21,6 +21,8 @@
   .legend{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
   .lg.off{opacity:.3}
+  .stf{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px dashed var(--line);background:var(--panel);color:var(--dim)}
+  .stf.on{border-color:var(--accent);border-style:solid;color:var(--text)}
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
   .hint{color:var(--dim);font-size:12px}
@@ -104,7 +106,12 @@
     <div class="lg ddr4" data-g="ddr4">DDR4</div>
     <div class="lg ddr5" data-g="ddr5">DDR5</div>
     <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
-    <span class="hint">🔒 + dashed border = soldered RAM (not upgradeable) · click a model for details</span>
+    <span class="stf" data-f="bay25" title="Has a 2.5″ drive bay">2.5″ bay</span>
+      <span class="stf" data-f="msata" title="Has an mSATA slot">mSATA</span>
+      <span class="stf" data-f="m2sata" title="M.2 slot that accepts SATA drives">M.2 SATA</span>
+      <span class="stf" data-f="nvme" title="M.2 slot that accepts NVMe drives">NVMe</span>
+      <span class="stf" data-f="m2only" title="M.2 slot that ONLY takes SATA drives — no NVMe">SATA-only M.2</span>
+      <span class="hint">🔒 + dashed border = soldered RAM (not upgradeable) · click a model for details</span>
   </div>
   <div class="tabs" id="tabs"></div>
 </header>
@@ -285,6 +292,13 @@ document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if
 // filters
 const genOff=new Set(); let w11Only=false;
 const q=document.getElementById('search');
+// storage filter chips (driven by the structured st_* columns)
+const stTest={nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
+const stOn=new Set();
+function stPass(d){for(const k of stOn) if(!stTest[k](d)) return false; return true;}
+document.querySelectorAll('.stf').forEach(b=>{b.onclick=()=>{const k=b.dataset.f;
+  if(stOn.has(k)){stOn.delete(k);b.classList.remove('on')}else{stOn.add(k);b.classList.add('on')}
+  apply();};});
 function apply(){
   const s=q.value.trim().toLowerCase();
   let firstHit=null;
@@ -292,7 +306,7 @@ function apply(){
     const genOk=!genOff.has(d.gen);
     const wOk=!w11Only||d.w11;
     const sOk=!s||el.dataset.model.includes(s);
-    const show=genOk&&wOk&&sOk;
+    const show=genOk&&wOk&&sOk&&stPass(d);
     el.classList.toggle('dim',!show);
     el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
     if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;
