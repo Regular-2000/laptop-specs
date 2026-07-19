@@ -22,10 +22,11 @@
   .legend{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
   .lg.off{opacity:.3}
-  .stf{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px dashed var(--line);background:var(--panel);color:var(--dim)}
-  .stf.ide{border-color:#8d6e63;color:#d7b49a}
+  .stf{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px dashed #262e3e;background:#0c0f15;color:#525c72}
+  .stf:hover{color:var(--dim)}
+  .stf.ide{border-color:#4a3c33;color:#84705f}
   .stf.ide.on{background:#8d6e63;border-color:#8d6e63;color:#fff}
-  .stf.on{border-color:var(--accent);border-style:solid;color:var(--text)}
+  .stf.on{background:var(--accent);border-color:var(--accent);border-style:solid;color:#fff}
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
   .hint{color:var(--dim);font-size:12px}
@@ -304,7 +305,7 @@ const q=document.getElementById('search');
 // storage filter chips (driven by the structured st_* columns)
 const stTest={ide:d=>d.st_ide>0,nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
 const stOn=new Set();
-function stPass(d){for(const k of stOn) if(!stTest[k](d)) return false; return true;}
+function stPass(d){if(!stOn.size) return true; for(const k of stOn) if(stTest[k](d)) return true; return false;} // OR: match ANY selected type
 document.querySelectorAll('.stf').forEach(b=>{b.onclick=()=>{const k=b.dataset.f;
   if(stOn.has(k)){stOn.delete(k);b.classList.remove('on')}else{stOn.add(k);b.classList.add('on')}
   apply();};});
