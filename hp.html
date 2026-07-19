@@ -23,6 +23,8 @@
   .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
   .lg.off{opacity:.3}
   .stf{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px dashed var(--line);background:var(--panel);color:var(--dim)}
+  .stf.ide{border-color:#8d6e63;color:#d7b49a}
+  .stf.ide.on{background:#8d6e63;border-color:#8d6e63;color:#fff}
   .stf.on{border-color:var(--accent);border-style:solid;color:var(--text)}
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
@@ -109,7 +111,8 @@
       <div class="lg ddr4" data-g="ddr4">DDR4</div>
       <div class="lg ddr5" data-g="ddr5">DDR5</div>
       <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
-      <span class="stf" data-f="bay25" title="Has a 2.5″ drive bay">2.5″ bay</span>
+      <span class="stf" data-f="bay25" title="Has a 2.5″ SATA drive bay">2.5″ SATA</span>
+      <span class="stf ide" data-f="ide" title="Vintage 2.5″ IDE (PATA) drive — the retro era gets its own chip">🦖 2.5″ IDE</span>
       <span class="stf" data-f="msata" title="Has an mSATA slot">mSATA</span>
       <span class="stf" data-f="m2sata" title="M.2 slot that accepts SATA drives">M.2 SATA</span>
       <span class="stf" data-f="nvme" title="M.2 slot that accepts NVMe drives">NVMe</span>
@@ -299,7 +302,7 @@ document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if
 const genOff=new Set(); let w11Only=false;
 const q=document.getElementById('search');
 // storage filter chips (driven by the structured st_* columns)
-const stTest={nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
+const stTest={ide:d=>d.st_ide>0,nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
 const stOn=new Set();
 function stPass(d){for(const k of stOn) if(!stTest[k](d)) return false; return true;}
 document.querySelectorAll('.stf').forEach(b=>{b.onclick=()=>{const k=b.dataset.f;
