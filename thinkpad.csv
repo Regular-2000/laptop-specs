@@ -94,3 +94,22 @@ thinkpad,P,P1 Gen 4 / P15 Gen 2 / P17 Gen 2,2021,,15.6/17.3″,Intel 11th gen / 
 thinkpad,P,P1 Gen 5 / P16 Gen 1 / P16s / P15v,2022,,16″,Intel 12th gen HX / Xeon,ddr5,DDR5-4800 SODIMM (ECC on Xeon),2× SODIMM (P16: 4×),64 GB (P16 128),,1,NVMe,,,,1,,,,"2× M.2 slots, PCIe Gen 4",,
 thinkpad,P,P1 Gen 6 / P16 Gen 2 / P16s Gen 2,2023,,16″,Intel 13th gen HX / Ryzen,ddr5,DDR5-5600 SODIMM (P16: to 96 GB),2× SODIMM (P16: 4×),64 GB (P16 192),,1,NVMe,,,,1,,,,"2× M.2 slots, PCIe Gen 4",,
 thinkpad,P,P1 Gen 7 / P16s Gen 3 / P14s Gen 5,2024,,14/16″,Intel Core Ultra 200H / Ryzen,ddr5,P1 Gen 7: LPDDR5x-7467 (CAMM2); P16s: DDR5 SODIMM,P1: CAMM2 module; P16s: 2× SODIMM,64 GB (P1) / 96 GB (P16s),1,1,NVMe,,,,1,,,,"2× M.2 slots, PCIe Gen 4",,"P1 Gen 7 moves to CAMM2 memory (a single replaceable module, but not standard SO-DIMM). Marked soldered-style here since it's not user-friendly to swap."
+thinkpad,L,R30 / R31,2001,,13.7/14.1″,Pentium III-M,sdr,PC133 SDRAM SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,,First of the R series — IBM's value line beside the T2x.
+thinkpad,L,R32,2002,,14.1″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,,
+thinkpad,L,R40,2003,,14.1/15″,Pentium M (Banias) / Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB (official 1),,0,IDE,,,,,1,,,,,
+thinkpad,L,R50 / R51,2004,,14.1/15″,Pentium M (Banias/Dothan),ddr1,DDR-333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,Value sibling of the T4x generation — shares much of its platform.
+thinkpad,L,R52,2005,,14.1/15″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,SATA chipset but drives bridged to IDE,,First DDR2 R-series.
+thinkpad,L,R60 / R60e,2006,,14.1/15″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,"4 GB (~3.3 usable, 32-bit)",,0,SATA,1,,,,,,,,,
+thinkpad,L,R61,2007,,14.1/15.4″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,,
+thinkpad,L,R400 / R500,2008,,14.1/15.4″,Core 2 Duo (Penryn),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Value twins of the T400/T500 — last of the R line.
+thinkpad,L,SL410 / SL510,2009,,14/15.6″,Core 2 Duo (Penryn),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,,Transitional SL line between R and L series.
+thinkpad,P,W500,2008,,15.4″,Core 2 Duo (Penryn),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Workstation twin of the T500 (ATI FireGL) — start of the W line.
+thinkpad,P,W510,2010,,15.6″,Intel 1st gen Core i7 QM (Clarksfield),ddr3,DDR3-1333 SODIMM,4× SODIMM,32 GB (official 16),,0,SATA,1,,,,,,,,,
+thinkpad,P,W520,2011,,15.6″,Intel 2nd gen QM (Sandy Bridge),ddr3,DDR3-1333 SODIMM,4× SODIMM,32 GB,,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,,
+thinkpad,P,W530,2012,,15.6″,Intel 3rd gen QM (Ivy Bridge),ddr3,DDR3-1600 SODIMM,4× SODIMM,32 GB,,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,,
+thinkpad,P,W540 / W541,2014,,15.6″,Intel 4th gen HQ (Haswell),ddr3,DDR3L-1600 SODIMM,4× SODIMM,32 GB,,0,SATA/M.2,1,,1,,,,2242,M.2 is SATA-only — no NVMe,,4 slots + numpad chassis; predecessor of the P50.
+thinkpad,P,W550s,2015,,15.6″,Intel 5th gen U (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,,Thin/light workstation — bridge to the P50 era.
+thinkpad,Z,Z13 Gen 1,2022,,13.3″,AMD Ryzen PRO 6000 (Rembrandt),ddr5,LPDDR5-6400 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2242,short 2242 drives only,,Premium AMD line — haptic touchpad, recycled-material lids.
+thinkpad,Z,Z16 Gen 1,2022,,16″,AMD Ryzen PRO 6000 H (Rembrandt),ddr5,LPDDR5-6400 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,16″ sibling of the Z13.
+thinkpad,Z,Z13 Gen 2,2023,,13.3″,AMD Ryzen PRO 7040 (Phoenix),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB (std 32),1,1,NVMe,,,,1,,,2242,"PCIe Gen 4, short 2242 drives only",,
+thinkpad,Z,Z16 Gen 2,2023,,16″,AMD Ryzen PRO 7040 (Phoenix),ddr5,LPDDR5x soldered,"soldered, no slots",64 GB (std 32),1,1,NVMe,,,,1,,,,PCIe Gen 4,,

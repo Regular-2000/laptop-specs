@@ -167,9 +167,10 @@ const META={
 "T":{label:"T series",note:"Mainstream 14/15/16-inch workhorse line — the most common ThinkPads on resale sites. Names: older T4x/T6x/T4xx, then T480→T490, then T14/T15/T16 with generations."},
 "X":{label:"X series",note:"12–13-inch ultraportables (no optical drive). Older X2x/X3x/X4x → X220…X280 → X13 with generations. Light, popular for travel."},
 "X1":{label:"X1 Carbon",note:"14-inch premium flagship — carbon-fibre, light, always soldered RAM (spec it at purchase). One generation per year; Gen number = the year's model. (X1 Yoga / Nano / Extreme are cousins.)"},
-"L":{label:"L series",note:"Value-oriented business line — cheaper than T, usually still user-upgradeable RAM. L4xx/L5xx → L480/L580 → L14/L15/L16 generations."},
+"L":{label:"R / L series",note:"Value-oriented business line. Classic era: R30→R500 (2001-2008, the R50 generation shares the T4x platform) → transitional SL → modern L4xx/L5xx → L480/L580 → L14/L15/L16. Usually still user-upgradeable RAM."},
 "E":{label:"E series",note:"Entry-level / SMB line (formerly ThinkPad Edge). Cheapest ThinkPads — plastic-heavier, but usually 2 RAM slots. E4xx/E5xx → E480/E580 → E14/E15/E16 generations. AMD variants had 5-suffix (E485)."},
-"P":{label:"P series",note:"Mobile workstations — highest RAM/storage, dedicated pro GPUs, heavier. P5x/P7x → P1 (thin) + P15/P16/P17. Often 2 SO-DIMM + 2 SSD slots; newest thin models use soldered/CAMM2."}
+"P":{label:"W / P series",note:"Mobile workstations — highest RAM/storage, dedicated pro GPUs, heavier. W500→W541 (the 4-slot W510-W530 era is a used-market RAM champion) → P5x/P7x → P1 (thin) + P15/P16/P17. Often 2 SO-DIMM + 2 SSD slots; newest thin models use soldered/CAMM2."},
+"Z":{label:"Z13 / Z16",note:"Modern premium AMD line (2022+) — bold design, haptic touchpad, always-soldered LPDDR5. Z13 takes only short M.2 2242 drives; Z16 takes standard 2280."}
 };
 const SERIES={};
 for(const k of Object.keys(META)) SERIES[k]={...META[k],models:ALL.filter(d=>d.series===k)};
@@ -184,14 +185,15 @@ const theadEl=document.getElementById('thead');
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let curSeries="T", selEl=null, allChips=[];
 // tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
-const order=["E","L","T","X","X1","P"];
-const TIER={E:"$",L:"$$",T:"$$$",X:"$$$",X1:"$$$$",P:"$$$$$"};
+const order=["E","L","T","X","X1","Z","P"];
+const TIER={E:"$",L:"$$",T:"$$$",X:"$$$",X1:"$$$$",Z:"$$$$",P:"$$$$$"};
 const POS ={E:"Entry / budget line — cheapest, plastic-heavier",
-            L:"Value line — cheaper than T, still user-upgradeable",
+            L:"Value line (incl. classic R series) — still user-upgradeable",
             T:"Mainstream workhorse — the default business ThinkPad",
             X:"Ultraportable — small & light, travel-focused",
             X1:"Premium flagship — thin, light, executive (soldered RAM)",
-            P:"Mobile workstation — most powerful & priciest, pro GPUs"};
+            Z:"Modern AMD premium — sleek design, soldered RAM",
+            P:"Mobile workstation (incl. classic W series) — most powerful, pro GPUs"};
 
 order.forEach(k=>{
   const b=document.createElement('button');
