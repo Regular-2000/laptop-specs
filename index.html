@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laptop Spec Reference — pick a brand</title>
 <style>
-  :root{--bg:#12151c;--panel:#1b1f2a;--text:#e8ebf2;--dim:#9aa3b5;--line:#333b4d;--dell:#4ea1ff;--tp:#e2352b}
+  :root{--bg:#12151c;--panel:#1b1f2a;--text:#e8ebf2;--dim:#9aa3b5;--line:#333b4d;--dell:#4ea1ff;--tp:#e2352b;--hp:#0096d6}
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
   body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;padding:24px;text-align:center}
@@ -16,8 +16,9 @@
   a.card:hover{transform:translateY(-3px)}
   a.card.dell:hover{border-color:var(--dell)}
   a.card.tp:hover{border-color:var(--tp)}
+  a.card.hp:hover{border-color:var(--hp)}
   .card .b{font-size:19px;font-weight:700;margin-bottom:4px}
-  .card.dell .b{color:var(--dell)} .card.tp .b{color:var(--tp)}
+  .card.dell .b{color:var(--dell)} .card.tp .b{color:var(--tp)} .card.hp .b{color:var(--hp)}
   .card .d{color:var(--dim);font-size:13px}
   .card .cnt{margin-top:10px;font-size:12px;color:var(--dim)}
   footer{margin-top:30px;color:var(--dim);font-size:12px;max-width:460px}
@@ -37,7 +38,12 @@
       <div class="d">Series tabs: T · X · X1 Carbon · L · E · P</div>
       <div class="cnt">95 models · IBM era → 2025</div>
     </a>
+    <a class="card hp" href="hp.html">
+      <div class="b">HP Business</div>
+      <div class="d">ProBook · EliteBook 700/800/1000 · Dragonfly · ZBook</div>
+      <div class="cnt">68 model groups · 2008 → 2024</div>
+    </a>
   </div>
-  <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access. HP EliteBook/ProBook coming next.</footer>
+  <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access.</footer>
 </body>
 </html>

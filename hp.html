@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HP Business Laptop Timeline — RAM & Storage Reference</title>
+<style>
+  :root{
+    --bg:#12151c; --panel:#1b1f2a; --panel2:#232937; --text:#e8ebf2; --dim:#9aa3b5;
+    --line:#333b4d; --accent:#0096d6; --red:#ff5c5c;
+    --sdr:#8d6e63; --ddr1:#7d8799; --ddr2:#b07aa1; --ddr3:#4e79a7; --ddr4:#59a14f; --ddr5:#f28e2b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  body{display:flex;flex-direction:column;overflow:hidden}
+  header{flex:none;padding:10px 16px 0;background:var(--bg);z-index:20;border-bottom:1px solid var(--line)}
+  .htop{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  header h1{font-size:16px;margin:0;white-space:nowrap}
+  header h1 small{color:var(--dim);font-weight:normal}
+  #search{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 12px;font-size:14px;width:190px}
+  #search:focus{outline:none;border-color:var(--accent)}
+  .legend{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
+  .lg.off{opacity:.3}
+  .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
+  .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
+  .hint{color:var(--dim);font-size:12px}
+  #win11toggle{cursor:pointer;user-select:none;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--panel)}
+  #win11toggle.on{border-color:var(--accent);color:#ff8a84}
+  /* series tabs */
+  .tabs{display:flex;gap:2px;margin-top:8px;overflow-x:auto}
+  .tab{cursor:pointer;user-select:none;padding:8px 14px;font-size:13px;font-weight:600;color:var(--dim);border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent)}
+  .tab small{font-weight:normal;opacity:.6}
+  .tab .tier{color:#e5b567;font-weight:800;letter-spacing:-1.5px;margin-right:5px;font-size:12px}
+  .tab.all{margin-left:8px;padding-left:16px;border-left:1px solid var(--line);color:#9db4ff}
+  .tab.all.active{color:#c3d2ff;border-bottom-color:#7d97ff}
+  #grid.allmode{min-width:1120px}
+  #grid.allmode th{font-size:11px}
+  .laddercap{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;display:flex;align-items:center;gap:6px}
+  .laddercap .bar{flex:0 0 60px;height:3px;border-radius:2px;background:linear-gradient(90deg,#5a6b4e,#e5b567)}
+  .wrap{flex:1;min-height:0;display:flex;gap:0}
+  main{flex:1;overflow:auto;padding:0 12px 60px}
+  .seriesnote{color:var(--dim);font-size:12px;padding:8px 4px 2px;font-style:italic}
+  table{border-collapse:collapse;width:100%;min-width:520px;table-layout:fixed}
+  col.cy{width:56px}
+  th{position:sticky;top:0;background:var(--bg);z-index:10;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding:8px 4px;border-bottom:1px solid var(--line);text-align:left}
+  td{border-bottom:1px solid #1e2430;padding:4px;vertical-align:top}
+  td.year{font-weight:bold;font-size:13px;color:var(--dim);white-space:nowrap;width:52px;padding-top:9px}
+  tr.win11line td{border-bottom:2px solid var(--red);padding:2px 6px;font-size:11px;color:var(--red);text-align:left}
+  .chip{display:inline-flex;flex-direction:column;align-items:flex-start;margin:2px;padding:4px 8px;border-radius:7px;cursor:pointer;border:2px solid transparent;min-width:70px;transition:opacity .15s}
+  .chip b{font-size:13px;line-height:1.1}
+  .chip span{font-size:10px;opacity:.85;line-height:1.2;margin-top:1px}
+  .chip.sdr{background:var(--sdr)} .chip.ddr1{background:var(--ddr1)} .chip.ddr2{background:var(--ddr2)}
+  .chip.ddr3{background:var(--ddr3)} .chip.ddr4{background:var(--ddr4)} .chip.ddr5{background:var(--ddr5);color:#1b1b1b}
+  .chip.soldered{border-style:dashed;border-color:rgba(255,255,255,.55)}
+  .chip.ddr5.soldered{border-color:rgba(0,0,0,.45)}
+  .chip.dim{opacity:.14}
+  .chip.hit{outline:2px solid #fff;outline-offset:1px}
+  .chip.sel{border-color:#fff;border-style:solid;box-shadow:0 0 0 2px var(--accent)}
+  #panel{width:320px;flex:0 0 320px;border-left:1px solid var(--line);background:var(--panel);padding:14px;overflow-y:auto;display:none}
+  #panel.show{display:block}
+  #panel h2{margin:0 0 2px;font-size:19px}
+  #panel .sub{color:var(--dim);font-size:12px;margin-bottom:10px}
+  .row{margin:8px 0;padding:8px 10px;background:var(--panel2);border-radius:8px}
+  .row .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+  .row .v{font-size:13.5px;margin-top:2px}
+  .badge{display:inline-block;font-size:11px;border-radius:5px;padding:2px 7px;margin-right:5px;margin-bottom:3px}
+  .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
+  .b-sold{background:#4a3b1e;color:#ffd27e}
+  .note{font-size:12px;color:#ffd27e;margin-top:8px}
+  .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
+  .photo img{display:block;width:100%;height:150px;object-fit:contain;background:#fff}
+  .photo .ph-fallback{display:none;color:var(--accent);font-size:13px;padding:14px}
+  .photo.noimg{background:var(--panel2)}
+  .photo.noimg img{display:none}
+  .photo.noimg .ph-fallback{display:block}
+  .phcap{color:var(--dim);font-size:11px;text-align:center;margin:-4px 0 8px}
+  .linklabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin-bottom:4px}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  .links .ext:hover{border-color:var(--accent)}
+  #closeP{float:right;cursor:pointer;color:var(--dim);font-size:18px;line-height:1;padding:2px 6px}
+  footer{margin-top:24px;padding:12px 4px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line)}
+  footer a{color:var(--accent)}
+  @media (max-width:900px){
+    #panel{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;flex:none;max-height:58vh;border-left:none;border-top:2px solid var(--accent);border-radius:14px 14px 0 0;z-index:40}
+    header h1{font-size:14px}
+    #search{width:130px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="htop">
+    <h1>HP <small>· EliteBook / ProBook / ZBook · RAM &amp; storage by year</small></h1>
+    <input id="search" type="search" placeholder="Type model, e.g. 840 G5" autocomplete="off">
+    <div class="legend" id="legend">
+      <div class="lg sdr" data-g="sdr">SDRAM</div>
+      <div class="lg ddr1" data-g="ddr1">DDR</div>
+      <div class="lg ddr2" data-g="ddr2">DDR2</div>
+      <div class="lg ddr3" data-g="ddr3">DDR3</div>
+      <div class="lg ddr4" data-g="ddr4">DDR4</div>
+      <div class="lg ddr5" data-g="ddr5">DDR5</div>
+      <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
+      <span class="hint">🔒 dashed = soldered RAM · click for details</span>
+    </div>
+  </div>
+  <div class="laddercap">budget <span class="bar"></span> premium <span style="text-transform:none;letter-spacing:0;margin-left:6px;">· $ = rough price · hover a tab for who it's for</span></div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<div class="wrap">
+<main>
+  <div class="seriesnote" id="seriesnote"></div>
+  <table id="grid">
+    <colgroup id="cols"><col class="cy"><col></colgroup>
+    <thead id="thead"><tr><th>Year</th><th>Models</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <footer>
+    Search across ebay/FB/Mercari listings. Specs compiled from HP QuickSpecs &amp; support.hp.com product specifications. Years are approximate first-release years (G-number = generation, e.g. 840 <b>G5</b>). "Max RAM" is the practical maximum the hardware accepts, which sometimes exceeds HP's official spec. Soldered = memory is not upgradeable. Verify exact config by serial number on support.hp.com.
+  </footer>
+</main>
+
+<aside id="panel">
+  <div id="closeP" title="close">✕</div>
+  <div id="pContent"></div>
+</aside>
+</div>
+
+<script type="module">
+// ===== Data lives in hp.csv (universal schema shared with dell.csv / thinkpad.csv) =====
+// Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
+import {loadCSV} from './specdata.js';
+const ALL=await loadCSV('hp.csv');
+// Series metadata (presentation only) — the models come from the CSV.
+const META={
+"PB":{label:"ProBook 400",note:"Budget/SMB business line — plastic-heavier but almost always 2 RAM slots. 430 (13.3″) / 440 (14″) / 450 (15.6″) with G-numbers; AMD twins are 445/455. From G8 (2021) the 2.5″ bay is gone."},
+"E7":{label:"EliteBook 700 (AMD)",note:"AMD-powered EliteBooks — same chassis as the 800 series but cheaper. 745/755 G2-G6, then 835/845/865 with Ryzen PRO. Often the best price/performance on the used market."},
+"E8":{label:"EliteBook 800",note:"Mainstream premium business line — HP's answer to Latitude 7000 / ThinkPad T. Legacy p-series (8440p→8570p) → 820/840/850 G1… → 830/840/860 G11. Usually 2 SODIMM slots, metal chassis."},
+"U":{label:"EliteBook 1000 / Dragonfly",note:"Executive ultra-premium: Folio, 1040, x360 1030, Elite Dragonfly. Thin and light — RAM is ALWAYS soldered, so the config it shipped with is the config it dies with. Check RAM size before buying."},
+"Z":{label:"ZBook",note:"Mobile workstations: 15/17 → Fury (high-end, 4 RAM slots, up to 128 GB), Power (budget), Studio (thin), Firefly (ultralight). Pro GPUs, ECC RAM options, multiple SSD slots on big chassis."}
+};
+const SERIES={};
+for(const k of Object.keys(META)) SERIES[k]={...META[k],models:ALL.filter(d=>d.series===k)};
+
+// ---- build ----
+const tabsEl=document.getElementById('tabs');
+const tbody=document.getElementById('tbody');
+const noteEl=document.getElementById('seriesnote');
+const grid=document.getElementById('grid');
+const colsEl=document.getElementById('cols');
+const theadEl=document.getElementById('thead');
+const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
+let curSeries="E8", selEl=null, allChips=[];
+// tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
+const order=["PB","E7","E8","U","Z"];
+const TIER={PB:"$",E7:"$",E8:"$$",U:"$$",Z:"$$$"};
+const POS ={PB:"Budget / SMB line — cheapest, still upgradeable",
+            E7:"AMD EliteBook — 800-series chassis, lower price",
+            E8:"Mainstream premium business — the default used EliteBook",
+            U:"Executive ultrabooks & 2-in-1s — always soldered RAM",
+            Z:"Mobile workstations — most power, pro GPUs, ECC options"};
+
+order.forEach(k=>{
+  const b=document.createElement('button');
+  b.className='tab'+(k===curSeries?' active':'');
+  b.title=POS[k];
+  b.innerHTML='<span class="tier">'+TIER[k]+'</span>'+SERIES[k].label+' <small>('+SERIES[k].models.length+')</small>';
+  b.onclick=()=>{curSeries=k;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));b.classList.add('active');render();};
+  tabsEl.appendChild(b);
+});
+// "All series" combined-matrix view (wide screens)
+const allTab=document.createElement('button');
+allTab.className='tab all'+(curSeries==="ALL"?' active':'');
+allTab.title="Show every series at once, side by side (best on a wide monitor)";
+allTab.innerHTML='▦ All series';
+allTab.onclick=()=>{curSeries="ALL";document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));allTab.classList.add('active');render();};
+tabsEl.appendChild(allTab);
+
+function makeChip(d,sk){
+  const ch=document.createElement('div');
+  ch.className='chip '+d.gen+(d.sold?' soldered':'');
+  ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
+  ch.onclick=()=>select(d,ch,sk);
+  ch.dataset.model=d.m.toLowerCase();
+  ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
+  allChips.push({el:ch,d});
+  return ch;
+}
+function win11Row(span){
+  const lr=document.createElement('tr'); lr.className='win11line';
+  lr.innerHTML='<td colspan="'+span+'">▲ generally Windows 11 eligible (Intel 8th gen+ / Ryzen 2000+) · ▼ below = not eligible</td>';
+  return lr;
+}
+
+function render(){
+  tbody.innerHTML=''; allChips=[];
+  if(selEl){panel.classList.remove('show');selEl=null;}
+
+  if(curSeries==="ALL"){
+    grid.classList.add('allmode');
+    noteEl.textContent="All series side by side, budget → premium (best on a wide monitor). Columns = series, rows = year. Click any model for details.";
+    colsEl.innerHTML='<col class="cy">'+order.map(()=>'<col>').join('');
+    theadEl.innerHTML='<tr><th>Year</th>'+order.map(k=>'<th><span class="tier">'+TIER[k]+'</span> '+SERIES[k].label+'</th>').join('')+'</tr>';
+    const allYears=[...new Set(order.flatMap(k=>SERIES[k].models.map(m=>m.y)))].sort((a,b)=>b-a);
+    allYears.forEach(yr=>{
+      const tr=document.createElement('tr');
+      const yc=document.createElement('td'); yc.className='year'; yc.textContent=yr; tr.appendChild(yc);
+      order.forEach(k=>{
+        const td=document.createElement('td');
+        SERIES[k].models.filter(d=>d.y===yr).forEach(d=>td.appendChild(makeChip(d,k)));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+      if(yr===2018) tbody.appendChild(win11Row(order.length+1));
+    });
+    apply(); return;
+  }
+
+  grid.classList.remove('allmode');
+  colsEl.innerHTML='<col class="cy"><col>';
+  theadEl.innerHTML='<tr><th>Year</th><th>Models</th></tr>';
+  const S=SERIES[curSeries];
+  noteEl.textContent=S.note;
+  const years=[...new Set(S.models.map(d=>d.y))].sort((a,b)=>b-a);
+  years.forEach(yr=>{
+    const tr=document.createElement('tr');
+    const td=document.createElement('td'); td.className='year'; td.textContent=yr; tr.appendChild(td);
+    const cell=document.createElement('td');
+    S.models.filter(d=>d.y===yr).forEach(d=>cell.appendChild(makeChip(d,curSeries)));
+    tr.appendChild(cell); tbody.appendChild(tr);
+    if(yr===2018) tbody.appendChild(win11Row(2));
+  });
+  apply();
+}
+
+// HP spec pages live on support.hp.com with non-derivable slugs, so use DuckDuckGo's
+// "I'm feeling lucky" (\ bang) to jump straight to the official specifications page.
+function tpProduct(nm){
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ support.hp.com HP '+nm+' specifications');
+}
+
+function select(d,el,sk){
+  if(selEl)selEl.classList.remove('sel');
+  selEl=el; el.classList.add('sel');
+  const w11=d.w11===0?0:1;
+  const models=d.m.split(' / ').map(s=>s.trim()); // a chip may group several models
+  const nm=models[0];
+  const q=encodeURIComponent('HP '+nm+' laptop');
+  const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
+  const imgSearch='https://www.bing.com/images/search?q='+q;
+  // one direct PSREF product-page link per model in the chip
+  const linkHtml=models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
+  pC.innerHTML=
+    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · HP '+SERIES[sk].label+'</div>'+
+    '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
+    (d.sold?'<span class="badge b-sold">Soldered / non-standard RAM</span>':'')+'</div>'+
+    '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
+      '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
+      '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
+    '<div class="phcap">tap image for more photos ↗</div>'+
+    '<div class="linklabel">Official HP spec page'+(models.length>1?'s':'')+':</div>'+
+    '<div class="links">'+linkHtml+'</div>'+
+    '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
+    '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
+    '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
+    '<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
+    '<div class="row"><div class="k">Shipped OS (typical)</div><div class="v">'+(d.os||YEAROS[d.y]||'—')+'</div></div>'+
+    (d.note?'<div class="note">'+d.note+'</div>':'');
+  panel.classList.add('show');
+}
+document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if(selEl)selEl.classList.remove('sel');selEl=null;};
+
+// filters
+const genOff=new Set(); let w11Only=false;
+const q=document.getElementById('search');
+function apply(){
+  const s=q.value.trim().toLowerCase();
+  let firstHit=null;
+  allChips.forEach(({el,d})=>{
+    const genOk=!genOff.has(d.gen);
+    const wOk=!w11Only||(d.w11!==0);
+    const sOk=!s||el.dataset.model.includes(s);
+    const show=genOk&&wOk&&sOk;
+    el.classList.toggle('dim',!show);
+    el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
+    if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;
+  });
+  if(firstHit)firstHit.scrollIntoView({block:'center',behavior:'smooth'});
+}
+q.addEventListener('input',apply);
+document.querySelectorAll('.lg').forEach(lg=>{
+  lg.onclick=()=>{const g=lg.dataset.g;
+    if(genOff.has(g)){genOff.delete(g);lg.classList.remove('off')}else{genOff.add(g);lg.classList.add('off')}
+    apply();};
+});
+const wt=document.getElementById('win11toggle');
+wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
+
+render();
+</script>
+</body>
+</html>
