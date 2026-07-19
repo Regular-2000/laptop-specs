@@ -242,6 +242,7 @@ const D=[
 {m:"9450",y:2024,col:14,size:'14″',cpu:"Intel Core Ultra (Meteor Lake)",gen:"ddr5",ram:"LPDDR5x-7467 soldered",slots:"soldered, no slots",max:"64 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2230 PCIe NVMe (Gen 4)",note:"Flagship 9450 2-in-1; soldered LPDDR5x."},
 {m:"9510",y:2020,col:15,size:'15.6″',cpu:"Intel 10th gen (Comet Lake)",gen:"ddr3",ram:"LPDDR3-2133 soldered",slots:"soldered, no slots",max:"16 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship 15″ (9000); soldered. Also a 9510 2-in-1."},
 {m:"9520",y:2021,col:15,size:'15″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"LPDDR4x soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"Flagship 15″ (9000); soldered. Also a 9520 2-in-1."},
+{m:"9330",y:2022,col:13,size:'13.3″',cpu:"Intel 12th gen (Alder Lake)",gen:"ddr5",ram:"LPDDR5-5200 soldered",slots:"soldered, no slots",max:"32 GB",sold:1,w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe (up to 1 TB)",note:"Flagship 13.3″ 2-in-1 (9000); QHD+ touch, thinnest Latitude ever made."},
 
 // ===== 3000 series — entry-level / education (from Haswell era) =====
 {m:"3480",y:2016,col:14,size:'14″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA + M.2 2280",note:"Budget / education line (3000)."},
@@ -270,7 +271,31 @@ const D=[
 {m:"5430 Rugged",y:2022,col:14,size:'14″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged 14″. Distinct from the 5430 business laptop."},
 {m:"7414 Rugged Ext.",y:2016,col:14,size:'14″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:0,tag:"SATA",stor:"Removable 2.5″ SATA",note:"Rugged Extreme 14″ (MIL-STD-810G, IP-65)."},
 {m:"7424 Rugged Ext.",y:2019,col:14,size:'14″',cpu:"Intel 8th gen (Whiskey Lake)",gen:"ddr4",ram:"DDR4 SODIMM",slots:"2× SODIMM",max:"64 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged Extreme 14″."},
-{m:"7330 Rugged Ext.",y:2022,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged Extreme 13.3″. Distinct from the 7330 premium laptop."}
+{m:"7330 Rugged Ext.",y:2022,col:13,size:'13.3″',cpu:"Intel 11th gen (Tiger Lake)",gen:"ddr4",ram:"DDR4-3200 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"Removable M.2 NVMe",note:"Rugged Extreme 13.3″. Distinct from the 7330 premium laptop."},
+
+// ===== E5000/5000 series — mainstream mid-tier (parallel to E6000/6000) =====
+{m:"E5400",y:2008,col:14,size:'14.1″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6400."},
+{m:"E5500",y:2008,col:15,size:'15.4″',cpu:"Core 2 Duo (Penryn)",gen:"ddr2",ram:"DDR2-800 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6500."},
+{m:"E5410",y:2010,col:14,size:'14.1″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6410."},
+{m:"E5510",y:2010,col:15,size:'15.6″',cpu:"Intel 1st gen Core i (Arrandale)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"8 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6510."},
+{m:"E5420",y:2011,col:14,size:'14″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6420 — one of the most common used Latitudes on the market."},
+{m:"E5520",y:2011,col:15,size:'15.6″',cpu:"Intel 2nd gen (Sandy Bridge)",gen:"ddr3",ram:"DDR3-1333 SODIMM",slots:"2× SODIMM",max:"16 GB (official 8)",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6520."},
+{m:"E5430",y:2012,col:14,size:'14″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6430 — very common on the used market."},
+{m:"E5530",y:2012,col:15,size:'15.6″',cpu:"Intel 3rd gen (Ivy Bridge)",gen:"ddr3",ram:"DDR3-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Value counterpart to the E6530."},
+{m:"E5440",y:2013,col:14,size:'14″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 SATA",note:"Value counterpart to the E6440."},
+{m:"E5540",y:2013,col:15,size:'15.6″',cpu:"Intel 4th gen (Haswell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA or M.2 SATA",note:"Value counterpart to the E6540."},
+{m:"E5250",y:2015,col:12,size:'12.5″',cpu:"Intel 5th gen (Broadwell)",gen:"ddr3",ram:"DDR3L-1600 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA",stor:"2.5″ SATA (7 mm) or M.2 SATA"},
+{m:"E5270",y:2016,col:12,size:'12.5″',cpu:"Intel 6th gen (Skylake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"2.5″ SATA or M.2 2280 SATA/NVMe"},
+{m:"5280",y:2017,col:12,size:'12.5″',cpu:"Intel 7th gen (Kaby Lake)",gen:"ddr4",ram:"DDR4-2133 SODIMM",slots:"2× SODIMM",max:"16 GB",w11:0,tag:"SATA/NVMe",stor:"M.2 2280 SATA/NVMe",note:"A separate '5285' 2-in-1 detachable (distinct model number) also exists."},
+{m:"5290",y:2018,col:12,size:'12.5″',cpu:"Intel 8th gen (Kaby Lake R)",gen:"ddr4",ram:"DDR4-2400 SODIMM",slots:"2× SODIMM",max:"32 GB",w11:1,tag:"NVMe",stor:"M.2 2280 PCIe NVMe",note:"A separate '5290 2-in-1' detachable (distinct model) also exists."},
+
+// ===== Legacy AMD & early C/D-series (2001–2007) =====
+{m:"D531",y:2007,col:15,size:'15.4″',cpu:"AMD Turion 64 X2 / Sempron",gen:"ddr2",ram:"DDR2-533/667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"AMD counterpart to the D620/D820-era Latitudes; also offered in a 14.1″ configuration."},
+{m:"D631",y:2007,col:14,size:'14.1″',cpu:"AMD Turion 64 X2",gen:"ddr2",ram:"DDR2-667 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"AMD counterpart to the D630."},
+{m:"D530",y:2007,col:14,size:'15″',cpu:"Core 2 Duo (Merom, T7250)",gen:"ddr2",ram:"DDR2-533 SODIMM",slots:"2× SODIMM",max:"4 GB",w11:0,tag:"SATA",stor:"2.5″ SATA",note:"Last 4:3-display Latitude; direct successor to the D520."},
+{m:"C610",y:2001,col:14,size:'14.1″',cpu:"Pentium III-M (Tualatin)",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"512 MB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"Successor to the C600; predates the D-series naming."},
+{m:"C810",y:2001,col:15,size:'15″',cpu:"Pentium III-M (Tualatin)",gen:"sdr",ram:"PC133 SDRAM SODIMM",slots:"2× SODIMM",max:"512 MB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"High-end desktop-replacement 'three-spindle' design; successor to the C800."},
+{m:"C840",y:2002,col:15,size:'15″',cpu:"Pentium 4-M",gen:"ddr1",ram:"DDR-266 SODIMM",slots:"2× SODIMM",max:"2 GB",w11:0,tag:"IDE",stor:"2.5″ IDE (PATA)",note:"Successor to the C810; last fixed-optical-drive 'three-spindle' Latitude."}
 ];
 
 const GENLABEL={sdr:"SDRAM (PC133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
