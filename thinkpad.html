@@ -27,6 +27,8 @@
   .stf.ide{border-color:#4a3c33;color:#84705f}
   .stf.ide.on{background:#8d6e63;border-color:#8d6e63;color:#fff}
   .stf.on{background:var(--accent);border-color:var(--accent);border-style:solid;color:#fff}
+  .stf.stall{border-style:solid;border-color:var(--line);background:var(--panel);color:var(--dim)}
+  .stf.stall:hover{color:var(--text);border-color:var(--accent)}
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
   .hint{color:var(--dim);font-size:12px}
@@ -118,6 +120,7 @@
       <span class="stf" data-f="m2sata" title="M.2 slot that accepts SATA drives">M.2 SATA</span>
       <span class="stf" data-f="nvme" title="M.2 slot that accepts NVMe drives">NVMe</span>
       <span class="stf" data-f="m2only" title="M.2 slot that ONLY takes SATA drives — no NVMe">SATA-only M.2</span>
+      <span class="stf stall" id="stall" title="Toggle all storage filters at once">✕ clear</span>
       <span class="hint">🔒 dashed = soldered RAM · click for details</span>
     </div>
   </div>
@@ -312,11 +315,29 @@ const genOff=new Set(); let w11Only=false;
 const q=document.getElementById('search');
 // storage filter chips (driven by the structured st_* columns)
 const stTest={ide:d=>d.st_ide>0,nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
-const stOn=new Set();
-function stPass(d){if(!stOn.size) return true; for(const k of stOn) if(stTest[k](d)) return true; return false;} // OR: match ANY selected type
-document.querySelectorAll('.stf').forEach(b=>{b.onclick=()=>{const k=b.dataset.f;
-  if(stOn.has(k)){stOn.delete(k);b.classList.remove('on')}else{stOn.add(k);b.classList.add('on')}
-  apply();};});
+const STKEYS=Object.keys(stTest);
+const stOn=new Set(STKEYS);            // all storage types shown by default (chips start lit)
+function stPass(d){
+  if(stOn.size===STKEYS.length) return true;   // nothing filtered out (incl. odd 1.8″ drives)
+  if(!stOn.size) return false;                 // everything cleared
+  for(const k of stOn) if(stTest[k](d)) return true;  // OR: match ANY lit chip
+  return false;
+}
+const stAllBtn=document.getElementById('stall');
+function syncStAll(){ stAllBtn.textContent = stOn.size ? '✕ clear' : '✓ show all'; }
+document.querySelectorAll('.stf[data-f]').forEach(b=>{
+  b.classList.add('on');
+  b.onclick=()=>{const k=b.dataset.f;
+    if(stOn.has(k)){stOn.delete(k);b.classList.remove('on')}else{stOn.add(k);b.classList.add('on')}
+    syncStAll(); apply();};
+});
+stAllBtn.onclick=()=>{
+  const on=!stOn.size;
+  stOn.clear(); if(on) STKEYS.forEach(k=>stOn.add(k));
+  document.querySelectorAll('.stf[data-f]').forEach(b=>b.classList.toggle('on',on));
+  syncStAll(); apply();
+};
+syncStAll();
 function apply(){
   const s=q.value.trim().toLowerCase();
   let firstHit=null;
