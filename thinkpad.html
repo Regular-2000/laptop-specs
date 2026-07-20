@@ -173,7 +173,7 @@ const META={
 "L":{label:"R / L series",note:"Value-oriented business line. Classic era: R30→R500 (2001-2008, the R50 generation shares the T4x platform) → transitional SL → modern L4xx/L5xx → L480/L580 → L14/L15/L16. Usually still user-upgradeable RAM."},
 "E":{label:"E series",note:"Entry-level / SMB line (formerly ThinkPad Edge). Cheapest ThinkPads — plastic-heavier, but usually 2 RAM slots. E4xx/E5xx → E480/E580 → E14/E15/E16 generations. AMD variants had 5-suffix (E485)."},
 "P":{label:"W / P series",note:"Mobile workstations — highest RAM/storage, dedicated pro GPUs, heavier. W500→W541 (the 4-slot W510-W530 era is a used-market RAM champion) → P5x/P7x → P1 (thin) + P15/P16/P17. Often 2 SO-DIMM + 2 SSD slots; newest thin models use soldered/CAMM2."},
-"Z":{label:"Z13 / Z16",note:"Modern premium AMD line (2022+) — bold design, haptic touchpad, always-soldered LPDDR5. Z13 takes only short M.2 2242 drives; Z16 takes standard 2280."}
+"Z":{label:"Z",note:"Two eras: the 2005–06 widescreen titanium Z60/Z61 (first ThinkPads under Lenovo), then a 16-year gap, then the modern premium AMD Z13/Z16 (2022+) — bold design, haptic touchpad, always-soldered LPDDR5. Z13 takes only short M.2 2242 drives; Z16 takes standard 2280."}
 };
 const SERIES={};
 for(const k of Object.keys(META)) SERIES[k]={...META[k],models:ALL.filter(d=>d.series===k)};
