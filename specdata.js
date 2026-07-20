@@ -82,6 +82,8 @@ export async function loadCSV(url){
     o.st_m2len=get(r,'st_m2len');
     const sn=get(r,'st_note'); if(sn) o.st_note=sn;
     o.stor=genStor(o);
+    const pr=get(r,'price'); if(pr) o.price=pr;
+    const pn=get(r,'price_note'); if(pn) o.price_note=pn;
     const os=get(r,'os'); if(os) o.os=os;
     const note=get(r,'note'); if(note) o.note=note;
     return o;

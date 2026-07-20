@@ -1,147 +1,147 @@
-brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,st_25sata,st_msata,st_m2sata,st_m2nvme,st_ide,st_emmc,st_m2len,st_note,os,note
-dell,,Pro Plus 16,2025,15,16″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2230 or 2280 depending on config,,2025 rename: 'Dell Pro 16 Plus' (PB16250) replaces Latitude 5xxx/7xxx naming.
-dell,,Pro Plus 14,2025,14,14″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2230 or 2280 depending on config,,2025 rename: 'Dell Pro 14 Plus' (PB14250). Copilot+ PC.
-dell,,Pro Plus 13,2025,13,13″,Intel Core Ultra 200V (Lunar Lake),ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,,2025 rename: 'Dell Pro 13 Plus'.
-dell,,5550,2024,15,15.6″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,PCIe Gen 4,,⚠ Name reused — a 2015 Latitude E5550 also exists (sold as '5550'). Check CPU gen in the listing.
-dell,,5450,2024,14,14″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,PCIe Gen 4,,⚠ Name reused — 2015 Latitude E5450 also sold as '5450'. Check CPU gen.
-dell,,5350,2024,13,13.3″,Intel Core Ultra 5/7 (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,,Also sold as 2-in-1.
-dell,,7350,2024,13,13.3″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,,Premium (7000) ultralight 13.3″. Also exists as 7350 Detachable.
-dell,,5540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2230 + 2280 slots,,
-dell,,5440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,2280 on some configs,,
-dell,,5340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,,Also sold as 2-in-1.
-dell,,5530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,
-dell,,5430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,A separate 'Latitude 5430 Rugged' also exists — different machine.
-dell,,5330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,,Also sold as 2-in-1.
-dell,,7230,2022,12,12″,Intel 12th gen U (Alder Lake),ddr5,LPDDR5-5200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,removable,,"Rugged Extreme Tablet — IP-65, MIL-STD-810H."
-dell,,5520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,
-dell,,5420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,
-dell,,5320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,Also sold as 2-in-1.
-dell,,7320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-4267,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,Premium (7000) 13.3″ laptop. '7320 Detachable' is a different 13″ tablet.
-dell,,5510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,
-dell,,5410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,
-dell,,5310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,,Also sold as 2-in-1.
-dell,,7210,2020,12,12.3″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,2230,,,2-in-1 detachable tablet (Surface Pro style).
-dell,,5500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,,2,,,,,,
-dell,,5400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,,2,,,,,,"Purdue's table swapped 5400/5300 — 5400 is the 14″, 5300 is the 13.3″."
-dell,,5300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,,Also sold as 2-in-1. Purdue's table swapped 5400/5300.
-dell,,7200,2019,12,12.3″,Intel 8th gen (Whiskey Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,2230,,,2-in-1 detachable tablet.
-dell,,5590,2018,15,15.6″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,2,2,,,,,,
-dell,,5490,2018,14,14″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,,
-dell,,7390,2018,13,13.3″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,,'7390 2-in-1' is a different machine with soldered LPDDR3 (max 16 GB).
-dell,,7290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,,
-dell,,5580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2,,2,2,,,,,,
-dell,,5480,2017,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2,,2,2,,,,,,
-dell,,7480,2017,14,14″,Intel 6th/7th gen (Kaby Lake),ddr4,DDR4-2133/2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,,,1,1,,,,,,
-dell,,5570,2016,15,15.6″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,2,,,,M.2 only on some configs,,
-dell,,5470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,,,,,,,
-dell,,7470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB (32 unofficial),,0,SATA/NVMe,,,1,1,,,,,,
-dell,,E5550,2015,15,15.6″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,,⚠ Name reused by the 2024 Latitude 5550 (DDR5 era) — check CPU gen in listings.
-dell,,E5450,2015,14,14″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,7 mm bay,,⚠ Name reused by the 2024 Latitude 5450 — check CPU gen in listings.
-dell,,E7450,2015,14,14″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,,,
-dell,,E7250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,,,1,,,,,,,
-dell,,E6540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E6440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E7440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,,
-dell,,E7240,2013,12,12.5″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,,,1,,,,,2280 + 2242 slots,,
-dell,,E6530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E6430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E6330,2012,13,13.3″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E6230,2012,12,12.5″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,,
-dell,,E6520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,,
-dell,,E6420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,,
-dell,,E6320,2011,13,13.3″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,,
-dell,,E6220,2011,12,12.5″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,,
-dell,,E6510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,
-dell,,E6410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,
-dell,,E4310,2010,13,13.3″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,
-dell,,Latitude 13,2010,13,13.3″,Core 2 Duo ULV (SU7300),ddr3,DDR3-1066 SODIMM,1× SODIMM,4 GB,,0,SATA,1,,,,,,,,,
-dell,,E6500,2009,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Launched 2008; Purdue lists 2009.
-dell,,E6400,2009,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Launched 2008; Purdue lists 2009.
-dell,,E4300,2009,13,13.3″,Core 2 Duo (Penryn SP9x00),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Early DDR3 adopter — unusual for its era.
-dell,,E4200,2009,12,12.1″,Core 2 Duo ULV (SU9x00),ddr3,DDR3-1066 (1 GB onboard + 1 slot),1 GB soldered + 1× SODIMM,5 GB,1,0,1.8″ SSD,,,,,,,,"1.8″ uSATA SSD — uncommon, check drive health",,Uses uncommon 1.8″ uSATA SSDs — check drive health before buying.
-dell,,D830,2007,15,15.4″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,,
-dell,,D630,2007,14,14.1″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,,
-dell,,D430,2007,12,12.1″,Core 2 Duo ULV,ddr2,DDR2-533 SODIMM,1× SODIMM,2 GB,,0,1.8″ IDE,,,,,1,,,1.8″ ZIF drive — slow and scarce,,1.8″ ZIF drives are slow and scarce — mSATA/CF adapters exist.
-dell,,D820,2006,15,15.4″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,,
-dell,,D620,2006,14,14.1″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,,
-dell,,D520,2006,14,15″,Celeron M / Core Duo,ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB (~3.3 usable),,0,SATA,1,,,,,,,SATA-150,,
-dell,,D420,2006,12,12.1″,Core Solo/Duo ULV,ddr2,DDR2-533 (512 MB onboard + 1 slot),512 MB soldered + 1× SODIMM,2 GB usable (chipset limit),1,0,1.8″ IDE,,,,,1,,,1.8″ ZIF drive — slow and scarce,,
-dell,,D810,2005,15,15.4″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D610,2005,14,14.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D510,2005,14,15″,Pentium M / Celeron M,ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D410,2005,12,12.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D505,2004,14,15″,Pentium M (Dothan),ddr1,DDR-333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D400,2004,12,12.1″,Pentium M (Banias),ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D800,2003,15,15.4″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D600,2003,14,14.1″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,D500,2003,14,14.1″,Pentium M / Celeron M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,
-dell,,C640,2002,14,14.1″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,,
-dell,,C400,2002,12,12.1″,Pentium III-M,sdr,PC133 SDRAM SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,,
-dell,,7490,2018,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,,Premium (7000) 14″ ultrabook — successor to E7470. Missing from the Purdue table.
-dell,,7400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,,Premium ultralight. Also a 7400 2-in-1 convertible.
-dell,,7410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Premium; RAM soldered. Also a 7410 2-in-1.
-dell,,7420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-3733 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Premium carbon-fibre; soldered. Also a 7420 2-in-1.
-dell,,7430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,DDR4-3200 or LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Premium; soldered. Also a 7430 2-in-1.
-dell,,7440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800 soldered,"soldered, no slots",64 GB (std 32),1,1,NVMe,,,,1,,,2230,,,Premium; soldered LPDDR5. Also 7440 2-in-1 and 7440 Ultralight.
-dell,,7450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,,Premium; soldered LPDDR5x. Also 7450 2-in-1 and 7450 Ultralight.
-dell,,7370,2016,13,13.3″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,,Premium 13.3″ (7000).
-dell,,7380,2017,13,13.3″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133,1× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,,Premium 13.3″ (7000).
-dell,,7300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,,Premium 13.3″ (7000).
-dell,,7310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Premium 13.3″; soldered. Also a 7310 2-in-1.
-dell,,7330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Premium 13.3″ laptop; soldered. (The 7330 Rugged Extreme is a different machine.)
-dell,,7340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,,Premium 13.3″ (7000); soldered.
-dell,,E7270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,,Premium 12.5″ ultraportable (7000).
-dell,,7280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4,1× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,,Premium 12.5″ ultraportable (7000).
-dell,,9410,2020,14,14″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,,Flagship (9000); soldered. Also a 9410 2-in-1.
-dell,,9420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Flagship (9000); soldered. Also a 9420 2-in-1.
-dell,,9430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,,Flagship (9000); soldered. Also a 9430 2-in-1.
-dell,,9440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,,,Flagship 9440 2-in-1; soldered LPDDR5x.
-dell,,9450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-7467 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,,Flagship 9450 2-in-1; soldered LPDDR5x.
-dell,,9510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,,Flagship 15″ (9000); soldered. Also a 9510 2-in-1.
-dell,,9520,2021,15,15″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,,Flagship 15″ (9000); soldered. Also a 9520 2-in-1.
-dell,,9330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr5,LPDDR5-5200 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,up to 1 TB,,"Flagship 13.3″ 2-in-1 (9000); QHD+ touch, thinnest Latitude ever made."
-dell,,3480,2016,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,1,,1,1,,,,,,Budget / education line (3000).
-dell,,3490,2017,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,SATA/NVMe,1,,1,1,,,,,,Budget (3000).
-dell,,3400,2018,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,,Budget (3000).
-dell,,3410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,,Budget (3000).
-dell,,3420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,,Budget (3000).
-dell,,3430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget (3000).
-dell,,3440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget (3000).
-dell,,3450,2024,14,14″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget (3000).
-dell,,3580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,1,,1,1,,,,,,Budget 15″ (3000).
-dell,,3590,2018,15,15.6″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,1,,1,1,,,,,,Budget 15″ (3000).
-dell,,3500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,1,,1,1,,,,,,Budget 15″ (3000).
-dell,,3520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,,Budget 15″ (3000).
-dell,,3530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget 15″ (3000).
-dell,,3540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget 15″ (3000).
-dell,,3550,2024,15,15.6″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,,Budget 15″ (3000).
-dell,,3380,2016,13,13.3″,Intel 6th/7th gen,ddr4,DDR4 SODIMM,1× SODIMM,8 GB,,0,SATA,2,,2,,,,,,,Budget 13.3″ (3000/3300 education).
-dell,,3300,2017,13,13.3″,Intel 7th/8th gen,ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,,,,1,,,,,,Budget 13.3″. Win 11 only with the i5-8250U (8th-gen) option.
-dell,,3310,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,,,,1,,,,,,Budget 13.3″. Also a 3310 2-in-1.
-dell,,3330,2022,13,13.3″,Intel 11th/12th gen,ddr4,LPDDR4x soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,,Budget 13.3″; onboard RAM. Also a 3330 2-in-1.
-dell,,5414 Rugged,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,2,,2,,,,,removable drive caddy,,"Rugged 14″ (MIL-STD-810G, IP-52)."
-dell,,5424 Rugged,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,,Rugged 14″ (≈5490 internals).
-dell,,5430 Rugged,2022,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,,Rugged 14″. Distinct from the 5430 business laptop.
-dell,,7414 Rugged Ext.,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,,,,,removable drive caddy,,"Rugged Extreme 14″ (MIL-STD-810G, IP-65)."
-dell,,7424 Rugged Ext.,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,,Rugged Extreme 14″.
-dell,,7330 Rugged Ext.,2022,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,removable drive caddy,,Rugged Extreme 13.3″. Distinct from the 7330 premium laptop.
-dell,,E5400,2008,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6400.
-dell,,E5500,2008,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6500.
-dell,,E5410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6410.
-dell,,E5510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6510.
-dell,,E5420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,,Value counterpart to the E6420 — one of the most common used Latitudes on the market.
-dell,,E5520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,,Value counterpart to the E6520.
-dell,,E5430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6430 — very common on the used market.
-dell,,E5530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,,Value counterpart to the E6530.
-dell,,E5440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,,Value counterpart to the E6440.
-dell,,E5540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,,,Value counterpart to the E6540.
-dell,,E5250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,,
-dell,,E5270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,2,,2,2,,,,,,
-dell,,5280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,,A separate '5285' 2-in-1 detachable (distinct model number) also exists.
-dell,,5290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,,A separate '5290 2-in-1' detachable (distinct model) also exists.
-dell,,D531,2007,15,15.4″,AMD Turion 64 X2 / Sempron,ddr2,DDR2-533/667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,,AMD counterpart to the D620/D820-era Latitudes; also offered in a 14.1″ configuration.
-dell,,D631,2007,14,14.1″,AMD Turion 64 X2,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,,AMD counterpart to the D630.
-dell,,D530,2007,14,15″,"Core 2 Duo (Merom, T7250)",ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,,Last 4:3-display Latitude; direct successor to the D520.
-dell,,C610,2001,14,14.1″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,,,,,1,,,,,Successor to the C600; predates the D-series naming.
-dell,,C810,2001,15,15″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,,,,,1,,,,,High-end desktop-replacement 'three-spindle' design; successor to the C800.
-dell,,C840,2002,15,15″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,,Successor to the C810; last fixed-optical-drive 'three-spindle' Latitude.
+brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,st_25sata,st_msata,st_m2sata,st_m2nvme,st_ide,st_emmc,st_m2len,st_note,price,price_note,os,note
+dell,,Pro Plus 16,2025,15,16″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2230 or 2280 depending on config,$700–1100,2025 rename — still in warranty channel; eBay runs barely below refurb retail.,,2025 rename: 'Dell Pro 16 Plus' (PB16250) replaces Latitude 5xxx/7xxx naming.
+dell,,Pro Plus 14,2025,14,14″,Intel Core Ultra 200V (Lunar Lake) / 200U,ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2230 or 2280 depending on config,$700–1100,2025 rename — still in warranty channel; eBay runs barely below refurb retail.,,2025 rename: 'Dell Pro 14 Plus' (PB14250). Copilot+ PC.
+dell,,Pro Plus 13,2025,13,13″,Intel Core Ultra 200V (Lunar Lake),ddr5,LPDDR5x-8533 on-package,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,$700–1100,2025 rename — still in warranty channel; eBay runs barely below refurb retail.,,2025 rename: 'Dell Pro 13 Plus'.
+dell,,5550,2024,15,15.6″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,PCIe Gen 4,$450–720,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,⚠ Name reused — a 2015 Latitude E5550 also exists (sold as '5550'). Check CPU gen in the listing.
+dell,,5450,2024,14,14″,Intel 13th gen / Core Ultra (Meteor Lake),ddr5,DDR5-5200/5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,PCIe Gen 4,$450–720,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,⚠ Name reused — 2015 Latitude E5450 also sold as '5450'. Check CPU gen.
+dell,,5350,2024,13,13.3″,Intel Core Ultra 5/7 (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,$450–720,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1.
+dell,,7350,2024,13,13.3″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,$505–805,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium (7000) ultralight 13.3″. Also exists as 7350 Detachable.
+dell,,5540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2230 + 2280 slots,$310–510,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,2230,2280 on some configs,$310–510,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,$310–510,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1.
+dell,,5530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$240–400,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$240–400,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,A separate 'Latitude 5430 Rugged' also exists — different machine.
+dell,,5330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,$240–400,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1.
+dell,,7230,2022,12,12″,Intel 12th gen U (Alder Lake),ddr5,LPDDR5-5200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,removable,$450–800,"Rugged Extreme Tablet — small market, holds value.",,"Rugged Extreme Tablet — IP-65, MIL-STD-810H."
+dell,,5520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$170–290,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$170–290,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$170–290,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1.
+dell,,7320,2021,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-4267,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$190–325,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium (7000) 13.3″ laptop. '7320 Detachable' is a different 13″ tablet.
+dell,,5510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$150–260,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$150–260,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,2280 or 2230 depending on config,$150–260,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1.
+dell,,7210,2020,12,12.3″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,2230,,$170–290,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,2-in-1 detachable tablet (Surface Pro style).
+dell,,5500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,,2,,,,,$130–220,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,,2,,,,,$130–220,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,"Purdue's table swapped 5400/5300 — 5400 is the 14″, 5300 is the 13.3″."
+dell,,5300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,$130–220,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Also sold as 2-in-1. Purdue's table swapped 5400/5300.
+dell,,7200,2019,12,12.3″,Intel 8th gen (Whiskey Lake),ddr3,LPDDR3-2133,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,2230,,$145–245,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,2-in-1 detachable tablet.
+dell,,5590,2018,15,15.6″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,2,,2,2,,,,,$110–190,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5490,2018,14,14″,"Intel 8th gen (Kaby Lake R, quad)",ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,$110–190,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,7390,2018,13,13.3″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,$125–215,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,'7390 2-in-1' is a different machine with soldered LPDDR3 (max 16 GB).
+dell,,7290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,1,1,,,,,$125–215,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,5580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2,,2,2,,,,,$90–160,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5480,2017,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,2,,2,2,,,,,$90–160,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,7480,2017,14,14″,Intel 6th/7th gen (Kaby Lake),ddr4,DDR4-2133/2400 SODIMM,2× SODIMM,32 GB,,0,SATA/NVMe,,,1,1,,,,,$100–180,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,5570,2016,15,15.6″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,2,,,,M.2 only on some configs,$80–145,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,,,,,,$80–145,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,7470,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB (32 unofficial),,0,SATA/NVMe,,,1,1,,,,,$90–160,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,E5550,2015,15,15.6″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,$70–130,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,⚠ Name reused by the 2024 Latitude 5550 (DDR5 era) — check CPU gen in listings.
+dell,,E5450,2015,14,14″,Intel 4th/5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,7 mm bay,$70–130,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,⚠ Name reused by the 2024 Latitude 5450 — check CPU gen in listings.
+dell,,E7450,2015,14,14″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,,$80–145,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,E7250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,,,1,,,,,,$80–145,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,E6540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$60–115,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$60–115,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E7440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,$65–130,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,E7240,2013,12,12.5″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,M.2 SATA,,,1,,,,,2280 + 2242 slots,$65–130,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,
+dell,,E6530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6330,2012,13,13.3″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6230,2012,12,12.5″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA+mSATA,1,2,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6320,2011,13,13.3″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6220,2011,12,12.5″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA+mSATA*,1,2,,,,,,mSATA uses the WWAN slot,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,
+dell,,E6510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,E6410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,E4310,2010,13,13.3″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,Low-volume model — prices vary widely with condition.,,
+dell,,Latitude 13,2010,13,13.3″,Core 2 Duo ULV (SU7300),ddr3,DDR3-1066 SODIMM,1× SODIMM,4 GB,,0,SATA,1,,,,,,,,$30–60,Forgotten one-off — sells slowly.,,
+dell,,E6500,2009,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Launched 2008; Purdue lists 2009.
+dell,,E6400,2009,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Launched 2008; Purdue lists 2009.
+dell,,E4300,2009,13,13.3″,Core 2 Duo (Penryn SP9x00),ddr3,DDR3-1066 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,Low-volume model — prices vary widely with condition.,,Early DDR3 adopter — unusual for its era.
+dell,,E4200,2009,12,12.1″,Core 2 Duo ULV (SU9x00),ddr3,DDR3-1066 (1 GB onboard + 1 slot),1 GB soldered + 1× SODIMM,5 GB,1,0,1.8″ SSD,,,,,,,,"1.8″ uSATA SSD — uncommon, check drive health",$30–65,Odd 1.8″ uSATA storage scares buyers — cheap but risky.,,Uses uncommon 1.8″ uSATA SSDs — check drive health before buying.
+dell,,D830,2007,15,15.4″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,$45–95,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D630,2007,14,14.1″,Core 2 Duo (Santa Rosa),ddr2,DDR2-667 SODIMM,2× SODIMM,8 GB (official 4),,0,SATA,1,,,,,,,,$50–110,Retro favorite — clean units with good batteries fetch the top end.,,
+dell,,D430,2007,12,12.1″,Core 2 Duo ULV,ddr2,DDR2-533 SODIMM,1× SODIMM,2 GB,,0,1.8″ IDE,,,,,1,,,1.8″ ZIF drive — slow and scarce,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,1.8″ ZIF drives are slow and scarce — mSATA/CF adapters exist.
+dell,,D820,2006,15,15.4″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D620,2006,14,14.1″,Core Duo / Core 2 Duo,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D520,2006,14,15″,Celeron M / Core Duo,ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB (~3.3 usable),,0,SATA,1,,,,,,,SATA-150,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D420,2006,12,12.1″,Core Solo/Duo ULV,ddr2,DDR2-533 (512 MB onboard + 1 slot),512 MB soldered + 1× SODIMM,2 GB usable (chipset limit),1,0,1.8″ IDE,,,,,1,,,1.8″ ZIF drive — slow and scarce,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D810,2005,15,15.4″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D610,2005,14,14.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D510,2005,14,15″,Pentium M / Celeron M,ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D410,2005,12,12.1″,Pentium M (Sonoma),ddr2,DDR2-533 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$40–85,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D505,2004,14,15″,Pentium M (Dothan),ddr1,DDR-333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D400,2004,12,12.1″,Pentium M (Banias),ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D800,2003,15,15.4″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D600,2003,14,14.1″,Pentium M (Banias),ddr1,DDR-266/333 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,D500,2003,14,14.1″,Pentium M / Celeron M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$35–80,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,C640,2002,14,14.1″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,C400,2002,12,12.1″,Pentium III-M,sdr,PC133 SDRAM SODIMM,2× SODIMM,1 GB,,0,IDE,,,,,1,,,,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,
+dell,,7490,2018,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,$125–215,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium (7000) 14″ ultrabook — successor to E7470. Missing from the Purdue table.
+dell,,7400,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,$145–245,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium ultralight. Also a 7400 2-in-1 convertible.
+dell,,7410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$170–290,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium; RAM soldered. Also a 7410 2-in-1.
+dell,,7420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x-3733 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$190–325,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium carbon-fibre; soldered. Also a 7420 2-in-1.
+dell,,7430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,DDR4-3200 or LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$270–450,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium; soldered. Also a 7430 2-in-1.
+dell,,7440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5-4800 soldered,"soldered, no slots",64 GB (std 32),1,1,NVMe,,,,1,,,2230,,$345–570,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium; soldered LPDDR5. Also 7440 2-in-1 and 7440 Ultralight.
+dell,,7450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,$505–805,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium; soldered LPDDR5x. Also 7450 2-in-1 and 7450 Ultralight.
+dell,,7370,2016,13,13.3″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,$90–160,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″ (7000).
+dell,,7380,2017,13,13.3″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133,1× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,$100–180,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″ (7000).
+dell,,7300,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,$145–245,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″ (7000).
+dell,,7310,2020,13,13.3″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$170–290,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″; soldered. Also a 7310 2-in-1.
+dell,,7330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$270–450,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″ laptop; soldered. (The 7330 Rugged Extreme is a different machine.)
+dell,,7340,2023,13,13.3″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,$345–570,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 13.3″ (7000); soldered.
+dell,,E7270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,$90–160,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 12.5″ ultraportable (7000).
+dell,,7280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4,1× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,$100–180,Premium build resells well; carbon/alu lids scratch — grade A gets a premium.,,Premium 12.5″ ultraportable (7000).
+dell,,9410,2020,14,14″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,$180–310,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship (9000); soldered. Also a 9410 2-in-1.
+dell,,9420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$205–350,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship (9000); soldered. Also a 9420 2-in-1.
+dell,,9430,2022,14,14″,Intel 12th gen (Alder Lake),ddr5,LPDDR5 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,2230,,$290–480,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship (9000); soldered. Also a 9430 2-in-1.
+dell,,9440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,LPDDR5x-6400 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,,$370–610,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship 9440 2-in-1; soldered LPDDR5x.
+dell,,9450,2024,14,14″,Intel Core Ultra (Meteor Lake),ddr5,LPDDR5x-7467 soldered,"soldered, no slots",64 GB,1,1,NVMe,,,,1,,,2230,PCIe Gen 4,$540–865,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship 9450 2-in-1; soldered LPDDR5x.
+dell,,9510,2020,15,15.6″,Intel 10th gen (Comet Lake),ddr3,LPDDR3-2133 soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,$180–310,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship 15″ (9000); soldered. Also a 9510 2-in-1.
+dell,,9520,2021,15,15″,Intel 11th gen (Tiger Lake),ddr4,LPDDR4x soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,,$205–350,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,Flagship 15″ (9000); soldered. Also a 9520 2-in-1.
+dell,,9330,2022,13,13.3″,Intel 12th gen (Alder Lake),ddr5,LPDDR5-5200 soldered,"soldered, no slots",32 GB,1,1,NVMe,,,,1,,,,up to 1 TB,$290–480,"Flagship, but soldered RAM caps upgrade appeal — resale sits close to 7000-series.",,"Flagship 13.3″ 2-in-1 (9000); QHD+ touch, thinnest Latitude ever made."
+dell,,3480,2016,14,14″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,1,,1,1,,,,,$65–115,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget / education line (3000).
+dell,,3490,2017,14,14″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,SATA/NVMe,1,,1,1,,,,,$70–130,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3400,2018,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,$90–150,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3410,2020,14,14″,Intel 10th gen (Comet Lake),ddr4,DDR4-2666 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,$120–210,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3420,2021,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,$135–230,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3430,2022,14,14″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$190–320,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3440,2023,14,14″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$250–410,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3450,2024,14,14″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$360–575,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget (3000).
+dell,,3580,2017,15,15.6″,Intel 7th gen (Kaby Lake),ddr4,DDR4 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,1,,1,1,,,,,$70–130,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3590,2018,15,15.6″,Intel 8th gen (Kaby Lake R),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,1,,1,1,,,,,$90–150,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3500,2019,15,15.6″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,32 GB,,1,NVMe,1,,1,1,,,,,$105–175,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3520,2021,15,15.6″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,1,,1,1,,,,,$135–230,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3530,2022,15,15.6″,Intel 12th gen (Alder Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$190–320,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3540,2023,15,15.6″,Intel 13th gen (Raptor Lake),ddr5,DDR5-5200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$250–410,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3550,2024,15,15.6″,Intel Core 5/7 (Meteor Lake U),ddr5,DDR5-5600 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,,$360–575,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 15″ (3000).
+dell,,3380,2016,13,13.3″,Intel 6th/7th gen,ddr4,DDR4 SODIMM,1× SODIMM,8 GB,,0,SATA,2,,2,,,,,,$65–115,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 13.3″ (3000/3300 education).
+dell,,3300,2017,13,13.3″,Intel 7th/8th gen,ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,,,,1,,,,,$70–130,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 13.3″. Win 11 only with the i5-8250U (8th-gen) option.
+dell,,3310,2019,13,13.3″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,1× SODIMM,16 GB,,1,NVMe,,,,1,,,,,$105–175,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 13.3″. Also a 3310 2-in-1.
+dell,,3330,2022,13,13.3″,Intel 11th/12th gen,ddr4,LPDDR4x soldered,"soldered, no slots",16 GB,1,1,NVMe,,,,1,,,,,$190–320,Budget line — big off-lease supply keeps prices soft; plastics often show wear.,,Budget 13.3″; onboard RAM. Also a 3330 2-in-1.
+dell,,5414 Rugged,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,2,,2,,,,,removable drive caddy,$140–260,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,"Rugged 14″ (MIL-STD-810G, IP-52)."
+dell,,5424 Rugged,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,$250–450,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,Rugged 14″ (≈5490 internals).
+dell,,5430 Rugged,2022,14,14″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,$500–850,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,Rugged 14″. Distinct from the 5430 business laptop.
+dell,,7414 Rugged Ext.,2016,14,14″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,32 GB,,0,SATA,1,,,,,,,removable drive caddy,$180–330,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,"Rugged Extreme 14″ (MIL-STD-810G, IP-65)."
+dell,,7424 Rugged Ext.,2019,14,14″,Intel 8th gen (Whiskey Lake),ddr4,DDR4 SODIMM,2× SODIMM,64 GB,,1,NVMe,,,,1,,,,removable drive caddy,$320–560,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,Rugged Extreme 14″.
+dell,,7330 Rugged Ext.,2022,13,13.3″,Intel 11th gen (Tiger Lake),ddr4,DDR4-3200 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,removable drive caddy,$550–950,"Niche but sticky demand. Check touchscreen, handles, port covers; batteries pricey.",,Rugged Extreme 13.3″. Distinct from the 7330 premium laptop.
+dell,,E5400,2008,14,14.1″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$40–90,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Value counterpart to the E6400.
+dell,,E5500,2008,15,15.4″,Core 2 Duo (Penryn),ddr2,DDR2-800 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$40–90,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Value counterpart to the E6500.
+dell,,E5410,2010,14,14.1″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Value counterpart to the E6410.
+dell,,E5510,2010,15,15.6″,Intel 1st gen Core i (Arrandale),ddr3,DDR3-1333 SODIMM,2× SODIMM,8 GB,,0,SATA,1,,,,,,,,$35–75,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,Value counterpart to the E6510.
+dell,,E5420,2011,14,14″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6420 — one of the most common used Latitudes on the market.
+dell,,E5520,2011,15,15.6″,Intel 2nd gen (Sandy Bridge),ddr3,DDR3-1333 SODIMM,2× SODIMM,16 GB (official 8),,0,SATA,1,,,,,,,,$45–90,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6520.
+dell,,E5430,2012,14,14″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6430 — very common on the used market.
+dell,,E5530,2012,15,15.6″,Intel 3rd gen (Ivy Bridge),ddr3,DDR3-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,1,,,,,,,,$50–100,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6530.
+dell,,E5440,2013,14,14″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,$60–115,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6440.
+dell,,E5540,2013,15,15.6″,Intel 4th gen (Haswell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,,$60–115,Huge fleet supply keeps prices soft; discrete-GPU variants run slightly higher.,,Value counterpart to the E6540.
+dell,,E5250,2015,12,12.5″,Intel 5th gen (Broadwell),ddr3,DDR3L-1600 SODIMM,2× SODIMM,16 GB,,0,SATA,2,,2,,,,,7 mm bay,$70–130,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,E5270,2016,12,12.5″,Intel 6th gen (Skylake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,2,,2,2,,,,,$80–145,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,
+dell,,5280,2017,12,12.5″,Intel 7th gen (Kaby Lake),ddr4,DDR4-2133 SODIMM,2× SODIMM,16 GB,,0,SATA/NVMe,,,1,1,,,,,$90–160,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,A separate '5285' 2-in-1 detachable (distinct model number) also exists.
+dell,,5290,2018,12,12.5″,Intel 8th gen (Kaby Lake R),ddr4,DDR4-2400 SODIMM,2× SODIMM,32 GB,,1,NVMe,,,,1,,,,,$110–190,i7 / FHD / backlit-KB configs top the range; battery health is the biggest swing.,,A separate '5290 2-in-1' detachable (distinct model) also exists.
+dell,,D531,2007,15,15.4″,AMD Turion 64 X2 / Sempron,ddr2,DDR2-533/667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,$45–95,Retro/collector market — value is condition-driven; working batteries rare.,,AMD counterpart to the D620/D820-era Latitudes; also offered in a 14.1″ configuration.
+dell,,D631,2007,14,14.1″,AMD Turion 64 X2,ddr2,DDR2-667 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,$45–95,Retro/collector market — value is condition-driven; working batteries rare.,,AMD counterpart to the D630.
+dell,,D530,2007,14,15″,"Core 2 Duo (Merom, T7250)",ddr2,DDR2-533 SODIMM,2× SODIMM,4 GB,,0,SATA,1,,,,,,,,$45–95,Retro/collector market — value is condition-driven; working batteries rare.,,Last 4:3-display Latitude; direct successor to the D520.
+dell,,C610,2001,14,14.1″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,,,,,1,,,,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,Successor to the C600; predates the D-series naming.
+dell,,C810,2001,15,15″,Pentium III-M (Tualatin),sdr,PC133 SDRAM SODIMM,2× SODIMM,512 MB,,0,IDE,,,,,1,,,,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,High-end desktop-replacement 'three-spindle' design; successor to the C800.
+dell,,C840,2002,15,15″,Pentium 4-M,ddr1,DDR-266 SODIMM,2× SODIMM,2 GB,,0,IDE,,,,,1,,,,$30–70,Retro/collector market — value is condition-driven; working batteries rare.,,Successor to the C810; last fixed-optical-drive 'three-spindle' Latitude.
