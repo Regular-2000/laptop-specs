@@ -17,6 +17,13 @@ typical eBay sold price, a photo and a link to the official spec page.
 > acceptable. **Not over-bloating the grid is equally important — compromise beats
 > completeness.**
 
+## Design constraint
+
+Current density is near the comfortable limit for a 14″ laptop screen (as of ~330 model
+groups total). If the grids grow much further, rethink layout before adding rows —
+candidates: collapsible year-decades, a compact mode, or splitting legacy eras onto
+sub-pages. Until then: prefer grouped rows and aliases over new chips.
+
 ## Architecture
 
 - `index.html` — landing page (brand picker)
