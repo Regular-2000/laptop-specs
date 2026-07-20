@@ -213,7 +213,7 @@ function makeChip(d,sk){
   ch.className='chip '+d.gen+(d.sold?' soldered':'');
   ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
   ch.onclick=()=>select(d,ch,sk);
-  ch.dataset.model=d.m.toLowerCase();
+  ch.dataset.model=(d.m+' '+(d.aliases||'')).toLowerCase();  // aliases make variants searchable
   ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
   allChips.push({el:ch,d});
   return ch;

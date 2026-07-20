@@ -189,7 +189,7 @@ function makeChip(d){
   ch.title=d.m+' — '+d.ram+' · '+d.stor;
   ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.tag+'</span>';  // storage type only (RAM gen = colour)
   ch.onclick=()=>select(d,ch);
-  ch.dataset.model=d.m.toLowerCase();
+  ch.dataset.model=(d.m+' '+(d.aliases||'')).toLowerCase();  // aliases make variants searchable
   ch.dataset.gen=d.gen; ch.dataset.w11=d.w11;
   els.push({el:ch,d});
   return ch;
