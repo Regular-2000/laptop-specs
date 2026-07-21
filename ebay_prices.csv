@@ -43,3 +43,4 @@ date,brand,search_term,grid_model,n,p25,median,p75
 2026-07-21,hp,firefly g9,Firefly G9,3,201,265,315
 2026-07-21,hp,firefly g10,Firefly G10,6,250,350,510
 2026-07-21,hp,firefly g11,Firefly G11,8,408,560,600
+2026-07-21,dell,latitude 3140,3140,32,99,165,222
