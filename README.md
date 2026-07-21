@@ -71,8 +71,10 @@ irrelevant). Validated in a 6-system pilot (Jul 2026):
   The site search fuzzy-redirects some queries — search bare MTM or exact name.
 - **ARM caveat:** the benchmark client is x86-only; Snapdragon machines (Latitude
   5455 etc.) appear as empty stub pages with 0 PCs. Absence of data ≠ absence of model.
-- **Pacing:** ~12 page loads at a few seconds apart drew no captchas; run the full
-  ~330-row audit in gentle batches. Compare observed CPU/RAM population against the
+- **Pacing:** observed limit ~40 page loads per session before the "click the green
+  human" captcha wall appears (even at 5–10s intervals). Budget ≤~15 systems (≈30
+  loads) per session, then let it cool down for hours/overnight. Captchas are a
+  hard stop — never automated past. Compare observed CPU/RAM population against the
   row's `cpu`/`gen`/`slots`/`max` columns and flag disagreements for human review.
 - **Blind spot:** chargers and batteries are invisible to the benchmark — those columns
   are verified from PSREF/QuickSpecs/manuals and owner reports instead.
