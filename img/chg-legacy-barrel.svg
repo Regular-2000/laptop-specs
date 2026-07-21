@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 60">
+  <!-- Legacy Dell PA-6/PA-9 era barrel: slimmer, small bore -->
+  <rect x="2" y="27" width="26" height="6" rx="3" fill="#3a4152"/>
+  <rect x="26" y="19" width="40" height="22" rx="5" fill="#8a93a8"/>
+  <rect x="64" y="24" width="24" height="12" rx="2" fill="#c8ced9"/>
+  <circle cx="110" cy="30" r="11" fill="#c8ced9"/>
+  <circle cx="110" cy="30" r="6" fill="#151923"/>
+  <circle cx="110" cy="30" r="1.8" fill="#c8ced9"/>
+  <text x="110" y="56" font-size="8" fill="#9aa3b5" text-anchor="middle" font-family="sans-serif">older slim barrel</text>
+</svg>
