@@ -80,6 +80,8 @@
   .b-sold{background:#4a3b1e;color:#ffd27e}
   .infoBtn{cursor:pointer;color:var(--dim);border:1px solid var(--line);border-radius:50%;padding:0 4px;font-size:11px;margin-left:4px;user-select:none}
   .infoBtn:hover{color:var(--text);border-color:var(--text)}
+  .chgThumb{height:18px;vertical-align:-4px;margin-left:6px;opacity:.9}
+  .chgBig{display:block;height:60px;margin:5px 0 2px}
   .deep{display:none;font-size:11.5px;color:var(--dim);border-left:2px solid var(--line);padding:3px 0 3px 8px;margin-top:4px}
 
   .note{font-size:12px;color:#ffd27e;margin-top:8px}
@@ -284,6 +286,7 @@ function tpProduct(nm){
 }
 
 function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
+function CHG(s){const M=[[/16V barrel/i,'img/chg-tp-16v.svg'],[/round tip/i,'img/chg-tp-round.svg'],[/slim tip/i,'img/chg-tp-slim.svg'],[/usb-c/i,'img/chg-usbc.svg']];const j0=s.indexOf(String.fromCharCode(124,62));const sh0=j0<0?s:s.slice(0,j0);const hit=M.find(p=>p[0].test(sh0));if(!hit)return DEEP(s);const im=hit[1];const sh=j0<0?s:s.slice(0,j0);const dp=j0<0?'':s.slice(j0+2);return DEEP(sh+' <img class="chgThumb" src="'+im+'" alt="connector">'+String.fromCharCode(124,62)+'<img class="chgBig" src="'+im+'" alt="connector"> '+dp);}
 function select(d,el,sk){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
@@ -308,7 +311,7 @@ function select(d,el,sk){
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
-    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+DEEP(d.pwr)+'</div></div>':'')+
+    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+'</div></div>':'')+
     (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+d.bat_note+'</span>':'')+'</div></div>':'')+
     (d.price?(()=>{const pn=d.price_note||'';const real=/^Real /.test(pn);const samp=/^Est\. cross-checked/.test(pn);const tag=real?'<span class="badge b-yes">real data</span>':samp?'<span class="badge b-sold">est · sampled</span>':'<span class="badge b-sold">estimate</span>';return '<div class="row"><div class="k">💰 eBay sold (mid-2026, upgraded*)</div><div class="v">'+DEEP('<b>'+d.price+'</b> '+tag+'|>'+pn+' · *Upgraded = SSD + 8–16 GB, tested, grade B — rough range, condition rules everything.')+'</div></div>';})():'')+
     '<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
