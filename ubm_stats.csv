@@ -39,3 +39,56 @@ date,brand,grid_model,ubm_system,ubm_url,n_pcs,component,item,config,count
 2026-07-21,hp,820 G3 / 840 G3 / 850 G3,HP EliteBook 840 G3,https://www.userbenchmark.com/System/HP-EliteBook-840-G3/26044,,ram,HMA81GS6MFR8N-UH,1x8GB,311
 2026-07-21,hp,820 G3 / 840 G3 / 850 G3,HP EliteBook 840 G3,https://www.userbenchmark.com/System/HP-EliteBook-840-G3/26044,,ram,M471A1K43BB1-CRC,1x8GB,266
 2026-07-21,dell,5455,Dell Latitude 5455,https://www.userbenchmark.com/System/Dell-Latitude-5455/346396,0,note,ARM negative control — x86 client cannot run; empty stub page,,0
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,cpu,Core i5-7200U,,31
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,cpu,Core i7-7500U,,21
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,cpu,Core i7-7600U,,11
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,cpu,Core i5-7300U,,5
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,ram,HMA81GS6AFR8N-UH,1x8GB,5
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,ram,M471A1K43BB1-CRC,1x8GB,5
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,ram,HMA82GS6AFR8N-UH,1x16GB,4
+2026-07-21,thinkpad,T470 / T470s / T470p / T570,Lenovo 20HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HDCTO1WW,73,ram,M471A1K43BB1-CRC,2x8GB,3
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,cpu,Core i7-8550U,,125
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,cpu,Core i7-8650U,,89
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,cpu,Core i5-8350U,,38
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,cpu,Core i5-8250U,,26
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,ram,K4EBE304EB-EGCG (LPDDR3 die - soldered),2x8GB,125
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,ram,MT52L1G32D4PG-093 (LPDDR3 die - soldered),2x8GB,78
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,ram,H9CCNNNCLGALAR-NVD (LPDDR3 die - soldered),2x8GB,39
+2026-07-21,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,278,ram,K4E6E304EB-EGCG (LPDDR3 die - soldered),2x4GB,25
+2026-07-21,thinkpad,T440 / T440s / T440p / T540p,Lenovo 20AN0069US (T440p),https://www.userbenchmark.com/System/Lenovo-20AN0069US,104,cpu,Core i5-4200M,,77
+2026-07-21,thinkpad,T440 / T440s / T440p / T540p,Lenovo 20AN0069US (T440p),https://www.userbenchmark.com/System/Lenovo-20AN0069US,104,cpu,Core i7-4700MQ (socket upgrade),,7
+2026-07-21,thinkpad,T440 / T440s / T440p / T540p,Lenovo 20AN0069US (T440p),https://www.userbenchmark.com/System/Lenovo-20AN0069US,104,cpu,Core i7-4800MQ (socket upgrade),,5
+2026-07-21,thinkpad,T440 / T440s / T440p / T540p,Lenovo 20AN0069US (T440p),https://www.userbenchmark.com/System/Lenovo-20AN0069US,104,ram,HMT451S6BFR8A-PB,2x4GB,6
+2026-07-21,thinkpad,T440 / T440s / T440p / T540p,Lenovo 20AN0069US (T440p),https://www.userbenchmark.com/System/Lenovo-20AN0069US,104,ram,G.SKILL F3 DDR3 1600 C9 (aftermarket),2x8GB,5
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,cpu,Core i7-7700HQ,,85
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,cpu,Xeon E3-1505M v6,,63
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,cpu,Xeon E3-1535M v6,,22
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,cpu,Core i7-7820HQ,,22
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,ram,HMA82GS6AFR8N-UH,1x16GB,15
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,ram,M471A2K43CB1-CRC,2x16GB,14
+2026-07-21,thinkpad,P51 / P71,Lenovo 20HHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HHCTO1WW/56582,192,ram,M474A2K43BB1-CRC (ECC),4x16GB,10
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,cpu,Core i7-7600U,,1417
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,cpu,Core i5-6300U (6th-gen SKU!),,1161
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,cpu,Core i5-7300U,,952
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,cpu,Core i7-6600U (6th-gen SKU!),,643
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,cpu,Core i5-7200U,,135
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,ram,HMA81GS6AFR8N-UH,1x8GB,705
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,ram,HMA81GS6AFR8N-UH,2x8GB,283
+2026-07-21,dell,7480,Dell Latitude 7480,https://www.userbenchmark.com/System/Dell-Latitude-7480,,ram,HMA82GS6AFR8N-UH,1x16GB,195
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,cpu,Core i7-4800MQ,,662
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,cpu,Core i7-4810MQ,,597
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,cpu,Core i7-4610M,,423
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,cpu,Core i5-4310M,,298
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,ram,HMT451S6BFR8A-PB,2x4GB,156
+2026-07-21,dell,E6540,Dell Latitude E6540,https://www.userbenchmark.com/System/Dell-Latitude-E6540/2201,,ram,HMT41GS6BFR8A-PB,2x8GB,121
+2026-07-21,hp,8460p / 8560p,HP EliteBook 8460p,https://www.userbenchmark.com/System/HP-EliteBook-8460p,,cpu,Core i5-2520M,,526
+2026-07-21,hp,8460p / 8560p,HP EliteBook 8460p,https://www.userbenchmark.com/System/HP-EliteBook-8460p,,cpu,Core i5-2540M,,259
+2026-07-21,hp,8460p / 8560p,HP EliteBook 8460p,https://www.userbenchmark.com/System/HP-EliteBook-8460p,,cpu,Core i7-2620M,,114
+2026-07-21,hp,8460p / 8560p,HP EliteBook 8460p,https://www.userbenchmark.com/System/HP-EliteBook-8460p,,ram,(unlabeled),2x4GB,456
+2026-07-21,hp,8460p / 8560p,HP EliteBook 8460p,https://www.userbenchmark.com/System/HP-EliteBook-8460p,,ram,(unlabeled) — confirms unofficial 16GB max,2x8GB,100
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,cpu,Core i7-3720QM,,250
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,cpu,Core i7-3740QM,,215
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,cpu,Core i7-3630QM,,179
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,cpu,Core i7-3820QM,,87
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,ram,HMT351S6EFR8A-PB,2x4GB,23
+2026-07-21,hp,8570w / 8770w,HP EliteBook 8570w,https://www.userbenchmark.com/System/HP-EliteBook-8570w/1635,,ram,16KTF1G64HZ-1G6E1,2x8GB,12
