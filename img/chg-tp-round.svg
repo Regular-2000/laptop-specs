@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 60">
+  <!-- Lenovo 7.9mm round tip: yellow center pin sleeve -->
+  <rect x="2" y="27" width="26" height="6" rx="3" fill="#3a4152"/>
+  <rect x="26" y="18" width="42" height="24" rx="5" fill="#8a93a8"/>
+  <rect x="66" y="22" width="20" height="16" rx="2" fill="#c8ced9"/>
+  <circle cx="110" cy="30" r="15" fill="#c8ced9"/>
+  <circle cx="110" cy="30" r="10" fill="#151923"/>
+  <circle cx="110" cy="30" r="4.5" fill="#e8b93b"/>
+  <circle cx="110" cy="30" r="1.6" fill="#151923"/>
+  <text x="110" y="56" font-size="8" fill="#9aa3b5" text-anchor="middle" font-family="sans-serif">7.9 mm · yellow pin</text>
+</svg>
