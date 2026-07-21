@@ -16,6 +16,10 @@
 //     st_m2len   - M.2 length when NOT 2280 (2242/2230/22110); blank = 2280
 //     st_note    - free-text storage oddities (1.8″ drives, WWAN-slot caveats, caddies)
 //   os     - optional shipped-OS override; note - optional warning/footnote
+//   pwr    - charger: connector family + typical shipped wattage (min-that-works
+//            noted only where the gap bites, e.g. workstations / USB-C 45W nag)
+//   bat    - battery serviceability: removable / internal / bridge (both)
+//   bat_note - interchangeability family + one common part number for searching
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -89,6 +93,9 @@ export async function loadCSV(url){
     const sn=get(r,'st_note'); if(sn) o.st_note=sn;
     o.stor=genStor(o);
     const al=get(r,'aliases'); if(al) o.aliases=al;
+    const pw=get(r,'pwr'); if(pw) o.pwr=pw;
+    const bt=get(r,'bat'); if(bt) o.bat=bt;
+    const bn=get(r,'bat_note'); if(bn) o.bat_note=bn;
     const pr=get(r,'price'); if(pr) o.price=pr;
     const pn=get(r,'price_note'); if(pn) o.price_note=pn;
     const os=get(r,'os'); if(os) o.os=os;
