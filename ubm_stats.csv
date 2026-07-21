@@ -191,3 +191,42 @@ date,brand,grid_model,ubm_system,ubm_url,n_pcs,component,item,config,count
 2026-07-21,hp,ZBook 15 G3 / 17 G3,HP ZBook 15 G3,https://www.userbenchmark.com/System/HP-ZBook-15-G3/25567,,cpu,Xeon E3-1505M v5,,350
 2026-07-21,hp,ZBook 15 G3 / 17 G3,HP ZBook 15 G3,https://www.userbenchmark.com/System/HP-ZBook-15-G3/25567,,ram,M471A1K43CB1-CRC,2x8GB,243
 2026-07-21,hp,ZBook 15 G3 / 17 G3,HP ZBook 15 G3,https://www.userbenchmark.com/System/HP-ZBook-15-G3/25567,,ram,HMA82GS6AFR8N-UH,1x16GB,134
+2026-07-21,thinkpad,X270,Lenovo 20HNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HNCTO1WW,11,cpu,Core i7-7500U,,4
+2026-07-21,thinkpad,X270,Lenovo 20HNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HNCTO1WW,11,cpu,Core i5-7200U,,3
+2026-07-21,thinkpad,X270,Lenovo 20HNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HNCTO1WW,11,cpu,Core i5-7300U,,2
+2026-07-21,thinkpad,X270,Lenovo 20HNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HNCTO1WW,11,ram,HMA82GS6AFR8N-UH,1x16GB,4
+2026-07-21,thinkpad,X270,Lenovo 20HNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20HNCTO1WW,11,ram,HMA81GS6AFR8N-UH,1x8GB,2
+2026-07-21,thinkpad,X280,Lenovo 20KFCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KFCTO1WW/83952,10,cpu,Core i7-8650U,,5
+2026-07-21,thinkpad,X280,Lenovo 20KFCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KFCTO1WW/83952,10,cpu,Core i5-8250U,,2
+2026-07-21,thinkpad,X280,Lenovo 20KFCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KFCTO1WW/83952,10,ram,(onboard - soldered),2x8GB,8
+2026-07-21,thinkpad,X280,Lenovo 20KFCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KFCTO1WW/83952,10,ram,(onboard - soldered),2x4GB,2
+2026-07-21,thinkpad,T450 / T450s / T550,Lenovo 20BV000BUS,https://www.userbenchmark.com/System/Lenovo-20BV000BUS,36,cpu,Core i5-4300U (Haswell early SKU!),,36
+2026-07-21,thinkpad,T450 / T450s / T550,Lenovo 20BV000BUS,https://www.userbenchmark.com/System/Lenovo-20BV000BUS,36,ram,M471B5173EB0-YK0,2x4GB,2
+2026-07-21,thinkpad,T450 / T450s / T550,Lenovo 20BV000BUS,https://www.userbenchmark.com/System/Lenovo-20BV000BUS,36,ram,RMT3170ME68F9F1600,1x4GB,3
+2026-07-21,thinkpad,X390 / X395,Lenovo 20Q0CTO1WW,https://www.userbenchmark.com/System/Lenovo-20Q0CTO1WW/142954,11,cpu,Core i5-8265U,,6
+2026-07-21,thinkpad,X390 / X395,Lenovo 20Q0CTO1WW,https://www.userbenchmark.com/System/Lenovo-20Q0CTO1WW/142954,11,cpu,Core i7-8565U,,4
+2026-07-21,thinkpad,X390 / X395,Lenovo 20Q0CTO1WW,https://www.userbenchmark.com/System/Lenovo-20Q0CTO1WW/142954,11,ram,4ATS1G64HZ-2G6E1 (CURIOSITY: retail part despite soldered spec — review),2x8GB,3
+2026-07-21,thinkpad,X390 / X395,Lenovo 20Q0CTO1WW,https://www.userbenchmark.com/System/Lenovo-20Q0CTO1WW/142954,11,ram,M471A1K43BB1-CTD (same curiosity),2x8GB,3
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,cpu,Core i5-6300U,,1504
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,cpu,Core i7-6820HQ (quad HQ config),,541
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,cpu,Core i5-6440HQ (quad HQ config),,540
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,cpu,Core i5-6200U,,419
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,ram,HMA41GS6AFR8N-TF,1x8GB,632
+2026-07-21,dell,E5470,Dell Latitude E5470,https://www.userbenchmark.com/System/Dell-Latitude-E5470,,ram,HMA41GS6AFR8N-TF,2x8GB,116
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,cpu,Core i5-6300U,,450
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,cpu,Core i5-7300U,,447
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,cpu,Core i7-7600U,,366
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,cpu,Core i7-6600U,,209
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,ram,HMA81GS6AFR8N-UH,1x8GB,344
+2026-07-21,dell,7280,Dell Latitude 7280,https://www.userbenchmark.com/System/Dell-Latitude-7280/51446,,ram,HMA82GS6AFR8N-UH,1x16GB,143
+2026-07-21,hp,2570p,HP EliteBook 2570p,https://www.userbenchmark.com/System/HP-EliteBook-2570p,,cpu,Core i7-3520M,,160
+2026-07-21,hp,2570p,HP EliteBook 2570p,https://www.userbenchmark.com/System/HP-EliteBook-2570p,,cpu,Core i5-3320M,,113
+2026-07-21,hp,2570p,HP EliteBook 2570p,https://www.userbenchmark.com/System/HP-EliteBook-2570p,,cpu,Core i5-3360M,,73
+2026-07-21,hp,2570p,HP EliteBook 2570p,https://www.userbenchmark.com/System/HP-EliteBook-2570p,,ram,HMT351S6EFR8A-PB,2x4GB,12
+2026-07-21,hp,2570p,HP EliteBook 2570p,https://www.userbenchmark.com/System/HP-EliteBook-2570p,,ram,RMT3160ED58E9W1600,2x4GB,7
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,cpu,Core i7-6820HQ,,417
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,cpu,Core i7-6700HQ,,308
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,cpu,Xeon E3-1505M v5,,174
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,cpu,Xeon E3-1545M v5,,28
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,ram,M471A1K43CB1-CRC,2x8GB,64
+2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,ram,HMA82GS6AFR8N-UH,1x16GB,34
