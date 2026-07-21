@@ -279,7 +279,7 @@ function dellUrl(d){
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let selEl=null;
 function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
-function CHG(s){const M=[[/7\.4mm barrel/i,'img/chg-dell74.svg'],[/legacy dell barrel/i,'img/chg-legacy-barrel.svg'],[/usb-c/i,'img/chg-usbc.svg']];const hit=M.find(p=>p[0].test(s));if(!hit)return DEEP(s);const im=hit[1];const j=s.indexOf(String.fromCharCode(124,62));const sh=j<0?s:s.slice(0,j);const dp=j<0?'':s.slice(j+2);return DEEP(sh+' <img class="chgThumb" src="'+im+'" alt="connector">'+String.fromCharCode(124,62)+'<img class="chgBig" src="'+im+'" alt="connector"> '+dp);}
+function CHG(s){const M=[[/7\.4mm barrel/i,'img/chg-dell74.svg'],[/legacy dell barrel/i,'img/chg-legacy-barrel.svg'],[/usb-c/i,'img/chg-usbc.svg']];const sh0=s.indexOf(String.fromCharCode(124,62))<0?s:s.slice(0,s.indexOf(String.fromCharCode(124,62)));const hit=M.find(p=>p[0].test(sh0));if(!hit)return DEEP(s);const im=hit[1];const j=s.indexOf(String.fromCharCode(124,62));const sh=j<0?s:s.slice(0,j);const dp=j<0?'':s.slice(j+2);return DEEP(sh+' <img class="chgThumb" src="'+im+'" alt="connector">'+String.fromCharCode(124,62)+'<img class="chgBig" src="'+im+'" alt="connector"> '+dp);}
 function select(d,el){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
