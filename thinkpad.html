@@ -283,7 +283,7 @@ function tpProduct(nm){
   return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ psref.lenovo.com ThinkPad '+nm);
 }
 
-function DEEP(s){const j=s.indexOf('|>');if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block'">ⓘ</span><div class="deep">'+b+'</div>';}
+function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
 function select(d,el,sk){
   if(selEl)selEl.classList.remove('sel');
   selEl=el; el.classList.add('sel');
