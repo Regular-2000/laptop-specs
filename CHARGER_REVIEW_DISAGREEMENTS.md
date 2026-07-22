@@ -61,7 +61,7 @@ Reviewing the doc caught **3 real errors in our own `pwr` column** — all were 
 set to "4.5mm blue tip" and are actually **7.4mm smart-pin barrel**. Fixed
 2026-07-22:
 
-- **Folio 9470m** → 7.4mm  *(SM to physically confirm — unit is on hand)*
+- **Folio 9470m** → 7.4mm  *(🔬 owner-verified — SM's unit, "100% 7.4, same as 4430s")*
 - **ProBook 440/450 G1** → 7.4mm
 - **EliteBook 820/840/850 G1** → 7.4mm
 
