@@ -52,6 +52,36 @@ on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
   deep part into an expandable note). Connector thumbnails come from `img/chg-*.svg`,
   matched on the short part of the pwr text only.
 
+## Source-of-truth hierarchy (how much to trust a given cell)
+
+Buying 400 machines to touch every one isn't realistic, so most cells lean on documents.
+This is the ranking of how close each source sits to physical reality, strongest first:
+
+1. **Physical unit in hand (owner-verified).** Gold, but a single sample — it confirms
+   *this* unit, not necessarily every unit of the model. Tagged 🔬 in the data. ~20+ of
+   the fleet's models have been personally handled; those double as the **calibration
+   set** — every time a hands-on unit agrees with the parts ref, trust in the parts ref
+   rises for the models nobody has touched.
+2. **Service-tag / serial-keyed parts lookup** (Dell parts-by-tag, HP PartSurfer,
+   Lenovo PSREF by serial). Nearly as good as physical: it reads the actual BOM Dell/HP/
+   Lenovo shipped for *that specific machine* — the real DC-in harness or battery FRU,
+   not a marketing sheet. **The tag is what makes it strong.** A model-level parts search
+   with no tag loses the config/revision pin and slides down toward tier 3.
+3. **Replacement-adapter / aftermarket listings** (what "fits" the 8470p, etc.). Useful
+   aggregate market knowledge, but muddied by universal-compatible sellers who list one
+   part against dozens of models. Good for confirming a family, weak for edge cases.
+4. **Spec sheets, QuickSpecs, wikis, marketing pages.** Weakest for connector-level
+   detail — they copy-paste errors and routinely omit tip type entirely. Fine for CPU/
+   screen/year, unreliable for the barrel-vs-blue-tip kind of question.
+
+**Stability caveat (mid-cycle running changes).** Even a tag-keyed parts ref can be
+wrong if the model got a running change mid-production. But this bites different specs
+differently: **connector tips are among the MOST stable** (retooling a barrel jack mid-
+cycle is expensive, so it rarely happens), whereas **RAM vendor, panel, wifi card, and
+sometimes battery P/N drift within a single model year.** So a parts ref on a charger
+tip is close to bulletproof; the same source on "which exact RAM shipped" deserves more
+doubt. Weight confidence by *which spec* you're reading, not just by the source tier.
+
 ## Verification methodology (proof run)
 
 Planned "triple-distilled" audit uses **UserBenchmark system pages** as the empirical
