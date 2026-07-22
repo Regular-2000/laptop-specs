@@ -87,6 +87,26 @@
   #fambar{display:none;position:sticky;top:0;z-index:60;margin:6px 10px;padding:6px 10px;border:1px solid #e5b567;border-radius:8px;background:#1a1408;color:#e5b567;font-size:12.5px}
   #fambar .fx{cursor:pointer;color:#0c0f15;background:#e5b567;border-radius:7px;padding:2px 9px;margin-left:10px;font-weight:600;white-space:nowrap}
 
+  /* mobile density: ~90% scale that owner prefers, minus touch-useless hints */
+  @media (max-width:740px){
+    header{padding:6px 10px 0;gap:6px}
+    #search{width:120px;padding:5px 9px;font-size:13px}
+    .htop{gap:6px}
+    .legend{gap:4px}
+    .lg,.stf,#win11toggle{padding:2px 6px;font-size:11px}
+    .hint,.laddercap{display:none}
+    .tab{padding:6px 10px;font-size:12px}
+    .tab.all{margin-left:4px;padding-left:10px}
+    main{padding:0 6px 40px}
+    td{padding:2px}
+    td.year{font-size:12px;width:44px}
+    .chip{margin:1px;padding:3px 7px;min-width:62px}
+    .chip b{font-size:12px}
+    .chip span{font-size:9.5px}
+  }
+  @media (max-width:740px){ .chip{width:84px;height:34px} }
+
+
   .note{font-size:12px;color:#ffd27e;margin-top:8px}
   .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
   .photo img{display:block;width:100%;height:150px;object-fit:contain;background:#fff}
