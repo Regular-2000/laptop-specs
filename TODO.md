@@ -60,6 +60,13 @@ with the score on the surface and config-as-tested behind the ⓘ. Doubles as th
 personal-verification marker. Waiting on: SM dumping the numbers (any format —
 messy list is fine, will be normalized).
 
+## 9. Battery market research
+Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without
+exception. Current row tips state the honest tiers (aftermarket $50–70+, genuine
+new $100+, used real OEM pulls = value play) but the used-real-OEM market needs
+proper research: how to spot authentic pulls, which sellers, price ranges per
+family. SM has field experience here — capture it.
+
 ## Standing context
 - eBay price batches still in progress (ThinkPad partially real-data'd; HP all
   estimates — Task #20).
