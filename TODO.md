@@ -31,11 +31,16 @@ part (sometimes visible on listing page). Research feasibility first — even a
 rough "sells in days vs weeks" tier per model would be valuable for both
 buying and reselling decisions.
 
-## 5. Filtering / cosmetics (owner's list pending)
-SM has cosmetic filtering changes in mind + probably more filter criteria.
-Await specifics. Current chips: RAM gen, storage types, Win11, search.
-Obvious candidates when the time comes: dGPU (see #2), USB-C charging,
-battery removable, price bracket.
+## 5. Filtering / cosmetics
+DONE 2026-07-22: component-first reverse lookup. `bat_fam` column (31-col schema) +
+"⇄ same battery / ⇄ same charger" buttons in the panel + amber filter banner; search
+box now also matches battery family keys and charger connector text. Jumps to the
+▦ All view so cross-series compatibility shows.
+STILL OPEN (approved design, not yet built): segmented filter selector
+(💾 Storage | 🔌 Charger | 🔋 Battery) swapping chip sets in one row, all chips
+colored by the era palette (storage buttons stop being "random colors":
+IDE brown → 2.5″ SATA mauve → mSATA blue → M.2 SATA green → NVMe orange).
+Other candidates: dGPU (see #2), price bracket.
 
 ## 6. Visitors counter
 Static GitHub Pages → needs external counter. Privacy-friendly candidates:

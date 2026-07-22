@@ -83,6 +83,9 @@
   .chgThumb{height:18px;vertical-align:-4px;margin-left:6px;opacity:.9}
   .chgBig{display:block;height:60px;margin:5px 0 2px}
   .deep{display:none;font-size:11.5px;color:var(--dim);border-left:2px solid var(--line);padding:3px 0 3px 8px;margin-top:4px}
+  .famBtn{cursor:pointer;color:#4ea1ff;border:1px solid #4ea1ff;background:none;border-radius:9px;padding:0 7px;font-size:11px;margin-left:6px;user-select:none}
+  #fambar{display:none;margin:6px 10px;padding:5px 10px;border:1px solid #e5b567;border-radius:8px;background:rgba(229,181,103,.08);color:#e5b567;font-size:12.5px}
+  #fambar .fx{cursor:pointer;color:var(--dim);margin-left:8px}
 
   .note{font-size:12px;color:#ffd27e;margin-top:8px}
   .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
@@ -137,6 +140,7 @@
 <div class="wrap">
 <main>
   <div class="seriesnote" id="seriesnote"></div>
+  <div id="fambar"></div>
   <table id="grid">
     <colgroup id="cols"><col class="cy"><col></colgroup>
     <thead id="thead"><tr><th>Year</th><th>Models</th></tr></thead>
@@ -219,7 +223,7 @@ function makeChip(d,sk){
   ch.className='chip '+d.gen+(d.sold?' soldered':'');
   ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
   ch.onclick=()=>select(d,ch,sk);
-  ch.dataset.model=(d.m+' '+(d.aliases||'')).toLowerCase();  // aliases make variants searchable
+  ch.dataset.model=(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')).toLowerCase();  // aliases + battery family + charger type all searchable
   ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
   allChips.push({el:ch,d});
   return ch;
@@ -304,8 +308,8 @@ function select(d,el,sk){
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
-    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+'</div></div>':'')+
-    (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
+    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+(pwrFam(d)?' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+pwrFam(d)+'&quot;)">⇄ same charger</button>':'')+'</div></div>':'')+
+    (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_fam?' <button class="famBtn" onclick="FAMGO(&quot;bat&quot;,&quot;'+d.bat_fam+'&quot;)">⇄ same battery ('+d.bat_fam+')</button>':'')+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
     (d.price?(()=>{const pn=d.price_note||'';const real=/^Real /.test(pn);const samp=/^Est\. cross-checked/.test(pn);const tag=real?'<span class="badge b-yes">real data</span>':samp?'<span class="badge b-sold">est · sampled</span>':'<span class="badge b-sold">estimate</span>';return '<div class="row"><div class="k">💰 eBay sold (mid-2026)*</div><div class="v">'+DEEP('<b>'+d.price+'</b> '+tag+'|>'+pn+UPG(d))+'</div></div>';})():'')+
     '<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
     '<div class="row"><div class="k">Shipped OS (typical)</div><div class="v">'+(d.os||YEAROS[d.y]||'—')+'</div></div>'+
@@ -342,6 +346,21 @@ stAllBtn.onclick=()=>{
   syncStAll(); apply();
 };
 syncStAll();
+// ---- reverse lookup: "I own this battery/charger — what else takes it?" ----
+const PWRFAMS=[[/7\.4mm HP barrel/i,'7.4mm HP smart-pin'],[/4\.5mm blue tip/i,'4.5mm blue tip'],[/usb-c/i,'USB-C']];
+function pwrFam(d){if(!d.pwr)return null;const j=d.pwr.indexOf(String.fromCharCode(124,62));const sh=j<0?d.pwr:d.pwr.slice(0,j);const hit=PWRFAMS.find(p=>p[0].test(sh));return hit?hit[1]:null;}
+let famFilt=null;
+const famBar=document.getElementById('fambar');
+function famPass(d){if(!famFilt)return true;return famFilt.kind==='bat'?d.bat_fam===famFilt.key:pwrFam(d)===famFilt.key;}
+window.FAMGO=function(kind,key){
+  famFilt={kind:kind,key:key};
+  let n=0;ALL.forEach(function(d){if(famPass(d))n++;});
+  famBar.innerHTML=(kind==='bat'?'🔋 Showing models compatible with the <b>'+key+'</b> battery family':'🔌 Showing models charged by a <b>'+key+'</b> charger (match wattage on workstations)')+' — '+n+' rows <span class="fx" onclick="FAMCLEAR()">✕ clear</span>';
+  famBar.style.display='block';
+  panel.classList.remove('show');if(selEl){selEl.classList.remove('sel');selEl=null;}
+  if(curSeries!=="ALL"){curSeries="ALL";document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));allTab.classList.add('active');render();}else{apply();}
+};
+window.FAMCLEAR=function(){famFilt=null;famBar.style.display='none';apply();};
 function apply(){
   const s=q.value.trim().toLowerCase();
   let firstHit=null;
@@ -349,7 +368,7 @@ function apply(){
     const genOk=!genOff.has(d.gen);
     const wOk=!w11Only||(d.w11!==0);
     const sOk=!s||el.dataset.model.includes(s);
-    const show=genOk&&wOk&&sOk&&stPass(d);
+    const show=genOk&&wOk&&sOk&&stPass(d)&&famPass(d);
     el.classList.toggle('dim',!show);
     el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
     if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;

@@ -1,9 +1,26 @@
 # Battery data — handoff brief
 
-**Status (2026-07-21):** all 382 grid rows have `bat` + `bat_note` filled. TYPES are
-reliable (era-rule derived). PART NUMBERS are verified for ~30 rows; the rest carry a
+**Status (2026-07-22):** all 382 grid rows have `bat` + `bat_note` filled. TYPES are
+reliable (era-rule derived). PART NUMBERS are verified for ~55 rows; the rest carry a
 generic `search "[model] battery"` placeholder. **Your job: replace placeholders with
 verified FRU/part numbers, family by family.**
+
+## NEW (2026-07-22): `bat_fam` column — schema is now 31 columns
+A `bat_fam` column was appended (last column). It holds the CANONICAL FAMILY KEY
+(one part number, e.g. `T54FJ`, `CC06`, `45N1136`) and drives the "⇄ same battery"
+reverse-lookup button on the site: clicking it filters the grid to every row sharing
+that key, so the owner of a spare pack sees all compatible models in two clicks.
+Rules:
+- **Fill `bat_fam` ONLY when interchangeability is verified.** Empty = the button
+  simply doesn't render. Under-inclusion is safe; over-inclusion tells a visitor a
+  battery fits when it doesn't.
+- When you verify a FRU for `bat_note`, set `bat_fam` to the family's most-searched
+  part number IN THE SAME EDIT. Same spelling across all rows of the family — the
+  filter is an exact string match.
+- Known merge candidate left un-merged on purpose: X240/X250/X260 carry `45N1126`
+  (3-cell ext) while the T450-row family carries `45N1136` (68+). If PSREF confirms
+  the 68/68+ packs fit the bridge X-machines too, merge all onto `45N1136`.
+- Column count check after every edit is now **31**, not 28.
 
 ## Where the data lives
 - `dell.csv`, `thinkpad.csv`, `hp.csv` — columns `bat` and `bat_note` (28-col schema;
@@ -40,7 +57,7 @@ BT04XL (Folio 9470m), PR06 (4x30s), RR03XL (ProBook 440/450 G4/G5), SE03XL (ZBoo
 
 ## Workflow
 Edit the CSV directly on GitHub (pencil icon) → commit → Pages rebuilds in ~1 min.
-No code changes needed. Validate column count stays 28 after each edit.
+No code changes needed. Validate column count stays 31 after each edit.
 
 ## Open related task (see TODO.md #9)
 Used-real-OEM battery market needs research: authentication tips, seller list, per-family

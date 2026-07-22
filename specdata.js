@@ -20,6 +20,10 @@
 //            noted only where the gap bites, e.g. workstations / USB-C 45W nag)
 //   bat    - battery serviceability: removable / internal / bridge (both)
 //   bat_note - interchangeability family + one common part number for searching
+//   bat_fam  - canonical battery family key (e.g. T54FJ, CC06, 45N1136). ONLY set when
+//              interchangeability is verified — drives the "⇄ same battery" reverse
+//              lookup, so empty = link doesn't render (safe). Filling a verified FRU
+//              in bat_note? Fill bat_fam too (see BATTERY_HANDOFF.md).
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -96,6 +100,7 @@ export async function loadCSV(url){
     const pw=get(r,'pwr'); if(pw) o.pwr=pw;
     const bt=get(r,'bat'); if(bt) o.bat=bt;
     const bn=get(r,'bat_note'); if(bn) o.bat_note=bn;
+    const bf=get(r,'bat_fam'); if(bf) o.bat_fam=bf;
     const pr=get(r,'price'); if(pr) o.price=pr;
     const pn=get(r,'price_note'); if(pn) o.price_note=pn;
     const os=get(r,'os'); if(os) o.os=os;
