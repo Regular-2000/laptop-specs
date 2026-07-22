@@ -51,6 +51,15 @@ Lenovo round tip (R50/Z60m chargers!), Lenovo slim tip, HP 7.4mm smart-pin
 allowed and encouraged — this is a reference diagram, not an eBay condition
 disclosure. Blocked on: photosession room availability.
 
+## 8. Field-tested owner benchmarks 🔬
+SM has Speedometer 3.1 + WebXPRT 5 results for EVERY machine that passed through
+his hands (PassMark for some) — same tester, same methodology, real bought-and-
+upgraded configs. Plan: `owner_bench.csv` (model, config_as_tested, speedometer31,
+webxprt5, passmark, date, notes) → "🔬 field-tested" badge in the detail panel
+with the score on the surface and config-as-tested behind the ⓘ. Doubles as the
+personal-verification marker. Waiting on: SM dumping the numbers (any format —
+messy list is fine, will be normalized).
+
 ## Standing context
 - eBay price batches still in progress (ThinkPad partially real-data'd; HP all
   estimates — Task #20).
