@@ -374,6 +374,10 @@ function famPass(d){if(!famFilt)return true;return famFilt.kind==='bat'?d.bat_fa
 window.FAMGO=function(kind,key){
   if(famFilt&&famFilt.kind===kind&&famFilt.key===key){FAMCLEAR();return;}
   famFilt={kind:kind,key:key};
+  genOff.clear();document.querySelectorAll(".lg").forEach(function(l){l.classList.remove("off")});
+  w11Only=false;var _w=document.getElementById("win11toggle");if(_w)_w.classList.remove("on");
+  stOn.clear();STKEYS.forEach(function(k){stOn.add(k)});document.querySelectorAll(".stf[data-f]").forEach(function(b){b.classList.add("on")});syncStAll();
+  q.value="";
   let n=0;ALL.forEach(function(d){if(famPass(d))n++;});
   famBar.innerHTML=(kind==='bat'?'🔋 Showing models compatible with the <b>'+key+'</b> battery family':'🔌 Showing models charged by a <b>'+key+'</b> charger (match wattage on workstations)')+' — '+n+' rows <span class="fx" onclick="FAMCLEAR()">✕ clear filter</span>';
   famBar.style.display='block';
