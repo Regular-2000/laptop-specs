@@ -65,6 +65,20 @@ with the score on the surface and config-as-tested behind the ⓘ. Doubles as th
 personal-verification marker. Waiting on: SM dumping the numbers (any format —
 messy list is fine, will be normalized).
 
+## 10. Official-link `url` column (added 2026-07-24)
+A manual `url` column now exists (last col, schema = 32). Empty = the page auto-links a
+brand-scoped model search ("🔍 Look up on Dell.com/Lenovo PSREF/HP support"); an exact
+URL in the cell overrides it with a direct "product page" link. Backlog: fill exact
+spec-page URLs per row, incrementally, where the auto-search isn't precise enough.
+Only Pro Plus 16 is filled so far.
+
+## ⚠ Build note — specdata.js cache stamp
+The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
+buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
+`{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
+whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
+visitors keep running the stale loader. Current stamp: 20260724.
+
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without
 exception. Current row tips state the honest tiers (aftermarket $50–70+, genuine
