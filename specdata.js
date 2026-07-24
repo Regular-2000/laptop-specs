@@ -76,7 +76,10 @@ export function parseCSV(text){
 // Load a CSV file and return an array of model objects using the short
 // property names the renderers expect (m, y, col, gen, ram, ...).
 export async function loadCSV(url){
-  const res=await fetch(url);
+  // no-cache = always revalidate against the server's ETag, so a CSV edit shows up on
+  // the next normal refresh instead of being masked by a stale browser-cached copy
+  // (cheap 304 when unchanged, fresh download only when the file actually changed).
+  const res=await fetch(url,{cache:'no-cache'});
   if(!res.ok) throw new Error('Could not load '+url+' ('+res.status+')');
   const rows=parseCSV(await res.text());
   const head=rows.shift();
