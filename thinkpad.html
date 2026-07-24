@@ -179,7 +179,8 @@
 <script type="module">
 // ===== Data lives in thinkpad.csv (universal schema shared with dell.csv) =====
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
-import {loadCSV} from './specdata.js';
+// cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
+const {loadCSV}=await import('./specdata.js?b=20260724');
 const ALL=await loadCSV('thinkpad.csv');
 
 const GENLABEL={sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
