@@ -24,6 +24,9 @@
 //              interchangeability is verified — drives the "⇄ same battery" reverse
 //              lookup, so empty = link doesn't render (safe). Filling a verified FRU
 //              in bat_note? Fill bat_fam too (see BATTERY_HANDOFF.md).
+//   url    - MANUAL override for the official spec-page link. Leave blank to use the
+//            brand's automatic DuckDuckGo "\ bang" redirect (which finds the page
+//            reliably); paste an exact URL here to pin a specific model precisely.
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -101,6 +104,7 @@ export async function loadCSV(url){
     const bt=get(r,'bat'); if(bt) o.bat=bt;
     const bn=get(r,'bat_note'); if(bn) o.bat_note=bn;
     const bf=get(r,'bat_fam'); if(bf) o.bat_fam=bf;
+    const ur=get(r,'url'); if(ur) o.url=ur;
     const pr=get(r,'price'); if(pr) o.price=pr;
     const pn=get(r,'price_note'); if(pn) o.price_note=pn;
     const os=get(r,'os'); if(os) o.os=os;

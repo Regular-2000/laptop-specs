@@ -287,18 +287,13 @@ function render(){
 
 // Build the official Dell support product-details URL from the model name.
 // Verified patterns: 5450→latitude-14-5450-laptop, 5550→latitude-15-5550-laptop, E6440→latitude-e6440-laptop.
+// Dell's support slugs aren't derivable (the old guess 404'd on ~half the models), so:
+// use a manual `url` override when present, else a DuckDuckGo "\ bang" that jumps to the
+// real Dell support page — same reliable approach as the ThinkPad/HP pages.
 function dellUrl(d){
-  if(d.url) return d.url;                    // explicit override
-  let m=d.m.replace(/\s*\(.*\)/,'').trim();  // strip "(E5450)" style suffix
-  const base='https://www.dell.com/support/product-details/en-us/product/';
-  if(/^[A-Za-z]/.test(m)){                   // letter-prefixed: D630, E6440, C640
-    return base+'latitude-'+m.toLowerCase().replace(/\s+/g,'-')+'-laptop/overview';
-  }
-  if(/^\d{4}$/.test(m)){                      // modern 4-digit: 5450, 7490, 5340
-    const size={15:'15',14:'14',13:'13',12:'12'}[d.col]||'14';
-    return base+'latitude-'+size+'-'+m+'-laptop/overview';
-  }
-  return null;                                // Pro Plus / oddballs: no reliable deep link
+  if(d.url) return d.url;                                  // manual override (most reliable)
+  const m=d.m.split(' / ')[0].replace(/\s*\(.*\)/,'').trim();
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ dell.com/support Latitude '+m);
 }
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let selEl=null;

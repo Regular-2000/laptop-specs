@@ -313,7 +313,9 @@ function select(d,el,sk){
   const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
   const imgSearch='https://www.bing.com/images/search?q='+q;
   // one direct PSREF product-page link per model in the chip
-  const linkHtml=models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
+  const linkHtml=d.url
+    ? '<a class="ext" href="'+d.url+'" target="_blank" rel="noreferrer noopener">'+d.m+' ↗</a>'
+    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · HP '+SERIES[sk].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
