@@ -291,9 +291,9 @@ function render(){
 // use a manual `url` override when present, else a DuckDuckGo "\ bang" that jumps to the
 // real Dell support page — same reliable approach as the ThinkPad/HP pages.
 function dellUrl(d){
-  if(d.url) return d.url;                                  // manual override (most reliable)
+  if(d.url) return d.url;                                  // manual override = true direct page
   const m=d.m.split(' / ')[0].replace(/\s*\(.*\)/,'').trim();
-  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ dell.com/support Latitude '+m);
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('Dell Latitude '+m+' support specifications');
 }
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
 let selEl=null;
@@ -315,7 +315,7 @@ function select(d,el){
       '<img src="'+imgSrc+'" alt="'+d.m+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+d.m+' ↗</span></a>'+
     '<div class="phcap">tap image for more photos ↗</div>'+
-    (dell?'<div class="links"><a class="ext" href="'+dell+'" target="_blank" rel="noopener">Dell.com product page ↗</a></div>':'')+
+    (dell?'<div class="links"><a class="ext" href="'+dell+'" target="_blank" rel="noopener">'+(d.url?'Dell.com product page ↗':'🔍 Look up on Dell.com ↗')+'</a></div>':'')+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+

@@ -300,12 +300,11 @@ function render(){
   apply();
 }
 
-// PSREF splits many models into separate Intel/AMD pages with no derivable rule
-// (T14 Gen 5 needs _Intel, but T16 Gen 3 uses the bare name). So instead of guessing
-// the slug, use DuckDuckGo's "I'm feeling lucky" (\ bang), which jumps straight to the
-// model's official Lenovo PSREF spec sheet — and degrades gracefully for vintage models.
+// PSREF splits many models into separate Intel/AMD pages with no derivable rule, and
+// no auto-redirect trick works reliably anymore, so this returns a scoped model lookup
+// (first result is the PSREF sheet). Pin an exact URL via the `url` column to skip it.
 function tpProduct(nm){
-  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ psref.lenovo.com ThinkPad '+nm);
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('Lenovo ThinkPad '+nm+' PSREF specifications');
 }
 
 function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
@@ -323,7 +322,7 @@ function select(d,el,sk){
   // one direct PSREF product-page link per model in the chip
   const linkHtml=d.url
     ? '<a class="ext" href="'+d.url+'" target="_blank" rel="noreferrer noopener">'+d.m+' ↗</a>'
-    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
+    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">🔍 '+mm+' ↗</a>').join('');
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · ThinkPad '+SERIES[sk].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
@@ -332,7 +331,7 @@ function select(d,el,sk){
       '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
     '<div class="phcap">tap image for more photos ↗</div>'+
-    '<div class="linklabel">Official Lenovo spec sheet'+(models.length>1?'s':'')+':</div>'+
+    '<div class="linklabel">'+(d.url?'Official Lenovo spec sheet:':'Look up on Lenovo PSREF'+(models.length>1?' (per model)':'')+':')+'</div>'+
     '<div class="links">'+linkHtml+'</div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+

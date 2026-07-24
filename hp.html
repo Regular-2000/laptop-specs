@@ -294,10 +294,11 @@ function render(){
   apply();
 }
 
-// HP spec pages live on support.hp.com with non-derivable slugs, so use DuckDuckGo's
-// "I'm feeling lucky" (\ bang) to jump straight to the official specifications page.
+// HP spec pages live on support.hp.com with non-derivable slugs and no reliable auto-
+// redirect, so this returns a scoped model lookup (first result is the spec page).
+// Pin an exact URL via the `url` column to skip the search.
 function tpProduct(nm){
-  return 'https://duckduckgo.com/?q='+encodeURIComponent('\\ support.hp.com HP '+nm+' specifications');
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('HP '+nm+' specifications support');
 }
 
 function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
@@ -315,7 +316,7 @@ function select(d,el,sk){
   // one direct PSREF product-page link per model in the chip
   const linkHtml=d.url
     ? '<a class="ext" href="'+d.url+'" target="_blank" rel="noreferrer noopener">'+d.m+' ↗</a>'
-    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">'+mm+' ↗</a>').join('');
+    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">🔍 '+mm+' ↗</a>').join('');
   pC.innerHTML=
     '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · HP '+SERIES[sk].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
@@ -324,7 +325,7 @@ function select(d,el,sk){
       '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
     '<div class="phcap">tap image for more photos ↗</div>'+
-    '<div class="linklabel">Official HP spec page'+(models.length>1?'s':'')+':</div>'+
+    '<div class="linklabel">'+(d.url?'Official HP spec page:':'Look up on HP support'+(models.length>1?' (per model)':'')+':')+'</div>'+
     '<div class="links">'+linkHtml+'</div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
