@@ -70,7 +70,22 @@ A manual `url` column now exists (last col, schema = 32). Empty = the page auto-
 brand-scoped model search ("🔍 Look up on Dell.com/Lenovo PSREF/HP support"); an exact
 URL in the cell overrides it with a direct "product page" link. Backlog: fill exact
 spec-page URLs per row, incrementally, where the auto-search isn't precise enough.
-Only Pro Plus 16 is filled so far.
+
+**Dell: DONE 2026-07-25.** 143/151 rows filled with verified Dell *support* overview
+pages (`…/product-support/product/<slug>/overview`) — tech/spec hub, not sales pages.
+Slugs are NOT derivable and a wrong one silently 302s to the generic "Support Home"
+hub (looks valid, is useless), so EVERY url was load-checked against the page title
+before pasting. 8 rows left blank on purpose — the 7410/7420/7430/7440/7450/7310/7330/
+7340 clamshells: their base slug redirects to the hub and only the `-2-in-1-laptop`
+slug resolves (different form factor / specs), so they fall through to the auto-search.
+Pro Plus 16 kept its existing shop URL (its support slug also hit the hub — unverified).
+Slug traps logged for next time: E7-thin models use `-ultrabook` (e7250-ultrabook,
+e7440-ultrabook); 2012 E6x30 use a BARE slug w/ no suffix (`latitude-e6530`); Rugged
+hides under screen-prefixed base slugs (`latitude-14-5430-laptop` = 5430 *Rugged*, while
+plain 5430 = `latitude-5430-laptop`); education 11″ = `latitude-11-` prefix. Method:
+per-model web search → extract real slug from a live dell.com/support result → fetch
+/overview → confirm title names the exact model. STILL OPEN: ThinkPad + HP url columns,
+and the 8 Dell clamshell blanks if a clean clamshell page ever surfaces.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
