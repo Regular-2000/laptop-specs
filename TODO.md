@@ -86,37 +86,44 @@ plain 5430 = `latitude-5430-laptop`); education 11″ = `latitude-11-` prefix. M
 per-model web search → extract real slug from a live dell.com/support result → fetch
 /overview → confirm title names the exact model.
 
-**ThinkPad + HP: DONE 2026-07-25 (singles-only policy).** Both renderers already show
-ONE search link PER grouped model when url is blank, so pinning a single url to a
-grouped row (e.g. "T480 / T480s / T580") would REPLACE those per-model links with one
-link covering only one model — a regression. Policy adopted: **pin a direct url ONLY on
-single-model rows; leave grouped rows blank** (their per-model auto-search is better).
-Same rule is the right one for all three brands.
-- ThinkPad → **Lenovo PSREF** product page `psref.lenovo.com/Product/ThinkPad/<slug>`.
-  39/70 single rows filled. Slugs non-derivable + verified via the fetchable spec PDF
-  (`/syspool/Sys/PDF/ThinkPad/<slug>/<slug>_Spec.PDF`) since PSREF HTML is a JS app.
-  Slug quirks: X1 Carbon Gen2–7 = `_2nd_Gen`…`_7th_Gen`, then Gen8+ = `_Gen_8`; X1
-  Extreme Gen1 = bare `ThinkPad_X1_Extreme`, Gen2 = `_2nd_Gen`, Gen3+ = `_Gen_3`; X1
-  Titanium = `_Gen_1`; T14s Gen6 = `_Snapdragon`. Blanks: pre-PSREF/withdrawn
-  (T20–T61, X31–X230, R/W-series, X1C Gen1) = NOTFOUND; Intel/AMD-split with no unified
-  page (X13 Gen1–4, P14s Gen1–4, P16v Gen1) = left to per-model search. P16v Gen2 is
-  Intel-only in PSREF so it got the `_Intel` page.
-- HP → **support.hp.com** spec page `/us-en/product/product-specs/<slug>/<oid>`. 19/19
-  single rows filled; OIDs non-derivable, verified via indexed result titles (support.hp.com
-  is also a JS app). Nearly all HP rows are grouped, so most stay on auto-search.
+**ThinkPad + HP: DONE 2026-07-25 (lead-model policy — revised from singles-only).**
+Initial pass was singles-only (grouped rows left blank so the renderer's per-model
+search shows). SM preferred a direct link over a search even on grouped rows, so the
+policy is now: **every row gets a direct link to its FIRST-listed (lead) model** where a
+page exists; only rows whose lead model has NO official page stay blank. Tradeoff (known
++ accepted): on a grouped row the shown link is labeled with the whole group but points
+to the lead model only, and the per-model search links are replaced.
+- ThinkPad → **Lenovo PSREF spec PDF** `…/syspool/Sys/PDF/ThinkPad/<slug>/<slug>_Spec.PDF`
+  (SM's call — the pure spec sheet, fetch-verifiable, and works for withdrawn models
+  whose HTML `/Product/` pages are broken/redirect to `/WDProduct/`). 101/145 filled;
+  every URL confirmed by fetching the PDF. Notes: server is case-insensitive on the
+  extension → normalized to `.PDF`. Intel/AMD-split models have NO combined PDF → use the
+  `_Intel` variant (E14 Gen3 = `_AMD`, the only one lacking Intel). Slug quirks: X1 Carbon
+  Gen2–7 = `_2nd_Gen`…`_7th_Gen` then Gen8+ = `_Gen_8`; X1 Extreme Gen1 = bare
+  `ThinkPad_X1_Extreme`; P1 Gen1 = bare `ThinkPad_P1`; E14 Gen1 = bare `ThinkPad_E14`;
+  L13 Gen1 = bare `ThinkPad_L13`. One oddball: **E430** has no standard `_Spec.PDF` — used
+  its `/withdrawnbook/ThinkPad_E430.PDF` (an E430-only withdrawn catalog, still a real
+  E430 sheet). 44 blanks = models with no per-model PSREF PDF (T20–T430, X31–X230,
+  R-series, SL410, W500–W530, W700/W701, X300, Z60m/Z61m, Edge 14/E420, L412–L430,
+  X1C Gen1) — these predate PSREF's per-model PDFs (they live only in giant consolidated
+  withdrawn books) → left to the per-model search.
+- HP → **support.hp.com** spec page `/us-en/product/product-specs/<slug>/<oid>`. 86/86
+  filled (all rows). OIDs non-derivable; verified via indexed result titles (support.hp.com
+  is a JS app). No PDF equivalent (HP QuickSpecs are messy family PDFs), so HTML spec page
+  is the right target here.
 
 **Unification notes (for the eventual merged all-brands table):** the hard part is
 already done — all 3 CSVs share the identical 32-col header, so a merge is a concat keyed
-on `brand`. Keep `url` semantically uniform = "official manufacturer SPEC page" (Dell
-support-overview / Lenovo PSREF / HP support-specs), never a sales page. Watch items:
-(1) `url` KIND differs by brand by necessity (no cross-brand rule) — fine, still a spec
-page; (2) the lone outlier is Dell **Pro Plus 16**, which still holds a dell.com/shop
-SALES url — swap to a support/spec page when one verifies, for consistency; (3) **line
-endings are inconsistent**: dell.csv = CRLF, thinkpad.csv + hp.csv = LF — normalize
-before/at merge; (4) grouped-row url policy (singles-only) is uniform across brands, but
-a future "one url per grouped model" upgrade would need a multi-url schema + renderer
-change (deferred). STILL OPEN: the 8 Dell clamshell blanks + Pro Plus support pages if
-clean ones surface; optional multi-url-per-group upgrade.
+on `brand`. `url` semantics = "official manufacturer SPEC page/sheet", never sales. Watch
+items: (1) `url` KIND differs by brand by necessity — Dell = support-overview HTML,
+ThinkPad = PSREF **PDF**, HP = support-specs HTML — all spec sources, fine; (2) the lone
+sales outlier is Dell **Pro Plus 16** (dell.com/shop url) — swap when a spec page
+verifies; (3) **line endings inconsistent**: dell.csv = CRLF, thinkpad.csv + hp.csv = LF
+— normalize before/at merge; (4) grouped rows now use LEAD-model links across ThinkPad+HP
+(Dell was mostly single-model already); a future "one url per grouped model" upgrade would
+need a multi-url schema + renderer change (deferred). STILL OPEN: 44 ThinkPad blanks +
+the 8 Dell clamshell blanks + Pro Plus spec page, if clean sources ever surface; optional
+multi-url-per-group upgrade.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
