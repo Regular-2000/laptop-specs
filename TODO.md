@@ -84,8 +84,39 @@ e7440-ultrabook); 2012 E6x30 use a BARE slug w/ no suffix (`latitude-e6530`); Ru
 hides under screen-prefixed base slugs (`latitude-14-5430-laptop` = 5430 *Rugged*, while
 plain 5430 = `latitude-5430-laptop`); education 11″ = `latitude-11-` prefix. Method:
 per-model web search → extract real slug from a live dell.com/support result → fetch
-/overview → confirm title names the exact model. STILL OPEN: ThinkPad + HP url columns,
-and the 8 Dell clamshell blanks if a clean clamshell page ever surfaces.
+/overview → confirm title names the exact model.
+
+**ThinkPad + HP: DONE 2026-07-25 (singles-only policy).** Both renderers already show
+ONE search link PER grouped model when url is blank, so pinning a single url to a
+grouped row (e.g. "T480 / T480s / T580") would REPLACE those per-model links with one
+link covering only one model — a regression. Policy adopted: **pin a direct url ONLY on
+single-model rows; leave grouped rows blank** (their per-model auto-search is better).
+Same rule is the right one for all three brands.
+- ThinkPad → **Lenovo PSREF** product page `psref.lenovo.com/Product/ThinkPad/<slug>`.
+  39/70 single rows filled. Slugs non-derivable + verified via the fetchable spec PDF
+  (`/syspool/Sys/PDF/ThinkPad/<slug>/<slug>_Spec.PDF`) since PSREF HTML is a JS app.
+  Slug quirks: X1 Carbon Gen2–7 = `_2nd_Gen`…`_7th_Gen`, then Gen8+ = `_Gen_8`; X1
+  Extreme Gen1 = bare `ThinkPad_X1_Extreme`, Gen2 = `_2nd_Gen`, Gen3+ = `_Gen_3`; X1
+  Titanium = `_Gen_1`; T14s Gen6 = `_Snapdragon`. Blanks: pre-PSREF/withdrawn
+  (T20–T61, X31–X230, R/W-series, X1C Gen1) = NOTFOUND; Intel/AMD-split with no unified
+  page (X13 Gen1–4, P14s Gen1–4, P16v Gen1) = left to per-model search. P16v Gen2 is
+  Intel-only in PSREF so it got the `_Intel` page.
+- HP → **support.hp.com** spec page `/us-en/product/product-specs/<slug>/<oid>`. 19/19
+  single rows filled; OIDs non-derivable, verified via indexed result titles (support.hp.com
+  is also a JS app). Nearly all HP rows are grouped, so most stay on auto-search.
+
+**Unification notes (for the eventual merged all-brands table):** the hard part is
+already done — all 3 CSVs share the identical 32-col header, so a merge is a concat keyed
+on `brand`. Keep `url` semantically uniform = "official manufacturer SPEC page" (Dell
+support-overview / Lenovo PSREF / HP support-specs), never a sales page. Watch items:
+(1) `url` KIND differs by brand by necessity (no cross-brand rule) — fine, still a spec
+page; (2) the lone outlier is Dell **Pro Plus 16**, which still holds a dell.com/shop
+SALES url — swap to a support/spec page when one verifies, for consistency; (3) **line
+endings are inconsistent**: dell.csv = CRLF, thinkpad.csv + hp.csv = LF — normalize
+before/at merge; (4) grouped-row url policy (singles-only) is uniform across brands, but
+a future "one url per grouped model" upgrade would need a multi-url schema + renderer
+change (deferred). STILL OPEN: the 8 Dell clamshell blanks + Pro Plus support pages if
+clean ones surface; optional multi-url-per-group upgrade.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
