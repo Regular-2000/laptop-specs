@@ -48,6 +48,15 @@ battery/charger when a ⇄ fam filter is active); "🖼 save as photo (.jpg)" = 
 Esc closes. Shared code in specdata.js (showCompactList + buildReportHTML; loadAllBrands
 kept exported for the future merged table); stamp bumped 20260802.
 Origin: mSATA queries used to need 6 screenshots — now one screen or one saved file.
+DONE 2026-08-02: landing-page quick search (index.html). Compact text field above the
+brand cards; lazy-loads all 3 CSVs via the already-exported loadAllBrands() and live-counts
+matches per brand (same haystack as page search: model + aliases + bat_fam + charger text).
+Brand-colored count buttons appear as you type; Enter jumps straight to <brand>.html?q=…
+when exactly ONE brand matches (the common case — full model numbers are near-unique);
+cross-brand collisions (440/450/840/830…) take one click on a brand button. Brand pages
+now honor ?q= — pre-fill search + auto-scroll to first hit; ThinkPad/HP additionally start
+in ▦ All view when arriving with ?q= so hits outside the default tab are visible.
+specdata.js unchanged → no stamp bump needed.
 STILL OPEN (approved design, not yet built): segmented filter selector
 (💾 Storage | 🔌 Charger | 🔋 Battery) swapping chip sets in one row, all chips
 colored by the era palette (storage buttons stop being "random colors":

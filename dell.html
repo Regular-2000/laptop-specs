@@ -426,6 +426,9 @@ document.querySelectorAll('.lg').forEach(lg=>{
 const wt=document.getElementById('win11toggle');
 wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
 
+// deep link from the landing-page search: index.html sends ?q=<query>
+const dq=new URLSearchParams(location.search).get('q');
+if(dq) q.value=dq;
 render();
 </script>
 </body>

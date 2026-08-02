@@ -217,7 +217,9 @@ const grid=document.getElementById('grid');
 const colsEl=document.getElementById('cols');
 const theadEl=document.getElementById('thead');
 const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
-let curSeries="T", selEl=null, allChips=[];
+// deep link from the landing-page search (?q=…) starts in ▦ All so the hit is visible whatever its series
+const dq=new URLSearchParams(location.search).get('q');
+let curSeries=dq?"ALL":"T", selEl=null, allChips=[];
 // tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
 const order=["E","L","T","X","X1","Z","P"];
 const TIER={E:"$",L:"$$",T:"$$$",X:"$$$",X1:"$$$$",Z:"$$$$",P:"$$$$$"};
@@ -440,6 +442,7 @@ document.querySelectorAll('.lg').forEach(lg=>{
 const wt=document.getElementById('win11toggle');
 wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
 
+if(dq) q.value=dq;
 render();
 </script>
 </body>
