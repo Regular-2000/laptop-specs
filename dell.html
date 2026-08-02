@@ -31,6 +31,8 @@
   .stf.stall:hover{color:var(--text);border-color:var(--accent)}
   .stf.stall.on{color:var(--accent);border-color:var(--accent)}
   #grid td.flow{white-space:normal;min-width:320px}
+  .chip.gone{display:none}
+  .vsep{display:inline-block;width:0;height:36px;border-left:1px dashed #3d465c;margin:3px 5px;vertical-align:top}
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
   .hint{color:var(--dim);font-size:12px}
@@ -282,9 +284,11 @@ function render(){
       const td=document.createElement('td'); td.className='year'; td.textContent=yr; tr.appendChild(td);
       const cell=document.createElement('td'); cell.className='flow';
       cols.forEach(c=>{
-        D.filter(d=>d.y===yr&&d.col===c)
-         .sort((a,b)=>{const sa=slotOf(a),sb=slotOf(b),ka=sa<0?9:sa,kb=sb<0?9:sb;return ka!==kb?ka-kb:mnum(a.m)-mnum(b.m);})
-         .forEach(d=>cell.appendChild(makeChip(d)));
+        const ym=D.filter(d=>d.y===yr&&d.col===c)
+         .sort((a,b)=>{const sa=slotOf(a),sb=slotOf(b),ka=sa<0?9:sa,kb=sb<0?9:sb;return ka!==kb?ka-kb:mnum(a.m)-mnum(b.m);});
+        if(!ym.length) return;
+        if(cell.children.length){const v=document.createElement('span');v.className='vsep';cell.appendChild(v);}
+        ym.forEach(d=>cell.appendChild(makeChip(d)));
       });
       tr.appendChild(cell); tbody.appendChild(tr);
       if(yr===2018){
@@ -435,11 +439,27 @@ function apply(){
     const wOk=!w11Only||d.w11;
     const sOk=!s||el.dataset.model.includes(s);
     const show=genOk&&wOk&&sOk&&stPass(d)&&famPass(d);
-    el.classList.toggle('dim',!show);
+    // compact flow: filtered chips are REMOVED so survivors pack together;
+    // aligned grid: dimmed in place (position = information there)
+    el.classList.toggle('dim',!compact&&!show);
+    el.classList.toggle('gone',compact&&!show);
     el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
     if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;
   });
+  if(compact)fixFlow();
   if(firstHit)firstHit.scrollIntoView({block:'center',behavior:'smooth'});
+}
+// compact-flow housekeeping after filters change: hide year rows that lost every
+// chip, and show a series/size separator only when visible chips sit on BOTH sides
+function fixFlow(){
+  document.querySelectorAll('#grid td.flow').forEach(cell=>{
+    let seen=false,pending=null,any=false;
+    [...cell.children].forEach(k=>{
+      if(k.classList.contains('vsep')){k.style.display='none';if(seen)pending=k;seen=false;}
+      else if(!k.classList.contains('gone')){any=true;seen=true;if(pending){pending.style.display='';pending=null;}}
+    });
+    cell.parentElement.style.display=any?'':'none';
+  });
 }
 q.addEventListener('input',apply);
 document.querySelectorAll('.lg').forEach(lg=>{

@@ -64,6 +64,12 @@ tier order kept inside each size, no alignment spacers. ThinkPad/HP: applies to 
 ▦ All view, series merged budget → premium (single-series tabs already flow — no-op
 there). Toggle persists via localStorage key `specs_compact`, shared across the three
 pages. specdata.js unchanged → no stamp bump.
+Compact v2 (same day): in compact flow, filtered-out chips are REMOVED (not dimmed) so
+survivors pack tight; year rows with zero visible chips hide entirely; subtle dashed
+vertical separators between series (TP/HP ▦ All) / size groups (Dell), auto-hidden when
+a whole group is filtered away (never two in a row, never leading/trailing). Aligned
+mode keeps the dim-in-place behavior — there, position IS information. TP/HP compact
+now also packs single-series tabs (flow cells, no seps).
 STILL OPEN (approved design, not yet built): segmented filter selector
 (💾 Storage | 🔌 Charger | 🔋 Battery) swapping chip sets in one row, all chips
 colored by the era palette (storage buttons stop being "random colors":
