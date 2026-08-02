@@ -43,7 +43,8 @@ in the era palette, dashed + ° = st value 2 (optional/config-dependent). Honors
 filter (storage chips, RAM legend, Win11, search, ⇄ fam). Overlay actions:
 "⬇ save report (.html)" = standalone light/print-friendly file, self-contained, named
 report-<brand>-<filters>-<date>.html, one context line per chip (storage by default,
-battery/charger when a ⇄ fam filter is active); "⧉ copy as text" for eBay descriptions;
+battery/charger when a ⇄ fam filter is active); "🖼 save as photo (.jpg)" = eBay-ready 1600px canvas-drawn JPEG (no 3rd-party libs);
+"⧉ copy as text" for eBay descriptions;
 Esc closes. Shared code in specdata.js (showCompactList + buildReportHTML; loadAllBrands
 kept exported for the future merged table); stamp bumped 20260802.
 Origin: mSATA queries used to need 6 screenshots — now one screen or one saved file.
@@ -141,7 +142,7 @@ The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` 
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20260802.
+visitors keep running the stale loader. Current stamp: 20260802a.
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

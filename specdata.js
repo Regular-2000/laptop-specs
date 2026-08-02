@@ -173,6 +173,74 @@ function buildReportHTML(o){
     '. Source: '+escH(o.src)+'</footer></body></html>';
 }
 
+// eBay-ready photo export: draws the report on a <canvas> (no libraries) and returns it.
+// White background + navy header, 1600 logical px wide — eBay wants JPG/PNG ≥500px,
+// 1600px recommended on the longest side. Layout = two passes (measure, then draw).
+function drawReportImage(o){
+  const W=1600,padX=26,yearW=64,gapX=8,gapY=8,chipH=46,maxChipW=430;
+  const FONT='-apple-system,"Segoe UI",Roboto,Arial,sans-serif';
+  const mF='bold 20px '+FONT,cF='12.5px '+FONT,yF='bold 16px '+FONT;
+  const meas=document.createElement('canvas').getContext('2d');
+  const trunc=(t,maxW)=>{meas.font=cF;if(meas.measureText(t).width<=maxW)return t;
+    while(t.length&&meas.measureText(t+'…').width>maxW)t=t.slice(0,-1);return t+'…';};
+  // pass 1: layout
+  const yrs=[...new Set(o.models.map(d=>d.y))].sort((a,b)=>b-a);
+  const rowW=W-padX*2-yearW, headerH=96, items=[], seps=[];
+  let curY=headerH+18;
+  for(const yr of yrs){
+    let x=0; const y0=curY;
+    for(const d of o.models.filter(r=>r.y===yr)){
+      const optional=o.single&&d[ST_COL[o.single]]===2;
+      const name=d.m+(optional?' °':'');
+      meas.font=mF; const mw=meas.measureText(name).width;
+      const raw=ctxOf(d,o.ctxKind);
+      meas.font=cF; const cwR=meas.measureText(raw).width;
+      const cw=Math.min(Math.max(mw,cwR)+22,maxChipW);
+      if(x+cw>rowW&&x>0){x=0;curY+=chipH+gapY;}
+      const ctxt=trunc(raw,cw-16);
+      items.push({x:padX+yearW+x,y:curY,w:cw,name,ctxt,gen:d.gen,optional});
+      x+=cw+gapX;
+    }
+    items.push({yearLabel:String(yr||'—'),x:padX,y:y0});
+    curY+=chipH+gapY+4;
+    seps.push(curY-6);
+  }
+  const footY=curY+8, H=footY+56;
+  // pass 2: draw (scale 2 for crispness; back off if the image would exceed eBay's ~12MP)
+  const S=(W*2*(H*2))>11800000?1.5:2;
+  const cvs=document.createElement('canvas');
+  cvs.width=Math.round(W*S); cvs.height=Math.round(H*S);
+  const ctx=cvs.getContext('2d'); ctx.scale(S,S);
+  ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='#0f2d52'; ctx.fillRect(0,0,W,headerH);
+  ctx.font='bold 28px '+FONT; ctx.fillStyle='#ffffff';
+  ctx.fillText(o.brandLabel+' — ',padX,40);
+  const w1=ctx.measureText(o.brandLabel+' — ').width;
+  ctx.fillStyle='#5dd0f0'; ctx.fillText(o.title,padX+w1,40);
+  ctx.font='14px '+FONT; ctx.fillStyle='#c9dcea';
+  ctx.fillText(o.models.length+' rows (a chip may group several models)'+
+    (o.extras.length?' · filters: '+o.extras.join(' · '):'')+' · '+o.date+' · '+o.src,padX,68);
+  const rr=(x,y,w,h,r)=>{ctx.beginPath();
+    if(ctx.roundRect)ctx.roundRect(x,y,w,h,r);
+    else{ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}};
+  for(const it of items){
+    if(it.yearLabel){ctx.font=yF;ctx.fillStyle='#5b7185';ctx.fillText(it.yearLabel,it.x,it.y+28);continue;}
+    ctx.fillStyle=GENBG[it.gen]||'#666'; rr(it.x,it.y,it.w,chipH,7); ctx.fill();
+    if(it.optional){ctx.setLineDash([5,4]);ctx.strokeStyle=it.gen==='ddr5'?'rgba(0,0,0,.5)':'rgba(255,255,255,.7)';ctx.lineWidth=1.5;rr(it.x+1,it.y+1,it.w-2,chipH-2,6);ctx.stroke();ctx.setLineDash([]);}
+    ctx.fillStyle=it.gen==='ddr5'?'#1b1b1b':'#ffffff';
+    ctx.font=mF; ctx.fillText(it.name,it.x+10,it.y+21);
+    ctx.globalAlpha=.9; ctx.font=cF; ctx.fillText(it.ctxt,it.x+10,it.y+37); ctx.globalAlpha=1;
+  }
+  ctx.strokeStyle='#e3e9f0'; ctx.lineWidth=1;
+  for(const sy of seps){ctx.beginPath();ctx.moveTo(padX,sy);ctx.lineTo(W-padX,sy);ctx.stroke();}
+  ctx.beginPath();ctx.moveTo(padX,footY);ctx.lineTo(W-padX,footY);ctx.stroke();
+  ctx.font='13px '+FONT; ctx.fillStyle='#5b7185';
+  ctx.fillText('Always verify the exact sub-model / configuration before buying'+
+    (o.single?' · ° / dashed = '+ST_LABEL[o.single]+' optional / config-dependent':''),padX,footY+24);
+  ctx.fillText('Source: '+o.src,padX,footY+44);
+  return cvs;
+}
+
 // opts: { models, brandLabel, stOnKeys, allStOn, extras, ctxKind }
 export function showCompactList(opts){
   const old=document.getElementById('cmpOverlay'); if(old) old.remove();
@@ -193,6 +261,7 @@ export function showCompactList(opts){
   h2.innerHTML='▤ '+escH(opts.brandLabel)+' — '+escH(stTitle)+' <small>('+opts.models.length+' rows · a chip may group several models)</small>';
   top.appendChild(h2);
   const dl=document.createElement('span'); dl.className='cmp-b'; dl.textContent='⬇ save report (.html)'; top.appendChild(dl);
+  const ph=document.createElement('span'); ph.className='cmp-b'; ph.textContent='🖼 save as photo (.jpg)'; ph.title='eBay-ready image, 1600px wide'; top.appendChild(ph);
   const cp=document.createElement('span'); cp.className='cmp-b'; cp.textContent='⧉ copy as text'; top.appendChild(cp);
   const x=document.createElement('span'); x.className='cmp-b cmp-x'; x.textContent='✕ close (Esc)'; top.appendChild(x);
   const subBits=[];
@@ -243,6 +312,18 @@ export function showCompactList(opts){
     a.download='report-'+slug(opts.brandLabel)+'-'+slug(stTitle)+'-'+date+'.html';
     a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),5000);
     dl.textContent='✓ saved'; setTimeout(()=>dl.textContent='⬇ save report (.html)',1500);
+  };
+  ph.onclick=()=>{
+    const cvs=drawReportImage({models:opts.models,brandLabel:opts.brandLabel,title:stTitle,
+      extras,single,ctxKind:opts.ctxKind,src,date});
+    const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,50);
+    cvs.toBlob(b=>{
+      const a=document.createElement('a');
+      a.href=URL.createObjectURL(b);
+      a.download='report-'+slug(opts.brandLabel)+'-'+slug(stTitle)+'-'+date+'.jpg';
+      a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),5000);
+      ph.textContent='✓ saved'; setTimeout(()=>ph.textContent='🖼 save as photo (.jpg)',1500);
+    },'image/jpeg',0.92);
   };
   cp.onclick=()=>{
     navigator.clipboard.writeText(txt.join('\n')).then(
