@@ -142,7 +142,7 @@ The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` 
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20260802a.
+visitors keep running the stale loader. Current stamp: 20260802b.
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

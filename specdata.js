@@ -206,20 +206,29 @@ function drawReportImage(o){
     seps.push(curY-6);
   }
   const footY=curY+8, H=footY+56;
+  // trim unused width: shrink to the widest content (chips / header / footer), min 700px
+  const subTxt=o.models.length+' rows (a chip may group several models)'+
+    (o.extras.length?' · filters: '+o.extras.join(' · '):'')+' · '+o.date+' · '+o.src;
+  const footTxt='Always verify the exact sub-model / configuration before buying'+
+    (o.single?' · ° / dashed = '+ST_LABEL[o.single]+' optional / config-dependent':'');
+  let maxX=0; for(const it of items) if(!it.yearLabel) maxX=Math.max(maxX,it.x+it.w);
+  meas.font='bold 28px '+FONT; const hw=meas.measureText(o.brandLabel+' — '+o.title).width;
+  meas.font='14px '+FONT;      const sw=meas.measureText(subTxt).width;
+  meas.font='13px '+FONT;      const fw=Math.max(meas.measureText(footTxt).width,meas.measureText('Source: '+o.src).width);
+  const W2=Math.ceil(Math.min(W,Math.max(maxX+padX,hw+padX*2,sw+padX*2,fw+padX*2,700)));
   // pass 2: draw (scale 2 for crispness; back off if the image would exceed eBay's ~12MP)
-  const S=(W*2*(H*2))>11800000?1.5:2;
+  const S=(W2*2*(H*2))>11800000?1.5:2;
   const cvs=document.createElement('canvas');
-  cvs.width=Math.round(W*S); cvs.height=Math.round(H*S);
+  cvs.width=Math.round(W2*S); cvs.height=Math.round(H*S);
   const ctx=cvs.getContext('2d'); ctx.scale(S,S);
-  ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='#0f2d52'; ctx.fillRect(0,0,W,headerH);
+  ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,W2,H);
+  ctx.fillStyle='#0f2d52'; ctx.fillRect(0,0,W2,headerH);
   ctx.font='bold 28px '+FONT; ctx.fillStyle='#ffffff';
   ctx.fillText(o.brandLabel+' — ',padX,40);
   const w1=ctx.measureText(o.brandLabel+' — ').width;
   ctx.fillStyle='#5dd0f0'; ctx.fillText(o.title,padX+w1,40);
   ctx.font='14px '+FONT; ctx.fillStyle='#c9dcea';
-  ctx.fillText(o.models.length+' rows (a chip may group several models)'+
-    (o.extras.length?' · filters: '+o.extras.join(' · '):'')+' · '+o.date+' · '+o.src,padX,68);
+  ctx.fillText(subTxt,padX,68);
   const rr=(x,y,w,h,r)=>{ctx.beginPath();
     if(ctx.roundRect)ctx.roundRect(x,y,w,h,r);
     else{ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}};
@@ -232,11 +241,10 @@ function drawReportImage(o){
     ctx.globalAlpha=.9; ctx.font=cF; ctx.fillText(it.ctxt,it.x+10,it.y+37); ctx.globalAlpha=1;
   }
   ctx.strokeStyle='#e3e9f0'; ctx.lineWidth=1;
-  for(const sy of seps){ctx.beginPath();ctx.moveTo(padX,sy);ctx.lineTo(W-padX,sy);ctx.stroke();}
-  ctx.beginPath();ctx.moveTo(padX,footY);ctx.lineTo(W-padX,footY);ctx.stroke();
+  for(const sy of seps){ctx.beginPath();ctx.moveTo(padX,sy);ctx.lineTo(W2-padX,sy);ctx.stroke();}
+  ctx.beginPath();ctx.moveTo(padX,footY);ctx.lineTo(W2-padX,footY);ctx.stroke();
   ctx.font='13px '+FONT; ctx.fillStyle='#5b7185';
-  ctx.fillText('Always verify the exact sub-model / configuration before buying'+
-    (o.single?' · ° / dashed = '+ST_LABEL[o.single]+' optional / config-dependent':''),padX,footY+24);
+  ctx.fillText(footTxt,padX,footY+24);
   ctx.fillText('Source: '+o.src,padX,footY+44);
   return cvs;
 }
