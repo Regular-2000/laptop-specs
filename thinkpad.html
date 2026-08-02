@@ -149,6 +149,7 @@
       <span class="stf" data-f="nvme" title="M.2 slot that accepts NVMe drives">NVMe</span>
       <span class="stf" data-f="m2only" title="M.2 slot that ONLY takes SATA drives — no NVMe">SATA-only M.2</span>
       <span class="stf stall" id="stall" title="Toggle all storage filters at once">✕ clear</span>
+      <span class="stf stall" id="clist" title="Compact one-screen view of the models matching the current filters, with save-as-HTML-report and copy-as-text">▤ report</span>
       <span class="hint">🔒 dashed = soldered RAM · click for details</span>
     </div>
   </div>
@@ -180,7 +181,7 @@
 // ===== Data lives in thinkpad.csv (universal schema shared with dell.csv) =====
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
 // cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
-const {loadCSV}=await import('./specdata.js?b=20260724');
+const {loadCSV,loadAllBrands,showCompactList}=await import('./specdata.js?b=20260802');
 const ALL=await loadCSV('thinkpad.csv');
 
 const GENLABEL={sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
@@ -375,6 +376,26 @@ stAllBtn.onclick=()=>{
   syncStAll(); apply();
 };
 syncStAll();
+// ---- ▤ compact list: cross-brand flat view of whatever the filters currently match ----
+document.getElementById('clist').onclick=async function(){
+  const b=this; b.textContent='▤ …';
+  try{
+    const all=ALL; // this page's brand only (compact view is per-brand by design)
+    const sTxt=q.value.trim().toLowerCase();
+    const sTx=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')).toLowerCase();
+    const extras=[];
+    if(genOff.size) extras.push('RAM gen hidden: '+[...genOff].join(', '));
+    if(w11Only) extras.push('Win 11 only');
+    if(sTxt) extras.push('search: "'+sTxt+'"');
+    if(famFilt) extras.push((famFilt.kind==='bat'?'battery family ':'charger ')+famFilt.key);
+    showCompactList({
+      models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&(!sTxt||sTx(d).includes(sTxt))&&stPass(d)&&famPass(d)),
+      brandLabel:'ThinkPad (Lenovo / IBM)', ctxKind:famFilt?famFilt.kind:null,
+      stOnKeys:[...stOn], allStOn:stOn.size===STKEYS.length, extras
+    });
+  }finally{ b.textContent='▤ report'; }
+};
+
 // ---- reverse lookup: "I own this battery/charger — what else takes it?" ----
 const PWRFAMS=[[/16V barrel/i,'16V barrel'],[/round tip/i,'round tip'],[/slim tip/i,'slim tip'],[/usb-c/i,'USB-C']];
 function pwrFam(d){if(!d.pwr)return null;const j=d.pwr.indexOf(String.fromCharCode(124,62));const sh=j<0?d.pwr:d.pwr.slice(0,j);const hit=PWRFAMS.find(p=>p[0].test(sh));return hit?hit[1]:null;}
