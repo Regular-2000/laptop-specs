@@ -57,6 +57,13 @@ cross-brand collisions (440/450/840/830…) take one click on a brand button. Br
 now honor ?q= — pre-fill search + auto-scroll to first hit; ThinkPad/HP additionally start
 in ▦ All view when arriving with ?q= so hits outside the default tab are visible.
 specdata.js unchanged → no stamp bump needed.
+DONE 2026-08-02: ▥ compact layout toggle (all 3 pages, next to ▤ report). Merges the
+aligned columns into ONE flowing row per year — report-style density but full-size,
+fully interactive chips (filters/search/panel all work). Dell: sizes merged 15–16″ → 12″,
+tier order kept inside each size, no alignment spacers. ThinkPad/HP: applies to the
+▦ All view, series merged budget → premium (single-series tabs already flow — no-op
+there). Toggle persists via localStorage key `specs_compact`, shared across the three
+pages. specdata.js unchanged → no stamp bump.
 STILL OPEN (approved design, not yet built): segmented filter selector
 (💾 Storage | 🔌 Charger | 🔋 Battery) swapping chip sets in one row, all chips
 colored by the era palette (storage buttons stop being "random colors":
