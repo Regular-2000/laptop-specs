@@ -84,7 +84,8 @@ hit badge. Decide tolerance for third-party script first.
 ## 7. Chargers PHOTOSESSION 📸
 Replace/augment the schematic SVGs (`img/chg-*.svg`) with real macro photos —
 plug tip toward camera, slight angle, plain background. Shopping list:
-Dell 7.4mm, Dell legacy (C-series if one survives), Lenovo 16V barrel,
+Dell 7.4mm, Dell 4.5mm small tip (3400-era 3000-series), Dell legacy (C-series if
+one survives), Lenovo 16V barrel,
 Lenovo round tip (R50/Z60m chargers!), Lenovo slim tip, HP 7.4mm smart-pin
 (8570w), HP 4.5mm blue tip (840 G3), one USB-C. Photoshop for clarity is
 allowed and encouraged — this is a reference diagram, not an eBay condition

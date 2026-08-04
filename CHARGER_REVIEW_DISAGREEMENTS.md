@@ -55,7 +55,37 @@ through the fleet.
 
 ---
 
-## Applied to the data (the parts I agreed with)
+## 4. OPEN QUESTION — Latitude 3300 tip (audit 2026-08-04)
+
+The 3000-series audit (see below) left one unresolved row: **Latitude 3300** (13.3″,
+listed year 2017 in our CSV). Aftermarket listings claim **7.4mm**, but the 3300 is
+the 3400/3500's 13″ sibling (launched 2019 — our CSV year may be off) and that whole
+platform is 4.5mm + USB-C per Dell's spec sheets. Sources conflict, so the row was
+LEFT at 7.4mm. Needs a tag-keyed parts lookup or a physical unit. (Related education
+oddity that keeps this plausible: SM's own 3120/3140 units shipped 7.4mm bricks 🔬.)
+
+---
+
+## Applied 2026-08-04 — Latitude 3000-series tip audit (triggered by SM's 3400 catch)
+
+SM flagged the 3400 as wrongly listed 7.4mm; his service-tag parts export (GQD5NW2)
+shows the shipped adapter = `MGJN9` **65W Liteon 4.5MM** — tier-2 evidence. Full
+vicinity audit against Dell's own manuals/spec pages followed. The switch point:
+
+- **7.4mm confirmed correct** (Dell manual explicit): 3380, 3480, 3580 — no change.
+- **x90 refresh switched to 4.5mm** (Dell manual: "shipped with 4.5 mm barrel plug"):
+  3490, 3590 → fixed from 7.4mm.
+- **3400 / 3500** (Dell spec table: 45/65W 4.5mm barrel + 65/90W USB-C options) →
+  fixed from 7.4mm (3400) / USB-C-only (3500). Surface = 4.5mm (what ships), USB-C
+  in the dual note.
+- **2019–2024 USB-C rows** (3310, 3330, 3410, 3420, 3430, 3440, 3450, 3520, 3530,
+  3540, 3550): kept USB-C as primary but added the **65W 4.5mm barrel** config
+  option (Dell spec tables for 3420/3520/3440; Dell's 65W-4.5mm accessory page lists
+  3430/3530/3550; DA65NM191 covers the rest) and corrected the old deep-note claim
+  that the barrel on these was "7.4mm" — it's 4.5mm on the 3000 series.
+- The doc's Section-1 verdict stands: business 5000/7000 of that era = 7.4mm. The
+  4.5mm tip entered the *Latitude 3000* line via the education/budget side — a third
+  lineage next to the two in #1.
 
 Reviewing the doc caught **3 real errors in our own `pwr` column** — all were wrongly
 set to "4.5mm blue tip" and are actually **7.4mm smart-pin barrel**. Fixed
