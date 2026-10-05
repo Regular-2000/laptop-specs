@@ -160,12 +160,32 @@ need a multi-url schema + renderer change (deferred). STILL OPEN: 44 ThinkPad bl
 the 8 Dell clamshell blanks + Pro Plus spec page, if clean sources ever surface; optional
 multi-url-per-group upgrade.
 
+## 11. RS-232 serial port + Dell Rugged column (started 2026-10-05)
+DONE: schema → 34 cols (`rs232`, `rs232_note`); "⊶ RS-232" toggle + panel row + search
+terms on all 3 pages (+ landing search); report export shows the serial note as context.
+Dell: Rugged/XFR rows moved to their own 🛡 Rugged column; added 5404, 7404, 7204, 7214,
+7202/7212/7220/7030 tablets, Pro Rugged 13/14, XFR D630/E6400/E6420; 5420 Rugged = alias on
+the 5424 row; ATG = aliases on D620/D630/E6400/E6410/E6420/E6430; 7230 renamed
+"7230 Rugged Tab.". New rugged rows have NO price yet (needs an eBay sold pull).
+Serial filled & sourced so far: all pre-2012 Dell C/D/E5x00–E5x20 + E6x00, every Rugged/XFR
+row, HP 6930p / 6x40b–6x70b / 8x40p–8x70p, ThinkPad T20–R61 era (ThinkWiki list).
+Findings worth knowing: on Dell E5500/E5510 and HP 6540b/6560b/6570b/8560p/8570p only the
+15″ model has the port — the 14″ twin doesn't. Device Manager "PCI Serial Port" on
+EliteBooks is Intel AMT Serial-over-LAN, NOT a physical port.
+STILL OPEN: (a) modern rows (~2012+, all brands) are blank = "Unverified" — sweep
+spec sheets to confirm 0s (Dell Setup&Specs ports table / PSREF / QuickSpecs);
+(b) HP 8530w, 8760w, 8770w, ProBook 4x10s–4x40s, Dell E4200/E4300/E4310/E6410/Latitude 13
+unchecked; (c) **HP ProBook 640/650 G1–G5 are missing from the grid entirely** — refurb
+sellers advertise the 650 G1–G3 "with serial port" (not yet verified against QuickSpecs),
+and the RS-232 filter can't find them until rows exist; (d) new rugged rows need eBay prices; (e) 7204/7214/7202/7212
+chargers not audited.
+
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20260802b.
+visitors keep running the stale loader. Current stamp: 20261005.
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

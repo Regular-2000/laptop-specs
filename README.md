@@ -52,6 +52,19 @@ on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
   deep part into an expandable note). Connector thumbnails come from `img/chg-*.svg`,
   matched on the short part of the pwr text only.
 
+- Serial port (`rs232`, `rs232_note`, added 2026-10-05 → **34-col schema**): `1` = native
+  RS-232 on the machine itself (DB9, or Dell's micro/mini-serial on tablets — the note says
+  which cable it needs), `2` = only some units (a factory option, an optional I/O module, or
+  a grouped row where only one sub-model has it — e.g. 6470b / 6570b), `0` = confirmed
+  none, **blank = unverified**. Dock / port-replicator / Ultrabay-adapter serial does NOT
+  count — it goes in `rs232_note`. Drives the "⊶ RS-232" toggle on all three pages and
+  the "serial / rs232 / db9" search terms. Every filled cell cites its source behind the ⓘ.
+- Dell **Rugged column** (2026-10-05): any Dell row whose model contains "Rugged" or
+  "XFR" is pulled out of its screen-size column into one 🛡 Rugged column (all sizes,
+  largest first; the chip shows the size). Name new rugged rows "<num> Rugged",
+  "<num> Rugged Ext.", "<num> Rugged Tab." or "<model> XFR" and they land there
+  automatically. Semi-rugged ATG variants are aliases on their base E/D rows, not chips.
+
 ## Source-of-truth hierarchy (how much to trust a given cell)
 
 Buying 400 machines to touch every one isn't realistic, so most cells lean on documents.

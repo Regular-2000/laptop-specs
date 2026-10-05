@@ -27,6 +27,12 @@
 //   url    - MANUAL override for the official spec-page link. Leave blank to use the
 //            brand's automatic DuckDuckGo "\ bang" redirect (which finds the page
 //            reliably); paste an exact URL here to pin a specific model precisely.
+//   rs232  - serial (RS-232 / DB9) port on the MACHINE ITSELF: 1 = native port,
+//            2 = optional (factory config / configurable I/O module — check the unit),
+//            0 = confirmed none (spec sheet / manual ports table), blank = unverified.
+//            Dock / port-replicator-only serial does NOT count — it goes in rs232_note.
+//   rs232_note - free text for the serial port (location, which configs, dock that adds
+//            it); supports the `short |> deep` split like pwr/bat_note.
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -84,7 +90,7 @@ export function parseCSV(text){
 //                            is active — so it works for ANY filter type, not just storage)
 //   ⧉ copy as text         → paste-ready plain text (eBay descriptions etc.)
 //   ✕ close (Esc)
-// loadAllBrands() (all three CSVs concatenated — identical 32-col schema) is kept
+// loadAllBrands() (all three CSVs concatenated — identical 34-col schema) is kept
 // exported for the future merged all-brands table; the overlay is per-brand by design.
 
 const BRAND_FILES=[['thinkpad','ThinkPad · Lenovo / IBM','thinkpad.csv'],
@@ -106,11 +112,19 @@ const GENBG={sdr:'#8d6e63',ddr1:'#7d8799',ddr2:'#b07aa1',ddr3:'#4e79a7',ddr4:'#5
 const stripTags=s=>String(s==null?'':s).replace(/<[^>]*>/g,'');
 const shortOf=s=>{const t=String(s==null?'':s);const j=t.indexOf(String.fromCharCode(124,62));return j<0?t:t.slice(0,j);};
 const escH=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+// RS-232 serial-port label (shared by the three renderers' detail panels + the report)
+export function rsLabel(d){
+  if(d.rs232===1) return 'Yes — native serial port';
+  if(d.rs232===2) return 'Some units only — depends on sub-model or factory option, check the unit';
+  if(d.rs232===0) return 'No';
+  return 'Unverified';
+}
 // context line shown under each model in the exported report (and in chip tooltips):
 // battery / charger info when a ⇄ fam filter drove the query, storage otherwise
 function ctxOf(d,kind){
   if(kind==='bat') return stripTags(shortOf(d.bat||''))+(d.bat_fam?' · '+d.bat_fam:'');
   if(kind==='pwr') return stripTags(shortOf(d.pwr||''));
+  if(kind==='rs232') return rsLabel(d)+(d.rs232_note?' · '+stripTags(shortOf(d.rs232_note)):'');
   return stripTags(d.stor||'');
 }
 
@@ -384,6 +398,8 @@ export async function loadCSV(url){
     const pn=get(r,'price_note'); if(pn) o.price_note=pn;
     const os=get(r,'os'); if(os) o.os=os;
     const note=get(r,'note'); if(note) o.note=note;
+    const rs=get(r,'rs232'); if(rs!=='') o.rs232=+rs;          // undefined = unverified
+    const rn=get(r,'rs232_note'); if(rn) o.rs232_note=rn;
     return o;
   });
 }

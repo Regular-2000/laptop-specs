@@ -45,7 +45,7 @@
     <a class="card dell" href="dell.html">
       <div class="b">Dell Latitude</div>
       <div class="d">Year × screen-size grid, 2001–2025</div>
-      <div class="cnt">151 models · 3000/5000/7000/9000 + Rugged + ARM + 11.6″ edu</div>
+      <div class="cnt">164 models · 3000/5000/7000/9000 + Rugged / XFR + ARM + 11.6″ edu</div>
     </a>
     <a class="card tp" href="thinkpad.html">
       <div class="b">Lenovo ThinkPad</div>
@@ -70,11 +70,11 @@ const BRANDS=[['dell','Dell Latitude','dell.html','dell'],
 const q=document.getElementById('q'), res=document.getElementById('qres');
 let ALL=null, loading=null;
 function load(){
-  if(!loading) loading=import('./specdata.js?b=20260802b')
+  if(!loading) loading=import('./specdata.js?b=20261005')
     .then(m=>m.loadAllBrands()).then(a=>{ALL=a;return a;});
   return loading;
 }
-const hay=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')).toLowerCase();
+const hay=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();
 function matches(s){
   const out={};
   for(const d of ALL){ if(hay(d).includes(s)) (out[d.brand]=out[d.brand]||[]).push(d); }

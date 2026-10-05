@@ -36,8 +36,8 @@
   .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
   .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
   .hint{color:var(--dim);font-size:12px}
-  #win11toggle{cursor:pointer;user-select:none;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--panel)}
-  #win11toggle.on{border-color:var(--accent);color:#ff8a84}
+  #win11toggle,#rs232toggle{cursor:pointer;user-select:none;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--panel)}
+  #win11toggle.on,#rs232toggle.on{border-color:var(--accent);color:#ff8a84}
   .home{color:var(--dim);font-size:12px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:4px 9px;white-space:nowrap}
   .home:hover{color:var(--text);border-color:var(--accent)}
   /* series tabs */
@@ -78,6 +78,7 @@
   #panel .sub{color:var(--dim);font-size:12px;margin-bottom:10px}
   .row{margin:8px 0;padding:8px 10px;background:var(--panel2);border-radius:8px}
   .row .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+  .row .v.rsu{color:var(--dim);font-style:italic}
   .row .v{font-size:13.5px;margin-top:2px}
   .badge{display:inline-block;font-size:11px;border-radius:5px;padding:2px 7px;margin-right:5px;margin-bottom:3px}
   .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
@@ -97,7 +98,7 @@
     #search{width:120px;padding:5px 9px;font-size:13px}
     .htop{gap:6px}
     .legend{gap:4px}
-    .lg,.stf,#win11toggle{padding:2px 6px;font-size:11px}
+    .lg,.stf,#win11toggle,#rs232toggle{padding:2px 6px;font-size:11px}
     .hint,.laddercap{display:none}
     .tab{padding:6px 10px;font-size:12px}
     .tab.all{margin-left:4px;padding-left:10px}
@@ -146,6 +147,7 @@
       <div class="lg ddr4" data-g="ddr4">DDR4</div>
       <div class="lg ddr5" data-g="ddr5">DDR5</div>
       <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
+    <div id="rs232toggle" title="Show only models with a serial (RS-232 / DB9) port on the machine itself — native or factory option. Dock-only serial is listed in the detail panel but not counted.">⊶ RS-232</div>
       <span class="stf" data-f="bay25" title="Has a 2.5″ SATA drive bay">2.5″ SATA</span>
       <span class="stf ide" data-f="ide" title="Vintage 2.5″ IDE (PATA) drive — the retro era gets its own chip">🦖 2.5″ IDE</span>
       <span class="stf" data-f="msata" title="Has an mSATA slot">mSATA</span>
@@ -186,7 +188,7 @@
 // ===== Data lives in thinkpad.csv (universal schema shared with dell.csv) =====
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
 // cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
-const {loadCSV,loadAllBrands,showCompactList}=await import('./specdata.js?b=20260802b');
+const {loadCSV,loadAllBrands,showCompactList,rsLabel}=await import('./specdata.js?b=20261005');
 const ALL=await loadCSV('thinkpad.csv');
 
 const GENLABEL={sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
@@ -257,7 +259,7 @@ function makeChip(d,sk){
   ch.className='chip '+d.gen+(d.sold?' soldered':'');
   ch.innerHTML='<b>'+d.m+'</b><span>'+(d.sold?'🔒 ':'')+d.ram.split(' ')[0].replace(';','')+' · '+d.tag+' · '+d.size+'</span>';
   ch.onclick=()=>select(d,ch,sk);
-  ch.dataset.model=(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')).toLowerCase();  // aliases + battery family + charger type all searchable
+  ch.dataset.model=(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();  // aliases + battery family + charger type all searchable
   ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
   allChips.push({el:ch,d});
   return ch;
@@ -370,6 +372,7 @@ function select(d,el,sk){
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
     (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+(pwrFam(d)?' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+pwrFam(d)+'&quot;)">⇄ same charger</button>':'')+'</div></div>':'')+
+    '<div class="row"><div class="k">⊶ Serial port (RS-232)</div><div class="v'+(d.rs232===undefined?' rsu':'')+'">'+rsLabel(d)+(d.rs232_note?' · '+DEEP(d.rs232_note):'')+'</div></div>'+
     (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_fam?' <button class="famBtn" onclick="FAMGO(&quot;bat&quot;,&quot;'+d.bat_fam+'&quot;)">⇄ same battery ('+d.bat_fam+')</button>':'')+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
     (d.price?(()=>{const pn=d.price_note||'';const real=/^Real /.test(pn);const samp=/^Est\. cross-checked/.test(pn);const tag=real?'<span class="badge b-yes">real data</span>':samp?'<span class="badge b-sold">est · sampled</span>':'<span class="badge b-sold">estimate</span>';return '<div class="row"><div class="k">💰 eBay sold (mid-2026)*</div><div class="v">'+DEEP('<b>'+d.price+'</b> '+tag+'|>'+pn+UPG(d))+'</div></div>';})():'')+
     '<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
@@ -380,7 +383,7 @@ function select(d,el,sk){
 document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if(selEl)selEl.classList.remove('sel');selEl=null;};
 
 // filters
-const genOff=new Set(); let w11Only=false;
+const genOff=new Set(); let w11Only=false; let rsOnly=false;
 const q=document.getElementById('search');
 // storage filter chips (driven by the structured st_* columns)
 const stTest={ide:d=>d.st_ide>0,nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
@@ -413,15 +416,16 @@ document.getElementById('clist').onclick=async function(){
   try{
     const all=ALL; // this page's brand only (compact view is per-brand by design)
     const sTxt=q.value.trim().toLowerCase();
-    const sTx=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')).toLowerCase();
+    const sTx=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();
     const extras=[];
     if(genOff.size) extras.push('RAM gen hidden: '+[...genOff].join(', '));
     if(w11Only) extras.push('Win 11 only');
+    if(rsOnly) extras.push('RS-232 serial port (native or optional)');
     if(sTxt) extras.push('search: "'+sTxt+'"');
     if(famFilt) extras.push((famFilt.kind==='bat'?'battery family ':'charger ')+famFilt.key);
     showCompactList({
-      models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&(!sTxt||sTx(d).includes(sTxt))&&stPass(d)&&famPass(d)),
-      brandLabel:'ThinkPad (Lenovo / IBM)', ctxKind:famFilt?famFilt.kind:null,
+      models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&(!rsOnly||d.rs232>0)&&(!sTxt||sTx(d).includes(sTxt))&&stPass(d)&&famPass(d)),
+      brandLabel:'ThinkPad (Lenovo / IBM)', ctxKind:famFilt?famFilt.kind:(rsOnly?'rs232':null),
       stOnKeys:[...stOn], allStOn:stOn.size===STKEYS.length, extras
     });
   }finally{ b.textContent='▤ report'; }
@@ -437,7 +441,7 @@ window.FAMGO=function(kind,key){
   if(famFilt&&famFilt.kind===kind&&famFilt.key===key){FAMCLEAR();return;}
   famFilt={kind:kind,key:key};
   genOff.clear();document.querySelectorAll(".lg").forEach(function(l){l.classList.remove("off")});
-  w11Only=false;var _w=document.getElementById("win11toggle");if(_w)_w.classList.remove("on");
+  w11Only=false;var _w=document.getElementById("win11toggle");if(_w)_w.classList.remove("on");rsOnly=false;var _r=document.getElementById("rs232toggle");if(_r)_r.classList.remove("on");
   stOn.clear();STKEYS.forEach(function(k){stOn.add(k)});document.querySelectorAll(".stf[data-f]").forEach(function(b){b.classList.add("on")});syncStAll();
   q.value="";
   let n=0;ALL.forEach(function(d){if(famPass(d))n++;});
@@ -454,14 +458,15 @@ function apply(){
   allChips.forEach(({el,d})=>{
     const genOk=!genOff.has(d.gen);
     const wOk=!w11Only||(d.w11!==0);
+    const rOk=!rsOnly||d.rs232>0;
     const sOk=!s||el.dataset.model.includes(s);
-    const show=genOk&&wOk&&sOk&&stPass(d)&&famPass(d);
+    const show=genOk&&wOk&&rOk&&sOk&&stPass(d)&&famPass(d);
     // compact flow: filtered chips are REMOVED so survivors pack together;
     // aligned grid: dimmed in place (position = information there)
     el.classList.toggle('dim',!compact&&!show);
     el.classList.toggle('gone',compact&&!show);
-    el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk);
-    if(s&&sOk&&genOk&&wOk&&!firstHit)firstHit=el;
+    el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk&&rOk);
+    if(s&&sOk&&genOk&&wOk&&rOk&&!firstHit)firstHit=el;
   });
   if(compact)fixFlow();
   if(firstHit)firstHit.scrollIntoView({block:'center',behavior:'smooth'});
@@ -486,6 +491,8 @@ document.querySelectorAll('.lg').forEach(lg=>{
 });
 const wt=document.getElementById('win11toggle');
 wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
+const rt=document.getElementById('rs232toggle');
+rt.onclick=()=>{rsOnly=!rsOnly;rt.classList.toggle('on',rsOnly);apply();};
 
 // ▥ compact layout toggle (shared across the three brand pages via localStorage)
 let compact=localStorage.getItem('specs_compact')==='1';
