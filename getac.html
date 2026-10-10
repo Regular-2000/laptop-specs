@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getac Rugged Timeline — RAM, Storage & Serial Reference</title>
+<style>
+  :root{
+    --bg:#12151c; --panel:#1b1f2a; --panel2:#232937; --text:#e8ebf2; --dim:#9aa3b5;
+    --line:#333b4d; --accent:#0096d6; --red:#ff5c5c;
+    --sdr:#8d6e63; --ddr1:#7d8799; --ddr2:#b07aa1; --ddr3:#4e79a7; --ddr4:#59a14f; --ddr5:#f28e2b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  body{display:flex;flex-direction:column;overflow:hidden}
+  header{flex:none;padding:10px 16px 0;background:var(--bg);z-index:20;border-bottom:1px solid var(--line)}
+  .htop{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  header h1{font-size:16px;margin:0;white-space:nowrap}
+  header h1 small{color:var(--dim);font-weight:normal}
+  #search{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 12px;font-size:14px;width:190px}
+  #search:focus{outline:none;border-color:var(--accent)}
+  .legend{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .lg{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px solid var(--line);opacity:.95}
+  .lg.off{opacity:.3}
+  .stf{cursor:pointer;user-select:none;border-radius:6px;padding:3px 9px;font-size:12px;border:1px dashed #262e3e;background:#0c0f15;color:#525c72}
+  .stf:hover{color:var(--dim)}
+  .stf.ide{border-color:#4a3c33;color:#84705f}
+  .stf.ide.on{background:#8d6e63;border-color:#8d6e63;color:#fff}
+  .stf.on{background:var(--accent);border-color:var(--accent);border-style:solid;color:#fff}
+  .stf.stall{border-style:solid;border-color:var(--line);background:var(--panel);color:var(--dim)}
+  .stf.stall:hover{color:var(--text);border-color:var(--accent)}
+  .stf.stall.on{color:var(--accent);border-color:var(--accent)}
+  #grid td.flow{white-space:normal;min-width:320px}
+  .chip.gone{display:none}
+  .vsep{display:inline-block;width:0;height:36px;border-left:1px dashed #3d465c;margin:3px 5px;vertical-align:top}
+  .lg.sdr{background:var(--sdr)} .lg.ddr1{background:var(--ddr1)} .lg.ddr2{background:var(--ddr2)}
+  .lg.ddr3{background:var(--ddr3)} .lg.ddr4{background:var(--ddr4)} .lg.ddr5{background:var(--ddr5);color:#222}
+  .hint{color:var(--dim);font-size:12px}
+  #win11toggle,#rs232toggle,#rptoggle{cursor:pointer;user-select:none;font-size:12px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--panel)}
+  #win11toggle.on,#rs232toggle.on,#rptoggle.on{border-color:var(--accent);color:#ff8a84}
+  .home{color:var(--dim);font-size:12px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:4px 9px;white-space:nowrap}
+  .home:hover{color:var(--text);border-color:var(--accent)}
+  /* series tabs */
+  .tabs{display:flex;gap:2px;margin-top:8px;overflow-x:auto}
+  .tab{cursor:pointer;user-select:none;padding:8px 14px;font-size:13px;font-weight:600;color:var(--dim);border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent)}
+  .tab small{font-weight:normal;opacity:.6}
+  .tab .tier{color:#e5b567;font-weight:800;letter-spacing:-1.5px;margin-right:5px;font-size:12px}
+  .tab.all{margin-left:8px;padding-left:16px;border-left:1px solid var(--line);color:#9db4ff}
+  .tab.all.active{color:#c3d2ff;border-bottom-color:#7d97ff}
+  #grid.allmode{min-width:1120px}
+  #grid.allmode th{font-size:11px}
+  .laddercap{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;display:flex;align-items:center;gap:6px}
+  .laddercap .bar{flex:0 0 60px;height:3px;border-radius:2px;background:linear-gradient(90deg,#5a6b4e,#e5b567)}
+  .wrap{flex:1;min-height:0;display:flex;gap:0}
+  main{flex:1;overflow:auto;padding:0 12px 60px}
+  .seriesnote{color:var(--dim);font-size:12px;padding:8px 4px 2px;font-style:italic}
+  table{border-collapse:collapse;width:100%;min-width:520px;table-layout:fixed}
+  col.cy{width:56px}
+  th{position:sticky;top:0;background:var(--bg);z-index:10;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding:8px 4px;border-bottom:1px solid var(--line);text-align:left}
+  td{border-bottom:1px solid #1e2430;padding:4px;vertical-align:top}
+  td.year{font-weight:bold;font-size:13px;color:var(--dim);white-space:nowrap;width:52px;padding-top:9px}
+  tr.win11line td{border-bottom:2px solid var(--red);padding:2px 6px;font-size:11px;color:var(--red);text-align:left}
+  .chip{display:inline-flex;flex-direction:column;align-items:flex-start;margin:2px;padding:4px 8px;border-radius:7px;cursor:pointer;border:2px solid transparent;min-width:70px;transition:opacity .15s}
+  .chip b{font-size:13px;line-height:1.1}
+  .chip span{font-size:10px;opacity:.85;line-height:1.2;margin-top:1px}
+  .chip.sdr{background:var(--sdr)} .chip.ddr1{background:var(--ddr1)} .chip.ddr2{background:var(--ddr2)}
+  .chip.ddr3{background:var(--ddr3)} .chip.ddr4{background:var(--ddr4)} .chip.ddr5{background:var(--ddr5);color:#1b1b1b}
+  .chip.soldered{border-style:dashed;border-color:rgba(255,255,255,.55)}
+  .chip.ddr5.soldered{border-color:rgba(0,0,0,.45)}
+  .chip.unk{background:#454c5c;color:#d8dce6} .lg.unk{background:#454c5c;color:#d8dce6}
+  .chip .rsmark{font-size:10px;opacity:.9}
+  .chip.dim{opacity:.14}
+  .chip.hit{outline:2px solid #fff;outline-offset:1px}
+  .chip.sel{border-color:#fff;border-style:solid;box-shadow:0 0 0 2px var(--accent)}
+  #panel{width:320px;flex:0 0 320px;border-left:1px solid var(--line);background:var(--panel);padding:14px;overflow-y:auto;display:none}
+  #panel.show{display:block}
+  #panel h2{margin:0 0 2px;font-size:19px}
+  #panel .sub{color:var(--dim);font-size:12px;margin-bottom:10px}
+  .row{margin:8px 0;padding:8px 10px;background:var(--panel2);border-radius:8px}
+  .row .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+  .row .v.rsu{color:var(--dim);font-style:italic}
+  .row .v{font-size:13.5px;margin-top:2px}
+  .badge{display:inline-block;font-size:11px;border-radius:5px;padding:2px 7px;margin-right:5px;margin-bottom:3px}
+  .b-yes{background:#1d4d2b;color:#7ee2a0} .b-no{background:#54262a;color:#ff9b9b}
+  .b-sold{background:#4a3b1e;color:#ffd27e}
+  .infoBtn{cursor:pointer;color:var(--dim);border:1px solid var(--line);border-radius:50%;padding:0 4px;font-size:11px;margin-left:4px;user-select:none}
+  .infoBtn:hover{color:var(--text);border-color:var(--text)}
+  .chgThumb{height:18px;vertical-align:-4px;margin-left:6px;opacity:.9}
+  .chgBig{display:block;height:60px;margin:5px 0 2px}
+  .deep{display:none;font-size:11.5px;color:var(--dim);border-left:2px solid var(--line);padding:3px 0 3px 8px;margin-top:4px}
+  .famBtn{cursor:pointer;color:#4ea1ff;border:1px solid #4ea1ff;background:none;border-radius:9px;padding:0 7px;font-size:11px;margin-left:6px;user-select:none}
+  #fambar{display:none;position:sticky;top:0;z-index:60;margin:6px 10px;padding:6px 10px;border:1px solid #e5b567;border-radius:8px;background:#1a1408;color:#e5b567;font-size:12.5px}
+  #fambar .fx{cursor:pointer;color:#0c0f15;background:#e5b567;border-radius:7px;padding:2px 9px;margin-left:10px;font-weight:600;white-space:nowrap}
+
+  /* mobile density: ~90% scale that owner prefers, minus touch-useless hints */
+  @media (max-width:740px){
+    header{padding:6px 10px 0;gap:6px}
+    #search{width:120px;padding:5px 9px;font-size:13px}
+    .htop{gap:6px}
+    .legend{gap:4px}
+    .lg,.stf,#win11toggle,#rs232toggle,#rptoggle{padding:2px 6px;font-size:11px}
+    .hint,.laddercap{display:none}
+    .tab{padding:6px 10px;font-size:12px}
+    .tab.all{margin-left:4px;padding-left:10px}
+    main{padding:0 6px 40px}
+    td{padding:2px}
+    td.year{font-size:12px;width:44px}
+    .chip{margin:1px;padding:3px 7px;min-width:62px}
+    .chip b{font-size:12px}
+    .chip span{font-size:9.5px}
+  }
+
+
+  .note{font-size:12px;color:#ffd27e;margin-top:8px}
+  .photo{display:block;margin:4px 0 8px;border-radius:8px;overflow:hidden;background:#fff;text-align:center;text-decoration:none}
+  .photo img{display:block;width:100%;height:150px;object-fit:contain;background:#fff}
+  .photo .ph-fallback{display:none;color:var(--accent);font-size:13px;padding:14px}
+  .photo.noimg{background:var(--panel2)}
+  .photo.noimg img{display:none}
+  .photo.noimg .ph-fallback{display:block}
+  .phcap{color:var(--dim);font-size:11px;text-align:center;margin:-4px 0 8px}
+  .linklabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin-bottom:4px}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .links .ext{color:var(--accent);font-size:12.5px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  .links .ext:hover{border-color:var(--accent)}
+  #closeP{float:right;cursor:pointer;color:var(--dim);font-size:18px;line-height:1;padding:2px 6px}
+  footer{margin-top:24px;padding:12px 4px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--line)}
+  footer a{color:var(--accent)}
+  @media (max-width:900px){
+    #panel{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;flex:none;max-height:58vh;border-left:none;border-top:2px solid var(--accent);border-radius:14px 14px 0 0;z-index:40}
+    header h1{font-size:14px}
+    #search{width:130px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="htop">
+    <a class="home" href="index.html" title="All brands">⌂ Home</a>
+    <h1>Getac <small>· rugged laptops, convertibles &amp; tablets · RAM, storage &amp; serial by year</small></h1>
+    <input id="search" type="search" placeholder="Type model, e.g. B300 G7" autocomplete="off">
+    <div class="legend" id="legend">
+      <div class="lg sdr" data-g="sdr">SDRAM</div>
+      <div class="lg ddr1" data-g="ddr1">DDR</div>
+      <div class="lg ddr2" data-g="ddr2">DDR2</div>
+      <div class="lg ddr3" data-g="ddr3">DDR3</div>
+      <div class="lg ddr4" data-g="ddr4">DDR4</div>
+      <div class="lg ddr5" data-g="ddr5">DDR5</div>
+      <div class="lg unk" data-g="unk" title="RAM type not verified yet">RAM ?</div>
+      <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
+    <div id="rs232toggle" title="Serial (RS-232 / DB9) port on the machine itself. Click to cycle: any → has serial (native or option) → native only → confirmed NONE → not verified yet. Dock-only serial is listed in the detail panel but not counted.">⊶ Serial: any</div>
+    <div id="rptoggle" title="CPU re-paste difficulty. Click to cycle: any → easy or better (levels 1–2: bottom cover, no keyboard/board work) → anything short of pulling the motherboard (≤3). Models not yet verified are hidden while this is on.">🔧 Re-paste: any</div>
+      <span class="stf" data-f="bay25" title="Has a 2.5″ SATA drive bay">2.5″ SATA</span>
+      <span class="stf ide" data-f="ide" title="Vintage 2.5″ IDE (PATA) drive — the retro era gets its own chip">🦖 2.5″ IDE</span>
+      <span class="stf" data-f="msata" title="Has an mSATA slot">mSATA</span>
+      <span class="stf" data-f="m2sata" title="M.2 slot that accepts SATA drives">M.2 SATA</span>
+      <span class="stf" data-f="nvme" title="M.2 slot that accepts NVMe drives">NVMe</span>
+      <span class="stf" data-f="m2only" title="M.2 slot that ONLY takes SATA drives — no NVMe">SATA-only M.2</span>
+      <span class="stf stall" id="stall" title="Toggle all storage filters at once">✕ clear</span>
+      <span class="stf stall" id="clist" title="Compact one-screen view of the models matching the current filters, with save-as-HTML-report and copy-as-text">▤ report</span>
+      <span class="stf stall" id="cmode" title="In ▦ All series: merge the series columns into one flowing row per year (like the report, but interactive). Click again for aligned columns.">▥ compact</span>
+      <span class="hint">⊶ = serial port · ⊶° = serial optional · grey = RAM type unverified · 🔒 = soldered · search: "-word" excludes · "portnone" = confirmed no serial</span>
+    </div>
+  </div>
+  <div class="laddercap">⊶ serial is shown on the chip · <span style="text-transform:none;letter-spacing:0">hover a tab for who it's for · blank = not verified yet, never a guess</span></div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<div class="wrap">
+<main>
+  <div class="seriesnote" id="seriesnote"></div>
+  <div id="fambar"></div>
+  <table id="grid">
+    <colgroup id="cols"><col class="cy"><col></colgroup>
+    <thead id="thead"><tr><th>Year</th><th>Models</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <footer>Getac rugged lineup ~2005 → 2026, Windows devices only (Android ZX/T800-Android/MX50 not included). Specs from Getac spec sheets / press releases and RuggedPCReview.com spec tables (each cell cites its source behind ⓘ); Kingston's memory configurator for slot counts. Getac re-uses model names across generations (B300 → G7, V110 → G7, F110 → G7) — always check the G-number on the bottom label. <b>Serial:</b> 1 = on the machine · ° = configurable option, check the unit · none = spec ports list shows no serial · blank = not verified. No prices yet (needs a live sold-comps pull).</footer>
+</main>
+
+<aside id="panel">
+  <div id="closeP" title="close">✕</div>
+  <div id="pContent"></div>
+</aside>
+</div>
+
+<script type="module">
+// ===== Data lives in getac.csv (universal schema shared with dell.csv / thinkpad.csv) =====
+// Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
+// cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
+const {loadCSV,loadAllBrands,showCompactList,rsLabel,rpLabel}=await import('./specdata.js?b=20261009');
+const ALL=await loadCSV('getac.csv');
+
+const GENLABEL={unk:"Not verified yet",sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
+// OS typically shipped/preinstalled, by release year
+const YEAROS={"2005": "Windows XP Pro", "2006": "Windows XP Pro", "2007": "Windows XP Pro", "2008": "Windows XP Pro / Vista Business", "2009": "Windows XP / Vista / 7", "2010": "Windows 7 Pro", "2011": "Windows 7 Pro", "2012": "Windows 7 Pro", "2013": "Windows 7 / 8 Pro", "2014": "Windows 7 / 8.1 Pro", "2015": "Windows 7 / 8.1 / 10 Pro", "2016": "Windows 10 Pro (Win 7 option)", "2017": "Windows 10 Pro", "2018": "Windows 10 Pro", "2019": "Windows 10 Pro", "2020": "Windows 10 Pro", "2021": "Windows 10 / 11 Pro", "2022": "Windows 11 Pro", "2023": "Windows 11 Pro", "2024": "Windows 11 Pro", "2025": "Windows 11 Pro", "2026": "Windows 11 Pro"};
+// Series metadata (presentation only) — the models come from the CSV.
+const META={
+"F": {
+"label": "Fully rugged laptops",
+"note": "Getac's flagship clamshells: M230/A790 → B300 (2008–2018, the classic 2-serial-port workhorse) → B360 / B360 Pro (2020+), plus the 15.6″ X500 / X600 big-screen line. IP65/66, MIL-STD-810. Nearly all have DB9 serial on the machine."
+},
+"S": {
+"label": "Semi-rugged laptops",
+"note": "Cheaper, lighter office-to-field line: W130 / P470 → S400 → S410 (G1–G5) → S510. IP5x splash/dust. Serial is usually a configurable option on the S410 — check the unit."
+},
+"V": {
+"label": "Convertibles",
+"note": "Rotating-screen fully rugged convertibles: V100 → V200 → V110 (G1–G7) → V120. Small (10–12″) but full rugged. V-series traditionally keeps 1× RS-232 on the chassis."
+},
+"T": {
+"label": "Windows tablets",
+"note": "Fully rugged Windows tablets: E100/E110 → F110 (G1–G7) → F120 · UX10 · K120 (with keyboard) · A140 (14″) · T800 (8″) · RX10. Serial, when available, is a factory expansion-slot option — never assume it."
+}
+};
+const SERIES={};
+for(const k of Object.keys(META)) SERIES[k]={...META[k],models:ALL.filter(d=>d.series===k)};
+
+// ---- build ----
+const tabsEl=document.getElementById('tabs');
+const tbody=document.getElementById('tbody');
+const noteEl=document.getElementById('seriesnote');
+const grid=document.getElementById('grid');
+const colsEl=document.getElementById('cols');
+const theadEl=document.getElementById('thead');
+const panel=document.getElementById('panel'), pC=document.getElementById('pContent');
+// deep link from the landing-page search (?q=…) starts in ▦ All so the hit is visible whatever its series
+const dq=new URLSearchParams(location.search).get('q');
+let curSeries=dq?"ALL":"F", selEl=null, allChips=[];
+// tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
+const order=["S", "V", "T", "F"];
+const TIER={"S": "◐", "V": "⟲", "T": "▭", "F": "🛡"};
+const POS ={"S": "Semi-rugged — splash/drop resistant, cheapest", "V": "Fully rugged convertibles — 10–12″ screen flips to tablet", "T": "Fully rugged Windows tablets", "F": "Fully rugged clamshells — the classic field laptop"};
+
+order.forEach(k=>{
+  const b=document.createElement('button');
+  b.className='tab'+(k===curSeries?' active':'');
+  b.title=POS[k];
+  b.innerHTML='<span class="tier">'+TIER[k]+'</span>'+SERIES[k].label+' <small>('+SERIES[k].models.length+')</small>';
+  b.onclick=()=>{curSeries=k;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));b.classList.add('active');render();};
+  tabsEl.appendChild(b);
+});
+// "All series" combined-matrix view (wide screens)
+const allTab=document.createElement('button');
+allTab.className='tab all'+(curSeries==="ALL"?' active':'');
+allTab.title="Show every series at once, side by side (best on a wide monitor)";
+allTab.innerHTML='▦ All series';
+allTab.onclick=()=>{curSeries="ALL";document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));allTab.classList.add('active');render();};
+tabsEl.appendChild(allTab);
+
+// searchable text: names + CPU + size + RAM + charger/battery family + status tokens
+function HAY(d){const sh=t=>t?t.split(String.fromCharCode(124,62))[0]:'';
+  return (d.m+' '+(d.aliases||'')+' '+d.cpu+' '+d.size+' '+d.ram+' '+(d.bat_fam||'')+' '+sh(d.pwr)+' '+(d.gen||'')+
+   (d.rs232>0?' rs232 rs-232 serial db9 com port':d.rs232===0?' portnone':' portunknown')+
+   (d.rs232===1?' native-serial':d.rs232===2?' optional-serial':'')+
+   (d.w11?' win11':' no-win11')+(d.sold?' soldered':'')).toLowerCase();}
+function makeChip(d,sk){
+  const ch=document.createElement('div');
+  ch.className='chip '+d.gen+(d.sold?' soldered':'');
+  const rsm=d.rs232===1?'⊶ ':d.rs232===2?'⊶° ':d.rs232===0?'':'';
+  ch.innerHTML='<b>'+d.m+'</b><span>'+rsm+(d.sold?'🔒 ':'')+(d.gen==='unk'?'RAM ?':d.ram.split(' ')[0].replace(';',''))+' · '+d.tag+' · '+d.size+'</span>';
+  ch.onclick=()=>select(d,ch,sk);
+  ch.dataset.model=HAY(d);
+  ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
+  allChips.push({el:ch,d});
+  return ch;
+}
+const WIN11Y=2019;
+function win11Row(span){
+  const lr=document.createElement('tr'); lr.className='win11line';
+  lr.innerHTML='<td colspan="'+span+'">▲ 2019+ all Windows 11 eligible · 2017–2018 mixed (8th gen yes, 7th gen no — check the chip) · ▼ older = not eligible</td>';
+  return lr;
+}
+
+function render(){
+  tbody.innerHTML=''; allChips=[];
+  if(selEl){panel.classList.remove('show');selEl=null;}
+
+  if(curSeries==="ALL"){
+    if(compact){
+      // ▥ compact: report-style flow — one wrapping row per year, series merged
+      // budget → premium, no column gaps. Fully interactive.
+      grid.classList.remove('allmode');
+      noteEl.textContent="All lines merged per year. ▥ compact again for aligned columns.";
+      colsEl.innerHTML='<col class="cy"><col>';
+      theadEl.innerHTML='<tr><th>Year</th><th>All series · compact flow</th></tr>';
+      const allYears=[...new Set(order.flatMap(k=>SERIES[k].models.map(m=>m.y)))].sort((a,b)=>b-a);
+      allYears.forEach(yr=>{
+        const tr=document.createElement('tr');
+        const yc=document.createElement('td'); yc.className='year'; yc.textContent=yr; tr.appendChild(yc);
+        const cell=document.createElement('td'); cell.className='flow';
+        order.forEach(k=>{
+          const ym=SERIES[k].models.filter(d=>d.y===yr);
+          if(!ym.length) return;
+          if(cell.children.length){const v=document.createElement('span');v.className='vsep';cell.appendChild(v);}
+          ym.forEach(d=>cell.appendChild(makeChip(d,k)));
+        });
+        tr.appendChild(cell); tbody.appendChild(tr);
+        if(yr===WIN11Y) tbody.appendChild(win11Row(2));
+      });
+      apply(); return;
+    }
+    grid.classList.add('allmode');
+    noteEl.textContent="All lines side by side (best on a wide monitor). Columns = product line, rows = year. Click any model for details and sources.";
+    colsEl.innerHTML='<col class="cy">'+order.map(()=>'<col>').join('');
+    theadEl.innerHTML='<tr><th>Year</th>'+order.map(k=>'<th><span class="tier">'+TIER[k]+'</span> '+SERIES[k].label+'</th>').join('')+'</tr>';
+    const allYears=[...new Set(order.flatMap(k=>SERIES[k].models.map(m=>m.y)))].sort((a,b)=>b-a);
+    allYears.forEach(yr=>{
+      const tr=document.createElement('tr');
+      const yc=document.createElement('td'); yc.className='year'; yc.textContent=yr; tr.appendChild(yc);
+      order.forEach(k=>{
+        const td=document.createElement('td');
+        SERIES[k].models.filter(d=>d.y===yr).forEach(d=>td.appendChild(makeChip(d,k)));
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+      if(yr===WIN11Y) tbody.appendChild(win11Row(order.length+1));
+    });
+    apply(); return;
+  }
+
+  grid.classList.remove('allmode');
+  colsEl.innerHTML='<col class="cy"><col>';
+  theadEl.innerHTML='<tr><th>Year</th><th>Models</th></tr>';
+  const S=SERIES[curSeries];
+  noteEl.textContent=S.note;
+  const years=[...new Set(S.models.map(d=>d.y))].sort((a,b)=>b-a);
+  years.forEach(yr=>{
+    const tr=document.createElement('tr');
+    const td=document.createElement('td'); td.className='year'; td.textContent=yr; tr.appendChild(td);
+    const cell=document.createElement('td');
+    if(compact) cell.className='flow';   // compact also packs single-series rows (filtered chips removed)
+    S.models.filter(d=>d.y===yr).forEach(d=>cell.appendChild(makeChip(d,curSeries)));
+    tr.appendChild(cell); tbody.appendChild(tr);
+    if(yr===WIN11Y) tbody.appendChild(win11Row(2));
+  });
+  apply();
+}
+
+// Getac: no stable spec-page URLs — the link is a scoped web search. (Comment below is inherited.)
+// HP spec pages live on support.hp.com with non-derivable slugs and no reliable auto-
+// redirect, so this returns a scoped model lookup (first result is the spec page).
+// Pin an exact URL via the `url` column to skip the search.
+function tpProduct(nm){
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('Getac '+nm+' spec sheet');
+}
+
+function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
+function CHG(s){const M=[[/7\.4mm HP barrel/i,'img/chg-hp-74.svg'],[/4\.5mm blue tip/i,'img/chg-hp-45.svg'],[/usb-c/i,'img/chg-usbc.svg']];const j0=s.indexOf(String.fromCharCode(124,62));const sh0=j0<0?s:s.slice(0,j0);const hit=M.find(p=>p[0].test(sh0));if(!hit)return DEEP(s);const im=hit[1];const sh=j0<0?s:s.slice(0,j0);const dp=j0<0?'':s.slice(j0+2);return DEEP(sh+' <img class="chgThumb" src="'+im+'" alt="connector">'+String.fromCharCode(124,62)+'<img class="chgBig" src="'+im+'" alt="connector"> '+dp);}
+function UPG(d){const ide=d.st_ide&&!d.st_25sata&&!d.st_m2sata&&!d.st_m2nvme;if(ide)return ' · *Working/tested, original config — IDE-era machines rarely get SSD swaps (adapters exist, but that is its own hobby). Collector condition rules everything.';if(d.gen==='sdr'||d.gen==='ddr1')return ' · *Working/tested, period-correct spec — RAM ceilings are tiny by modern standards; condition and completeness rule everything.';if(d.gen==='ddr2')return ' · *Upgraded = maxed RAM (2–4GB-era ceilings) + SSD where SATA exists; condition rules everything.';if(d.sold===1)return ' · *Upgraded = SSD; RAM is soldered — it has what it shipped with, config sets the price.';return ' · *Upgraded = SSD + 8–16 GB, tested, grade B — rough range, condition rules everything.';}
+function select(d,el,sk){
+  if(selEl)selEl.classList.remove('sel');
+  selEl=el; el.classList.add('sel');
+  const w11=d.w11===0?0:1;
+  const models=d.m.split(' / ').map(s=>s.trim()); // a chip may group several models
+  const nm=models[0];
+  const q=encodeURIComponent('Getac '+nm);
+  const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
+  const imgSearch='https://www.bing.com/images/search?q='+q;
+  // one direct PSREF product-page link per model in the chip
+  const linkHtml=d.url
+    ? '<a class="ext" href="'+d.url+'" target="_blank" rel="noreferrer noopener">'+d.m+' ↗</a>'
+    : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">🔍 '+mm+' ↗</a>').join('');
+  pC.innerHTML=
+    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · Getac '+SERIES[sk].label+'</div>'+
+    '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
+    (d.sold?'<span class="badge b-sold">Soldered / non-standard RAM</span>':'')+'</div>'+
+    '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
+      '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
+      '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
+    '<div class="phcap">tap image for more photos ↗</div>'+
+    '<div class="linklabel">'+(d.url?'Official Getac spec page:':'Look up the Getac spec sheet'+(models.length>1?' (per model)':'')+':')+'</div>'+
+    '<div class="links">'+linkHtml+'</div>'+
+    '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
+    '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
+    '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
+    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+(pwrFam(d)?' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+pwrFam(d)+'&quot;)">⇄ same charger</button>':'')+'</div></div>':'')+
+    '<div class="row"><div class="k">⊶ Serial port (RS-232)</div><div class="v'+(d.rs232===undefined?' rsu':'')+'">'+rsLabel(d)+(d.rs232_note?' · '+DEEP(d.rs232_note):'')+'</div></div>'+
+    '<div class="row"><div class="k">🔧 CPU re-paste</div><div class="v'+(d.rp===undefined?' rsu':'')+'">'+rpLabel(d)+(d.rp_note?' · '+DEEP(d.rp_note):'')+'</div></div>'+
+    (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_fam?' <button class="famBtn" onclick="FAMGO(&quot;bat&quot;,&quot;'+d.bat_fam+'&quot;)">⇄ same battery ('+d.bat_fam+')</button>':'')+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
+    (d.price?(()=>{const pn=d.price_note||'';const real=/^Real /.test(pn);const samp=/^Est\. cross-checked/.test(pn);const tag=real?'<span class="badge b-yes">real data</span>':samp?'<span class="badge b-sold">est · sampled</span>':'<span class="badge b-sold">estimate</span>';return '<div class="row"><div class="k">💰 eBay sold (mid-2026)*</div><div class="v">'+DEEP('<b>'+d.price+'</b> '+tag+'|>'+pn+UPG(d))+'</div></div>';})():'')+
+    (d.note?'':'')+'<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
+    '<div class="row"><div class="k">Shipped OS (typical)</div><div class="v">'+(d.os||YEAROS[d.y]||'—')+'</div></div>'+
+    (d.note?'<div class="note">'+DEEP(d.note)+'</div>':'')+(d.st_note?'':'');
+  panel.classList.add('show');
+}
+document.getElementById('closeP').onclick=()=>{panel.classList.remove('show');if(selEl)selEl.classList.remove('sel');selEl=null;};
+
+// filters
+const genOff=new Set(); let w11Only=false; let rsMode=0; let rpMax=0;
+const q=document.getElementById('search');
+// search: space-separated words must ALL match; a word starting with "-" must NOT match
+// (e.g. "-ddr3", "b300 -g7", "-serial"; tokens: portnone = confirmed no serial, portunknown = not verified)
+function sMatch(h,s){if(!s)return true;for(const w of s.split(/\s+/)){if(!w)continue;if(w[0]==='-'&&w.length>1){if(h.includes(w.slice(1)))return false;}else if(!h.includes(w))return false;}return true;}
+const RSMODES=['⊶ Serial: any','⊶ Serial: has port','⊶ Serial: native only','⊶ Serial: confirmed NONE','⊶ Serial: not verified'];
+function rsPass(d){if(!rsMode)return true;if(rsMode===1)return d.rs232>0;if(rsMode===2)return d.rs232===1;if(rsMode===3)return d.rs232===0;return d.rs232===undefined;}
+// storage filter chips (driven by the structured st_* columns)
+const stTest={ide:d=>d.st_ide>0,nvme:d=>d.st_m2nvme>0,m2sata:d=>d.st_m2sata>0,bay25:d=>d.st_25sata>0,msata:d=>d.st_msata>0,m2only:d=>d.st_m2sata>0&&!d.st_m2nvme};
+const STKEYS=Object.keys(stTest);
+const stOn=new Set(STKEYS);            // all storage types shown by default (chips start lit)
+function stPass(d){
+  if(stOn.size===STKEYS.length) return true;   // nothing filtered out (incl. odd 1.8″ drives)
+  if(!stOn.size) return false;                 // everything cleared
+  for(const k of stOn) if(stTest[k](d)) return true;  // OR: match ANY lit chip
+  return false;
+}
+const stAllBtn=document.getElementById('stall');
+function syncStAll(){ stAllBtn.textContent = stOn.size ? '✕ clear' : '✓ show all'; }
+document.querySelectorAll('.stf[data-f]').forEach(b=>{
+  b.classList.add('on');
+  b.onclick=()=>{const k=b.dataset.f;
+    if(stOn.has(k)){stOn.delete(k);b.classList.remove('on')}else{stOn.add(k);b.classList.add('on')}
+    syncStAll(); apply();};
+});
+stAllBtn.onclick=()=>{
+  const on=!stOn.size;
+  stOn.clear(); if(on) STKEYS.forEach(k=>stOn.add(k));
+  document.querySelectorAll('.stf[data-f]').forEach(b=>b.classList.toggle('on',on));
+  syncStAll(); apply();
+};
+syncStAll();
+// ---- ▤ compact list: cross-brand flat view of whatever the filters currently match ----
+document.getElementById('clist').onclick=async function(){
+  const b=this; b.textContent='▤ …';
+  try{
+    const all=ALL; // this page's brand only (compact view is per-brand by design)
+    const sTxt=q.value.trim().toLowerCase();
+    const sTx=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();
+    const extras=[];
+    if(genOff.size) extras.push('RAM gen hidden: '+[...genOff].join(', '));
+    if(w11Only) extras.push('Win 11 only');
+    if(rsMode) extras.push(RSMODES[rsMode].replace('⊶ ',''));
+    if(rpMax) extras.push('CPU re-paste level ≤'+rpMax);
+    if(sTxt) extras.push('search: "'+sTxt+'"');
+    if(famFilt) extras.push((famFilt.kind==='bat'?'battery family ':'charger ')+famFilt.key);
+    showCompactList({
+      models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&rsPass(d)&&rpPass(d)&&sMatch(HAY(d),sTxt)&&stPass(d)&&famPass(d)),
+      brandLabel:'Getac rugged', ctxKind:famFilt?famFilt.kind:(rsMode?'rs232':(rpMax?'rp':null)),
+      stOnKeys:[...stOn], allStOn:stOn.size===STKEYS.length, extras
+    });
+  }finally{ b.textContent='▤ report'; }
+};
+
+// ---- reverse lookup: "I own this battery/charger — what else takes it?" ----
+const PWRFAMS=[[/7\.4mm HP barrel/i,'7.4mm HP smart-pin'],[/4\.5mm blue tip/i,'4.5mm blue tip'],[/usb-c/i,'USB-C']];
+function pwrFam(d){if(!d.pwr)return null;const j=d.pwr.indexOf(String.fromCharCode(124,62));const sh=j<0?d.pwr:d.pwr.slice(0,j);const hit=PWRFAMS.find(p=>p[0].test(sh));return hit?hit[1]:null;}
+let famFilt=null;
+const famBar=document.getElementById('fambar');
+function famPass(d){if(!famFilt)return true;return famFilt.kind==='bat'?d.bat_fam===famFilt.key:pwrFam(d)===famFilt.key;}
+window.FAMGO=function(kind,key){
+  if(famFilt&&famFilt.kind===kind&&famFilt.key===key){FAMCLEAR();return;}
+  famFilt={kind:kind,key:key};
+  genOff.clear();document.querySelectorAll(".lg").forEach(function(l){l.classList.remove("off")});
+  w11Only=false;var _w=document.getElementById("win11toggle");if(_w)_w.classList.remove("on");rsMode=0;var _r=document.getElementById("rs232toggle");if(_r){_r.classList.remove("on");_r.textContent=RSMODES[0];}rpMax=0;syncRp();
+  stOn.clear();STKEYS.forEach(function(k){stOn.add(k)});document.querySelectorAll(".stf[data-f]").forEach(function(b){b.classList.add("on")});syncStAll();
+  q.value="";
+  let n=0;ALL.forEach(function(d){if(famPass(d))n++;});
+  famBar.innerHTML=(kind==='bat'?'🔋 Showing models compatible with the <b>'+key+'</b> battery family':'🔌 Showing models charged by a <b>'+key+'</b> charger (match wattage on workstations)')+' — '+n+' rows <span class="fx" onclick="FAMCLEAR()">✕ clear filter</span>';
+  famBar.style.display='block';
+  panel.classList.remove('show');if(selEl){selEl.classList.remove('sel');selEl=null;}
+  if(curSeries!=="ALL"){curSeries="ALL";document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));allTab.classList.add('active');render();}else{apply();}
+};
+window.FAMCLEAR=function(){famFilt=null;famBar.style.display='none';apply();};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&famFilt)FAMCLEAR();});
+function apply(){
+  const s=q.value.trim().toLowerCase();
+  let firstHit=null;
+  allChips.forEach(({el,d})=>{
+    const genOk=!genOff.has(d.gen);
+    const wOk=!w11Only||(d.w11!==0);
+    const rOk=rsPass(d)&&rpPass(d);
+    const sOk=sMatch(el.dataset.model,s);
+    const show=genOk&&wOk&&rOk&&sOk&&stPass(d)&&famPass(d);
+    // compact flow: filtered chips are REMOVED so survivors pack together;
+    // aligned grid: dimmed in place (position = information there)
+    el.classList.toggle('dim',!compact&&!show);
+    el.classList.toggle('gone',compact&&!show);
+    el.classList.toggle('hit',!!s&&sOk&&genOk&&wOk&&rOk);
+    if(s&&sOk&&genOk&&wOk&&rOk&&!firstHit)firstHit=el;
+  });
+  if(compact)fixFlow();
+  if(firstHit)firstHit.scrollIntoView({block:'center',behavior:'smooth'});
+}
+// compact-flow housekeeping after filters change: hide year rows that lost every
+// chip, and show a series separator only when visible chips sit on BOTH sides
+function fixFlow(){
+  document.querySelectorAll('#grid td.flow').forEach(cell=>{
+    let seen=false,pending=null,any=false;
+    [...cell.children].forEach(k=>{
+      if(k.classList.contains('vsep')){k.style.display='none';if(seen)pending=k;seen=false;}
+      else if(!k.classList.contains('gone')){any=true;seen=true;if(pending){pending.style.display='';pending=null;}}
+    });
+    cell.parentElement.style.display=any?'':'none';
+  });
+}
+q.addEventListener('input',apply);
+document.querySelectorAll('.lg').forEach(lg=>{
+  lg.onclick=()=>{const g=lg.dataset.g;
+    if(genOff.has(g)){genOff.delete(g);lg.classList.remove('off')}else{genOff.add(g);lg.classList.add('off')}
+    apply();};
+});
+const wt=document.getElementById('win11toggle');
+wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
+const rt=document.getElementById('rs232toggle');
+rt.onclick=()=>{rsMode=(rsMode+1)%5;rt.textContent=RSMODES[rsMode];rt.classList.toggle('on',rsMode>0);apply();};
+
+// 🔧 CPU re-paste difficulty filter — cycles any → ≤2 → ≤3 (unverified rows hidden while active)
+const RPMODES=['🔧 Re-paste: any','🔧 Re-paste ≤1 · very easy','🔧 Re-paste ≤2 · easy','🔧 Re-paste ≤3 · no board-out'];
+function rpPass(d){return !rpMax||(d.rp>=1&&d.rp<=rpMax);}
+function syncRp(){const b=document.getElementById('rptoggle');if(!b)return;b.textContent=RPMODES[rpMax];b.classList.toggle('on',rpMax>0);}
+document.getElementById('rptoggle').onclick=()=>{rpMax=rpMax===0?2:rpMax===2?3:0;syncRp();apply();};
+
+// ▥ compact layout toggle (shared across the three brand pages via localStorage)
+let compact=localStorage.getItem('specs_compact')==='1';
+const cm=document.getElementById('cmode');
+cm.classList.toggle('on',compact);
+cm.onclick=()=>{compact=!compact;localStorage.setItem('specs_compact',compact?'1':'0');cm.classList.toggle('on',compact);render();};
+
+if(dq) q.value=dq;
+render();
+</script>
+</body>
+</html>

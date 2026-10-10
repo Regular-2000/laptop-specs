@@ -5,20 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Laptop Spec Reference — pick a brand</title>
 <style>
-  :root{--bg:#12151c;--panel:#1b1f2a;--text:#e8ebf2;--dim:#9aa3b5;--line:#333b4d;--dell:#4ea1ff;--tp:#e2352b;--hp:#0096d6}
+  :root{--bg:#12151c;--panel:#1b1f2a;--text:#e8ebf2;--dim:#9aa3b5;--line:#333b4d;--dell:#4ea1ff;--tp:#e2352b;--hp:#0096d6;--gt:#e8a33d;--pn:#5cc8a1}
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
   body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;padding:24px;text-align:center}
   h1{font-size:22px;margin:0 0 4px}
   p.sub{color:var(--dim);margin:0 0 26px;max-width:440px}
-  .cards{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;width:100%;max-width:640px}
+  .cards{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;width:100%;max-width:820px}
   a.card{flex:1 1 240px;text-decoration:none;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:transform .12s,border-color .12s}
   a.card:hover{transform:translateY(-3px)}
   a.card.dell:hover{border-color:var(--dell)}
   a.card.tp:hover{border-color:var(--tp)}
   a.card.hp:hover{border-color:var(--hp)}
+  a.card.gt:hover{border-color:var(--gt)} a.card.pn:hover{border-color:var(--pn)}
   .card .b{font-size:19px;font-weight:700;margin-bottom:4px}
-  .card.dell .b{color:var(--dell)} .card.tp .b{color:var(--tp)} .card.hp .b{color:var(--hp)}
+  .card.dell .b{color:var(--dell)} .card.tp .b{color:var(--tp)} .card.hp .b{color:var(--hp)} .card.gt .b{color:var(--gt)} .card.pn .b{color:var(--pn)}
   .card .d{color:var(--dim);font-size:13px}
   .card .cnt{margin-top:10px;font-size:12px;color:var(--dim)}
   footer{margin-top:30px;color:var(--dim);font-size:12px;max-width:460px}
@@ -29,8 +30,8 @@
   #qres{margin-top:8px;min-height:34px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
   .qbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;font:inherit}
   .qbtn b{font-weight:700}
-  .qbtn.dell b{color:var(--dell)} .qbtn.tp b{color:var(--tp)} .qbtn.hp b{color:var(--hp)}
-  .qbtn.dell:hover{border-color:var(--dell)} .qbtn.tp:hover{border-color:var(--tp)} .qbtn.hp:hover{border-color:var(--hp)}
+  .qbtn.dell b{color:var(--dell)} .qbtn.tp b{color:var(--tp)} .qbtn.hp b{color:var(--hp)} .qbtn.gt b{color:var(--gt)} .qbtn.pn b{color:var(--pn)}
+  .qbtn.dell:hover{border-color:var(--dell)} .qbtn.tp:hover{border-color:var(--tp)} .qbtn.hp:hover{border-color:var(--hp)} .qbtn.gt:hover{border-color:var(--gt)} .qbtn.pn:hover{border-color:var(--pn)}
   .qhint{color:var(--dim);font-size:12px;align-self:center}
 </style>
 </head>
@@ -57,6 +58,11 @@
       <div class="d">ProBook · EliteBook 700/800/1000 · Dragonfly · ZBook</div>
       <div class="cnt">86 model groups · 2008 → 2025 · incl. ARM</div>
     </a>
+    <a class="card gt" href="getac.html">
+      <div class="b">Getac rugged</div>
+      <div class="d">B300 / B360 / X500 · S410 · V110 · F110 / UX10 / K120</div>
+      <div class="cnt">62 rows · 2005 → 2026 · ⊶ serial port per model</div>
+    </a>
   </div>
   <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access.</footer>
 <script type="module">
@@ -66,12 +72,16 @@
 // loadAllBrands() the report view uses.
 const BRANDS=[['dell','Dell Latitude','dell.html','dell'],
               ['thinkpad','ThinkPad','thinkpad.html','tp'],
-              ['hp','HP','hp.html','hp']];
+              ['hp','HP','hp.html','hp'],
+              ['getac','Getac','getac.html','gt']];
+// rugged brands are loaded here (not via specdata.js BRAND_FILES) so the shared loader and the
+// Dell/ThinkPad/HP pages stay untouched — no cache-stamp bump needed
+const EXTRA_CSV=['getac.csv'];
 const q=document.getElementById('q'), res=document.getElementById('qres');
 let ALL=null, loading=null;
 function load(){
   if(!loading) loading=import('./specdata.js?b=20261009')
-    .then(m=>m.loadAllBrands()).then(a=>{ALL=a;return a;});
+    .then(async m=>{const a=await m.loadAllBrands();const x=await Promise.all(EXTRA_CSV.map(f=>m.loadCSV(f).catch(()=>[])));return a.concat(...x);}).then(a=>{ALL=a;return a;});
   return loading;
 }
 const hay=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();
