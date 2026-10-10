@@ -70,7 +70,7 @@ const BRANDS=[['dell','Dell Latitude','dell.html','dell'],
 const q=document.getElementById('q'), res=document.getElementById('qres');
 let ALL=null, loading=null;
 function load(){
-  if(!loading) loading=import('./specdata.js?b=20261005')
+  if(!loading) loading=import('./specdata.js?b=20261009')
     .then(m=>m.loadAllBrands()).then(a=>{ALL=a;return a;});
   return loading;
 }

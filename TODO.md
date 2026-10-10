@@ -180,12 +180,49 @@ sellers advertise the 650 G1–G3 "with serial port" (not yet verified against Q
 and the RS-232 filter can't find them until rows exist; (d) new rugged rows need eBay prices; (e) 7204/7214/7202/7212
 chargers not audited.
 
+## 12. CPU re-paste difficulty (started 2026-10-09)
+DONE: schema → 36 cols (`repaste` 1–4, `repaste_note`); panel row "🔧 CPU re-paste" + cycle
+filter button (any → ≤1 → ≤2 → ≤3, unverified hidden while active) + report context line,
+all 3 pages; stamp 20261009. Seeded from SM hands-on only: Dell 3400 = 1, HP ProBook 650 G5 = 3.
+DELL SWEEP DONE 2026-10-09: 146/164 Dell rows filled from Dell service/owner's manuals
+(heat-sink removal prerequisites) — 50× L1, 54× L2, 30× L3, 13× L4; every note cites the manual.
+Method: dl.dell.com directory listings (/topicspdf/ + esuprt_latitude_laptop/) read in the built-in
+browser, PDFs parsed with pdf.js in-page; 2022+ models via dell.com/support/manuals HTML topic pages
+(clamshell 7x10–7x50 manuals live under the "-2-in-1-laptop" product slug). Findings: E5250/E5440/
+E5450/E5540/E5550/E7440/E7450/E6320/E6330/E4200/E4300/E4310/Latitude 13 = heatsink under the system
+board (L4); 5480/5490/5590 manuals only document UMA (L1) — dGPU units differ; E5420/E5520/E5430/
+E5530 = L1 via CPU door. Dell blanks left: Pro Plus 13/16, D400/D410/D420/D430, C400 (no heatsink
+section in manual), 7370, 9510/9520 (Dell: heatsink ships attached to the board — note added),
+3480/3580 (manual has screw table only), 3150-3190 edu, 7202/7030 tablets, Pro Rugged 13/14.
+THINKPAD + HP SWEEP DONE 2026-10-10:
+ThinkPad 131/145 (L1 5, L2 87, L3 30, L4 9) from Lenovo HMMs — "For access, remove these FRUs in
+order" list for the thermal fan / heat sink FRU. Manual URLs via pcsupport.lenovo.com API
+(/api/v4/mse/getproducts?productId=<token> → ParentID → /us/en/api/v4/contents/recommendmanualv2?pids=)
+and, for pre-2012 models, the thinkpad-manuals.retropc.se mirror. Most 2013+ ThinkPads = L2 (one-piece
+thermal fan assembly under the base cover); L14 Gen 1 (Intel)/Gen 3–5 and X13s = L1; E4x0/E5x0
+2015–2017 = L4 (system board + thermal fan are one FRU); P50/P51/P52/P53/P72/P73 and W540/T540p = L4
+(LCD + chassis/frame). Blanks: X200/X201, X220, X230, E420/E520, R30–R32, X300/X301 (old HMM text not
+machine-readable), Z13/Z16 Gen 1–2, X1 Nano Gen 1, X1 Titanium (no HMM reached).
+HP 83/98 (L1 31, L2 12, L3 17, L4 23) from HP Maintenance & Service Guides ("Before removing the heat
+sink, follow these steps"). MSG links via support.hp.com /wcc-services/pdp/manuals/getManuals?productID=
+<OID> (Akamai blocks it after ~1000 rapid calls — go slow). Grouped rows use the LEAD model's MSG,
+except 820/840/850 G1–G2 where the 840/850 MSGs were also checked (all L3). Notable L4s: ProBook 440/450
+G1–G4, 640/650 G2, 6470b/8470p/9470m, 2740p/2760p, EliteBook 840 G9, 845 G9/G10, 1040 G9–G11, x360 1030/
+1040 G4–G8, ZBook Fury 16 G9/G10. 650 G5 = L3 matches SM hands-on. Blanks: 4420s, 640/650 G3, 650 G4,
+640/650 G7, 440 G5, 2570p, x360 1030 G2/G3, ZBook 15 G2, Studio G3, Firefly G7, Fury G7/G8.
+STILL OPEN: (a) 840/850 G3–G8 not checked separately (row level is from the 830/820 lead) — worth a look
+since the 840 is the volume model; (b) the blanks above; (c) hands-on spot checks to calibrate — SM's hands-on machines first (calibration set),
+then service manuals (the "before removing the heat sink" prerequisite list maps straight to
+a level); (b) twins are likely but NOT assumed (640 G5 ≈ 650 G5, 3500 ≈ 3400) — confirm
+before copying; (c) grouped rows can split (e.g. T480 vs T480s) → use the dominant level +
+note, or 2-style "varies"; (d) optional chip-face marker for level 4 if it proves useful.
+
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20261005.
+visitors keep running the stale loader. Current stamp: 20261009.
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

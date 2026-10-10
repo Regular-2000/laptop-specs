@@ -33,6 +33,18 @@
 //            Dock / port-replicator-only serial does NOT count — it goes in rs232_note.
 //   rs232_note - free text for the serial port (location, which configs, dock that adds
 //            it); supports the `short |> deep` split like pwr/bat_note.
+//   repaste - CPU re-paste difficulty (how far you must tear down to reach the CPU die):
+//            1 = very easy — bottom cover off, lift the heatsink only; the fan is a separate
+//                part and stays in place (e.g. Latitude 3400)
+//            2 = easy — bottom cover off, heatsink + fan come out as one assembly
+//            3 = complex — partial disassembly first (keyboard / palmrest / other parts
+//                before the heatsink is reachable) (e.g. ProBook 650 G5)
+//            4 = very complex — motherboard must come out (heatsink on the far side of the
+//                board) / full teardown
+//            blank = unverified. Source of truth = hands-on (🔬) or the service manual's
+//            heatsink-removal prerequisites (Dell Service Manual / Lenovo HMM / HP MSG).
+//   repaste_note - free text (shared dGPU heatsink, thermal pads, clip-on bottom covers that
+//            crack, hidden screws); supports the `short |> deep` split.
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -90,7 +102,7 @@ export function parseCSV(text){
 //                            is active — so it works for ANY filter type, not just storage)
 //   ⧉ copy as text         → paste-ready plain text (eBay descriptions etc.)
 //   ✕ close (Esc)
-// loadAllBrands() (all three CSVs concatenated — identical 34-col schema) is kept
+// loadAllBrands() (all three CSVs concatenated — identical 36-col schema) is kept
 // exported for the future merged all-brands table; the overlay is per-brand by design.
 
 const BRAND_FILES=[['thinkpad','ThinkPad · Lenovo / IBM','thinkpad.csv'],
@@ -119,11 +131,21 @@ export function rsLabel(d){
   if(d.rs232===0) return 'No';
   return 'Unverified';
 }
+// CPU re-paste difficulty label (1–4, blank = unverified)
+export const RPTXT={1:'Very easy — bottom cover + heatsink only, fan stays in place',
+  2:'Easy — bottom cover, heatsink + fan as one assembly',
+  3:'Complex — partial disassembly (keyboard / palmrest / more) first',
+  4:'Very complex — motherboard out / full teardown'};
+export function rpLabel(d){
+  if(d.rp>=1&&d.rp<=4) return 'Level '+d.rp+'/4 · '+RPTXT[d.rp];
+  return 'Unverified';
+}
 // context line shown under each model in the exported report (and in chip tooltips):
 // battery / charger info when a ⇄ fam filter drove the query, storage otherwise
 function ctxOf(d,kind){
   if(kind==='bat') return stripTags(shortOf(d.bat||''))+(d.bat_fam?' · '+d.bat_fam:'');
   if(kind==='pwr') return stripTags(shortOf(d.pwr||''));
+  if(kind==='rp') return rpLabel(d)+(d.rp_note?' · '+stripTags(shortOf(d.rp_note)):'');
   if(kind==='rs232') return rsLabel(d)+(d.rs232_note?' · '+stripTags(shortOf(d.rs232_note)):'');
   return stripTags(d.stor||'');
 }
@@ -400,6 +422,8 @@ export async function loadCSV(url){
     const note=get(r,'note'); if(note) o.note=note;
     const rs=get(r,'rs232'); if(rs!=='') o.rs232=+rs;          // undefined = unverified
     const rn=get(r,'rs232_note'); if(rn) o.rs232_note=rn;
+    const rp=get(r,'repaste'); if(rp!=='') o.rp=+rp;           // undefined = unverified
+    const rpn=get(r,'repaste_note'); if(rpn) o.rp_note=rpn;
     return o;
   });
 }

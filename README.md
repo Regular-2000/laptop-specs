@@ -59,6 +59,15 @@ on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
   none, **blank = unverified**. Dock / port-replicator / Ultrabay-adapter serial does NOT
   count — it goes in `rs232_note`. Drives the "⊶ RS-232" toggle on all three pages and
   the "serial / rs232 / db9" search terms. Every filled cell cites its source behind the ⓘ.
+- CPU re-paste difficulty (`repaste`, `repaste_note`, added 2026-10-09 → **36-col schema**):
+  how far you tear down to reach the CPU die. `1` = very easy — bottom cover off, heatsink
+  only, fan is separate and stays (Latitude 3400); `2` = easy — bottom cover off, heatsink +
+  fan as one assembly; `3` = complex — partial disassembly first (keyboard / palmrest / more)
+  (ProBook 650 G5); `4` = very complex — motherboard out / full teardown; **blank =
+  unverified**. Sources: hands-on 🔬 first, else the service manual's heatsink-removal
+  prerequisites (Dell Service Manual / Lenovo HMM / HP Maintenance & Service Guide).
+  Gotchas (shared dGPU heatsink, VRM pads, clip-on covers that crack) go in the note.
+  Drives the "🔧 Re-paste" cycle button (any → ≤1 → ≤2 → ≤3) on all three pages.
 - Dell **Rugged column** (2026-10-05): any Dell row whose model contains "Rugged" or
   "XFR" is pulled out of its screen-size column into one 🛡 Rugged column (all sizes,
   largest first; the chip shows the size). Name new rugged rows "<num> Rugged",
