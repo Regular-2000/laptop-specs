@@ -67,7 +67,7 @@ on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
   unverified**. Sources: hands-on 🔬 first, else the service manual's heatsink-removal
   prerequisites (Dell Service Manual / Lenovo HMM / HP Maintenance & Service Guide).
   Gotchas (shared dGPU heatsink, VRM pads, clip-on covers that crack) go in the note.
-  Drives the "🔧 Re-paste" cycle button (any → ≤1 → ≤2 → ≤3) on all three pages.
+  Drives the "🔧 Re-paste" cycle button (any → ≤2 → ≤3) on all three pages.
 - Dell **Rugged column** (2026-10-05): any Dell row whose model contains "Rugged" or
   "XFR" is pulled out of its screen-size column into one 🛡 Rugged column (all sizes,
   largest first; the chip shows the size). Name new rugged rows "<num> Rugged",

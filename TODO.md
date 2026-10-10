@@ -182,7 +182,7 @@ chargers not audited.
 
 ## 12. CPU re-paste difficulty (started 2026-10-09)
 DONE: schema → 36 cols (`repaste` 1–4, `repaste_note`); panel row "🔧 CPU re-paste" + cycle
-filter button (any → ≤1 → ≤2 → ≤3, unverified hidden while active) + report context line,
+filter button (any → ≤2 → ≤3 — ≤1 step dropped 2026-10-10 per SM, unverified hidden while active) + report context line,
 all 3 pages; stamp 20261009. Seeded from SM hands-on only: Dell 3400 = 1, HP ProBook 650 G5 = 3.
 DELL SWEEP DONE 2026-10-09: 146/164 Dell rows filled from Dell service/owner's manuals
 (heat-sink removal prerequisites) — 50× L1, 54× L2, 30× L3, 13× L4; every note cites the manual.

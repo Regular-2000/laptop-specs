@@ -148,7 +148,7 @@
       <div class="lg ddr5" data-g="ddr5">DDR5</div>
       <div id="win11toggle" title="Show only Windows 11 eligible models">Win 11 only</div>
     <div id="rs232toggle" title="Show only models with a serial (RS-232 / DB9) port on the machine itself — native or factory option. Dock-only serial is listed in the detail panel but not counted.">⊶ RS-232</div>
-    <div id="rptoggle" title="CPU re-paste difficulty. Click to cycle: any → very easy only (heatsink only, fan stays) → easy or better (heatsink + fan) → anything short of pulling the motherboard. Models not yet verified are hidden while this is on.">🔧 Re-paste: any</div>
+    <div id="rptoggle" title="CPU re-paste difficulty. Click to cycle: any → easy or better (levels 1–2: bottom cover, no keyboard/board work) → anything short of pulling the motherboard (≤3). Models not yet verified are hidden while this is on.">🔧 Re-paste: any</div>
       <span class="stf" data-f="bay25" title="Has a 2.5″ SATA drive bay">2.5″ SATA</span>
       <span class="stf ide" data-f="ide" title="Vintage 2.5″ IDE (PATA) drive — the retro era gets its own chip">🦖 2.5″ IDE</span>
       <span class="stf" data-f="msata" title="Has an mSATA slot">mSATA</span>
@@ -497,11 +497,11 @@ wt.onclick=()=>{w11Only=!w11Only;wt.classList.toggle('on',w11Only);apply();};
 const rt=document.getElementById('rs232toggle');
 rt.onclick=()=>{rsOnly=!rsOnly;rt.classList.toggle('on',rsOnly);apply();};
 
-// 🔧 CPU re-paste difficulty filter — cycles any → ≤1 → ≤2 → ≤3 (unverified rows hidden while active)
+// 🔧 CPU re-paste difficulty filter — cycles any → ≤2 → ≤3 (unverified rows hidden while active)
 const RPMODES=['🔧 Re-paste: any','🔧 Re-paste ≤1 · very easy','🔧 Re-paste ≤2 · easy','🔧 Re-paste ≤3 · no board-out'];
 function rpPass(d){return !rpMax||(d.rp>=1&&d.rp<=rpMax);}
 function syncRp(){const b=document.getElementById('rptoggle');if(!b)return;b.textContent=RPMODES[rpMax];b.classList.toggle('on',rpMax>0);}
-document.getElementById('rptoggle').onclick=()=>{rpMax=(rpMax+1)%4;syncRp();apply();};
+document.getElementById('rptoggle').onclick=()=>{rpMax=rpMax===0?2:rpMax===2?3:0;syncRp();apply();};
 
 // ▥ compact layout toggle (shared across the three brand pages via localStorage)
 let compact=localStorage.getItem('specs_compact')==='1';
