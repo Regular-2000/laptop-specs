@@ -3,8 +3,9 @@
 Interactive spec sheets for used-laptop hunting on eBay / Facebook Marketplace / Mercari.
 Live at **https://regular-2000.github.io/laptop-specs/**
 
-Covers **Dell Latitude**, **Lenovo ThinkPad** (incl. IBM era) and **HP business laptops**
-(ProBook / EliteBook / Dragonfly / ZBook). Per model: RAM type & max, upgradeability
+Covers **Dell Latitude**, **Lenovo ThinkPad** (incl. IBM era), **HP business laptops**
+(ProBook / EliteBook / Dragonfly / ZBook) and — since Oct 2026 — the rugged brands
+**Getac** and **Panasonic Toughbook** (separate pages; may be merged later). Per model: RAM type & max, upgradeability
 (soldered vs SODIMM), storage interfaces, Windows 11 eligibility, typical shipped OS,
 typical eBay sold price, a photo and a link to the official spec page.
 
@@ -26,9 +27,13 @@ sub-pages. Until then: prefer grouped rows and aliases over new chips.
 
 ## Architecture
 
-- `index.html` — landing page (brand picker)
+- `index.html` — landing page (brand picker + cross-brand quick search)
 - `dell.html` / `thinkpad.html` / `hp.html` — pure renderers, one per brand
-- `dell.csv` / `thinkpad.csv` / `hp.csv` — ALL model data lives here (universal schema)
+- `getac.html` / `panasonic.html` — rugged renderers (cloned from `hp.html`, identical code
+  except the brand config block: META/order/TIER/POS/YEAROS/WIN11Y). Fix a bug in one → fix both.
+- `dell.csv` / `thinkpad.csv` / `hp.csv` / `getac.csv` / `panasonic.csv` — ALL model data lives here (universal schema)
+- The rugged CSVs are NOT in `specdata.js` BRAND_FILES on purpose: `index.html` loads them itself
+  (`EXTRA_CSV`), so adding them needed no change to the shared loader and no cache-stamp bump.
 - `specdata.js` — shared CSV loader; schema documentation lives at the top of this file
 
 **Adding a laptop = adding one CSV row.** No code changes needed. Edit the CSV directly
@@ -73,6 +78,32 @@ on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
   largest first; the chip shows the size). Name new rugged rows "<num> Rugged",
   "<num> Rugged Ext.", "<num> Rugged Tab." or "<model> XFR" and they land there
   automatically. Semi-rugged ATG variants are aliases on their base E/D rows, not chips.
+
+## Rugged pages (Getac / Panasonic, added 2026-10-10)
+
+- **Scope:** ~2005 → 2026, Windows devices only. Everything that existed goes in, even models that
+  fail a buyer's requirement — negative answers are information (SM: "I want to see it in the table,
+  not googling").
+- **One chip per generation / Mark.** Getac G-numbers and Panasonic Marks change CPU, RAM type and
+  ports, so they are never grouped. Panasonic's own letter→Mark table (from the TOUGHBOOK Support
+  site model list) is in the aliases, e.g. `CF-31S` `CF-31U` `CF-31V` → CF-31 mk3.
+- **Part-number paste:** the search also matches a pasted full part number against those Mark
+  prefixes (`cf-31sblaxxm` → CF-31 mk3) — tokens shaped `cf-xxx` / `fz-xxx`, query ≥7 chars.
+- **Search syntax (rugged pages):** space-separated words are AND-ed; a leading `-` excludes
+  (`-ddr3 -ddr4 serial`, `b300 -g7`). Haystack = model, aliases, CPU, size, RAM, charger/battery
+  family plus status tokens: `serial`/`rs232` (has port), `native-serial`, `optional-serial`,
+  `portnone` (spec ports list shows none), `portunknown` (not verified), `win11` / `no-win11`, `soldered`.
+- **⊶ Serial button** cycles: any → has port (1 or 2) → native only (1) → confirmed NONE (0) →
+  not verified (blank). Chip face shows `⊶` (native) or `⊶°` (option).
+- **gen = `unk`** → grey chip "RAM ?": the generation exists (needed for search / Mark lookup) but
+  RAM type isn't verified yet. Same rule as everywhere: blank/unk beats a guess.
+- **Serial on keyboards/docks** (CF-33 keyboard = USB-based serial, UX10 keyboard dock, CF-H1 dock)
+  does NOT count — it goes in `rs232_note`.
+- **Sources used:** Getac/Panasonic spec sheets and press releases, Panasonic Operating Instructions
+  PDFs (dl-pc-support.connect.panasonic.com — `pc-dl.panasonic.co.jp` is robots-blocked, not used),
+  RuggedPCReview.com spec tables (excellent per-generation tables; reachable from the built-in
+  browser, not from the cloud fetcher), Kingston's memory configurator for slot counts.
+- No prices yet on either rugged page (needs a live sold-comps pull — never training data).
 
 ## Source-of-truth hierarchy (how much to trust a given cell)
 

@@ -153,8 +153,7 @@ on `brand`. `url` semantics = "official manufacturer SPEC page/sheet", never sal
 items: (1) `url` KIND differs by brand by necessity — Dell = support-overview HTML,
 ThinkPad = PSREF **PDF**, HP = support-specs HTML — all spec sources, fine; (2) the lone
 sales outlier is Dell **Pro Plus 16** (dell.com/shop url) — swap when a spec page
-verifies; (3) **line endings inconsistent**: dell.csv = CRLF, thinkpad.csv + hp.csv = LF
-— normalize before/at merge; (4) grouped rows now use LEAD-model links across ThinkPad+HP
+verifies; (3) line endings: all CSVs are LF now (dell.csv was normalized; re-checked 2026-10-10); (4) grouped rows now use LEAD-model links across ThinkPad+HP
 (Dell was mostly single-model already); a future "one url per grouped model" upgrade would
 need a multi-url schema + renderer change (deferred). STILL OPEN: 44 ThinkPad blanks +
 the 8 Dell clamshell blanks + Pro Plus spec page, if clean sources ever surface; optional
@@ -175,9 +174,8 @@ EliteBooks is Intel AMT Serial-over-LAN, NOT a physical port.
 STILL OPEN: (a) modern rows (~2012+, all brands) are blank = "Unverified" — sweep
 spec sheets to confirm 0s (Dell Setup&Specs ports table / PSREF / QuickSpecs);
 (b) HP 8530w, 8760w, 8770w, ProBook 4x10s–4x40s, Dell E4200/E4300/E4310/E6410/Latitude 13
-unchecked; (c) **HP ProBook 640/650 G1–G5 are missing from the grid entirely** — refurb
-sellers advertise the 650 G1–G3 "with serial port" (not yet verified against QuickSpecs),
-and the RS-232 filter can't find them until rows exist; (d) new rugged rows need eBay prices; (e) 7204/7214/7202/7212
+unchecked; (c) DONE since: HP ProBook 640/650 G1–G7 rows exist with rs232 filled (650 G1 = 1,
+650 G2–G5 = 2, 640s = 0, 650 G7 = 0); (d) new rugged rows need eBay prices; (e) 7204/7214/7202/7212
 chargers not audited.
 
 ## 12. CPU re-paste difficulty (started 2026-10-09)
@@ -216,6 +214,28 @@ then service manuals (the "before removing the heat sink" prerequisite list maps
 a level); (b) twins are likely but NOT assumed (640 G5 ≈ 650 G5, 3500 ≈ 3400) — confirm
 before copying; (c) grouped rows can split (e.g. T480 vs T480s) → use the dominant level +
 note, or 2-style "varies"; (d) optional chip-face marker for level 4 if it proves useful.
+
+## 13. Rugged pages — Getac + Panasonic Toughbook (started 2026-10-10)
+DONE: `getac.html` + `getac.csv` (62 rows, 2005–2026, tabs Semi / Convertibles / Tablets / Fully rugged)
+and `panasonic.html` + `panasonic.csv` (66 rows, one chip per Mark, tabs Semi / Convertibles & 2-in-1 /
+Tablets / Fully rugged). Landing page cards + quick search (loaded via `EXTRA_CSV` in index.html).
+New on these two pages only: AND / `-exclude` search, 5-state ⊶ serial button, `unk` grey chips,
+Toughbook part-number paste → Mark. SM decisions: separate pages for now ("maybe combine later"),
+~20 years back, show models that fail requirements, Win 11 = nice-to-have not a requirement.
+OPEN (grey chips / blank serial = the to-do list, search `portunknown` or click RAM ? legend):
+- Getac: V110 G3/G4/G6, F110 G5, UX10 G2/G3/G4, A140 G1, K120 G1 — RAM type and serial unverified;
+  S410 G3 CPU SKUs; B300 G4 label ↔ CPU mapping; "B300 G6 (DDR3)" Kingston oddity; S510 serial "0"
+  is from the RPCR ports list — confirm against Getac's configurator.
+- Panasonic: CF-19 mk4/mk5, CF-31 mk2, CF-52 mk1/mk4, CF-53 mk3, CF-33 mk2–mk4, FZ-40 mk3,
+  FZ-G1 mk3/mk5, FZ-G2 mk2, FZ-M1 mk2, CF-D1 mk1/2 — CPU/RAM unverified (Mark + letters ARE verified).
+  Panasonic OI PDFs for most of these exist on dl-pc-support.connect.panasonic.com/itn/manual/<series>/.
+- Panasonic "Let's note"-based business Toughbooks (CF-F9, S10, SX2, AX2/3, LX3, MX4, XZ6) and
+  Android devices not included yet.
+- Getac ZX80W (Windows 8″, 2026) and G140 not included yet.
+- Prices (both pages), chargers (`pwr` mostly blank — Panasonic CF-AA5713A 15.6V filled where an OI
+  names it), re-paste levels (no public service manuals; hands-on units first).
+- Candidate extra fields if SM wants to filter on them: hot-swap battery, IP rating, touch/digitizer.
+  For now they live in `note` (searchable).
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

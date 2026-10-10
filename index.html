@@ -63,6 +63,11 @@
       <div class="d">B300 / B360 / X500 · S410 · V110 · F110 / UX10 / K120</div>
       <div class="cnt">62 rows · 2005 → 2026 · ⊶ serial port per model</div>
     </a>
+    <a class="card pn" href="panasonic.html">
+      <div class="b">Panasonic Toughbook</div>
+      <div class="d">CF-19 / CF-31 / CF-33 · CF-52/53/54 · FZ-55 · FZ-G1/G2</div>
+      <div class="cnt">66 rows · one chip per Mark · paste a part number</div>
+    </a>
   </div>
   <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access.</footer>
 <script type="module">
@@ -73,10 +78,11 @@
 const BRANDS=[['dell','Dell Latitude','dell.html','dell'],
               ['thinkpad','ThinkPad','thinkpad.html','tp'],
               ['hp','HP','hp.html','hp'],
-              ['getac','Getac','getac.html','gt']];
+              ['getac','Getac','getac.html','gt'],
+              ['panasonic','Panasonic','panasonic.html','pn']];
 // rugged brands are loaded here (not via specdata.js BRAND_FILES) so the shared loader and the
 // Dell/ThinkPad/HP pages stay untouched — no cache-stamp bump needed
-const EXTRA_CSV=['getac.csv'];
+const EXTRA_CSV=['getac.csv','panasonic.csv'];
 const q=document.getElementById('q'), res=document.getElementById('qres');
 let ALL=null, loading=null;
 function load(){
@@ -85,9 +91,12 @@ function load(){
   return loading;
 }
 const hay=d=>(d.m+' '+(d.aliases||'')+' '+(d.bat_fam||'')+' '+(d.pwr?d.pwr.split(String.fromCharCode(124,62))[0]:'')+(d.rs232>0?' rs232 rs-232 serial db9 com port':'')).toLowerCase();
+// Toughbook part numbers: a pasted full part number (cf-31sblaxxm) matches the Mark alias "cf-31s"
+const PNTOK=/^(cf|fz)-?[a-z0-9]{3}$/;
+function hasPN(h,s){if(h.includes(s))return true;if(s.length<7||s.includes(' '))return false;for(const t of h.split(' '))if(PNTOK.test(t)&&s.startsWith(t))return true;return false;}
 function matches(s){
   const out={};
-  for(const d of ALL){ if(hay(d).includes(s)) (out[d.brand]=out[d.brand]||[]).push(d); }
+  for(const d of ALL){ if(hasPN(hay(d),s)) (out[d.brand]=out[d.brand]||[]).push(d); }
   return out;
 }
 const go=(page,s)=>{location.href=page+'?q='+encodeURIComponent(s);};

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getac Rugged Timeline — RAM, Storage & Serial Reference</title>
+<title>Panasonic Toughbook Timeline — RAM, Storage & Serial Reference</title>
 <style>
   :root{
     --bg:#12151c; --panel:#1b1f2a; --panel2:#232937; --text:#e8ebf2; --dim:#9aa3b5;
@@ -139,8 +139,8 @@
 <header>
   <div class="htop">
     <a class="home" href="index.html" title="All brands">⌂ Home</a>
-    <h1>Getac <small>· rugged laptops, convertibles &amp; tablets · RAM, storage &amp; serial by year</small></h1>
-    <input id="search" type="search" placeholder="Type model, e.g. B300 G7" autocomplete="off">
+    <h1>Panasonic Toughbook <small>· one chip per Mark · RAM, storage &amp; serial by year</small></h1>
+    <input id="search" type="search" placeholder="Model / part no., e.g. CF-31S or CF-19 mk7" autocomplete="off">
     <div class="legend" id="legend">
       <div class="lg sdr" data-g="sdr">SDRAM</div>
       <div class="lg ddr1" data-g="ddr1">DDR</div>
@@ -164,7 +164,7 @@
       <span class="hint">⊶ = serial port · ⊶° = serial optional · grey = RAM type unverified · 🔒 = soldered · search: "-word" excludes · "portnone" = confirmed no serial</span>
     </div>
   </div>
-  <div class="laddercap">⊶ serial is shown on the chip · <span style="text-transform:none;letter-spacing:0">hover a tab for who it's for · blank = not verified yet, never a guess</span></div>
+  <div class="laddercap">⊶ serial is shown on the chip · <span style="text-transform:none;letter-spacing:0">paste a full part number (CF-31SBLAXxM) — the letter after CF-31 picks the Mark · blank = not verified yet, never a guess</span></div>
   <div class="tabs" id="tabs"></div>
 </header>
 
@@ -177,7 +177,7 @@
     <thead id="thead"><tr><th>Year</th><th>Models</th></tr></thead>
     <tbody id="tbody"></tbody>
   </table>
-  <footer>Getac rugged lineup ~2005 → 2026, Windows devices only (Android ZX/T800-Android/MX50 not included). Specs from Getac spec sheets / press releases and RuggedPCReview.com spec tables (each cell cites its source behind ⓘ); Kingston's memory configurator for slot counts. Getac re-uses model names across generations (B300 → G7, V110 → G7, F110 → G7) — always check the G-number on the bottom label. <b>Serial:</b> 1 = on the machine · ° = configurable option, check the unit · none = spec ports list shows no serial · blank = not verified. No prices yet (needs a live sold-comps pull).</footer>
+  <footer>Panasonic Toughbook ~2005 → 2026, Windows devices only (Android FZ-A/FZ-N/FZ-L/FZ-T/FZ-X/S1 not included; Let's note-based business models CF-F9/S10/SX/AX/LX/XZ not included yet). <b>Marks:</b> Panasonic re-uses the model name for years — the letter right after the model number in the part number (CF-31<b>S</b>BLAX…, CF-19<b>K</b>…) identifies the Mark; the letter→Mark table is Panasonic's own (TOUGHBOOK Support site model list) and is built into the search. Specs from Panasonic Operating Instructions (dl-pc-support.connect.panasonic.com), Panasonic spec sheets and RuggedPCReview.com spec tables — each cell cites its source behind ⓘ. Grey chips = Mark exists, specs not verified yet. No prices yet.</footer>
 </main>
 
 <aside id="panel">
@@ -187,32 +187,32 @@
 </div>
 
 <script type="module">
-// ===== Data lives in getac.csv (universal schema shared with dell.csv / thinkpad.csv) =====
+// ===== Data lives in panasonic.csv (universal schema shared with dell.csv / thinkpad.csv) =====
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
 // cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
 const {loadCSV,loadAllBrands,showCompactList,rsLabel,rpLabel}=await import('./specdata.js?b=20261009');
-const ALL=await loadCSV('getac.csv');
+const ALL=await loadCSV('panasonic.csv');
 
 const GENLABEL={unk:"Not verified yet",sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
 // OS typically shipped/preinstalled, by release year
-const YEAROS={"2005": "Windows XP Pro", "2006": "Windows XP Pro", "2007": "Windows XP Pro", "2008": "Windows XP Pro / Vista Business", "2009": "Windows XP / Vista / 7", "2010": "Windows 7 Pro", "2011": "Windows 7 Pro", "2012": "Windows 7 Pro", "2013": "Windows 7 / 8 Pro", "2014": "Windows 7 / 8.1 Pro", "2015": "Windows 7 / 8.1 / 10 Pro", "2016": "Windows 10 Pro (Win 7 option)", "2017": "Windows 10 Pro", "2018": "Windows 10 Pro", "2019": "Windows 10 Pro", "2020": "Windows 10 Pro", "2021": "Windows 10 / 11 Pro", "2022": "Windows 11 Pro", "2023": "Windows 11 Pro", "2024": "Windows 11 Pro", "2025": "Windows 11 Pro", "2026": "Windows 11 Pro"};
+const YEAROS={"2005": "Windows XP Pro", "2006": "Windows XP Pro", "2007": "Windows XP / Vista Business", "2008": "Windows XP / Vista Business", "2009": "Windows XP / Vista / 7", "2010": "Windows 7 Pro", "2011": "Windows 7 Pro", "2012": "Windows 7 Pro", "2013": "Windows 7 / 8 Pro", "2014": "Windows 7 / 8.1 Pro", "2015": "Windows 7 / 8.1 / 10 Pro", "2016": "Windows 10 Pro (Win 7 downgrade)", "2017": "Windows 10 Pro (Win 7 downgrade on 6th gen)", "2018": "Windows 10 Pro", "2019": "Windows 10 Pro", "2020": "Windows 10 Pro", "2021": "Windows 10 / 11 Pro", "2022": "Windows 11 Pro", "2023": "Windows 11 Pro", "2024": "Windows 11 Pro", "2025": "Windows 11 Pro", "2026": "Windows 11 Pro"};
 // Series metadata (presentation only) — the models come from the CSV.
 const META={
 "F": {
 "label": "Fully rugged laptops",
-"note": "Getac's flagship clamshells: M230/A790 → B300 (2008–2018, the classic 2-serial-port workhorse) → B360 / B360 Pro (2020+), plus the 15.6″ X500 / X600 big-screen line. IP65/66, MIL-STD-810. Nearly all have DB9 serial on the machine."
+"note": "The classic clamshells: CF-29 → CF-30 → CF-31 (mk1–mk6, 2010–2019) → FZ-40 / TOUGHBOOK 40 (2022+). IP65-class, DB9 serial on the chassis through the whole line."
+},
+"C": {
+"label": "Convertibles & 2-in-1",
+"note": "CF-18 → CF-19 (mk1–mk8, rotating screen) → CF-20 (detachable) and CF-33 (12″ 2-in-1, mk1–mk4) → FZ-34 (2026). Plus the business-rugged CF-C1/C2. CF-19 has DB9 on every verified Mark; on CF-20/CF-33 serial is a tablet option and the keyboard's port is USB-based on CF-33."
 },
 "S": {
 "label": "Semi-rugged laptops",
-"note": "Cheaper, lighter office-to-field line: W130 / P470 → S400 → S410 (G1–G5) → S510. IP5x splash/dust. Serial is usually a configurable option on the S410 — check the unit."
-},
-"V": {
-"label": "Convertibles",
-"note": "Rotating-screen fully rugged convertibles: V100 → V200 → V110 (G1–G7) → V120. Small (10–12″) but full rugged. V-series traditionally keeps 1× RS-232 on the chassis."
+"note": "Office-to-field line: CF-51/CF-73/CF-74 → CF-52 (15.4″) → CF-53 (14″) → CF-54 → FZ-55 (TOUGHBOOK 55) → FZ-56. DB9 is standard on CF-52/CF-53, an option (xPAK) from CF-54 on."
 },
 "T": {
 "label": "Windows tablets",
-"note": "Fully rugged Windows tablets: E100/E110 → F110 (G1–G7) → F120 · UX10 · K120 (with keyboard) · A140 (14″) · T800 (8″) · RX10. Serial, when available, is a factory expansion-slot option — never assume it."
+"note": "CF-U1 (5.6″ UMPC), CF-H1/H2 (10″ handheld), CF-D1 (13″), FZ-G1 → FZ-G2 (10″), FZ-M1 (7″). Serial, where offered, is a factory expansion-port option."
 }
 };
 const SERIES={};
@@ -230,9 +230,9 @@ const panel=document.getElementById('panel'), pC=document.getElementById('pConte
 const dq=new URLSearchParams(location.search).get('q');
 let curSeries=dq?"ALL":"F", selEl=null, allChips=[];
 // tabs ordered budget → premium. $ = rough price; X and P are specialty (not strictly pricier).
-const order=["S", "V", "T", "F"];
-const TIER={"S": "◐", "V": "⟲", "T": "▭", "F": "🛡"};
-const POS ={"S": "Semi-rugged — splash/drop resistant, cheapest", "V": "Fully rugged convertibles — 10–12″ screen flips to tablet", "T": "Fully rugged Windows tablets", "F": "Fully rugged clamshells — the classic field laptop"};
+const order=["S", "C", "T", "F"];
+const TIER={"S": "◐", "C": "⟲", "T": "▭", "F": "🛡"};
+const POS ={"S": "Semi-rugged — spill/drop resistant, cheapest", "C": "Rotating-screen convertibles and detachable 2-in-1s", "T": "Rugged Windows tablets", "F": "Fully rugged clamshells — CF-30 / CF-31 / TOUGHBOOK 40"};
 
 order.forEach(k=>{
   const b=document.createElement('button');
@@ -270,7 +270,7 @@ function makeChip(d,sk){
 const WIN11Y=2019;
 function win11Row(span){
   const lr=document.createElement('tr'); lr.className='win11line';
-  lr.innerHTML='<td colspan="'+span+'">▲ 2019+ all Windows 11 eligible · 2017–2018 mixed (8th gen yes, 7th gen no — check the chip) · ▼ older = not eligible</td>';
+  lr.innerHTML='<td colspan="'+span+'">▲ 2019+ Windows 11 eligible · ▼ 2018 and older not eligible (Panasonic stayed on 7th gen and Core m through 2018)</td>';
   return lr;
 }
 
@@ -339,12 +339,12 @@ function render(){
   apply();
 }
 
-// Getac: no stable spec-page URLs — the link is a scoped web search. (Comment below is inherited.)
+// Panasonic: no stable spec-page URLs — the link is a scoped web search. (Comment below is inherited.)
 // HP spec pages live on support.hp.com with non-derivable slugs and no reliable auto-
 // redirect, so this returns a scoped model lookup (first result is the spec page).
 // Pin an exact URL via the `url` column to skip the search.
 function tpProduct(nm){
-  return 'https://duckduckgo.com/?q='+encodeURIComponent('Getac '+nm+' spec sheet');
+  return 'https://duckduckgo.com/?q='+encodeURIComponent('Panasonic '+nm+' spec sheet');
 }
 
 function DEEP(s){const j=s.indexOf(String.fromCharCode(124,62));if(j<0)return s;const a=s.slice(0,j).trim(),b=s.slice(j+2).trim();return a+' <span class="infoBtn" title="more detail" onclick="const d=this.nextElementSibling;d.style.display=d.style.display===&quot;block&quot;?&quot;none&quot;:&quot;block&quot;">ⓘ</span><div class="deep">'+b+'</div>';}
@@ -356,7 +356,7 @@ function select(d,el,sk){
   const w11=d.w11===0?0:1;
   const models=d.m.split(' / ').map(s=>s.trim()); // a chip may group several models
   const nm=models[0];
-  const q=encodeURIComponent('Getac '+nm);
+  const q=encodeURIComponent('Panasonic '+nm);
   const imgSrc='https://tse1.mm.bing.net/th?q='+q+'&w=240&h=150&c=7';
   const imgSearch='https://www.bing.com/images/search?q='+q;
   // one direct PSREF product-page link per model in the chip
@@ -364,14 +364,14 @@ function select(d,el,sk){
     ? '<a class="ext" href="'+d.url+'" target="_blank" rel="noreferrer noopener">'+d.m+' ↗</a>'
     : models.map(mm=>'<a class="ext" href="'+tpProduct(mm)+'" target="_blank" rel="noreferrer noopener">🔍 '+mm+' ↗</a>').join('');
   pC.innerHTML=
-    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · Getac '+SERIES[sk].label+'</div>'+
+    '<h2>'+d.m+'</h2><div class="sub">'+d.y+' · '+d.size+' · Panasonic '+SERIES[sk].label+'</div>'+
     '<div style="margin-bottom:8px">'+(w11?'<span class="badge b-yes">Win 11 ✓</span>':'<span class="badge b-no">No Win 11</span>')+
     (d.sold?'<span class="badge b-sold">Soldered / non-standard RAM</span>':'')+'</div>'+
     '<a class="photo" href="'+imgSearch+'" target="_blank" rel="noopener" title="open image search">'+
       '<img src="'+imgSrc+'" alt="'+nm+'" onerror="this.parentNode.classList.add(\'noimg\')">'+
       '<span class="ph-fallback">🔍 See photos of the '+nm+' ↗</span></a>'+
     '<div class="phcap">tap image for more photos ↗</div>'+
-    '<div class="linklabel">'+(d.url?'Official Getac spec page:':'Look up the Getac spec sheet'+(models.length>1?' (per model)':'')+':')+'</div>'+
+    '<div class="linklabel">'+(d.url?'Official Panasonic spec page:':'Look up the Panasonic spec sheet'+(models.length>1?' (per model)':'')+':')+'</div>'+
     '<div class="links">'+linkHtml+'</div>'+
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
@@ -440,7 +440,7 @@ document.getElementById('clist').onclick=async function(){
     if(famFilt) extras.push((famFilt.kind==='bat'?'battery family ':'charger ')+famFilt.key);
     showCompactList({
       models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&rsPass(d)&&rpPass(d)&&sMatch(HAY(d),sTxt)&&stPass(d)&&famPass(d)),
-      brandLabel:'Getac rugged', ctxKind:famFilt?famFilt.kind:(rsMode?'rs232':(rpMax?'rp':null)),
+      brandLabel:'Panasonic Toughbook', ctxKind:famFilt?famFilt.kind:(rsMode?'rs232':(rpMax?'rp':null)),
       stOnKeys:[...stOn], allStOn:stOn.size===STKEYS.length, extras
     });
   }finally{ b.textContent='▤ report'; }
