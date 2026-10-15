@@ -372,7 +372,7 @@ function select(d,el,sk){
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
-    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+(pwrFam(d)?' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+pwrFam(d)+'&quot;)">⇄ same charger</button>':'')+'</div></div>':'')+
+    (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+pwrFams(d).map(function(f){return ' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+f+'&quot;)">⇄ same charger'+(pwrFams(d).length>1?' ('+f+')':'')+'</button>';}).join('')+'</div></div>':'')+
     '<div class="row"><div class="k">⊶ Serial port (RS-232)</div><div class="v'+(d.rs232===undefined?' rsu':'')+'">'+rsLabel(d)+(d.rs232_note?' · '+DEEP(d.rs232_note):'')+'</div></div>'+
     '<div class="row"><div class="k">🔧 CPU re-paste</div><div class="v'+(d.rp===undefined?' rsu':'')+'">'+rpLabel(d)+(d.rp_note?' · '+DEEP(d.rp_note):'')+'</div></div>'+
     (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_fam?' <button class="famBtn" onclick="FAMGO(&quot;bat&quot;,&quot;'+d.bat_fam+'&quot;)">⇄ same battery ('+d.bat_fam+')</button>':'')+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
@@ -436,10 +436,11 @@ document.getElementById('clist').onclick=async function(){
 
 // ---- reverse lookup: "I own this battery/charger — what else takes it?" ----
 const PWRFAMS=[[/16V barrel/i,'16V barrel'],[/round tip/i,'round tip'],[/slim tip/i,'slim tip'],[/usb-c/i,'USB-C']];
-function pwrFam(d){if(!d.pwr)return null;const j=d.pwr.indexOf(String.fromCharCode(124,62));const sh=j<0?d.pwr:d.pwr.slice(0,j);const hit=PWRFAMS.find(p=>p[0].test(sh));return hit?hit[1]:null;}
+function pwrFams(d){if(!d.pwr)return [];const j=d.pwr.indexOf(String.fromCharCode(124,62));const sh=j<0?d.pwr:d.pwr.slice(0,j);return PWRFAMS.filter(p=>p[0].test(sh)).map(p=>p[1]);}
+function pwrFam(d){const f=pwrFams(d);return f.length?f[0]:null;}  // first family; dual-input machines belong to several
 let famFilt=null;
 const famBar=document.getElementById('fambar');
-function famPass(d){if(!famFilt)return true;return famFilt.kind==='bat'?d.bat_fam===famFilt.key:pwrFam(d)===famFilt.key;}
+function famPass(d){if(!famFilt)return true;return famFilt.kind==='bat'?d.bat_fam===famFilt.key:pwrFams(d).includes(famFilt.key);}
 window.FAMGO=function(kind,key){
   if(famFilt&&famFilt.kind===kind&&famFilt.key===key){FAMCLEAR();return;}
   famFilt={kind:kind,key:key};
