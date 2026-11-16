@@ -25,6 +25,26 @@ HD 8790M configs) — harvest during UB runs.
   not per-SKU granularity. Output could be a small per-model bar in the panel
   or a separate stats page.
 
+- **2026-11-16 — "typical config" phase (gen 8+ first).** New `typ` / `typ_note` columns (38-col
+  schema), panel row "📦 Typical config (as found)", stamp 20261116. Batch 1 = 32 system pages
+  pulled (raw: `ubm_raw/2026-11-16.jsonl`, flat copy appended to `ubm_stats.csv` incl. SSD + GPU
+  rows), 29 rows filled: Dell 5490 5590 7490 · 5400 5500 7300 7400 · 5410 5510 7410 · 5420 5520
+  7420 · 5430 7430 · 7440 · 3310 3410 3420 3500; HP 840 G5–G10; ThinkPad T480, X1C6, E480.
+  Left blank on purpose (< 50 PCs): T14 Gen 1 (AMD CTO, 38), T14 Gen 4 (Intel CTO, 18).
+  ~170 gen-8+ rows still to do — ≤ ~30 systems per sitting, then let the site cool down.
+  NEXT (IDs already known, not pulled): Dell 5401/147037, 5411/180846, 5491/91662, 5521/244676,
+  5431/276448, 7400 2-in-1/142938, 3430/290099, 3490/85172, 5420 Rugged/111717, 5430 Rugged/265096,
+  7424 Rugged Ext./111718; HP x360 830 G6/145959. Still need IDs: Dell 5530/5440/5540/7390/7290/
+  5290/5300/5310/5320/5330/7310/7320/7330/3400/3520/3530/3540/3590/9xxx, all remaining HP + ThinkPad.
+  Lenovo: one MTM page is too thin — pull 2–3 MTMs per row (CTO + top fixed SKUs) and let the
+  script pick the biggest; `system_map.csv` already allows several systems per row.
+  FOUND WHILE DOING IT (need SM's call): (a) no Latitude **3510** row in dell.csv (UBM has 1,694 PCs;
+  raw is saved, unmapped); (b) the **7490** row says "M.2 2280 PCIe NVMe" only (`st_m2sata` blank), but the
+  drives actually found in 7490s are mostly M.2 **SATA** (SC311, Micron 1100, KSG60) — the slot
+  takes both, like the 5490 / 7390 rows already say; `st_m2sata` should probably be 1; (c) UBM "Latitude 5450"/"3450" ids 26364/15754
+  look like the 2015 Broadwell machines (low ids from the 2015–16 range, not opened yet) — check
+  the CPU list before mapping them to the 2024 rows.
+
 ## 4. eBay "days on market" per model
 Where feasible: sold listings expose sold date; listing-start date is the hard
 part (sometimes visible on listing page). Research feasibility first — even a
@@ -242,7 +262,7 @@ The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` 
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20261009.
+visitors keep running the stale loader. Current stamp: 20261116 (all five brand pages + index.html).
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

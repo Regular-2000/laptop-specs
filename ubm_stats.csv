@@ -230,3 +230,597 @@ date,brand,grid_model,ubm_system,ubm_url,n_pcs,component,item,config,count
 2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,cpu,Xeon E3-1545M v5,,28
 2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,ram,M471A1K43CB1-CRC,2x8GB,64
 2026-07-21,hp,Studio G3 / G4,HP ZBook Studio G3,https://www.userbenchmark.com/System/HP-ZBook-Studio-G3/24414,,ram,HMA82GS6AFR8N-UH,1x16GB,34
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,cpu,Core i7-8650U,,2829
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,cpu,Core i5-8350U,,2088
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,cpu,Core i5-8250U,,367
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,cpu,Core i5-7300U,,193
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,cpu,Core i7-7600U,,20
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,5258
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,gpu,HD 620 (Mobile Kaby Lake),,214
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,gpu,GTX 1060-6GB,,4
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,gpu,Radeon Pro 580X,,4
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,gpu,RX 580,,2
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ssd,hynix SC311 SATA 256GB,256 GB,284
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ssd,KSG60ZMV512G M.2 2280 512GB,512 GB,246
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ssd,1100 SATA 256GB,256 GB,197
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ssd,hynix SC311 SATA 512GB,512 GB,181
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ssd,1100 SATA 512GB,512 GB,167
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ram,HMA81GS6AFR8N-UH,1x8GB,776
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ram,HMA81GS6AFR8N-UH,2x8GB,749
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ram,HMA82GS6AFR8N-UH,1x16GB,274
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ram,16ATF2G64HZ-2G3E1,1x16GB,137
+2026-11-16,dell,7490,Dell Latitude 7490,https://www.userbenchmark.com/System/Dell-Latitude-7490/76979,5501,ram,8ATF1G64HZ-2G3E1,1x8GB,83
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,cpu,Core i5-1145G7,,2295
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,cpu,Core i5-1135G7,,1846
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,cpu,Core i7-1185G7,,1559
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,cpu,Core i7-1165G7,,488
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,cpu,Gen Intel Core i3-1125G4,,96
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,gpu,Iris Xe,,6169
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,gpu,UHD Graphics,,96
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,gpu,UHD Graphics,,30
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,gpu,GTX 1080,,5
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,gpu,Titan Xp,,2
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ssd,SN530 NVMe WDC 256GB,256 GB,599
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ssd,PC SN530 WDC 256GB,256 GB,477
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ssd,BC711 SK hynix 256GB,256 GB,324
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ssd,KBG40ZNS256G KIOXIA 256GB,256 GB,319
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ssd,NVMe KIOXIA 256GB,256 GB,273
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ram,HMAA2GS6AJR8N-XN,1x16GB,1067
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ram,HMAA2GS6CJR8N-XN,1x16GB,798
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ram,HMAA1GS6CJR6N-XN,1x8GB,393
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ram,M471A2G43BB2-CWE,1x16GB,341
+2026-11-16,dell,5420,Dell Latitude 5420,https://www.userbenchmark.com/System/Dell-Latitude-5420/220778,6314,ram,8ATF2G64HZ-3G2E2,1x16GB,274
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,cpu,Core i5-8350U,,1771
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,cpu,Core i5-8250U,,821
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,cpu,Core i7-8650U,,770
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,cpu,Core i5-7300U,,423
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,cpu,Core i3-8130U,,20
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,3317
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,gpu,HD 620 (Mobile Kaby Lake),,443
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,gpu,MX130,,64
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,gpu,UHD Graphics 600,,1
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,gpu,HD Graphics 620,,1
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ssd,hynix SC311 SATA 256GB,256 GB,300
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ssd,PM871b M.2 2280 256GB,256 GB,162
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ssd,1100 SATA 256GB,256 GB,96
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ssd,1100 SATA 512GB,512 GB,87
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ssd,hynix SC401 SATA 256GB,256 GB,85
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ram,HMA81GS6AFR8N-UH,1x8GB,760
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ram,HMA81GS6AFR8N-UH,2x8GB,283
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ram,HMA82GS6AFR8N-UH,1x16GB,220
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ram,16ATF2G64HZ-2G3E1,1x16GB,121
+2026-11-16,dell,5490,Dell Latitude 5490,https://www.userbenchmark.com/System/Dell-Latitude-5490/77840,3827,ram,8ATF1G64HZ-2G3E1,1x8GB,92
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,cpu,Core i7-8650U,,784
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,cpu,Core i5-8350U,,596
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,cpu,Core i5-8250U,,405
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,cpu,Core i5-7300U,,154
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,cpu,Core i3-8130U,,24
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,1755
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,gpu,HD 620 (Mobile Kaby Lake),,176
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,gpu,MX130,,55
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,gpu,GTX 1050,,1
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ssd,hynix SC311 SATA 256GB,256 GB,141
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ssd,KSG60ZMV512G M.2 2280 512GB,512 GB,82
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ssd,1100 SATA 512GB,512 GB,72
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ssd,hynix SC311 SATA 512GB,512 GB,60
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ssd,NVMe SK hynix 256GB,256 GB,56
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ram,HMA81GS6AFR8N-UH,1x8GB,353
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ram,HMA81GS6AFR8N-UH,2x8GB,318
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ram,HMA82GS6AFR8N-UH,1x16GB,64
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ram,AO1P24HC8T1-BSFS,1x8GB,32
+2026-11-16,dell,5590,Dell Latitude 5590,https://www.userbenchmark.com/System/Dell-Latitude-5590/77842,1987,ram,HMA82GS6AFR8N-UH,2x16GB,31
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,cpu,Core i5-8365U,,1680
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,cpu,Core i7-8665U,,1037
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,cpu,Core i5-8265U,,677
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,cpu,Core i5-8350U,,87
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,cpu,Core i5-8250U,,41
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,gpu,UHD Graphics 620,,3396
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,146
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,gpu,UHD Graphics 610,,2
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,gpu,RTX 3080,,2
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,gpu,GTX 1660-Ti,,2
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ssd,SN520 NVMe WDC 256GB,256 GB,186
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ssd,NVMe KIOXIA 256GB,256 GB,166
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ssd,NVMe SK hynix 256GB,256 GB,132
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ssd,SN520 NVMe WDC 512GB,512 GB,88
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ssd,KBG40ZNS256G NVM 256GB,256 GB,87
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ram,HMA81GS6JJR8N-VK,1x8GB,297
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ram,HMA82GS6DJR8N-VK,1x16GB,292
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ram,HMA82GS6JJR8N-VK,1x16GB,268
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ram,HMA81GS6JJR8N-VK,2x8GB,104
+2026-11-16,dell,5400,Dell Latitude 5400,https://www.userbenchmark.com/System/Dell-Latitude-5400/144004,3554,ram,HMA81GS6DJR8N-VK,1x8GB,99
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,cpu,Core i5-8365U,,523
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,cpu,Core i7-8665U,,487
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,cpu,Core i5-8265U,,345
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,cpu,Core i3-8145U,,7
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,gpu,UHD Graphics 620,,1359
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,gpu,UHD Graphics,,3
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ssd,NVMe KIOXIA 256GB,256 GB,83
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ssd,SN520 NVMe WDC 512GB,512 GB,74
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ssd,SN520 NVMe WDC 256GB,256 GB,73
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ssd,KBG40ZNS256G NVM 256GB,256 GB,56
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ssd,NVMe KIOXIA 512GB,512 GB,45
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ram,HMA81GS6JJR8N-VK,1x8GB,119
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ram,HMA82GS6DJR8N-VK,1x16GB,110
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ram,HMA82GS6JJR8N-VK,1x16GB,100
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ram,8ATF1G64HZ-2G6J1,1x8GB,58
+2026-11-16,dell,5500,Dell Latitude 5500,https://www.userbenchmark.com/System/Dell-Latitude-5500/145071,1362,ram,HMA81GS6JJR8N-VK,2x8GB,37
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,cpu,Core i7-8665U,,1255
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,cpu,Core i5-8365U,,772
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,cpu,Core i5-8265U,,184
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,gpu,UHD Graphics 620,,2200
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,gpu,R9 280,,2
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,gpu,RX 580-2048SP,,2
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,gpu,GTX 1080,,2
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,gpu,GTX 1060-6GB,,1
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ssd,NVMe SK hynix 256GB,256 GB,136
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ssd,2200S NVMe 256GB,256 GB,135
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ssd,2200S NVMe 512GB,512 GB,105
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ssd,NVMe SK hynix 512GB,512 GB,72
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ssd,NVMe INTEL 256GB,256 GB,63
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ram,HMA82GS6DJR8N-VK,1x16GB,301
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ram,HMA82GS6JJR8N-VK,1x16GB,294
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ram,HMA81GS6JJR8N-VK,1x8GB,85
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ram,HMA81GS6JJR8N-VK,2x8GB,66
+2026-11-16,dell,7400,Dell Latitude 7400,https://www.userbenchmark.com/System/Dell-Latitude-7400/139796,2211,ram,HMA82GS6CJR8N-VK,1x16GB,58
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,cpu,Core i7-8665U,,423
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,cpu,Core i5-8365U,,241
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,cpu,Core i5-8265U,,108
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,gpu,UHD Graphics 620,,759
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,gpu,GTX 1660S (Super),,2
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,gpu,GTX 1070,,2
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,gpu,Quadro K2200,,1
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,gpu,GTX 1080,,1
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ssd,2200S NVMe 256GB,256 GB,53
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ssd,NVMe TOSHIBA 256GB,256 GB,30
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ssd,2200S NVMe 512GB,512 GB,27
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ssd,Micron 2200S NVM 256GB,256 GB,23
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ssd,NVMe SK hynix 512GB,512 GB,20
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ram,HMA82GS6JJR8N-VK,1x16GB,107
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ram,HMA82GS6DJR8N-VK,1x16GB,78
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ram,HMA81GS6JJR8N-VK,1x8GB,50
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ram,M471A1K43DB1-CTD,1x8GB,24
+2026-11-16,dell,7300,Dell Latitude 7300,https://www.userbenchmark.com/System/Dell-Latitude-7300/145028,772,ram,M471A2K43CB1-CTD,1x16GB,22
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,cpu,Core i5-10310U,,1036
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,cpu,Core i5-10210U,,643
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,cpu,Core i7-10610U,,438
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,cpu,Core i7-10810U,,95
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,cpu,Core i5-8365U,,33
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,gpu,UHD Graphics,,2138
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,gpu,UHD Graphics,,94
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,gpu,UHD Graphics 620,,33
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,gpu,RTX 2070,,1
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ssd,NVMe KIOXIA 256GB,256 GB,210
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ssd,NVMe SK hynix 256GB,256 GB,195
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ssd,SN530 NVMe WDC 256GB,256 GB,154
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ssd,NVMe KIOXIA 512GB,512 GB,70
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ssd,BC511 SK hy 256GB,256 GB,66
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ram,HMA82GS6DJR8N-XN,1x16GB,413
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ram,HMA81GS6DJR8N-XN,1x8GB,181
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ram,HMA81GS6CJR8N-XN,1x8GB,112
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ram,8ATF1G64HZ-3G2J1,1x8GB,77
+2026-11-16,dell,5410,Dell Latitude 5410,https://www.userbenchmark.com/System/Dell-Latitude-5410/187681,2266,ram,16ATF2G64HZ-3G2J1,1x16GB,57
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,cpu,Core i5-10310U,,479
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,cpu,Core i5-10210U,,381
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,cpu,Core i7-10610U,,325
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,cpu,Core i7-10810U,,69
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,cpu,Core i3-10110U,,9
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,gpu,UHD Graphics,,1193
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,gpu,UHD Graphics,,68
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,gpu,GTX 760,,2
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,gpu,Radeon RX 640,,1
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,gpu,GTX Titan Black,,1
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ssd,NVMe KIOXIA 256GB,256 GB,107
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ssd,SN530 NVMe WDC 256GB,256 GB,107
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ssd,SN530 NVMe WDC 512GB,512 GB,70
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ssd,NVMe SK hynix 512GB,512 GB,69
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ssd,NVMe SK hynix 256GB,256 GB,66
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ram,HMA82GS6DJR8N-XN,1x16GB,251
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ram,HMA81GS6DJR8N-XN,1x8GB,107
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ram,HMA81GS6CJR8N-XN,1x8GB,60
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ram,8ATF1G64HZ-3G2J1,1x8GB,57
+2026-11-16,dell,5510,Dell Latitude 5510,https://www.userbenchmark.com/System/Dell-Latitude-5510/191631,1265,ram,HMA82GS6DJR8N-XN,2x16GB,41
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,cpu,Core i7-10610U,,674
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,cpu,Core i5-10310U,,448
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,cpu,Core i7-10810U,,73
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,cpu,Core i5-10210U,,46
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,gpu,UHD Graphics,,1163
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,gpu,UHD Graphics,,73
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,gpu,GTX 1060-6GB,,1
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,gpu,Radeon Pro 580X,,1
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,gpu,RX 570,,1
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ssd,NVMe KIOXIA 256GB,256 GB,89
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ssd,NVMe KIOXIA 512GB,512 GB,73
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ssd,NVMe SK hynix 512GB,512 GB,61
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ssd,NVMe SK hynix 256GB,256 GB,44
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ssd,2200S NVMe 256GB,256 GB,39
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ram,HMAA1GS6CMR8N-VK,2x8GB,692
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ram,4ATS1G64HZ-2G6E1,2x8GB,147
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ram,M471A1K43BB1-CTD,2x8GB,141
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ram,M471A2G44AM0-CTD,2x16GB,98
+2026-11-16,dell,7410,Dell Latitude 7410,https://www.userbenchmark.com/System/Dell-Latitude-7410/191162,1241,ram,4ATF51264HZ-3G2J1,2x4GB,53
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,cpu,Core i7-1185G7,,1235
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,cpu,Core i5-1145G7,,990
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,cpu,Core i5-1135G7,,702
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,cpu,Core i7-1165G7,,422
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,cpu,Gen Intel Core i3-1125G4,,67
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,gpu,Iris Xe,,3274
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,gpu,UHD Graphics,,67
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,gpu,GeForce MX450,,55
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,gpu,UHD Graphics,,11
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,gpu,RTX 3080,,3
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ssd,KBG40ZNS512G KIOXIA 512GB,512 GB,364
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ssd,KBG40ZNS256G KIOXIA 256GB,256 GB,246
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ssd,NVMe KIOXIA 512GB,512 GB,229
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ssd,NVMe KIOXIA 256GB,256 GB,172
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ssd,BC711 SK hynix 512GB,512 GB,124
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ram,HMAA2GS6CJR8N-XN,1x16GB,748
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ram,HMAA1GS6CJR6N-XN,1x8GB,256
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ram,M471A2G43BB2-CWE,1x16GB,220
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ram,HMAA2GS6CJR8N-XN,2x16GB,187
+2026-11-16,dell,5520,Dell Latitude 5520,https://www.userbenchmark.com/System/Dell-Latitude-5520/222444,3427,ram,M471A2G43AB2-CWE,1x16GB,153
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,cpu,Core i7-1185G7,,1866
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,cpu,Core i5-1145G7,,721
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,cpu,Core i7-1165G7,,272
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,cpu,Core i5-1135G7,,147
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,gpu,Iris Xe,,2976
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,gpu,RTX 2060,,6
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,gpu,RTX 2070,,3
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,gpu,RTX 2060S (Super),,3
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,gpu,R9 270,,2
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ssd,SN530 NVMe WDC 256GB,256 GB,214
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ssd,PC SN530 WDC 512GB,512 GB,124
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ssd,SN530 NVMe WDC 512GB,512 GB,124
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ssd,PC SN530 WDC 256GB,256 GB,114
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ssd,NVMe KIOXIA 512GB,512 GB,91
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ram,8x2GB,8x2GB,626
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ram,8x2GB,8x2GB,584
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ram,8x2GB,8x2GB,381
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ram,8x2GB,8x2GB,254
+2026-11-16,dell,7420,Dell Latitude 7420,https://www.userbenchmark.com/System/Dell-Latitude-7420/222100,3006,ram,8x2GB,8x2GB,177
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,cpu,Core i5-1245U,,553
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,cpu,Core i5-1235U,,416
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,cpu,Core i7-1265U,,382
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,cpu,Core i7-1255U,,245
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,cpu,Core i5-1145G7,,27
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,gpu,Iris Xe Graphics,,992
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,gpu,UHD Graphics,,604
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,gpu,Iris Xe,,27
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,gpu,UHD Graphics,,12
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,gpu,GTX 970,,1
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ssd,PC SN740 WD 512GB,512 GB,120
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ssd,SN740 NVMe WD 512GB,512 GB,107
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ssd,NVMe KIOXIA 256GB,256 GB,88
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ssd,KBG50ZNS256G KIOXIA 256GB,256 GB,68
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ssd,NVMe KIOXIA 512GB,512 GB,54
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ram,HMAA1GS6CJR6N-XN,2x8GB,210
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ram,M471A1G44BB0-CWE,2x8GB,123
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ram,HMAA2GS6CJR8N-XN,1x16GB,92
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ram,M471A2G43BB2-CWE,1x16GB,75
+2026-11-16,dell,5430,Dell Latitude 5430,https://www.userbenchmark.com/System/Dell-Latitude-5430/274261,1636,ram,M471A2G43AB2-CWE,1x16GB,72
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,cpu,Core i7-1265U,,549
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,cpu,Core i5-1245U,,198
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,cpu,Gen Intel Core i7-1270P,,120
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,cpu,Core i7-1255U,,103
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,cpu,Core i5-1235U,,73
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,gpu,Iris Xe Graphics,,922
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,gpu,Iris Xe Graphics,,148
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,gpu,Radeon RX 560-B,,1
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,gpu,RTX 3060-Ti,,1
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ssd,BC711 SK hynix 512GB,512 GB,56
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ssd,NVMe KIOXIA 512GB,512 GB,51
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ssd,NVMe Samsung 512GB,512 GB,44
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ssd,KBG50ZNS512G KIOXIA 512GB,512 GB,42
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ssd,NVMe KIOXIA 256GB,256 GB,42
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ram,2x8GB,2x8GB,644
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ram,2x16GB,2x16GB,274
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ram,8x2GB,8x2GB,78
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ram,8x4GB,8x4GB,45
+2026-11-16,dell,7430,Dell Latitude 7430,https://www.userbenchmark.com/System/Dell-Latitude-7430/271972,1072,ram,8x4GB,8x4GB,18
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,cpu,Core i7-1365U,,132
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,cpu,Gen Intel Core i5-1345U,,108
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,cpu,Core i7-1370P,,45
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,cpu,Core i7-1355U,,36
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,cpu,Core i5-1350P,,17
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,gpu,Iris Xe Graphics,,284
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,gpu,Iris Xe Graphics,,63
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,gpu,RTX 2070S (Super),,1
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ssd,NVMe KIOXIA 512GB,512 GB,27
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ssd,BC901 SK hynix 512GB,512 GB,23
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ssd,NVMe SK hynix 512GB,512 GB,21
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ssd,2450 NVMe 256GB,256 GB,20
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ssd,KBG50ZNS512G KIOXIA 512GB,512 GB,17
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ram,8x2GB,8x2GB,212
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ram,8x4GB,8x4GB,134
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ram,8x8GB,8x8GB,1
+2026-11-16,dell,7440,Dell Latitude 7440,https://www.userbenchmark.com/System/Dell-Latitude-7440/304082,348,ram,8x1GB,8x1GB,1
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,cpu,Core i5-10210U,,1289
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,cpu,Core i3-10110U,,586
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,cpu,Core i7-10510U,,346
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,cpu,Core i5-10310U,,319
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,cpu,Celeron 5205U,,26
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,gpu,UHD Graphics,,2514
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,gpu,UHD Graphics,,26
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,gpu,GeForce MX230,,26
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,gpu,UHD Graphics P630,,1
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ssd,NVMe KIOXIA 256GB,256 GB,290
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ssd,NVMe SK hynix 256GB,256 GB,149
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ssd,KBG40ZNS256G KIOXIA 256GB,256 GB,114
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ssd,KBG40ZNS256G NVM 256GB,256 GB,113
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ssd,BC511 SK hy 256GB,256 GB,72
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ram,M471A1K43DB1-CWE,1x8GB,395
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ram,HMA81GS6DJR8N-XN,1x8GB,388
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ram,HMA81GS6CJR8N-XN,1x8GB,123
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ram,HMA82GS6DJR8N-XN,1x16GB,75
+2026-11-16,dell,3410,Dell Latitude 3410,https://www.userbenchmark.com/System/Dell-Latitude-3410/178153,2567,ram,M471A2K43DB1-CWE,1x16GB,65
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,cpu,Core i5-1135G7,,1739
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,cpu,Core i3-1115G4,,664
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,cpu,Core i7-1165G7,,637
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,cpu,Core i5-1145G7,,264
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,cpu,Gen Intel Core i3-1125G4,,71
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,gpu,Iris Xe,,2600
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,gpu,UHD Graphics,,764
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,gpu,GeForce MX450,,30
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,gpu,GeForce MX350,,8
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,gpu,UHD G1,,7
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ssd,BC711 SK hynix 256GB,256 GB,363
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ssd,KBG40ZNS256G KIOXIA 256GB,256 GB,277
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ssd,NVMe KIOXIA 256GB,256 GB,175
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ssd,NVMe SK hynix 256GB,256 GB,170
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ssd,NVMe Samsung 256GB,256 GB,103
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ram,HMAA1GS6CJR6N-XN,1x8GB,553
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ram,M471A1G44BB0-CWE,1x8GB,408
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ram,HMAA2GS6CJR8N-XN,1x16GB,197
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ram,M471A1G44AB0-CWE,1x8GB,184
+2026-11-16,dell,3420,Dell Latitude 3420,https://www.userbenchmark.com/System/Dell-Latitude-3420/233961,3411,ram,4ATF1G64HZ-3G2E2,1x8GB,137
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,cpu,Core i5-10210U,,1037
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,cpu,Core i7-10510U,,311
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,cpu,Core i3-10110U,,266
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,cpu,Core i5-10310U,,80
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,gpu,UHD Graphics,,1624
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,gpu,GeForce MX230,,70
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ssd,NVMe KIOXIA 256GB,256 GB,267
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ssd,NVMe SK hynix 256GB,256 GB,90
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ssd,SN530 NVMe WDC 256GB,256 GB,82
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ssd,KBG40ZNS256G NVM 256GB,256 GB,72
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ssd,NVMe SK hynix 512GB,512 GB,55
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ram,HMA81GS6DJR8N-XN,1x8GB,220
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ram,M471A1K43DB1-CWE,1x8GB,172
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ram,HMA81GS6CJR8N-XN,1x8GB,90
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ram,HMA82GS6DJR8N-XN,1x16GB,81
+2026-11-16,dell,3510,Dell Latitude 3510,https://www.userbenchmark.com/System/Dell-Latitude-3510/192427,1694,ram,HMAA1GS6CJR6N-XN,1x8GB,76
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,cpu,Core i5-8265U,,471
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,cpu,Core i7-8565U,,192
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,cpu,Core i3-8145U,,78
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,cpu,Core i5-8365U,,18
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,cpu,Celeron 4205U,,1
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,gpu,UHD Graphics 620,,720
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,gpu,MX130,,38
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,gpu,UHD Graphics 610,,2
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,gpu,UHD Graphics,,1
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ssd,NVMe KIOXIA 256GB,256 GB,39
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ssd,NVMe Samsung 256GB,256 GB,35
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ssd,NVMe TOSHIBA 256GB,256 GB,34
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ssd,NVMe SK hynix 256GB,256 GB,30
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ssd,SN520 NVMe WDC 256GB,256 GB,30
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ram,HMA81GS6JJR8N-VK,1x8GB,91
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ram,HMA81GS6DJR8N-VK,1x8GB,53
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ram,KHYXPX-MIE,1x8GB,41
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ram,M471A1K43DB1-CTD,1x8GB,37
+2026-11-16,dell,3500,Dell Latitude 3500,https://www.userbenchmark.com/System/Dell-Latitude-3500/139661,761,ram,M471A1K43CB1-CTD,1x8GB,27
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,cpu,Core i3-8145U,,652
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,cpu,Core i5-8265U,,272
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,cpu,Pentium 5405U,,50
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,cpu,Celeron 4205U,,34
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,gpu,UHD Graphics 620,,924
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,gpu,UHD Graphics 610,,84
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ssd,NVMe SK hynix 256GB,256 GB,147
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ssd,NVMe KIOXIA 128GB,128 GB,83
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ssd,NVMe SK hynix 128GB,128 GB,62
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ssd,X110 SATA M.2 256GB,256 GB,60
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ssd,NVMe SK hynix 128GB,128 GB,56
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ram,HMA81GS6AFR8N-UH,1x8GB,220
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ram,HMAA1GS6CJR6N-XN,1x8GB,142
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ram,4ATF1G64HZ-3G2E2,1x8GB,82
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ram,HMA81GS6DJR8N-VK,1x8GB,50
+2026-11-16,dell,3310,Dell Latitude 3310,https://www.userbenchmark.com/System/Dell-Latitude-3310/198074,1008,ram,HMA81GS6CJR8N-VK,1x8GB,40
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,cpu,Core i5-8350U,,2443
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,cpu,Core i7-8650U,,940
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,cpu,Core i5-8250U,,828
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,cpu,Core i7-8550U,,534
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,cpu,Core i5-7300U,,233
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,4725
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,gpu,HD 620 (Mobile Kaby Lake),,364
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,gpu,Radeon RX 540,,5
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,gpu,RTX 2060,,3
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,gpu,RX 580,,2
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ssd,MZVLB256HAHQ-000H1 256GB,256 GB,791
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ssd,MZVLB512HAJQ-000H1 512GB,512 GB,378
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ssd,MTFDDAV256TBN-1AR15ABHA 256GB,256 GB,363
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ssd,TOSHIBA 256GB,256 GB,221
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ssd,XG5 NVMe PCIe M.2 256GB,256 GB,200
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ram,HMA81GS6AFR8N-UH,1x8GB,375
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ram,HP26D4S9S8MD-8,1x8GB,266
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ram,M471A1K43CB1-CTD,1x8GB,259
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ram,M471A2K43CB1-CTD,1x16GB,255
+2026-11-16,hp,830 G5 / 840 G5 / 850 G5,HP EliteBook 840 G5,https://www.userbenchmark.com/System/HP-EliteBook-840-G5/72244,5114,ram,M471A1K43DB1-CTD,1x8GB,190
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,cpu,Core i5-8365U,,1587
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,cpu,Core i5-8265U,,647
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,cpu,Core i7-8665U,,554
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,cpu,Core i7-8565U,,393
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,cpu,Core i5-8350U,,2
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,gpu,UHD Graphics 620,,3155
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,gpu,GTX 1060-6GB,,5
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,4
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,gpu,Radeon RX 560-B,,3
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,gpu,RTX 3080,,3
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ssd,MZVLB256HAHQ-000H1 256GB,256 GB,285
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ssd,MTFDHBA256TCK-1AS1AABHA 256GB,256 GB,166
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ssd,PC SN520 SDAPNUW-256G-1006 256GB,256 GB,163
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ssd,SSDPEKNW512G8H 512GB,512 GB,161
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ssd,hynix BC501 HFM256GDJTNG-8310A 256GB,256 GB,143
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ram,M471A2K43CB1-CTD,1x16GB,316
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ram,M471A1K43CB1-CTD,1x8GB,201
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ram,RMSA3260KC78HAF-2666,1x8GB,120
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ram,M471A2K43DB1-CTD,1x16GB,118
+2026-11-16,hp,830 G6 / 840 G6 / 850 G6,HP EliteBook 840 G6,https://www.userbenchmark.com/System/HP-EliteBook-840-G6/148493,3185,ram,HMA81GS6JJR8N-VK,1x8GB,84
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,cpu,Core i5-10310U,,718
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,cpu,Core i5-10210U,,414
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,cpu,Core i7-10610U,,258
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,cpu,Core i7-10510U,,226
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,cpu,Core i7-10710U,,36
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,gpu,UHD Graphics,,1609
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,gpu,UHD Graphics,,69
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,gpu,Quadro P4000,,1
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,gpu,RX 580,,1
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,gpu,GTX 1060-3GB,,1
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ssd,KIOXIA 256GB,256 GB,92
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ssd,hynix BC511 HFM256GDJTNI-82A0A 256GB,256 GB,81
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ssd,MZVLQ256HAJD-000H1 256GB,256 GB,80
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ssd,PC SN530 SDBPNPZ-256G-1006 256GB,256 GB,65
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ssd,SSDPEKNW512G8H 512GB,512 GB,64
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ram,M471A2K43DB1-CWE,1x16GB,107
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ram,M471A2K43DB1-CTD,1x16GB,97
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ram,8ATF2G64HZ-3G2E2,1x16GB,79
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ram,M471A2G43AB2-CWE,1x16GB,59
+2026-11-16,hp,830 G7 / 840 G7 / 850 G7,HP EliteBook 840 G7 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G7-Notebook-PC/194218,1686,ram,16ATF2G64HZ-3G2J1,1x16GB,53
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,cpu,Core i5-1145G7,,1068
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,cpu,Core i5-1135G7,,585
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,cpu,Core i7-1165G7,,541
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,cpu,Core i7-1185G7,,429
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,gpu,Iris Xe,,2608
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,gpu,RTX 2060,,2
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,gpu,GTX 1050-Ti,,1
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,gpu,GTX 1060-6GB,,1
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,gpu,GTX 1060-3GB,,1
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ssd,KIOXIA 256GB,256 GB,186
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ssd,MZVLQ512HBLU-00BH1 512GB,512 GB,116
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ssd,KIOXIA 256GB,256 GB,110
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ssd,MTFDHBA512QFD-1AX1AABHA 512GB,512 GB,89
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ssd,hynix BC711 HFM256GD3JX013N 256GB,256 GB,88
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ram,M471A2K43EB1-CWE,1x16GB,215
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ram,HMAA2GS6CJR8N-XN,1x16GB,146
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ram,8ATF2G64HZ-3G2F1,1x16GB,144
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ram,M471A1K43EB1-CWE,2x8GB,117
+2026-11-16,hp,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,HP EliteBook 840 G8 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-G8-Notebook-PC/210278,2623,ram,HMA81GS6DJR8N-XN,2x8GB,114
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,cpu,Core i7-1255U,,182
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,cpu,Core i7-1265U,,102
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,cpu,Core i5-1245U,,97
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,cpu,Core i5-1235U,,96
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,cpu,Gen Intel Core i7-1270P,,27
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,gpu,Iris Xe Graphics,,293
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,gpu,UHD Graphics,,182
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,gpu,Iris Xe Graphics,,42
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,gpu,UHD Graphics,,23
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,gpu,GTX 1080,,1
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ssd,MZVLQ512HBLU-00BH1 512GB,512 GB,98
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ssd,hynix BC711 HFM512GD3JX013N 512GB,512 GB,66
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ssd,MZVLQ256HBJD-00BH1 256GB,256 GB,25
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ssd,KIOXIA 512GB,512 GB,20
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ram,M425R1GB4BB0-CQKOL,2x8GB,112
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ram,M425R2GA3BB0-CQKOL,1x16GB,101
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ram,M425R2GA3BB0-CQKOL,2x16GB,52
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ram,HMCG78MEBSA092N,1x16GB,34
+2026-11-16,hp,840 G9 / 860 G9,HP EliteBook 840 14 inch G9 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G9-Notebook-PC/279848,542,ram,HMCG66MEBSA092N,2x8GB,30
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,cpu,Gen Intel Core i5-1345U,,57
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,cpu,Core i7-1355U,,53
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,cpu,Core i5-1335U,,45
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,cpu,Core i7-1365U,,39
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,cpu,Core i7-1360P,,17
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,gpu,Iris Xe Graphics,,113
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,gpu,UHD Graphics,,81
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,gpu,Iris Xe Graphics,,39
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,gpu,UHD Graphics,,9
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ssd,MZVL4512HBLU 512GB,512 GB,33
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ssd,MZVL4256HBJD-00BH1 256GB,256 GB,14
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ssd,hynix PC801 HFS001TEJ9X101N 1TB,1 TB,13
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ssd,hynix PC801 HFS512GEJ9X101N 512GB,512 GB,11
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ram,HMCG78AGBSA095N,1x16GB,25
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ram,M425R1GB4BB0-CWMOD,2x8GB,13
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ram,M425R2GA3BB0-CQKOL Hynix HMCG78MEBSA092N,32GB,12
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ram,HMCG66AGBSA095N,2x8GB,12
+2026-11-16,hp,840 G10 / 860 G10,HP EliteBook 840 14 inch G10 Notebook PC,https://www.userbenchmark.com/System/HP-EliteBook-840-14-inch-G10-Notebook-PC/308213,242,ram,HMCG78AGBSA095N,2x16GB,11
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,cpu,Core i5-8250U,,50
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,cpu,Core i7-8550U,,49
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,cpu,Core i5-8350U,,23
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,cpu,Core i7-8650U,,14
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,120
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,gpu,MX150-0,,9
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,gpu,RTX 3060,,2
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,gpu,GTX 980-Ti,,1
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,gpu,GTX 1050 (Mobile),,1
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ssd,SSDPEKKF256G8L 256GB,256 GB,12
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ssd,PC SN720 SDAQNTW-512G-1001 512GB,512 GB,10
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ssd,PM981 NVMe PCIe M.2 512GB,512 GB,9
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ssd,MZ7LN256HAJQ-000L7 256GB,256 GB,8
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ssd,PM981 NVMe PCIe M.2 1TB,1 TB,6
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ram,M471A1K43CB1-CRC,1x8GB,18
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ram,M471A2K43CB1-CRC,1x16GB,14
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ram,HMA81GS6AFR8N-UH,2x8GB,13
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ram,HMA82GS6AFR8N-UH,2x16GB,9
+2026-11-16,thinkpad,T480 / T480s / T580,Lenovo 20L5CTO1WW,https://www.userbenchmark.com/System/Lenovo-20L5CTO1WW/82775,136,ram,M471A2K43CB1-CRC,2x16GB,5
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,cpu,Core i7-8550U,,127
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,cpu,Core i7-8650U,,89
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,cpu,Core i5-8350U,,38
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,cpu,Core i5-8250U,,26
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,272
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,gpu,GTX 1080,,2
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,gpu,GTX 1050 (Mobile),,2
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,gpu,Quadro P4000,,1
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,gpu,GTX 1070,,1
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ssd,PM981 NVMe PCIe M.2 512GB,512 GB,34
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ssd,PM981 NVMe PCIe M.2 1TB,1 TB,31
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ssd,SSDPEKKF256G8L 256GB,256 GB,25
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ssd,LENSE30512GMSP34MEAT3TA 512GB,512 GB,21
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ssd,SSDPEKKF512G8L 512GB,512 GB,16
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ram,K4EBE304EB-EGCG,2x8GB,125
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ram,MT52L1G32D4PG-093,2x8GB,78
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ram,H9CCNNNCLGALAR-NVD,2x8GB,41
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ram,K4E6E304EB-EGCG,2x4GB,25
+2026-11-16,thinkpad,X1 Carbon Gen 6,Lenovo 20KHCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KHCTO1WW/80899,280,ram,H9CCNNNBJTALAR-NVD,2x4GB,7
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,cpu,Ryzen 7 PRO 4750U Graphics,,26
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,cpu,Ryzen 5 PRO 4650U Graphics,,12
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,gpu,RX Vega 8 4000 (iGPU),,38
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ssd,SKHynix_HFS512GD9TNI-L2B0B 512GB,512 GB,5
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ssd,Black SN750 NVMe PCIe M.2 500GB (2019),512 GB,4
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ssd,TS1TMTE240S 1TB,1 TB,3
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ssd,MZVLB1T0HBLR-00000 1TB,1 TB,2
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ssd,970 Evo Plus NVMe PCIe M.2 1TB,1 TB,2
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ram,M471A2G44AM0-CWE,1x16GB,6
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ram,HMAB2GS6AMR6N-XN Micron 8ATF2G64HZ-3G2E1,32GB,4
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ram,4ATS2G64HZ-3G2B1 CT16G4SFD832A.M16FR,32GB,4
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ram,4ATS2G64HZ-3G2B1 8ATF2G64HZ-3G2E1,32GB,4
+2026-11-16,thinkpad,T14 Gen 1 / T14s Gen 1 / T15,Lenovo 20UDCTO1WW,https://www.userbenchmark.com/System/Lenovo-20UDCTO1WW/196990,38,ram,M471A2G44AM0-CWE CT16G4SFD832A.C16FP,32GB,3
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,cpu,Core i7-1355U,,9
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,cpu,Core i5-1335U,,7
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,cpu,Core i7-1365U,,2
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,gpu,Iris Xe Graphics,,12
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,gpu,UHD Graphics,,6
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ssd,MZVL21T0HDLU-00BLL 1TB,1 TB,4
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ssd,LA KIOXIA 1TB,1 TB,2
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ssd,LA KIOXIA 1TB,1 TB,2
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ssd,LA KIOXIA 512GB,512 GB,2
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ssd,PC SN730 SDBQNTY-256G-1001 256GB,256 GB,1
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ram,HMCG78AGBSA092N,1x16GB,3
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ram,M425R1GB4DB0-CWMOL Micron MTC8C1084S1SC56BD1,32GB,3
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ram,M425R1GB4DB0-CWMOL,1x16GB,3
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ram,M425R1GB4DB0-CWMOL Essencore Limited KD5AGSA80-56G4600,32GB,2
+2026-11-16,thinkpad,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,Lenovo 21HDCTO1WW,https://www.userbenchmark.com/System/Lenovo-21HDCTO1WW/310612,18,ram,M425R1GB4DB0-CWMOL M425R2GA3BB0-CWMOD,32GB,2
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,cpu,Core i7-8550U,,46
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,cpu,Core i5-8250U,,28
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,cpu,Core i5-7200U,,3
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,cpu,Core i3-7130U,,1
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,gpu,UHD Graphics 620 (Mobile Kaby Lake R),,61
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,gpu,RX 550,,9
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,gpu,HD 620 (Mobile Kaby Lake),,4
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,gpu,Radeon 500,,4
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ssd,TOSHIBA 128GB,128 GB,11
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ssd,LENSE20256GMSP34MEAT2TA 256GB,256 GB,9
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ssd,PM961 NVMe PCIe M.2 256GB,256 GB,8
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ssd,PC SN720 SDAQNTW-256G-1001 256GB,256 GB,6
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ssd,TOSHIBA 256GB,256 GB,4
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,HMA81GS6AFR8N-UH,1x8GB,10
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,M471A1K43CB1-CRC,2x8GB,7
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,M471A1K43CB1-CRC,1x8GB,7
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,RMSA3260ME78HAF-2666,2x8GB,4
+2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,KF3200C20S4/16G,2x16GB,4
