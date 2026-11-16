@@ -96,8 +96,8 @@ dell,7202 Rugged Tab.,7202 Rugged Tab.,\b7202\b.*\brugged\b|\brugged\b.*\b7202\b
 dell,7212 Rugged Tab.,7212 Rugged Tab.,\b7212\b.*\brugged\b|\brugged\b.*\b7212\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
 dell,7220 Rugged Tab.,7220 Rugged Tab.,\b7220\b.*\brugged\b|\brugged\b.*\b7220\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
 dell,7030 Rugged Tab.,7030 Rugged Tab.,\b7030\b.*\brugged\b|\brugged\b.*\b7030\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
-dell,Pro Rugged 13,Pro Rugged 13,\bpro\s*rugged\s*13\b|\brugged\s*13\b,
-dell,Pro Rugged 14,Pro Rugged 14,\bpro\s*rugged\s*14\b|\brugged\s*14\b,
+dell,Pro Rugged 13,Pro Rugged 13,\bpro\s*rugged\s*13\b,\blatitude\b
+dell,Pro Rugged 14,Pro Rugged 14,\bpro\s*rugged\s*14\b,\blatitude\b
 thinkpad,T470 / T470s / T470p / T570,T470 / T470s / T470p / T570,\bt470\b,\bt470s\b|\bt470p\b
 thinkpad,T490 / T490s / T495 / T590,T490 / T490s / T495 / T590,\bt490\b,\bt490s\b|\bt490p\b
 thinkpad,T14 Gen 2 / T14s Gen 2 / T15 Gen 2,T14 Gen 2 / T14s Gen 2 / T15 Gen 2,\bt14\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*2\d

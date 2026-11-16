@@ -15,7 +15,7 @@ def dell(m, sold):
     if m.startswith('Pro Plus'):
         n = m.split()[-1]; return ('dell pro %s plus' % n, r'\bpro\s*%s\s*plus\b|\bpro\s*plus\s*%s\b' % (n, n), '')
     if m.startswith('Pro Rugged'):
-        n = m.split()[-1]; return ('dell pro rugged %s' % n, r'\bpro\s*rugged\s*%s\b|\brugged\s*%s\b' % (n, n), '')
+        n = m.split()[-1]; return ('dell pro rugged %s' % n, r'\bpro\s*rugged\s*%s\b' % n, r'\blatitude\b')
     num = re.match(r'(\d{4})', m).group(1)
     must = r'\blatitude\b.*\b%s\b|\b%s\b.*\blatitude\b' % (num, num)
     if 'Rugged' in m:
