@@ -91,6 +91,12 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   prerequisites (Dell Service Manual / Lenovo HMM / HP Maintenance & Service Guide).
   Gotchas (shared dGPU heatsink, VRM pads, clip-on covers that crack) go in the note.
   Drives the "🔧 Re-paste" cycle button (any → ≤2 → ≤3) on all three pages.
+- Dell **5xx1 performance twins** (2026-11-16): 5491 / 5591 · 5401 / 5501 · 5411 / 5511 · 5421 / 5521 · 5431 / 5531 are their
+  own rows, NOT aliases of the 5xx0 — different board: H-series (5431: P-series) CPU, optional GeForce MX, 90 / 130 W charger,
+  a battery pack not always shared with the 5xx0, and from 2022 different RAM (5431 / 5531 = DDR5, 5430 / 5530 = DDR4). `dell.html`
+  `slotOf()` gives any model matching `5[45]x1` its own aligned sub-column (slot 1.5) right beside the 5000s, so a new one
+  only needs a CSV row. Built from Dell Setup & Specifications + service manuals, then cross-checked against the
+  UserBenchmark system pages (`ubm_raw/2026-11-16-xx1.jsonl`): CPU list, RAM type and dGPU share all agreed.
 - Dell **Rugged column** (2026-10-05): any Dell row whose model contains "Rugged" or
   "XFR" is pulled out of its screen-size column into one 🛡 Rugged column (all sizes,
   largest first; the chip shows the size). Name new rugged rows "<num> Rugged",

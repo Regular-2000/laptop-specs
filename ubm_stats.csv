@@ -824,3 +824,177 @@ date,brand,grid_model,ubm_system,ubm_url,n_pcs,component,item,config,count
 2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,M471A1K43CB1-CRC,1x8GB,7
 2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,RMSA3260ME78HAF-2666,2x8GB,4
 2026-11-16,thinkpad,E480 / E580 / E485 / E585,Lenovo 20KNCTO1WW,https://www.userbenchmark.com/System/Lenovo-20KNCTO1WW/77088,78,ram,KF3200C20S4/16G,2x16GB,4
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,cpu,Core i7-8850H,,494
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,cpu,Core i5-8400H,,191
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,cpu,Core i5-8300H,,28
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,gpu,UHD Graphics 630,,609
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,gpu,MX130,,102
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,gpu,GTX 1080-Ti,,1
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,gpu,RTX 2080S (Super),,1
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ssd,1100 SATA 512GB,512 GB,44
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ssd,KSG60ZMV512G M.2 2280 512GB,512 GB,39
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ssd,PM981 NVMe PCIe M.2 512GB,512 GB,38
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ssd,hynix SC311 SATA 512GB,512 GB,26
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ssd,hynix SC311 SATA 256GB,256 GB,21
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ram,HMA81GS6CJR8N-VK,2x8GB,43
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ram,HMA82GS6JJR8N-VK,1x16GB,30
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ram,HMA81GS6JJR8N-VK,2x8GB,28
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ram,16ATF2G64HZ-2G6E1,1x16GB,27
+2026-11-16,dell,5591,Dell Latitude 5591,https://www.userbenchmark.com/System/Dell-Latitude-5591/90594,713,ram,M471A2K43CB1-CTD,1x16GB,25
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,cpu,Core i7-8850H,,308
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,cpu,Core i5-8400H,,272
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,cpu,Core i5-8300H,,72
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,gpu,UHD Graphics 630,,566
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,gpu,MX130,,83
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,gpu,RX 480,,1
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,gpu,RTX 2080-Ti,,1
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,gpu,GTX 1070,,1
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ssd,hynix SC311 SATA 256GB,256 GB,42
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ssd,hynix SC401 SATA 256GB,256 GB,31
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ssd,NVMe TOSHIBA 512GB,512 GB,18
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ssd,1100 SATA 256GB,256 GB,17
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ssd,PM871b M.2 2280 256GB,256 GB,13
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ram,HMA82GS6JJR8N-VK,1x16GB,45
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ram,HMA81GS6CJR8N-VK,1x8GB,30
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ram,HMA81GS6JJR8N-VK,1x8GB,29
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ram,HMA81GS6CJR8N-VK,2x8GB,25
+2026-11-16,dell,5491,Dell Latitude 5491,https://www.userbenchmark.com/System/Dell-Latitude-5491/91662,652,ram,M471A2K43DB1-CTD,1x16GB,19
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,cpu,Core i7-9850H,,371
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,cpu,Core i5-9400H,,267
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,cpu,Core i5-9300H,,58
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,gpu,UHD Graphics 630,,586
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,gpu,MX150-0,,94
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,gpu,RTX 3060-Ti,,3
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,gpu,GTX 1070,,3
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,gpu,GTX 970,,2
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ssd,NVMe SK hynix 512GB,512 GB,31
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ssd,PC SN730 WD 512GB,512 GB,28
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ssd,CT1000P 1TB,1 TB,26
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ssd,2200S NVMe 256GB,256 GB,24
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ssd,2200S NVMe 512GB,512 GB,23
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ram,HMA82GS6JJR8N-VK,1x16GB,86
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ram,HMA82GS6DJR8N-VK,1x16GB,82
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ram,KF3200C20S4/16G,2x16GB,56
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ram,HMA81GS6JJR8N-VK,1x8GB,23
+2026-11-16,dell,5401,Dell Latitude 5401,https://www.userbenchmark.com/System/Dell-Latitude-5401/147037,696,ram,HMA82GS6DJR8N-VK,2x16GB,17
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,cpu,Core i7-9850H,,486
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,cpu,Core i5-9400H,,148
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,cpu,Core i5-9300H,,34
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,gpu,UHD Graphics 630,,590
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,gpu,GeForce MX150,,74
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,gpu,GTX 1060-3GB,,3
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,gpu,RX 6700-XT,,1
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ssd,NVMe SK hynix 512GB,512 GB,48
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ssd,2200S NVMe 512GB,512 GB,44
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ssd,NVMe TOSHIBA 512GB,512 GB,18
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ssd,2200S NVMe 256GB,256 GB,18
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ssd,NVMe Samsung 512GB,512 GB,14
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ram,HMA82GS6DJR8N-VK,1x16GB,82
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ram,HMA82GS6JJR8N-VK,1x16GB,81
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ram,HMA82GS6DJR8N-VK,2x16GB,41
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ram,HMA82GS6JJR8N-VK,2x16GB,40
+2026-11-16,dell,5501,Dell Latitude 5501,https://www.userbenchmark.com/System/Dell-Latitude-5501/148494,668,ram,HMA81GS6JJR8N-VK,1x8GB,20
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,cpu,Core i7-10850H,,360
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,cpu,Core i5-10400H,,215
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,cpu,Core i5-10300H,,16
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,gpu,UHD Graphics,,530
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,gpu,GeForce MX250,,58
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,gpu,RTX 3070,,1
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,gpu,RTX 3060,,1
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,gpu,RTX 2080,,1
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ssd,NVMe KIOXIA 512GB,512 GB,41
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ssd,NVMe SK hynix 512GB,512 GB,28
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ssd,2300 NVMe 512GB,512 GB,25
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ssd,NVMe KIOXIA 256GB,256 GB,20
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ssd,2200S NVMe 512GB,512 GB,19
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ram,HMA82GS6DJR8N-XN,1x16GB,67
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ram,M471A2K43DB1-CWE,1x16GB,65
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ram,HMAA2GS6AJR8N-XN,1x16GB,31
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ram,HMAA2GS6CJR8N-XN,1x16GB,21
+2026-11-16,dell,5411,Dell Latitude 5411,https://www.userbenchmark.com/System/Dell-Latitude-5411/180846,591,ram,K1CXP8-MIE,1x16GB,18
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,cpu,Core i7-10850H,,473
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,cpu,Core i5-10400H,,144
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,cpu,Core i5-10300H,,26
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,gpu,UHD Graphics,,570
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,gpu,GeForce MX250,,73
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ssd,NVMe SK hynix 512GB,512 GB,40
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ssd,SN730 NVMe WDC 512GB,512 GB,27
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ssd,NVMe KIOXIA 512GB,512 GB,25
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ssd,2200S NVMe 256GB,256 GB,20
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ssd,SN530 NVMe WDC 256GB,256 GB,18
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ram,M471A2K43DB1-CWE,1x16GB,58
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ram,M471A2K43DB1-CWE,2x16GB,55
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ram,HMA82GS6DJR8N-XN,1x16GB,52
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ram,HMA82GS6DJR8N-XN,2x16GB,29
+2026-11-16,dell,5511,Dell Latitude 5511,https://www.userbenchmark.com/System/Dell-Latitude-5511/191619,643,ram,K1CXP8-MIE,1x16GB,26
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,cpu,Core i7-11850H,,221
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,cpu,Gen Intel Core i5-11500H,,133
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,cpu,Core i5-11400H,,20
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,gpu,UHD Graphics,,322
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,gpu,GeForce MX450,,29
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,gpu,UHD Graphics,,20
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,gpu,RX 570,,1
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,gpu,RTX 3090,,1
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ssd,PC711 SK hynix 256GB,256 GB,17
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ssd,KXG60ZNV512G KIOXIA 512GB,512 GB,14
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ssd,NVMe Samsung 512GB,512 GB,12
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ssd,PC711 SK hynix 512GB,512 GB,12
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ssd,Micron 2300 512GB,512 GB,11
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ram,HMAA2GS6CJR8N-XN,1x16GB,43
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ram,M471A2G43BB2-CWE,1x16GB,30
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ram,HMAA2GS6CJR8N-XN,2x16GB,19
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ram,HMAA1GS6CJR6N-XN,2x8GB,14
+2026-11-16,dell,5421,Dell Latitude 5421,https://www.userbenchmark.com/System/Dell-Latitude-5421/243455,374,ram,HMAA4GS6AJR8N-XN,1x31GB,13
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,cpu,Core i7-11850H,,353
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,cpu,Gen Intel Core i5-11500H,,81
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,cpu,Core i5-11400H,,16
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,gpu,UHD Graphics,,394
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,gpu,GeForce MX450,,37
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,gpu,UHD Graphics,,16
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,gpu,Arc A770,,1
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,gpu,GTX 980-Ti,,1
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ssd,PC711 SK hynix 512GB,512 GB,58
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ssd,NVMe SK hynix 512GB,512 GB,30
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ssd,NVMe SK hynix 1TB,1 TB,28
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ssd,PC711 SK hynix 1TB,1 TB,17
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ssd,PM9A1 Samsung 512GB,512 GB,14
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ram,HMAA2GS6CJR8N-XN,1x16GB,79
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ram,HMAA2GS6CJR8N-XN,2x16GB,65
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ram,HMAA4GS6CJR8N-XN,1x31GB,20
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ram,KP6FH5-MIE,1x31GB,17
+2026-11-16,dell,5521,Dell Latitude 5521,https://www.userbenchmark.com/System/Dell-Latitude-5521/244676,450,ram,M471A2G43BB2-CWE,1x16GB,17
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,cpu,Gen Intel Core i7-1270P,,175
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,cpu,Core i5-1250P,,45
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,cpu,Core i5-1240P,,17
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,cpu,0000,,1
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,gpu,Iris Xe Graphics,,129
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,gpu,UHD Graphics,,97
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,gpu,GeForce MX550,,11
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,gpu,Iris Xe Graphics,,1
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ssd,KBG50ZNS512G KIOXIA 512GB,512 GB,15
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ssd,PC801 SK hynix 1TB,1 TB,15
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ssd,PM9A1 Samsung 512GB,512 GB,15
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ssd,NVMe Samsung 512GB,512 GB,10
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ssd,SN740 NVMe WD 256GB,256 GB,8
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ram,HMCG66MEBSA092N,2x8GB,30
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ram,HMCG78MEBSA092N,2x16GB,29
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ram,HMCG78MEBSA092N,1x16GB,25
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ram,HMCG78MEBSA095N,1x16GB,17
+2026-11-16,dell,5431,Dell Latitude 5431,https://www.userbenchmark.com/System/Dell-Latitude-5431/276448,238,ram,HMCG78MEBSA095N,2x16GB,16
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,cpu,Core i7-12800H,,208
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,cpu,Core i5-12600H,,39
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,cpu,Core i5-12500H,,22
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,gpu,Iris Xe Graphics,,151
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,gpu,UHD Graphics,,91
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,gpu,GeForce MX550,,26
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,gpu,RTX 4070-S (Super),,1
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ssd,PC801 SK hynix 1TB,1 TB,16
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ssd,PC801 SK hynix 512GB,512 GB,16
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ssd,PC SN740 WD 512GB,512 GB,13
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ssd,NVMe Samsung 1024GB,1 TB,11
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ssd,SN810 NVMe WDC 1024GB,1 TB,10
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ram,MTC4C10163S1SC48BA1,2x8GB,32
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ram,HMCG78MEBSA092N,2x16GB,22
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ram,HMCG78MEBSA095N,2x16GB,20
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ram,HMCG88MEBSA092N,1x31GB,19
+2026-11-16,dell,5531,Dell Latitude 5531,https://www.userbenchmark.com/System/Dell-Latitude-5531/273674,269,ram,HMCG78MEBSA092N,1x16GB,17

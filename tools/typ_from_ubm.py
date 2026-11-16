@@ -39,6 +39,7 @@ def ram_of(name):
     m = re.search(r'(\d+)x(\d+)GB', name)
     if m:
         k, g = int(m.group(1)), int(m.group(2))
+        if g == 31: g = 32        # UserBenchmark reports 32 GB sticks as "1x31GB"
         return k * g, '%d×%d' % (k, g), k
     m = re.search(r'(\d+)GB', name)
     return (int(m.group(1)), 'mixed', 0) if m else (0, '', 0)

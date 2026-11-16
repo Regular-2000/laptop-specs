@@ -230,3 +230,13 @@ hp,ZBook Ultra G1a,ZBook Ultra G1a,\bultra\s*g1a\b,
 hp,ZBook 8 G1i / X G1i,ZBook 8 G1i / X G1i,\bzbook\s*8\s*g1i\b,
 hp,ZBook Fury G1i 16 / 18,ZBook Fury G1i 16 / 18,\bfury\b.*\bg1i\b,
 hp,Firefly 14 G8 / 15 G8,Firefly 14 G8 / 15 G8,\bzbook\b.*\bfirefly\b\s*14\b\s*g8\b,
+dell,5531,5531,\blatitude\b.*\b5531\b|\b5531\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5431,5431,\blatitude\b.*\b5431\b|\b5431\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5521,5521,\blatitude\b.*\b5521\b|\b5521\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5421,5421,\blatitude\b.*\b5421\b|\b5421\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5511,5511,\blatitude\b.*\b5511\b|\b5511\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5411,5411,\blatitude\b.*\b5411\b|\b5411\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5501,5501,\blatitude\b.*\b5501\b|\b5501\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5401,5401,\blatitude\b.*\b5401\b|\b5401\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5591,5591,\blatitude\b.*\b5591\b|\b5591\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5491,5491,\blatitude\b.*\b5491\b|\b5491\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b

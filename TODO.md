@@ -32,8 +32,8 @@ HD 8790M configs) — harvest during UB runs.
   7420 · 5430 7430 · 7440 · 3310 3410 3420 3500; HP 840 G5–G10; ThinkPad T480, X1C6, E480.
   Left blank on purpose (< 50 PCs): T14 Gen 1 (AMD CTO, 38), T14 Gen 4 (Intel CTO, 18).
   ~170 gen-8+ rows still to do — ≤ ~30 systems per sitting, then let the site cool down.
-  NEXT (IDs already known, not pulled): Dell 5401/147037, 5411/180846, 5491/91662, 5521/244676,
-  5431/276448, 7400 2-in-1/142938, 3430/290099, 3490/85172, 5420 Rugged/111717, 5430 Rugged/265096,
+  NEXT (IDs already known, not pulled): [5401 / 5411 / 5491 / 5521 / 5431 pulled 2026-11-16 with the other xx1 — see §14]
+  7400 2-in-1/142938, 3430/290099, 3490/85172, 5420 Rugged/111717, 5430 Rugged/265096,
   7424 Rugged Ext./111718; HP x360 830 G6/145959. Still need IDs: Dell 5530/5440/5540/7390/7290/
   5290/5300/5310/5320/5330/7310/7320/7330/3400/3520/3530/3540/3590/9xxx, all remaining HP + ThinkPad.
   Lenovo: one MTM page is too thin — pull 2–3 MTMs per row (CTO + top fixed SKUs) and let the
@@ -282,6 +282,38 @@ OPEN (grey chips / blank serial = the to-do list, search `portunknown` or click 
 - Candidate extra fields if SM wants to filter on them: hot-swap battery, IP rating, touch/digitizer.
   For now they live in `note` (searchable).
 
+## 14. Latitude 5xx1 performance rows (2026-11-16)
+DONE: 10 new Dell rows — 5491, 5591 (2018) · 5401, 5501 (2019) · 5411, 5511 (2020) · 5421, 5521 (2021) · 5431, 5531 (2022),
+each in its own aligned sub-column beside the 5xx0 (`slotOf()` → 1.5 in dell.html; grid is 2 chips wider: 15–16″ and 14″).
+Method (reuse): (1) UserBenchmark ids by WebSearch restricted to userbenchmark.com; (2) ONE system page opened in Chrome
+(built-in browser was not attachable from a phone-started session), the other 9 pulled same-origin with `fetch()` + DOMParser at
+9–12 s gaps — 10 loads, no captcha; raw in `ubm_raw/2026-11-16-xx1.jsonl` (+ `.wire.txt`, `system_map.csv`, `ubm_stats.csv`);
+(3) Dell Setup & Specifications PDFs from `dl.dell.com/topicspdf/` read with the cloud fetcher (works; `dl.dell.com/content/`
+is robots-blocked), 5431 / 5531 from a mirror of the same Dell PDF; (4) service-manual heat-sink sections + support-page slugs
+read in Chrome from dell.com/support/manuals (doc names are not derivable — `Latitude_5401_SM`, `Latitiude_5501_SM` [sic],
+`latitude_5421_sm`, `lati_5521_sm`, `lati-5431-service-manual`: take them from the model's "Manuals & Documents" page).
+Cross-check result: CPU list, RAM generation / speed class and dGPU model matched Dell's sheet on all ten.
+What differs from the 5xx0 sibling (why they are separate rows):
+- CPU: 45 W-class H (5431: 28 W P) vs 15 W U. dGPU GeForce MX130 → MX550 in only ~5–15 % of benchmarked units.
+- Charger: 90 W minimum, 130 W with the GeForce. 5491/5591/5401/5501 = 7.4 mm barrel; 5411/5511 = barrel + USB-C;
+  5421/5521/5431/5531 = USB-C only (Dell's 130 W USB-C is 20 V / 6.5 A, above ordinary 100 W PD bricks).
+- RAM: 5431 / 5531 = DDR5-4800, their 5430 / 5530 siblings = DDR4.
+- Battery: 5401/5411/5501/5511 = 3HWPP 68 Wh (15.2 V); 5421/5431/5521/5531 = GRT01 64 Wh; `bat_fam` set for those two
+  families (three vendors' compatibility lists agree). 5491/5591: GJKNX is only a lead → `bat_fam` left blank.
+- Re-paste: all xx1 from 2019 on = L2 (heatsink + fan one assembly) even where the 5xx0 is L1 (5500, 5520, 5530).
+- `rs232` = 0 on all ten (Setup & Specs ports table lists none).
+- `typ` shows "(benchmark data)" = UserBenchmark fallback until the eBay pull runs: the 10 searches are appended to
+  `ebay_raw/row_map.csv` (last 10 lines) for a scheduled slow sitting. Fixed on the way: UserBenchmark writes 32 GB sticks as
+  "1x31GB" → `tools/typ_from_ubm.py` now reads that as 32.
+OPEN / needs SM's call:
+- No prices on the ten rows (needs a live sold pull — never training data).
+- **Battery family of the 5400/5410/5500/5510 rows:** they say GJKNX (7.6 V), but BTI / Total Micro / LaptopBatteryExpress list
+  the 15.2 V **3HWPP** pack for 5410/5510 (and LaptopBatteryExpress for 5400/5500 too). Not changed — check a real unit's label.
+- 5491 / 5591 GeForce units: heat-sink procedure not documented by Dell (manual = UMA only) — hands-on needed.
+- 5401 / 5501: does the Thunderbolt 3 port charge? Dell's spec doesn't say (the 5400/5500 rows say it does).
+- Not added: Latitude 3301 (2019, 13.3″ — ends in 1 but is an ordinary thin 3000, not a performance twin; no row on the site yet)
+  and the Precision twins that share these boards (3530/3541/3551/3561/3571) — say if wanted.
+
 ## ⚠ eBay scraping pace — NEVER do rapid searches (SM's rule, 2026-11-16)
 On 2026-11-16 ~110 eBay search loads in one session at 4–9 s gaps got eBay to answer **403 on search** for
 SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP depend on eBay — don't burn it.
@@ -296,7 +328,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.5.
+the newest version is live. Current: 2026.11.16.6.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
