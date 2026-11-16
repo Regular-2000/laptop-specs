@@ -45,6 +45,13 @@
 //            heatsink-removal prerequisites (Dell Service Manual / Lenovo HMM / HP MSG).
 //   repaste_note - free text (shared dGPU heatsink, thermal pads, clip-on bottom covers that
 //            crack, hidden screws); supports the `short |> deep` split.
+//   typ    - typical RAM + SSD config AS FOUND IN THE WILD (not the spec-sheet range): short
+//            surface text, e.g. "16 GB (1×16) · 256 GB NVMe". Derived from UserBenchmark
+//            system pages (auto-detected hardware of real machines; top-5 parts per component).
+//            blank = not harvested yet. Raw pulls: ubm_raw/*.jsonl + ubm_stats.csv; rebuild
+//            with tools/typ_from_ubm.py (never hand-edit — regenerate).
+//   typ_note - the evidence behind typ: UBM system name, PC count, date, RAM / SSD
+//            size split within the visible top-5, caveats. Shown behind the ⓘ.
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -102,7 +109,7 @@ export function parseCSV(text){
 //                            is active — so it works for ANY filter type, not just storage)
 //   ⧉ copy as text         → paste-ready plain text (eBay descriptions etc.)
 //   ✕ close (Esc)
-// loadAllBrands() (all three CSVs concatenated — identical 36-col schema) is kept
+// loadAllBrands() (all three CSVs concatenated — identical 38-col schema) is kept
 // exported for the future merged all-brands table; the overlay is per-brand by design.
 
 const BRAND_FILES=[['thinkpad','ThinkPad · Lenovo / IBM','thinkpad.csv'],
@@ -424,6 +431,8 @@ export async function loadCSV(url){
     const rn=get(r,'rs232_note'); if(rn) o.rs232_note=rn;
     const rp=get(r,'repaste'); if(rp!=='') o.rp=+rp;           // undefined = unverified
     const rpn=get(r,'repaste_note'); if(rpn) o.rp_note=rpn;
+    const tp=get(r,'typ'); if(tp) o.typ=tp;                    // blank = not harvested yet
+    const tpn=get(r,'typ_note'); if(tpn) o.typ_note=tpn;
     return o;
   });
 }
