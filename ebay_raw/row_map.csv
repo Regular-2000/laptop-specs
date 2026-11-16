@@ -30,3 +30,203 @@ thinkpad,X1 Carbon Gen 6,X1 Carbon Gen 6,x1\s*carbon.*(\bgen\s*6\b|\b6th\s*gen\b
 thinkpad,E480,E480 / E580 / E485 / E585,\be480\b,
 thinkpad,T14 Gen 1,T14 Gen 1 / T14s Gen 1 / T15,\bt14\b.*(\bgen\s*1\b|\b1st\s*gen\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*1[0-9]
 thinkpad,T14 Gen 4,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,\bt14\b.*(\bgen\s*4\b|\b4th\s*gen\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bt14\b,\bt14s\b
+dell,Pro Plus 16,Pro Plus 16,\bpro\s*16\s*plus\b|\bpro\s*plus\s*16\b,
+dell,Pro Plus 14,Pro Plus 14,\bpro\s*14\s*plus\b|\bpro\s*plus\s*14\b,
+dell,Pro Plus 13,Pro Plus 13,\bpro\s*13\s*plus\b|\bpro\s*plus\s*13\b,
+dell,5550,5550,\blatitude\b.*\b5550\b|\b5550\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5450,5450,\blatitude\b.*\b5450\b|\b5450\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5350,5350,\blatitude\b.*\b5350\b|\b5350\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7350,7350,\blatitude\b.*\b7350\b|\b7350\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5540,5540,\blatitude\b.*\b5540\b|\b5540\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5440,5440,\blatitude\b.*\b5440\b|\b5440\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5340,5340,\blatitude\b.*\b5340\b|\b5340\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5530,5530,\blatitude\b.*\b5530\b|\b5530\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5330,5330,\blatitude\b.*\b5330\b|\b5330\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7230 Rugged Tab.,7230 Rugged Tab.,\b7230\b.*\brugged\b|\brugged\b.*\b7230\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,5320,5320,\blatitude\b.*\b5320\b|\b5320\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7320,7320,\blatitude\b.*\b7320\b|\b7320\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5310,5310,\blatitude\b.*\b5310\b|\b5310\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7210,7210,\blatitude\b.*\b7210\b|\b7210\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5300,5300,\blatitude\b.*\b5300\b|\b5300\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7200,7200,\blatitude\b.*\b7200\b|\b7200\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7390,7390,\blatitude\b.*\b7390\b|\b7390\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7290,7290,\blatitude\b.*\b7290\b|\b7290\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5580,5580,\blatitude\b.*\b5580\b|\b5580\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5480,5480,\blatitude\b.*\b5480\b|\b5480\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7480,7480,\blatitude\b.*\b7480\b|\b7480\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7450,7450,\blatitude\b.*\b7450\b|\b7450\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7380,7380,\blatitude\b.*\b7380\b|\b7380\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7310,7310,\blatitude\b.*\b7310\b|\b7310\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7330,7330,\blatitude\b.*\b7330\b|\b7330\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7340,7340,\blatitude\b.*\b7340\b|\b7340\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7280,7280,\blatitude\b.*\b7280\b|\b7280\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,9410,9410,\blatitude\b.*\b9410\b|\b9410\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9420,9420,\blatitude\b.*\b9420\b|\b9420\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9430,9430,\blatitude\b.*\b9430\b|\b9430\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9440,9440,\blatitude\b.*\b9440\b|\b9440\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9450,9450,\blatitude\b.*\b9450\b|\b9450\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9510,9510,\blatitude\b.*\b9510\b|\b9510\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9520,9520,\blatitude\b.*\b9520\b|\b9520\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,9330,9330,\blatitude\b.*\b9330\b|\b9330\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,3490,3490,\blatitude\b.*\b3490\b|\b3490\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3400,3400,\blatitude\b.*\b3400\b|\b3400\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3430,3430,\blatitude\b.*\b3430\b|\b3430\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3440,3440,\blatitude\b.*\b3440\b|\b3440\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3450,3450,\blatitude\b.*\b3450\b|\b3450\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3580,3580,\blatitude\b.*\b3580\b|\b3580\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3590,3590,\blatitude\b.*\b3590\b|\b3590\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3520,3520,\blatitude\b.*\b3520\b|\b3520\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3530,3530,\blatitude\b.*\b3530\b|\b3530\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3540,3540,\blatitude\b.*\b3540\b|\b3540\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3550,3550,\blatitude\b.*\b3550\b|\b3550\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3300,3300,\blatitude\b.*\b3300\b|\b3300\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3330,3330,\blatitude\b.*\b3330\b|\b3330\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5424 Rugged,5424 Rugged,\b5424\b.*\brugged\b|\brugged\b.*\b5424\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,5430 Rugged,5430 Rugged,\b5430\b.*\brugged\b|\brugged\b.*\b5430\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,7424 Rugged Ext.,7424 Rugged Ext.,\b7424\b.*\brugged\b|\brugged\b.*\b7424\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,7330 Rugged Ext.,7330 Rugged Ext.,\b7330\b.*\brugged\b|\brugged\b.*\b7330\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,5280,5280,\blatitude\b.*\b5280\b|\b5280\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5290,5290,\blatitude\b.*\b5290\b|\b5290\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,5455,5455,\blatitude\b.*\b5455\b|\b5455\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7455,7455,\blatitude\b.*\b7455\b|\b7455\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,3150 / 3160 / 3180 / 3190,3150 / 3160 / 3180 / 3190,\blatitude\b.*\b3150\b|\b3150\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,3120,3120,\blatitude\b.*\b3120\b|\b3120\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,3140,3140,\blatitude\b.*\b3140\b|\b3140\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,7202 Rugged Tab.,7202 Rugged Tab.,\b7202\b.*\brugged\b|\brugged\b.*\b7202\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,7212 Rugged Tab.,7212 Rugged Tab.,\b7212\b.*\brugged\b|\brugged\b.*\b7212\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,7220 Rugged Tab.,7220 Rugged Tab.,\b7220\b.*\brugged\b|\brugged\b.*\b7220\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,7030 Rugged Tab.,7030 Rugged Tab.,\b7030\b.*\brugged\b|\brugged\b.*\b7030\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b
+dell,Pro Rugged 13,Pro Rugged 13,\bpro\s*rugged\s*13\b|\brugged\s*13\b,
+dell,Pro Rugged 14,Pro Rugged 14,\bpro\s*rugged\s*14\b|\brugged\s*14\b,
+thinkpad,T470 / T470s / T470p / T570,T470 / T470s / T470p / T570,\bt470\b,\bt470s\b|\bt470p\b
+thinkpad,T490 / T490s / T495 / T590,T490 / T490s / T495 / T590,\bt490\b,\bt490s\b|\bt490p\b
+thinkpad,T14 Gen 2 / T14s Gen 2 / T15 Gen 2,T14 Gen 2 / T14s Gen 2 / T15 Gen 2,\bt14\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*2\d
+thinkpad,T14 Gen 3 / T14s Gen 3 / T15 Gen 3 / T16 Gen 1,T14 Gen 3 / T14s Gen 3 / T15 Gen 3 / T16 Gen 1,\bt14\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*3\d
+thinkpad,T14 Gen 5 / T14s Gen 5 / T16 Gen 3,T14 Gen 5 / T14s Gen 5 / T16 Gen 3,\bt14\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*5\d
+thinkpad,X270,X270,\bx270\b,\bx270s\b|\bx270p\b
+thinkpad,X280,X280,\bx280\b,\bx280s\b|\bx280p\b
+thinkpad,X390 / X395,X390 / X395,\bx390\b,\bx390s\b|\bx390p\b
+thinkpad,X13 Gen 1,X13 Gen 1,\bx13\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bx13\b,\bx13s\b|\byoga\b|\bx13s\b|\bgen\s*1\d
+thinkpad,X13 Gen 2,X13 Gen 2,\bx13\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bx13\b,\bx13s\b|\byoga\b|\bx13s\b|\bgen\s*2\d
+thinkpad,X13 Gen 3,X13 Gen 3,\bx13\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bx13\b,\bx13s\b|\byoga\b|\bx13s\b|\bgen\s*3\d
+thinkpad,X13 Gen 4,X13 Gen 4,\bx13\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bx13\b,\bx13s\b|\byoga\b|\bx13s\b|\bgen\s*4\d
+thinkpad,X13 Gen 5,X13 Gen 5,\bx13\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bx13\b,\bx13s\b|\byoga\b|\bx13s\b|\bgen\s*5\d
+thinkpad,X1 Carbon Gen 3,X1 Carbon Gen 3,\bx1\s*carbon\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*3\d
+thinkpad,X1 Carbon Gen 4,X1 Carbon Gen 4,\bx1\s*carbon\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*4\d
+thinkpad,X1 Carbon Gen 5,X1 Carbon Gen 5,\bx1\s*carbon\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*5\d
+thinkpad,X1 Carbon Gen 7,X1 Carbon Gen 7,\bx1\s*carbon\b.*(\bgen\s*7\b|\b7th\s*gen\b|\bg7\b)|(\bgen\s*7\b|\b7th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*7\d
+thinkpad,X1 Carbon Gen 8,X1 Carbon Gen 8,\bx1\s*carbon\b.*(\bgen\s*8\b|\b8th\s*gen\b|\bg8\b)|(\bgen\s*8\b|\b8th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*8\d
+thinkpad,X1 Carbon Gen 9,X1 Carbon Gen 9,\bx1\s*carbon\b.*(\bgen\s*9\b|\b9th\s*gen\b|\bg9\b)|(\bgen\s*9\b|\b9th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*9\d
+thinkpad,X1 Carbon Gen 10,X1 Carbon Gen 10,\bx1\s*carbon\b.*(\bgen\s*10\b|\b10th\s*gen\b|\bg10\b)|(\bgen\s*10\b|\b10th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*10\d
+thinkpad,X1 Carbon Gen 11,X1 Carbon Gen 11,\bx1\s*carbon\b.*(\bgen\s*11\b|\b11th\s*gen\b|\bg11\b)|(\bgen\s*11\b|\b11th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*11\d
+thinkpad,X1 Carbon Gen 12,X1 Carbon Gen 12,\bx1\s*carbon\b.*(\bgen\s*12\b|\b12th\s*gen\b|\bg12\b)|(\bgen\s*12\b|\b12th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*12\d
+thinkpad,X1 Carbon Gen 13,X1 Carbon Gen 13,\bx1\s*carbon\b.*(\bgen\s*13\b|\b13th\s*gen\b|\bg13\b)|(\bgen\s*13\b|\b13th\s*gen\b).*\bx1\s*carbon\b,\byoga\b|\bgen\s*13\d
+thinkpad,L470 / L570,L470 / L570,\bl470\b,\bl470s\b|\bl470p\b
+thinkpad,L480 / L580,L480 / L580,\bl480\b,\bl480s\b|\bl480p\b
+thinkpad,L490 / L590,L490 / L590,\bl490\b,\bl490s\b|\bl490p\b
+thinkpad,L14 Gen 1 / L15 Gen 1,L14 Gen 1 / L15 Gen 1,\bl14\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bl14\b,\bl14s\b|\bgen\s*1\d
+thinkpad,L14 Gen 2 / L15 Gen 2,L14 Gen 2 / L15 Gen 2,\bl14\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bl14\b,\bl14s\b|\bgen\s*2\d
+thinkpad,L14 Gen 3 / L15 Gen 3,L14 Gen 3 / L15 Gen 3,\bl14\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bl14\b,\bl14s\b|\bgen\s*3\d
+thinkpad,L14 Gen 4 / L15 Gen 4,L14 Gen 4 / L15 Gen 4,\bl14\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bl14\b,\bl14s\b|\bgen\s*4\d
+thinkpad,L14 Gen 5 / L16 Gen 1,L14 Gen 5 / L16 Gen 1,\bl14\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bl14\b,\bl14s\b|\bgen\s*5\d
+thinkpad,E470 / E570 / E475 / E575,E470 / E570 / E475 / E575,\be470\b,\be470s\b|\be470p\b
+thinkpad,E490 / E590 / E495 / E595,E490 / E590 / E495 / E595,\be490\b,\be490s\b|\be490p\b
+thinkpad,E14 Gen 2 / E15 Gen 2,E14 Gen 2 / E15 Gen 2,\be14\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\be14\b,\be14s\b|\bgen\s*2\d
+thinkpad,E14 Gen 3 / E15 Gen 3,E14 Gen 3 / E15 Gen 3,\be14\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\be14\b,\be14s\b|\bgen\s*3\d
+thinkpad,E14 Gen 4 / E15 Gen 4,E14 Gen 4 / E15 Gen 4,\be14\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\be14\b,\be14s\b|\bgen\s*4\d
+thinkpad,E14 Gen 5 / E16 Gen 1,E14 Gen 5 / E16 Gen 1,\be14\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\be14\b,\be14s\b|\bgen\s*5\d
+thinkpad,E14 Gen 6 / E16 Gen 2,E14 Gen 6 / E16 Gen 2,\be14\b.*(\bgen\s*6\b|\b6th\s*gen\b|\bg6\b)|(\bgen\s*6\b|\b6th\s*gen\b).*\be14\b,\be14s\b|\bgen\s*6\d
+thinkpad,P52 / P72 / P52s,P52 / P72 / P52s,\bp52\b,\bp52s\b|\bp52p\b
+thinkpad,P1 Gen 1 / P1 Gen 2,P1 Gen 1 / P1 Gen 2,\bp1\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*1\d
+thinkpad,P53 / P73 / P43s / P53s,P53 / P73 / P43s / P53s,\bp53\b,\bp53s\b|\bp53p\b
+thinkpad,P1 Gen 3 / P15 / P17 / P15s,P1 Gen 3 / P15 / P17 / P15s,\bp1\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*3\d
+thinkpad,P1 Gen 4 / P15 Gen 2 / P17 Gen 2,P1 Gen 4 / P15 Gen 2 / P17 Gen 2,\bp1\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*4\d
+thinkpad,P1 Gen 5 / P16 Gen 1 / P16s / P15v,P1 Gen 5 / P16 Gen 1 / P16s / P15v,\bp1\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*5\d
+thinkpad,P1 Gen 6 / P16 Gen 2 / P16s Gen 2,P1 Gen 6 / P16 Gen 2 / P16s Gen 2,\bp1\b.*(\bgen\s*6\b|\b6th\s*gen\b|\bg6\b)|(\bgen\s*6\b|\b6th\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*6\d
+thinkpad,P1 Gen 7 / P16s Gen 3 / P14s Gen 5,P1 Gen 7 / P16s Gen 3 / P14s Gen 5,\bp1\b.*(\bgen\s*7\b|\b7th\s*gen\b|\bg7\b)|(\bgen\s*7\b|\b7th\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*7\d
+thinkpad,Z13 Gen 1,Z13 Gen 1,\bz13\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bz13\b,\bz13s\b|\bgen\s*1\d
+thinkpad,Z16 Gen 1,Z16 Gen 1,\bz16\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bz16\b,\bz16s\b|\bgen\s*1\d
+thinkpad,Z13 Gen 2,Z13 Gen 2,\bz13\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bz13\b,\bz13s\b|\bgen\s*2\d
+thinkpad,Z16 Gen 2,Z16 Gen 2,\bz16\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bz16\b,\bz16s\b|\bgen\s*2\d
+thinkpad,P14s Gen 1,P14s Gen 1,\bp14s\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bp14s\b,\bgen\s*1\d
+thinkpad,P14s Gen 2,P14s Gen 2,\bp14s\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bp14s\b,\bgen\s*2\d
+thinkpad,P14s Gen 3,P14s Gen 3,\bp14s\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bp14s\b,\bgen\s*3\d
+thinkpad,P14s Gen 4,P14s Gen 4,\bp14s\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bp14s\b,\bgen\s*4\d
+thinkpad,P16v Gen 1,P16v Gen 1,\bp16v\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bp16v\b,\bgen\s*1\d
+thinkpad,P16v Gen 2,P16v Gen 2,\bp16v\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bp16v\b,\bgen\s*2\d
+thinkpad,X1 Nano Gen 1,X1 Nano Gen 1,\bx1\s*nano\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bx1\s*nano\b,\bgen\s*1\d
+thinkpad,X1 Nano Gen 2,X1 Nano Gen 2,\bx1\s*nano\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bx1\s*nano\b,\bgen\s*2\d
+thinkpad,X1 Nano Gen 3,X1 Nano Gen 3,\bx1\s*nano\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bx1\s*nano\b,\bgen\s*3\d
+thinkpad,X1 Extreme Gen 1,X1 Extreme Gen 1,\bx1\s*extreme\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bx1\s*extreme\b,\bgen\s*1\d
+thinkpad,X1 Extreme Gen 2,X1 Extreme Gen 2,\bx1\s*extreme\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bx1\s*extreme\b,\bgen\s*2\d
+thinkpad,X1 Extreme Gen 3,X1 Extreme Gen 3,\bx1\s*extreme\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bx1\s*extreme\b,\bgen\s*3\d
+thinkpad,X1 Extreme Gen 4,X1 Extreme Gen 4,\bx1\s*extreme\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bx1\s*extreme\b,\bgen\s*4\d
+thinkpad,X1 Extreme Gen 5,X1 Extreme Gen 5,\bx1\s*extreme\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bx1\s*extreme\b,\bgen\s*5\d
+thinkpad,X1 Titanium Yoga,X1 Titanium Yoga,\bx1\s*titanium\b,
+thinkpad,T15p Gen 1,T15p Gen 1,\bt15p\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bt15p\b,\bgen\s*1\d
+thinkpad,T15p Gen 2,T15p Gen 2,\bt15p\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bt15p\b,\bgen\s*2\d
+thinkpad,T15p Gen 3,T15p Gen 3,\bt15p\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bt15p\b,\bgen\s*3\d
+thinkpad,E14 Gen 1 / E15 Gen 1,E14 Gen 1 / E15 Gen 1,\be14\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\be14\b,\be14s\b|\bgen\s*1\d
+thinkpad,L13 Gen 1 / L13 Yoga Gen 1,L13 Gen 1 / L13 Yoga Gen 1,\bl13\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bl13\b,\bl13s\b|\bgen\s*1\d
+thinkpad,L13 Gen 2 / L13 Yoga Gen 2,L13 Gen 2 / L13 Yoga Gen 2,\bl13\b.*(\bgen\s*2\b|\b2nd\s*gen\b|\bg2\b)|(\bgen\s*2\b|\b2nd\s*gen\b).*\bl13\b,\bl13s\b|\bgen\s*2\d
+thinkpad,L13 Gen 3 / L13 Yoga Gen 3,L13 Gen 3 / L13 Yoga Gen 3,\bl13\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bl13\b,\bl13s\b|\bgen\s*3\d
+thinkpad,L13 Gen 4 / L13 Yoga Gen 4,L13 Gen 4 / L13 Yoga Gen 4,\bl13\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bl13\b,\bl13s\b|\bgen\s*4\d
+thinkpad,L13 Gen 5 / L13 2-in-1 Gen 5,L13 Gen 5 / L13 2-in-1 Gen 5,\bl13\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\bl13\b,\bl13s\b|\bgen\s*5\d
+thinkpad,X13s Gen 1,X13s Gen 1,\bx13s\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bx13s\b,\bgen\s*1\d
+thinkpad,T14s Gen 6 (Snapdragon),T14s Gen 6 (Snapdragon),\bt14s\b.*(\bgen\s*6\b|\b6th\s*gen\b|\bg6\b)|(\bgen\s*6\b|\b6th\s*gen\b).*\bt14s\b,\bintel\b|\bryzen\b|\bultra\b
+hp,640 G3,640 G3,\b640\s*g3\b,\bx360\b
+hp,650 G3,650 G3,\b650\s*g3\b,\bx360\b
+hp,640 G4,640 G4,\b640\s*g4\b,\bx360\b
+hp,650 G4,650 G4,\b650\s*g4\b,\bx360\b
+hp,640 G5,640 G5,\b640\s*g5\b,\bx360\b
+hp,650 G5,650 G5,\b650\s*g5\b,\bx360\b
+hp,640 G7,640 G7,\b640\s*g7\b,\bx360\b
+hp,650 G7,650 G7,\b650\s*g7\b,\bx360\b
+hp,440 G4 / 450 G4,440 G4 / 450 G4,\b440\s*g4\b,\bx360\b
+hp,440 G5 / 450 G5,440 G5 / 450 G5,\b440\s*g5\b,\bx360\b
+hp,440 G6 / 450 G6,440 G6 / 450 G6,\b440\s*g6\b,\bx360\b
+hp,440 G7 / 450 G7,440 G7 / 450 G7,\b440\s*g7\b,\bx360\b
+hp,440 G8 / 450 G8,440 G8 / 450 G8,\b440\s*g8\b,\bx360\b
+hp,440 G9 / 450 G9,440 G9 / 450 G9,\b440\s*g9\b,\bx360\b
+hp,440 G10 / 450 G10,440 G10 / 450 G10,\b440\s*g10\b,\bx360\b
+hp,440 G11 / 460 G11,440 G11 / 460 G11,\b440\s*g11\b,\bx360\b
+hp,745 G4 / 755 G4,745 G4 / 755 G4,\b745\s*g4\b,\bx360\b
+hp,745 G5 / 755 G5,745 G5 / 755 G5,\b745\s*g5\b,\bx360\b
+hp,745 G6,745 G6,\b745\s*g6\b,\bx360\b
+hp,835 G7 / 845 G7 / 855 G7,835 G7 / 845 G7 / 855 G7,\b845\s*g7\b,\bx360\b
+hp,835 G8 / 845 G8 / 855 G8,835 G8 / 845 G8 / 855 G8,\b845\s*g8\b,\bx360\b
+hp,845 G9 / 865 G9,845 G9 / 865 G9,\b845\s*g9\b,\bx360\b
+hp,845 G10 / 865 G10,845 G10 / 865 G10,\b845\s*g10\b,\bx360\b
+hp,845 G11 / 865 G11,845 G11 / 865 G11,\b845\s*g11\b,\bx360\b
+hp,820 G4 / 840 G4 / 850 G4,820 G4 / 840 G4 / 850 G4,\b840\s*g4\b,\bx360\b
+hp,840 G11 / 860 G11,840 G11 / 860 G11,\b840\s*g11\b,\bx360\b
+hp,Folio 1020 G1,Folio 1020 G1,\b1020\s*g1\b,
+hp,1040 G3,1040 G3,\b1040\s*g3\b,
+hp,x360 1030 G2,x360 1030 G2,\bx360\b.*\b1030\s*g2\b,
+hp,x360 1030 G3 / x360 1040 G5,x360 1030 G3 / x360 1040 G5,\bx360\b.*\b1030\s*g3\b,
+hp,x360 1030 G4 / x360 1040 G6,x360 1030 G4 / x360 1040 G6,\bx360\b.*\b1030\s*g4\b,
+hp,x360 1030 G7 / 1040 G7,x360 1030 G7 / 1040 G7,\bx360\b.*\b1030\s*g7\b,
+hp,x360 1030 G8 / 1040 G8,x360 1030 G8 / 1040 G8,\bx360\b.*\b1030\s*g8\b,
+hp,1040 G9,1040 G9,\b1040\s*g9\b,
+hp,1040 G10,1040 G10,\b1040\s*g10\b,
+hp,1040 G11,1040 G11,\b1040\s*g11\b,
+hp,Dragonfly G1,Dragonfly G1,\bdragonfly\b,\bg[2-9]\b|\bmax\b
+hp,Dragonfly G2,Dragonfly G2,\bdragonfly\b.*\bg2\b,\bmax\b
+hp,Dragonfly G3,Dragonfly G3,\bdragonfly\b.*\bg3\b,\bmax\b
+hp,Dragonfly G4,Dragonfly G4,\bdragonfly\b.*\bg4\b,\bmax\b
+hp,ZBook 15 G4 / 17 G4,ZBook 15 G4 / 17 G4,\bzbook\b.*\b15\b\s*g4\b,\bstudio\b|\bfirefly\b|\bfury\b|\bpower\b|\b15u\b|\b15v\b|\bcreate\b
+hp,ZBook 15 G5 / 17 G5 / Studio G5,ZBook 15 G5 / 17 G5 / Studio G5,\bzbook\b.*\b15\b\s*g5\b,\bstudio\b|\bfirefly\b|\bfury\b|\bpower\b|\b15u\b|\b15v\b|\bcreate\b
+hp,ZBook 15 G6 / 17 G6,ZBook 15 G6 / 17 G6,\bzbook\b.*\b15\b\s*g6\b,\bstudio\b|\bfirefly\b|\bfury\b|\bpower\b|\b15u\b|\b15v\b|\bcreate\b
+hp,Firefly 14 G7 / 15 G7,Firefly 14 G7 / 15 G7,\bzbook\b.*\bfirefly\b\s*14\b\s*g7\b,
+hp,Fury 15 G7 / 17 G7 / Power G7,Fury 15 G7 / 17 G7 / Power G7,\bzbook\b.*\bfury\b\s*15\b\s*g7\b,
+hp,Fury 15 G8 / 17 G8 / Power G8 / Studio G8,Fury 15 G8 / 17 G8 / Power G8 / Studio G8,\bzbook\b.*\bfury\b\s*15\b\s*g8\b,
+hp,Firefly 14 G9 / 16 G9,Firefly 14 G9 / 16 G9,\bzbook\b.*\bfirefly\b\s*14\b\s*g9\b,
+hp,Fury 16 G9 / Power 15.6 G9 / Studio 16 G9,Fury 16 G9 / Power 15.6 G9 / Studio 16 G9,\bzbook\b.*\bfury\b\s*16\b\s*g9\b,
+hp,Firefly 14 G10 / 16 G10,Firefly 14 G10 / 16 G10,\bzbook\b.*\bfirefly\b\s*14\b\s*g10\b,
+hp,Fury 16 G10 / Power G10 / Studio 16 G10,Fury 16 G10 / Power G10 / Studio 16 G10,\bzbook\b.*\bfury\b\s*16\b\s*g10\b,
+hp,Firefly 14 G11 / Fury 16 G11,Firefly 14 G11 / Fury 16 G11,\bzbook\b.*\bfirefly\b\s*14\b\s*g11\b,
+hp,Elite Folio,Elite Folio,\belite\s*folio\b,\b1020\b|\b9470m?\b|\b1040\b|\b9480m?\b
+hp,ZBook Ultra G1a,ZBook Ultra G1a,\bultra\s*g1a\b,
+hp,ZBook 8 G1i / X G1i,ZBook 8 G1i / X G1i,\bzbook\s*8\s*g1i\b,
+hp,ZBook Fury G1i 16 / 18,ZBook Fury G1i 16 / 18,\bfury\b.*\bg1i\b,
+hp,Firefly 14 G8 / 15 G8,Firefly 14 G8 / 15 G8,\bzbook\b.*\bfirefly\b\s*14\b\s*g8\b,

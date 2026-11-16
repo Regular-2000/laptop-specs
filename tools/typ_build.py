@@ -16,8 +16,29 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import typ_from_ubm as U                                   # UBM raw loader + RAM/SSD parsers
 
 ROOT = U.ROOT
+MIN_SHOW = 10                   # fewer usable listings than this -> no eBay line at all (UBM fallback or blank)
 THIN = 50                       # fewer usable listings than this -> line gets "(thin sample)"
 
+
+# ---------- CPU-generation guard (Dell reused 3440/3450/3540/3550 etc.; sellers drop the "E" on E5450) ----------
+def row_min_gen(cpu):
+    """Lowest Intel Core generation the grid row allows (None = can't tell, e.g. AMD / Celeron / ARM)."""
+    c = cpu.lower()
+    if 'core ultra' in c and not re.search(r'\d+(st|nd|rd|th)\s*gen', c): return 14
+    g = [int(x) for x in re.findall(r'(\d+)(?:st|nd|rd|th)(?:/\d+(?:st|nd|rd|th))*\s*gen', c)]
+    g += [int(x) for x in re.findall(r'(\d+)(?:st|nd|rd|th)\s*/', c)]
+    for name, n in (('broadwell', 5), ('skylake', 6), ('kaby lake r', 8), ('kaby lake', 7), ('whiskey', 8), ('comet', 10),
+                    ('tiger', 11), ('alder lake', 12), ('raptor', 13), ('meteor', 13), ('lunar', 14), ('arrow', 14)):
+        if name in c and not ('n100' in c or 'n200' in c or 'celeron' in c): g.append(n)
+    return min(g) if g else None
+def title_gen(t):
+    m = re.search(r'\bi[3579][- ]?(1[0-4])\d{2,3}[a-z]{0,2}\b', t, re.I)
+    if m: return int(m.group(1))
+    m = re.search(r'\bi[3579][- ]?([2-9])\d{3}[a-z]{0,2}\b', t, re.I)
+    if m: return int(m.group(1))
+    m = re.search(r'\b(\d{1,2})(?:st|nd|rd|th)\s*gen', t, re.I)
+    if m: return int(m.group(1))
+    return None
 # ---------- eBay title parsing ----------
 DROP = re.compile(r'\blot\b|\bqty\b|\bbulk\b|\(\s*\d+\s*\)\s*(dell|hp|lenovo)|\b\d+\s*x\s*(dell|hp|lenovo|latitude)|'
                   r'for parts|parts only|parts/repair|parts repair|not working|\bas[- ]is\b|broken|no post|no boot|no power|'
@@ -59,11 +80,15 @@ def fmt(pairs, unit_gb=True):
 
 def load_ebay():
     rows = list(csv.DictReader(open(os.path.join(ROOT, 'ebay_raw', 'row_map.csv'), encoding='utf-8')))
+    cpu = {}
+    for b in ('dell', 'thinkpad', 'hp'):
+        for x in csv.DictReader(open(os.path.join(ROOT, b + '.csv'), encoding='utf-8', newline='')): cpu[(b, x['model'])] = x['cpu']
     rmap = {(r['brand'], r['pull_model']): r for r in rows}
     best = {}
     for f in sorted(glob.glob(os.path.join(ROOT, 'ebay_raw', '*_active.json'))):
         d = json.load(open(f, encoding='utf-8'))
         for p in d['pulls']:
+            if p.get('status') != 200: continue
             p['date'] = d['date']; p['file'] = os.path.basename(f)
             best[(p['brand'], p['model'])] = p            # later files win
     res = {}
@@ -71,18 +96,22 @@ def load_ebay():
         m = rmap.get(k)
         if not m: print('!! eBay pull without row_map entry:', k); continue
         must = re.compile(m['must'], re.I); exc = re.compile(m['exclude'], re.I) if m['exclude'] else None
-        seen = set(); ram = collections.Counter(); ssd = collections.Counter(); kept = drop = 0
+        mg = row_min_gen(cpu.get((p['brand'], m['csv_model']), ''))
+        seen = set(); ram = collections.Counter(); ssd = collections.Counter(); kept = drop = 0; oldcpu = 0
         for it in p['items']:
             t = it['t']
             if not must.search(t) or (exc and exc.search(t)): continue
             if DROP.search(t) or re.search(r'parts', it.get('cond', ''), re.I): drop += 1; continue
+            tg = title_gen(t)
+            if mg and tg and tg < mg: oldcpu += 1; continue
+            if mg and mg >= 12 and re.search(r'\bhdd\b|\bhard drive\b|\bdvd', t, re.I) and not tg: oldcpu += 1; continue
             key = re.sub(r'[^a-z0-9]', '', t.lower())
             if key in seen: continue
             seen.add(key); kept += 1
             r = ram_of(t); s = ssd_of(t)
             if r is not None: ram[r] += 1
             if s is not None: ssd[s] += 1
-        res[(p['brand'], m['csv_model'])] = dict(p=p, kept=kept, drop=drop, ram=ram, ssd=ssd, lead=m['pull_model'])
+        res[(p['brand'], m['csv_model'])] = dict(p=p, kept=kept, drop=drop, ram=ram, ssd=ssd, lead=m['pull_model'], oldcpu=oldcpu, mingen=mg)
     return res
 
 # ---------- UserBenchmark second opinion ----------
@@ -117,16 +146,19 @@ def main():
             if not e and not us:
                 continue
             note = []; line = ''
+            if e and e['kept'] < MIN_SHOW:
+                note.append('eBay: only %d usable listings for "%s" on %s — too few to show odds.' % (e['kept'], e['p']['query'], e['p']['date']))
+                e = None
             if e:
                 ro, rn = odds(e['ram']); so, sn = odds(e['ssd'])
                 thin = ' (thin sample)' if e['kept'] < THIN else ''
                 line = 'RAM ' + fmt(ro) + '<br>SSD ' + fmt(so) + thin
                 q = e['p']
                 note.append('eBay active listings (US), %s, search "%s"%s: %d listings counted (identical titles once; '
-                            'lots, for-parts and spec ranges dropped), RAM stated in %d, SSD in %d. "none" = sold without '
+                            'lots, for-parts, spec ranges%s dropped), RAM stated in %d, SSD in %d. "none" = sold without '
                             'RAM / without a drive. 32 GB+ and 1 TB+ are mostly refurbisher upgrades.'
                             % (q['date'], q['query'], (' — lead model ' + e['lead'] + ' only') if '/' in r[iM] else '',
-                               e['kept'], rn, sn))
+                               e['kept'], (' and %d older-CPU look-alikes' % e['oldcpu']) if e['oldcpu'] else '', rn, sn))
             if us:
                 d = max(us, key=lambda x: U.num(x['n']))
                 if U.num(d['n']) >= U.MIN_PCS:
@@ -136,7 +168,9 @@ def main():
                     note.append('Second opinion — UserBenchmark (%s, %s PCs, %s; benchmarked machines, owner upgrades '
                                 'included, top-5 parts only): %s.' % (name, d['n'], d['date'], txt))
                     if not line: line = 'RAM ' + fmt(ur) + '<br>SSD ' + fmt(uss) + ' (benchmark data)'
-            if not line: continue
+            if not line:
+                if r[iT] or r[iN]: r[iT], r[iN] = '', ''
+                continue
             r[iT], r[iN] = line, ' '.join(note); filled += 1
             print('%-9s %-32s %s' % (brand, r[iM][:32], line.replace('<br>', '  |  ')))
         if write:
