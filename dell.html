@@ -365,7 +365,7 @@ function select(d,el){
     '<div class="row"><div class="k">CPU</div><div class="v">'+d.cpu+'</div></div>'+
     '<div class="row"><div class="k">Memory</div><div class="v">'+d.ram+'<br>'+d.slots+' · max <b>'+d.max+'</b></div></div>'+
     '<div class="row"><div class="k">Storage</div><div class="v">'+d.stor+'</div></div>'+
-    (d.typ?'<div class="row"><div class="k">📦 Typical config (as found)</div><div class="v">'+DEEP(d.typ+(d.typ_note?' '+String.fromCharCode(124,62)+' '+d.typ_note:''))+'</div></div>':'')+
+    (d.typ?'<div class="row"><div class="k">📦 Likely config (random unit)</div><div class="v">'+DEEP(d.typ+(d.typ_note?' '+String.fromCharCode(124,62)+' '+d.typ_note:''))+'</div></div>':'')+
     (d.pwr?'<div class="row"><div class="k">🔌 Charger</div><div class="v">'+CHG(d.pwr)+pwrFams(d).map(function(f){return ' <button class="famBtn" onclick="FAMGO(&quot;pwr&quot;,&quot;'+f+'&quot;)">⇄ same charger'+(pwrFams(d).length>1?' ('+f+')':'')+'</button>';}).join('')+'</div></div>':'')+
     '<div class="row"><div class="k">⊶ Serial port (RS-232)</div><div class="v'+(d.rs232===undefined?' rsu':'')+'">'+rsLabel(d)+(d.rs232_note?' · '+DEEP(d.rs232_note):'')+'</div></div>'+
     '<div class="row"><div class="k">🔧 CPU re-paste</div><div class="v'+(d.rp===undefined?' rsu':'')+'">'+rpLabel(d)+(d.rp_note?' · '+DEEP(d.rp_note):'')+'</div></div>'+

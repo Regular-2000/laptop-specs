@@ -1,0 +1,32 @@
+brand,pull_model,csv_model,must,exclude
+dell,7490,7490,\blatitude\b.*\b7490\b|\b7490\b.*\blatitude\b,\binspiron\b|\b7480\s*/|/\s*7480\b
+dell,5490,5490,\blatitude\b.*\b5490\b|\b5490\b.*\blatitude\b,\binspiron\b|\bvostro\b
+dell,5590,5590,\blatitude\b.*\b5590\b|\b5590\b.*\blatitude\b,\binspiron\b|\bvostro\b
+dell,5400,5400,\blatitude\b.*\b5400\b|\b5400\b.*\blatitude\b,\b2[- ]?in[- ]?1\b|\brugged\b
+dell,5500,5500,\blatitude\b.*\b5500\b|\b5500\b.*\blatitude\b,\binspiron\b
+dell,7300,7300,\blatitude\b.*\b7300\b|\b7300\b.*\blatitude\b,\b2[- ]?in[- ]?1\b
+dell,7400,7400,\blatitude\b.*\b7400\b|\b7400\b.*\blatitude\b,\b2[- ]?in[- ]?1\b
+dell,5410,5410,\blatitude\b.*\b5410\b|\b5410\b.*\blatitude\b,\binspiron\b|\b2[- ]?in[- ]?1\b
+dell,5510,5510,\blatitude\b.*\b5510\b|\b5510\b.*\blatitude\b,\binspiron\b|\bvostro\b
+dell,7410,7410,\blatitude\b.*\b7410\b|\b7410\b.*\blatitude\b,\b2[- ]?in[- ]?1\b
+dell,5420,5420,\blatitude\b.*\b5420\b|\b5420\b.*\blatitude\b,\brugged\b
+dell,5520,5520,\blatitude\b.*\b5520\b|\b5520\b.*\blatitude\b,\binspiron\b
+dell,7420,7420,\blatitude\b.*\b7420\b|\b7420\b.*\blatitude\b,\b2[- ]?in[- ]?1\b|\binspiron\b
+dell,5430,5430,\blatitude\b.*\b5430\b|\b5430\b.*\blatitude\b,\brugged\b|\be5430\b
+dell,7430,7430,\blatitude\b.*\b7430\b|\b7430\b.*\blatitude\b,\b2[- ]?in[- ]?1\b
+dell,7440,7440,\blatitude\b.*\b7440\b|\b7440\b.*\blatitude\b,\b2[- ]?in[- ]?1\b|\be7440\b
+dell,3310,3310,\blatitude\b.*\b3310\b|\b3310\b.*\blatitude\b,\b2[- ]?in[- ]?1\b
+dell,3410,3410,\blatitude\b.*\b3410\b|\b3410\b.*\blatitude\b,
+dell,3420,3420,\blatitude\b.*\b3420\b|\b3420\b.*\blatitude\b,
+dell,3500,3500,\blatitude\b.*\b3500\b|\b3500\b.*\blatitude\b,\binspiron\b|\bvostro\b
+hp,840 G5,830 G5 / 840 G5 / 850 G5,\b840\s*g5\b,\bx360\b
+hp,840 G6,830 G6 / 840 G6 / 850 G6,\b840\s*g6\b,\bx360\b
+hp,840 G7,830 G7 / 840 G7 / 850 G7,\b840\s*g7\b,\bx360\b
+hp,840 G8,830 G8 / 840 G8 / 850 G8 / 840 Aero G8,\b840\s*(aero\s*)?g8\b,\bx360\b
+hp,840 G9,840 G9 / 860 G9,\b840\s*g9\b,\bx360\b
+hp,840 G10,840 G10 / 860 G10,\b840\s*g10\b,\bx360\b
+thinkpad,T480,T480 / T480s / T580,\bt480\b,\bt480s\b
+thinkpad,X1 Carbon Gen 6,X1 Carbon Gen 6,x1\s*carbon.*(\bgen\s*6\b|\b6th\s*gen\b|\bg6\b)|(\bgen\s*6\b|\b6th\s*gen\b).*x1\s*carbon,\byoga\b
+thinkpad,E480,E480 / E580 / E485 / E585,\be480\b,
+thinkpad,T14 Gen 1,T14 Gen 1 / T14s Gen 1 / T15,\bt14\b.*(\bgen\s*1\b|\b1st\s*gen\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bt14\b,\bt14s\b|\bgen\s*1[0-9]
+thinkpad,T14 Gen 4,T14 Gen 4 / T14s Gen 4 / T16 Gen 2,\bt14\b.*(\bgen\s*4\b|\b4th\s*gen\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bt14\b,\bt14s\b

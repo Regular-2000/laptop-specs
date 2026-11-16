@@ -1,0 +1,223 @@
+# eBay ACTIVE listings, "dell latitude 7490", category 177 (PC Laptops), US-only, 240/page, page 1, pulled 2026-11-16
+# url: https://www.ebay.com/sch/i.html?_nkw=dell+latitude+7490&_sacat=177&LH_PrefLoc=1&_ipg=240  (eBay said "1,200+ results")
+# format: item_id|condition|title   (220 rows whose title contains 7490; seller names not captured)
+880108980661|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6Ghz 16GB DDR4 256GB SSD Black Laptop C/See.
+168860236519|Pre-Owned|Dell Latitude 7490 - 14" Intel Core i5-8350U 1.7 GHz 8GB DDR4 RAM No OS/AC/SSD
+900080579084|Pre-Owned|Dell Latitude 7490 14” 1.9GHz Intel i7-8650U 16GB RAM 512GB SSD **BAD BATTERY**
+137931692564|Good - Refurbished|Dell Latitude 7490 i7-8650U 8GB RAM 256GB SSD 14" FHD Touchscreen WiFi/BT Win 11
+128144825337|Pre-Owned|Dell Latitude 7490 14” 1.9GHz Intel i7-8650U 32GB RAM 512GB SSD • Nice Cond.
+960172265246|Pre-Owned|Dell Latitude 7490 14in Touch i5-8350U 12GB Ram 128GB SSD Win11 Pro Black Laptop
+188964892259|Pre-Owned|Dell Latitude 7490 i5 8350U @ 1.7 GHz 256 GB 16 GB 14" FHD Windows 11 Pro
+137931692576|Good - Refurbished|Dell Latitude 7490 i7-8650U 8GB RAM 256GB SSD 14" FHD Touch ID WiFi/BT Win11 Pro
+168855509802|Refurbished|Dell 7490 Latitude 14" FHD Laptop Intel i5-8350U 1.7GHz 8GB 512GB W10P
+880065756664|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6GHz 8GB DDR4 256GB SSD Black Laptop C/READ.
+377642072601|Pre-Owned|Dell Latitude 7490 Core i5-8350U, 8GB RAM, 256GB NVMe, Win11 *READ #1145
+860105902616|Pre-Owned|Dell Latitude 7490 14 FHD TOUCH i5-8350U 1.70GHz 16GB 256GB SSD Very Good
+298336426411|Pre-Owned|Dell Latitude 7490 Business Class Laptop i5 32GB 1TB SSD Windows 11 Grade A
+377642309144|Pre-Owned|Dell Latitude 7490 Core I5-8350U 8GB RAM 256GB SSd Win11 Pro *READ #1140
+307147461870|Good - Refurbished|Dell Latitude 7490 14" HD i7-8650U 16GB 512GB SSD Webcam Backlit Kbd Win 11 Pro
+295905272339|Pre-Owned|Dell Latitude 7490 Business Class Laptop 4 Core i5 16GB 256GB Windows 11 Grade A
+840122225901|Pre-Owned|Dell Latitude 7490 i7-8650U 8GB RAM 512GB SSD Windows 11 battery 59.994-54,112
+327454597633|Pre-Owned|Dell Latitude 7490 i5-8th Gen 8GB 256GB SSD Windows 11 PRO
+227613007136|Pre-Owned|Dell Latitude 7490 i7 14" FHD Laptop 16GB 256GB SSD Win 11 Pro
+128193814745|Pre-Owned|Dell Latitude 7490 14'' (i7-8650U,1.9GHz 16GB, 256GB) Win11 Pro + Charger
+227567598136|Pre-Owned|Dell Latitude 7490 14" (i7-8650U 1.9GHz - 16GB RAM - 256GB SSD - Win11Home)
+307147566020|Good - Refurbished|Dell Latitude 7490 14" HD Quad Core i5-8350U 16GB 512GB SSD Cam Win 11 Pro
+880099652454|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6Ghz 8GB DDR4 512GB SSD Black Laptop-FAIR/S3
+860096395687|Pre-Owned|Dell Latitude 7490 14" i3-7130U 16GB RAM 256GB SSD HD+ Win 11 Pro Laptop #D23
+206693099603|Good - Refurbished|Dell Latitude 7490 i5-8th Gen 16GB 256GB SSD Windows 11 Pro
+880035004614|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6Ghz 8GB DDR4 256GB SSD Black Laptop C -See.
+900091365534|Pre-Owned|Dell Latitude 7490 Laptop Windows 10 Pro 16GB Fast 480GB SSD ++ 5 Year Warranty
+278250709454|Very Good - Refurbished|Dell Latitude 7490 14" FHD i7-8650U 16GB 512GB NVMe SSD WiFi Win 11 Pro
+880109986235|Pre-Owned|Lot of 3 Dell Latitude 7490 14" Laptop Intel Core i5-8350U 1.70GHz 8GB RAM No OS
+178524923525|Pre-Owned|DELL LATITUDE 7490 i5-8250U @ 1.60GHz, 16GB RAM, NO HDD/OS
+306015928615|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 16GB SUPER FAST 256GB SSD 5 Year Warranty
+398228460375|Pre-Owned|Dell Latitude 7490 Intel Core i7-8650U 1.90GHz 16 GB 256GB SSD 14" Win 11 Pro C8
+900092872479|Pre-Owned|Dell Latitude 7490 I5-8350U 256GB SSD 8GB W11P Backlit *READ*
+840048560441|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6GHz 16GB DDR4 256GB SSD Black Laptop C/READ
+298599462922|Pre-Owned|Dell Latitude 7490 Laptop Windows 10 Pro 16GB Fast 256GB SSD ++ 5 Year Warranty
+117378935088|Good - Refurbished|Dell Latitude 7490 14" FHD Touch Quad Core i5-8350U 16GB 512GB SSD Cam Win 11Pro
+226267376269|Excellent - Refurbished|Dell 14" FHD 7490 16gb DDR4 NEW 256gb SSD Core i7 8th gen Win 11 pro Laptop WIFI
+377642221007|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U, 8GB RAM, 256GB NVMe, Win11 Pro *READ #1142
+840068759138|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6GHz 8GB DDR4 256GB SSD Black Laptop C/READ
+860096414774|Pre-Owned|Dell Latitude 7490 14" i5-8250U 8GB RAM 256GB SSD FHD Win 11 Pro Laptop #D25
+900091365544|Pre-Owned|Dell Latitude 7490 Laptop Windows 10 Pro 16GB Fast 500GB SSD ++ 5 Year Warranty
+398353308561|Pre-Owned|Dell Latitude 7490 14" FHD i5-8350U 16GB RAM 512GB SSD Win 11 Pro, Wi-Fi Laptop
+198747387807|Pre-Owned|Dell Latitude 7490 i7-8th Gen 16GB 256GB SSD Windows 11 Home
+940025554743|Pre-Owned|Dell Latitude 7490 Laptop i7-8650U 1.9GHz 16GB 256GB SSD No OS 14" *See Issues*
+820202777891|Pre-Owned|Dell Latitude 7490 14" Intel i5 8th Gen 8GB RAM 256GB SSD Windows 11 Pro
+880035980564|Pre-Owned|Dell Latitude 7490 FHD Touch 1.9 GHz i7-8650U 8GB RAM 256GB SSD
+287644256069|Pre-Owned|Dell Latitude 7490 14" Touch (Intel Core i5-8350U, 8GB 256 GB SSD) 121925-2
+377606294702|Pre-Owned|Dell Latitude 7490 i5-8350U 1.70GHz 8GB RAM 256GB SSD Windows 11 Pro
+296655917506|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Cinnamon 16GB 512GB SSD +++ 5 YEAR WARRANTY
+407342808847|Pre-Owned|Dell Latitude 7490 Intel Core i7-8650U @1.9GHz 8GB RAM 256GB NVMe Win11Pro
+128123444164|Pre-Owned|Dell Latitude 7490 14” Intel Core i7-8650U 8GB RAM 256GB NVMe Win 11 Pro @JB
+296842806768|Pre-Owned|Dell 7490 Laptop Linux Mint Cinnamon 16GB SUPER FAST 500GB SSD + 5 YEAR WARRANTY
+940071154779|Pre-Owned|Dell Latitude 7490 i5 8th Gen 16GB DDR4 Windows 11 Pro *No Battery*
+297081882143|Pre-Owned|Dell Latitude 7490 Laptop 1.90GHz Intel Core i7-8650U 16GB DDR4 RAM 512NVME
+327452949908|Pre-Owned|Dell Latitude 7490 14" i7-8650U 1.90GHz 16GB 256GB m2SSD Laptop + AC NOOS
+198397108086|Pre-Owned|DELL LATITUDE 7490 14" 2.6GHz i5-7300U 256GB SSD 16GB RAM Win 11 Pro ; 6181931
+336889236117|Pre-Owned|Dell Latitude 7490 14" Laptop Core i5-8350U 1.7GHz 4GB RAM 256GB NVMe W11Pro
+278175047284|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 16GB 500GB SSD + 5 Year Warranty
+206687696835|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+147673647147|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+206690257940|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+137931692600|Good - Refurbished|Dell Latitude 7490 i7-8650U 8GB RAM 256GB SSD 14" FHD Touchscreen WiFi/BT Win11
+267832254618|Pre-Owned|Dell Latitude Laptop 7490 8GB RAM i5-8350U 1.7GHz 256GB SSD Excellent Battery !
+296671643886|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 16GB 256GB SSD ++ 5 YEAR WARRANTY
+840062277578|Pre-Owned|Dell Latitude 14" 7490 Intel i7-8650u 256GB SSD 16GB DDR4 14" laptop Nice!
+940092203623|Pre-Owned|Dell Latitude 7490 Laptop Windows 10 Pro 16GB Fast 512GB SSD +++ 5 Year Warranty
+188470093581|Pre-Owned|Dell Latitude 7490 8GB, i7-8650U, 1.90GHz, 256GB SSD With Windows 11
+307221612448|Pre-Owned|Dell Latitude 7490 14" FHD Touch i7-8650U 1.90GHz 16GB 512GB SSD Windows11Pro+PA
+840037985343|Pre-Owned|Dell Latitude 7490 14" i5-7300U 2.6GHz 512GB SSD 16GB DDR4 Black Laptop C/READ
+147673667970|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+227601113109|Pre-Owned|Dell Latitude 7490 14in i5-8350U 16GB 256GB NVMe Win11 FHD Black
+198268629261|Pre-Owned|Dell Latitude 7490 14" Laptop i7 8th Gen 256GB SSD 8GB RAM Win 11 Pro (CI) C
+198786227342|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+206689612256|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+206688103477|Pre-Owned|Dell Latitude 7490 i5 8350U @ 1.70GHz 8GB RAM NO NVME NO OS
+227555354665|Pre-Owned|Dell Latitude 7490 14" i5-8350U 1.70GHz 8GB RAM 256GB SSD
+860096411742|Pre-Owned|Dell Latitude 7490 14" i5-8250U 8GB RAM 256GB SSD FHD Win 11 Pro Laptop #D28
+800738740920|Pre-Owned|Dell Latitude 7490 / i5 8th Gen 8GB RAM 256GB NVMe SSD / FHD Backlit Win 11 Pro
+237023878460|Pre-Owned|Dell Latitude 7490 14" FHD Touch i7-8650U 16GB 512GB SSD Win11 Pro New Battery
+227465192838|Pre-Owned|Dell Latitude 7490 14" i7-8650 1.90GHz 16GB Ram 128GB M.2 SSD Tested Laptop .
+326938851738|Pre-Owned|Dell Latitude 7490 14" Laptop Intel Core i5-8350U @1.70GHz 16GB RAM 256GB SSD
+860096400575|Pre-Owned|Dell Latitude 7490 14" i5-8250U 8GB RAM 256GB SSD FHD Win 11 Pro Laptop #D24
+198785442713|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+277991521201|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 16GB 256GB SSD ++ 5 YEAR WARRANTY
+227612171291|Good - Refurbished|Dell Latitude 7490 Intel Quad Core i5-8250U 4GB RAM 128GB SSD Windows 11 Pro
+306613719914|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 16GB FAST 256GB SSD + 5 Year Warranty
+198784045086|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+147673621554|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+336888888100|Pre-Owned|Dell Latitude 7490 14” i5-8350U 1.7GHz, 8GB RAM, 256GB M.2, Win11 w/Charger #74
+206687566572|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+198790601521|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+206704098477||NEW LISTINGdell latitude 7490 parts
+206690273311|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+307239596297|Pre-Owned|Dell Inspiron 7490 14" Laptop i7-8650U 8GB 512GB SSD Win11 Pro Batt 94%
+307227744780|Pre-Owned|Dell Latitude 7490 14" i5-8350U 16GB RAM 256GB SSD Win 11 Pro Batt 15% w.AC
+198785628856|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+147678040310|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+267760189870|Pre-Owned|DELL LATITUDE 7490, Intel Core i5-8350U, 1.70 GHz, 16 GB RAM, No Hard Drive
+900081421699|Good - Refurbished|Dell Latitude 7490 i7-8650U 14 in TOUCH W11 Pro 16-32GB RAM 512GB-2TB SSD
+158129032219|Excellent - Refurbished|Dell Latitude 7490 14" Laptop i5-8250U 8GB Ram 256GB SSD W11P Low Battery Health
+198790592847|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+128103897620|Very Good - Refurbished|Dell Latitude 7490 14" i7-8650U 4.20GHz 512GB SSD 32GB WiFi BT WINDOWS 11
+227270290143|Pre-Owned|Latitude 7490: i5-8250U, 16GB RAM, 1TB NVMe SSD, 14", Win 11 Pro
+128187539817|Pre-Owned|DELL LATITUDE 7490 INTEL CORE I7-8650U 1.90GHZ 8GB RAM
+296691221644|Pre-Owned|Dell Latitude 7490 Laptop Intel i7 Windows 11 32GB 1TB SSD 5 YEAR WARRANTY
+198790558959|Pre-Owned|Dell Latitude 7490 14" Intel Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS
+880038797972|Pre-Owned|Dell Latitude 7490 14" Intel Quad Core i5-8350U 1.70GHz 8GB 256GB SSD Win 11 Pro
+206687798227|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+237074076042|Pre-Owned|Dell Latitude 7490 / i5-8350U / 8GB RAM / 128GB SSD / LINUX
+960193688320|Pre-Owned|Lot of (3) Dell Latitude 2x7490 Intel i5-8350U No RAM w/Battery NoSSD 1x 3590
+840115657691|Pre-Owned|Dell Latitude 7490 14" i7-8650U 16GB 474GB (500gb) SSD Win 11 Pro w/ Charger
+198787612045|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS Fair
+840041670370|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6Ghz 8GB DDR4 256GB SSD Black Laptop C/See.
+307229649607|Pre-Owned|Dell Latitude 7490 14" i5-7300U 12GB RAM 512GB SSD Windows 11 Pro BATT 64%
+198785747143|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM NO HDD NO OS
+900091365542|Pre-Owned|Dell 7490 Laptop Ubuntu Linux 8th Gen i5-8350U 16GB 480GB SSD (5 Year Warranty)
+305555143185|Pre-Owned|Dell 7490 Laptop Ubuntu Linux 16GB FAST 256GB SSD + 5 Year Warranty
+860096405932|Pre-Owned|Dell Latitude 7490 14" i5-8250U 8GB RAM 256GB SSD FHD Win 11 Pro Laptop #D26
+900091365541|Pre-Owned|Dell 7490 Laptop Linux Mint Cinnamon 16GB FAST 480GB SSD ++ 5 YEAR WARRANTY
+840034509104|Pre-Owned|^ Dell Latitude 7490 14" Laptop i7-8650U @ 1.90GHz 16GB RAM 256GB SSD W11 #X9385
+237113482479|Pre-Owned|Dell Latitude 7490 Laptop 14" i5-8250U 8GB 256GB SSD Win 11 Pro Hebrew Keyboard
+366799901182|Pre-Owned|Dell Latitude 7490 Intel Core i7-8650U 1.90GHz 4GB RAM NO SSD 14"
+940088211590|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 32GB 2TB SSD +++ 5 YEAR WARRANTY
+128035179438|Pre-Owned|Dell Latitude 7490 Intel Core i5 256G Windows 11 Wifi BT MS Office 21 Laptop
+297971056586||FOR PARTS Dell Latitude 7490 14"Laptop Intel i5-8250U 1.60GHz 16GB RAM**READ**
+137890107990|Pre-Owned|Dell Latitude 7490 14" FHD i5-8350U 8GB RAM 128GB SSD Laptop No Charger/OS READ
+920131936629|Pre-Owned|(Lot of 2)Dell Latitude 7490 i5-8350U 1.70GHz 16GB No OS/SSD/HDD
+336799964864|Pre-Owned|Dell Latitude 7490 14"FHD vPRO i7-8650U 1.9GHz 8GB 512GB NVMe SSD Backlit K W11P
+206698662500|Pre-Owned|Dell Latitude 7490 14" Intel i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS
+147677935092|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS Good
+198752792138|Pre-Owned|Dell Latitude 7490 14" Laptop i7 8th Gen 512GB SSD 8GB RAM Win 11 Pro (CI) CB
+327451949057|Pre-Owned|Dell Latitude 7490 i7-8650U 16GB 480GB SSD Grade B
+147677925985|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS Good
+900065256192|Pre-Owned|Dell Latitude 7490 14" FHD Touch i7-8650U 16GB 256GB SSD Wifi BT WC W11P Bat 84%
+900091365535|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Studio Linux 16GB 1TB SSD + 5 Year Warranty
+860134873619|Pre-Owned|Dell Latitude 7490 i7-8650 16GB RAM 256GB SSD Win 11 Pro TOUCH w/ 180w AC
+900062590859|Pre-Owned|Dell Latitude 7490 14" FHD Touch i7-8650U 16GB 256GB SSD Wifi BT WC W11P AC
+940019241412|Pre-Owned|Dell Latitude 7490 i5 8th Gen 8GB DDR4 Windows 11 Pro
+297506524588|Pre-Owned|Dell 7490 Laptop Windows 11 Pro 16GB RAM FAST 256GB SSD + 5 YEAR WARRANTY
+800904943878|Pre-Owned|Dell Latitude 7490 Core i7-8650U @ 1.9GHz No RAM No SSD No Batteryb
+277864963428|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 16GB 256GB SSD (5 YEAR WARRANTY)
+224939659312|Excellent - Refurbished|Dell 14" 7490 32GB DDR4 NEW 512gb NVME SSD Core i7 8th gen Win 11 pro Laptop FHD
+198713001433|Pre-Owned|Dell Latitude 7490 14" Laptop i5 8th 256GB SSD 8GB RAM Win11 (AE)See Description
+206696515419|Pre-Owned|Dell Latitude 7490 14" Intel Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS
+287592549385|Pre-Owned|Dell Latitude 7490 Touch 14"FHD vPRO i7-8650U 1.9GHz 16GB 512GB BacklitK FP W11P
+227584744164|Pre-Owned|Dell Latitude 7490 14" Laptop Core i5-7300U 8GB RAM 256GB SSD - Win 11 Pro
+237047006706|Pre-Owned|Dell Latitude 7490 14" i5-8350U 1.70GHz 8GB RAM 256GB SSD *READ
+198788015923|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS
+880034977729|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6Ghz 8GB DDR4 512GB SSD Black Laptop C/See..
+278025032172|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 16GB 1TB SSD [5 YEAR WARRANTY]
+128183879518|Pre-Owned|Dell Latitude 7490 14in i5 8GB RAM 256GB SSD Win11 Pro Black w/Charger - Tested
+237149645390|Pre-Owned|Dell Latitude 7490 / i5-8350U / 8GB RAM / 512GB SSD / LINUX
+920109174509|Pre-Owned|DELL Latitude 7490 14" Laptop Up to 512GB RAM Up to 16GB RAM Intel i5/i7 Windows
+206698630612|Pre-Owned|Dell Latitude 7490 14" Intel Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS
+860096408787|Pre-Owned|Dell Latitude 7490 14" i5-8250U 8GB RAM 256GB SSD FHD Win 11 Pro Laptop #D27
+307282639989|Pre-Owned|Dell 7490 Laptop Windows 11 Pro i7 32GB RAM FAST 500GB SSD + 5 YEAR WARRANTY
+900080769576|Pre-Owned|(2) Dell Latitude 7490 Intel i5-8650U 1.9GHz 8GB RAM No/SSD/Batt/BIOSLOCKEDx1
+198790420621|Pre-Owned|Dell Latitude 7490 14" Core i5-8350U 1.7GHz 8GB RAM 256GB SSD NO OS Good
+327451675753|Pre-Owned|Dell Latitude 7490 i7-8650U 8GB 240GB SSD Grade B
+336835404617|Pre-Owned|Dell Latitude 7490 14" FHD i7-8650U 1.60GHz 8GB 512GB Win11Pro Excellent Bat+PA
+198348011377|Pre-Owned|Dell Latitude 7490 14" Laptop i5 8th Gen 512GB SSD 8GB RAM Win 11 Pro (CI) CB
+296782641973|Pre-Owned|Dell 7490 Laptop Linux Mint Quad Core 32GB 1TB SSD + 5 YEAR WARRANTY
+336820859691|Pre-Owned|Dell Latitude 7490 i7-7600U 8GB RAM 256GB SSD Win11 w/Charger #1
+306922177823|Pre-Owned|Dell Latitude 7490 Laptop Linux Mint Quad Core 16GB Fast 1TB SSD 5 YEAR WARRANTY
+158083386115|Pre-Owned|Dell Latitude 7490 14in Laptop i7 8th Gen 16GB 512GB SSD FHD Win11 Pro - Good
+168553064237|Pre-Owned|Dell Latitude 7490 256gb Nvme Win 11 i5-8250u 4 Core 1.80ghz 16gb Ram Hdmi Cam3
+237151211670|Pre-Owned|Dell Latitude 7490 Laptop / i5-8350U / 8 GB RAM / 256 GB SSD / LINUX / READ
+327350250422|Good - Refurbished|Dell Latitude 7490 14" i5-8350U 1.70GHz 8GB RAM 256GB SSD
+188876756274|Pre-Owned|Dell Latitude 7490 14” Intel i5-8350U 8GB RAM 128GB SSD NVMe Win 11Pr Poor Bttry
+257660155276|Pre-Owned|Dell Latitude 7490 14'', Intel i5-8350U, 8GB RAM, 256GB SSD - Laptop & WD15 Dock
+820214407829|Pre-Owned|Dell Latitude 7490 14" Intel i7 8th Gen 8GB DDR4 RAM 256GB SSD Windows 11 Pro
+176655240626|Pre-Owned|Dell Latitude 7490 i7-8650U @1.9GHz 16GB RAM 512GB SSD
+800855613620|Good - Refurbished|Dell Latitude 7490 14" 16GB 512GB, BLACK
+900091365539|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 16GB Fast 2TB SSD + 5 Year Warranty
+276804292327|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 16GB Super Fast 1TB SSD + 5 Year Warranty
+178073380387|Pre-Owned|Dell Latitude 7490 14''i5-7300U 2.6GHz 8GB DDR4 256GB SSD Black Laptop B-/See DC
+960193552759||DELL LATITUDE 7490 INTEL CORE I5-8350U 1.70GHZ No RAM No SSD
+940092203631|Pre-Owned|Dell Latitude i7 7490 Laptop Windows 11 Pro 16GB RAM 1TB SSD + 5 YEAR WARRANTY
+235685502713|Pre-Owned|Dell Latitude 7490 I5-7300U 512GB NvME SSD 16GB DDR4 Win11Pro
+225558739104|Excellent - Refurbished|Dell Latitude 14" TOUCH 7490 32GB DDR4 500GB NVME Core i7 Win 11 p Laptop WIFI
+940068705210|Pre-Owned|Dell Latitude 7490 i7 8th Gen Windows 11 Pro
+940089584244|Pre-Owned|Dell Latitude 7490 i5 8th Gen 16GB DDR4 Windows 11 Pro
+840072148379|Pre-Owned|Dell Latitude 7490 14'' i5-8250U 1.6GHz 8GB DDR4 512GB SSD Black Laptop C/AC
+198299582663|Pre-Owned|Dell Latitude 7490 14" Laptop i5 8th Gen 128GB SSD 16GB RAM Win11 Pro (CI) C
+900087391380|Pre-Owned|Dell Latitude 7490 Laptop Windows 11 Pro 32GB RAM FAST 2TB SSD + 5 YEAR WARRANTY
+128191213872||FOR PARTS Dell Latitude 7490 14-inch business laptop
+940088211584|Pre-Owned|Dell Latitude 7490 Laptop Windows 11 Pro 16GB RAM FAST 2TB SSD + 5 YEAR WARRANTY
+237074290327|Pre-Owned|Dell Latitude 7490 / i5-8350U / 16GB RAM / 128GB SSD / LINUX
+296990182839|Pre-Owned|Dell 7490 Laptop Ubuntu Linux 8th Gen 16GB SUPER FAST 256GB SSD 5 Year Warranty
+800912022670|Pre-Owned|Dell Latitude 7490 Intel Core i7-8650U @1.90GHz 8GB RAM/NO SSD READ Description
+117096231242|Good - Refurbished|Dell Latitude 7490 14" FHD Quad Core i5-8350U 16GB 512GB SSD Cam Win 11 Pro
+820214041580|Pre-Owned|Lot of 5 Dell Latitude 7490 14" Intel i5 8thGen 8gb RAM 256gb SSD Windows 11 Pro
+128165376134|Pre-Owned|Dell Latitude 7490 14" Touch i7-8650U 8GB RAM 256GB NVMe SSD Windows 11 Pro
+296648004683|Pre-Owned|Dell Latitude 7490 Laptop Windows 11 32GB RAM FAST 1TB SSD + 5 YEAR WARRANTY
+326701909892||Dell Latitude 7490 14" Laptop Intel Core i5 8th Gen - NO BOOT - READ -RR
+277320366409|Pre-Owned|Dell Latitude 7490 Laptop Windows 10 Pro 16GB Fast 256GB SSD + 5 Year Warranty
+257778251314|Pre-Owned|Dell Latitude 7490 14" Laptop Intel Core i7 8th Gen Black (2018)
+128152793509||Dell Latitude 7490 14” i7-8665U Fair Battery For Parts
+920081078078|Pre-Owned|Dell Latitude 7490 14"FHD i5-8350U 16GB RAM 256GB SSD Win 11 Pro Cam WIFI Laptop
+137931692511||Dell Latitude 7490 i7-8650U 14" FHD Touchscreen No RAM SSD Parts Repair BIOS
+168822857843|Pre-Owned|Dell Latitude 7490 14in i7 8th Gen 16GB 512GB No OS Lid Scratches Used
+278437382413|Pre-Owned|Dell Latitude 7490 14" Touch (Intel Core i5-8350U, 16GB 256 GB SSD) 121925-5
+940092203629|Pre-Owned|Dell Latitude 7490 Laptop Ubuntu Linux 32GB Fast 2TB SSD + 5 Year Warranty
+206561513374|Pre-Owned|Dell Latitude 7490 14" Intel i5-8350U 1.7GHz 16GB RAM 256GB SSD Win 11 Pro
+237008997384|Pre-Owned|Dell Latitude 7490 I7-8650U 256GB NvME SSD 16GB DDR4 Win11Pro
+327451948596|Pre-Owned|Dell Latitude 7490 i7-8650U 8GB No HD Grade C
+198318613928|Pre-Owned|Dell Latitude 7490 i5 8th Gen 8GB 256GB NVMe SSD Windows 11 Home
+287629165004|Pre-Owned|Dell Latitude 7490 14" Touch (Intel Core i5-8350U, 16GB 256 GB SSD) 121925-6
+900093961169||NEW LISTINGDell Latitude 7490 14" HD+ I7-8650U 256GB SSD 8GB W11P Backlit FP Reader *READ*
+158320508200|Pre-Owned|DELL LATITUDE 7490 i7-8650U TOUCH 16GB RAM 512GB NVME WINDOWS 11 + OFFICE 2021
+197759882057|Pre-Owned|Dell Latitude 7490 14" Laptop i7 8th Gen 256GB SSD 16GB RAM Win 11 Pro (CI) C
+128191183115|Pre-Owned|Dell Latitude 7490 14" FHD i7-8650U 16GB RAM 512GB SSD Win 11 Laptop UD READ
+276507839340|Pre-Owned|Dell 7490 Laptop Ubuntu Linux 8th Gen i5-8350U 16GB 512GB SSD (5 Year Warranty)
+237138174801|Pre-Owned|Dell Latitude 7480/7490 14" (Mixed CPU - 8/16GB RAM - NO OS/HDD) - Lot of 5
+306878372524|Pre-Owned|Dell 7490 Laptop Ubuntu Linux 16GB Super Fast 256GB SSD ++++++++ 5 Year Warranty
+900089618516|Good - Refurbished|Dell Latitude 7490 14 in FHD i7-8650U 8-32GB RAM 256GB-2TB SSD
+920140254285|Pre-Owned|Lot of 3 Dell Latitude 7490 14" Intel 8th Gen No RAM/SSD/OS w/ AC Read
+188757366155|Pre-Owned|Dell Latitude 7490 14" FHD Intel Core i7-8650U 32GB RAM 1TB SSD Windows10
+178522665914||DELL LATITUDE 7490 i7-8650U @ 1.90GHz, 8GB RAM, NO HDD/OS - (FOR PARTS)
+188639887540|Pre-Owned|Dell Latitude 7490 14" FHD i7-8650U 16GB 256GB SSD Windows 11 Pro

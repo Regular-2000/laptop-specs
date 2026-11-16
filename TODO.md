@@ -45,6 +45,14 @@ HD 8790M configs) — harvest during UB runs.
   look like the 2015 Broadwell machines (low ids from the 2015–16 range, not opened yet) — check
   the CPU list before mapping them to the 2024 rows.
 
+- **2026-11-16 (later) — switched to eBay odds.** SM's use: semi-blind buying, "what's most likely in a
+  random 7490". Row renamed "📦 Likely config (random unit)": RAM / SSD odds rounded to 5 %, from eBay
+  ACTIVE listing titles (`ebay_raw/`, `tools/typ_build.py`); UserBenchmark kept behind the ⓘ as a second
+  opinion. Why: on the 7490 the benchmark site said SSD 512 GB ~55 %, eBay says ~25 % (256 GB ~55 %), and
+  it can't see units sold without a drive (5–25 % depending on model). 31 rows filled (adds T14 Gen 1 / Gen 4).
+  Pull cost: ~10 s per model in Chrome, no captcha — next: all remaining gen-8+ rows, then maybe sold
+  listings (needs eBay sign-in, Chrome has it) to compare sold vs. still-for-sale mixes.
+
 ## 4. eBay "days on market" per model
 Where feasible: sold listings expose sold date; listing-start date is the hard
 part (sometimes visible on listing page). Research feasibility first — even a
@@ -262,7 +270,7 @@ OPEN (grey chips / blank serial = the to-do list, search `portunknown` or click 
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.
+the newest version is live. Current: 2026.11.16.2.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

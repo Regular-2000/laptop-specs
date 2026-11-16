@@ -67,6 +67,10 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   none, **blank = unverified**. Dock / port-replicator / Ultrabay-adapter serial does NOT
   count — it goes in `rs232_note`. Drives the "⊶ RS-232" toggle on all three pages and
   the "serial / rs232 / db9" search terms. Every filled cell cites its source behind the ⓘ.
+- **Since 2026-11-16 (later): `typ` = odds for a random unit** — "RAM 16 GB ~50% · 8 GB ~40%<br>SSD 256 GB
+  ~55% · …", from eBay active-listing titles (`ebay_raw/`, rebuilt by `tools/typ_build.py`); the
+  UserBenchmark numbers moved behind the ⓘ as a second opinion. The paragraph below describes the
+  first (UserBenchmark-only) version and its limits, which still apply to that second opinion.
 - Typical config as found (`typ`, `typ_note`, added 2026-11-16 → **38-col schema**): the RAM
   size / stick layout and SSD size that real machines of this model actually carry — NOT the
   spec-sheet range. Surface text like `16 GB (1×16) · 256 GB NVMe`; two values (`8 GB (1×8) /
