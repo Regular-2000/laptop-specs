@@ -70,6 +70,13 @@ HD 8790M configs) — harvest during UB runs.
   Note: titles like "X1 Carbon … 12th Gen" (CPU) match the laptop-generation regex too — the older-CPU
   guard is what keeps them out of the wrong row, so keep it.
 
+- **2026-11-16 13:05 sitting 2 (slow pace): 40 searches, no block.** ThinkPad X1 Carbon Gen 13, L, E, P, Z,
+  P14s, P16v, X1 Nano, X1 Extreme Gen 1–3 (`ebay_raw/2026-11-16c-2_active.json`). Blank (< 10 usable listings,
+  genuinely rare on eBay): Z13 Gen 1/2, Z16 Gen 1/2, X1 Nano Gen 2/3, X1 Extreme Gen 1. Fix: the P1 Gen 1 / Gen 2
+  row now accepts both generations. Merged the other session's Latitude 5xx1 commit (59fc80c) into the local
+  folder first. Remaining: 80 searches (X1 Extreme Gen 4 → T14s Gen 6, all remaining HP, Dell 5xx1) =
+  sittings 3 and 4.
+
 ## 4. eBay "days on market" per model
 Where feasible: sold listings expose sold date; listing-start date is the hard
 part (sometimes visible on listing page). Research feasibility first — even a
@@ -328,7 +335,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.6.
+the newest version is live. Current: 2026.11.16.7.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

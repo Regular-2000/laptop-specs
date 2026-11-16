@@ -28,6 +28,8 @@ def thinkpad(m, sold):
     if lead == 'X1 Titanium Yoga': return ('lenovo thinkpad x1 titanium yoga', r'\bx1\s*titanium\b', '')
     if lead.startswith('T14s Gen 6'): return ('lenovo thinkpad t14s gen 6 snapdragon', gen_rx('t14s', 6), r'\bintel\b|\bryzen\b|\bultra\b')
     g = re.match(r'(.+?)\s+Gen\s+(\d+)$', lead)
+    if lead == 'P1 Gen 1':   # row covers P1 Gen 1 AND Gen 2 — accept both (2026-11-16 fix)
+        return ('lenovo thinkpad p1 gen 1', r'\bp1\b.*(\bgen\s*[12]\b|\b(1st|2nd)\s*gen\b|\bg[12]\b)|(\bgen\s*[12]\b|\b(1st|2nd)\s*gen\b).*\bp1\b', r'\bp1s\b|\bgen\s*1\d')
     if g:
         ser, n = g.group(1).lower(), int(g.group(2))
         serx = re.sub(r'\s+', r'\\s*', re.escape(ser).replace(r'\ ', ' '))

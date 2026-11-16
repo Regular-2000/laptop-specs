@@ -137,7 +137,7 @@ thinkpad,E14 Gen 4 / E15 Gen 4,E14 Gen 4 / E15 Gen 4,\be14\b.*(\bgen\s*4\b|\b4th
 thinkpad,E14 Gen 5 / E16 Gen 1,E14 Gen 5 / E16 Gen 1,\be14\b.*(\bgen\s*5\b|\b5th\s*gen\b|\bg5\b)|(\bgen\s*5\b|\b5th\s*gen\b).*\be14\b,\be14s\b|\bgen\s*5\d
 thinkpad,E14 Gen 6 / E16 Gen 2,E14 Gen 6 / E16 Gen 2,\be14\b.*(\bgen\s*6\b|\b6th\s*gen\b|\bg6\b)|(\bgen\s*6\b|\b6th\s*gen\b).*\be14\b,\be14s\b|\bgen\s*6\d
 thinkpad,P52 / P72 / P52s,P52 / P72 / P52s,\bp52\b,\bp52s\b|\bp52p\b
-thinkpad,P1 Gen 1 / P1 Gen 2,P1 Gen 1 / P1 Gen 2,\bp1\b.*(\bgen\s*1\b|\b1st\s*gen\b|\bg1\b)|(\bgen\s*1\b|\b1st\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*1\d
+thinkpad,P1 Gen 1 / P1 Gen 2,P1 Gen 1 / P1 Gen 2,\bp1\b.*(\bgen\s*[12]\b|\b(1st|2nd)\s*gen\b|\bg[12]\b)|(\bgen\s*[12]\b|\b(1st|2nd)\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*1\d
 thinkpad,P53 / P73 / P43s / P53s,P53 / P73 / P43s / P53s,\bp53\b,\bp53s\b|\bp53p\b
 thinkpad,P1 Gen 3 / P15 / P17 / P15s,P1 Gen 3 / P15 / P17 / P15s,\bp1\b.*(\bgen\s*3\b|\b3rd\s*gen\b|\bg3\b)|(\bgen\s*3\b|\b3rd\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*3\d
 thinkpad,P1 Gen 4 / P15 Gen 2 / P17 Gen 2,P1 Gen 4 / P15 Gen 2 / P17 Gen 2,\bp1\b.*(\bgen\s*4\b|\b4th\s*gen\b|\bg4\b)|(\bgen\s*4\b|\b4th\s*gen\b).*\bp1\b,\bp1s\b|\bp1\s*gen\s*1[0-9]|\bgen\s*4\d
