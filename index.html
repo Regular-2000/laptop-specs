@@ -23,6 +23,8 @@
   .card .d{color:var(--dim);font-size:13px}
   .card .cnt{margin-top:10px;font-size:12px;color:var(--dim)}
   footer{margin-top:30px;color:var(--dim);font-size:12px;max-width:460px}
+  #ver{margin-top:10px;color:var(--dim);font-size:11px;opacity:.8;font-variant-numeric:tabular-nums}
+  #ver b{color:var(--text);font-weight:600}
   /* ---- quick model search ---- */
   .qwrap{width:100%;max-width:440px;margin:0 0 24px;position:relative}
   #q{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 14px;font-size:15px}
@@ -70,6 +72,16 @@
     </a>
   </div>
   <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access.</footer>
+  <!-- SITE VERSION: bump with EVERY commit that touches the site (date, then .2/.3 for more commits that day) -->
+  <div id="ver" data-v="2026.11.16" data-what="typical RAM + SSD config (as found)">Version <b>2026.11.16</b> · typical RAM + SSD config (as found)<span id="dep"></span></div>
+  <script>
+  // When GitHub Pages last published THIS page (from the server's Last-Modified header) —
+  // tells you whether the browser is showing the newest deploy. Skipped if the server sent none
+  // (the browser then reports "now", which would be misleading).
+  (function(){try{var t=new Date(document.lastModified);if(isNaN(t)||Math.abs(Date.now()-t)<5000)return;
+    var f=t.toLocaleString(undefined,{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    document.getElementById('dep').textContent=' · published '+f;}catch(e){}})();
+  </script>
 <script type="module">
 // Quick model search: counts live matches per brand (model + aliases + bat_fam +
 // charger text — same haystack as the brand pages' search) and deep-links to

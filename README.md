@@ -39,6 +39,9 @@ sub-pages. Until then: prefer grouped rows and aliases over new chips.
 **Adding a laptop = adding one CSV row.** No code changes needed. Edit the CSV directly
 on GitHub (pencil icon) and the site updates after the Pages build (~1 min).
 
+**Version line:** the front page (`index.html`, bottom) shows `Version YYYY.MM.DD · what changed`
+plus the time GitHub Pages published the page. Bump it with every commit — see TODO "Build note".
+
 ## Data conventions
 
 - `aliases` column: extra searchable names that share the row's platform but don't get
