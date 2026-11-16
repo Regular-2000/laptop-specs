@@ -153,6 +153,15 @@ sometimes battery P/N drift within a single model year.** So a parts ref on a ch
 tip is close to bulletproof; the same source on "which exact RAM shipped" deserves more
 doubt. Weight confidence by *which spec* you're reading, not just by the source tier.
 
+## ⚠ eBay scraping pace — NEVER do rapid searches (SM's rule, 2026-11-16)
+On 2026-11-16 ~110 eBay search loads in one session at 4–9 s gaps got eBay to answer **403 on search** for
+SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP depend on eBay — don't burn it.
+- **≥ 20 s between searches** (randomized 20–30 s), **≤ 40 searches per sitting**, then **≥ 3 h cool-down**.
+- Stop at the FIRST non-200 / empty / challenge page — no retries, no switching browser or method to get around it.
+- Keep results in the page AND mirror to localStorage as they arrive; make **ONE** download at the end
+  (Chrome blocks a 2nd automatic download); never navigate the working tab away before the file is in Downloads.
+- Same spirit for any other site (UserBenchmark: ≤ ~30 page loads per sitting, captcha = hard stop).
+
 ## Verification methodology (proof run)
 
 Planned "triple-distilled" audit uses **UserBenchmark system pages** as the empirical

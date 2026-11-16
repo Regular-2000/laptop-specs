@@ -275,12 +275,21 @@ OPEN (grey chips / blank serial = the to-do list, search `portunknown` or click 
 - Candidate extra fields if SM wants to filter on them: hot-swap battery, IP rating, touch/digitizer.
   For now they live in `note` (searchable).
 
+## ⚠ eBay scraping pace — NEVER do rapid searches (SM's rule, 2026-11-16)
+On 2026-11-16 ~110 eBay search loads in one session at 4–9 s gaps got eBay to answer **403 on search** for
+SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP depend on eBay — don't burn it.
+- **≥ 20 s between searches** (randomized 20–30 s), **≤ 40 searches per sitting**, then **≥ 3 h cool-down**.
+- Stop at the FIRST non-200 / empty / challenge page — no retries, no switching browser or method to get around it.
+- Keep results in the page AND mirror to localStorage as they arrive; make **ONE** download at the end
+  (Chrome blocks a 2nd automatic download); never navigate the working tab away before the file is in Downloads.
+- Same spirit for any other site (UserBenchmark: ≤ ~30 page loads per sitting, captcha = hard stop).
+
 ## ⚠ Build note — front-page version line (EVERY commit)
 `index.html` shows "Version YYYY.MM.DD · <what changed>" at the bottom, plus "published <time>" read
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.3.
+the newest version is live. Current: 2026.11.16.4.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

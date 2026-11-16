@@ -9,6 +9,9 @@ of a model, as it shows up for sale). Nothing here is interpreted — regroup it
 | `<date>_latitude-7490_active.txt` | first test pull (7490 only, `item_id|condition|title`) |
 | `row_map.csv` | which grid row (exact `model` cell of the brand CSV) each pull feeds, plus the title regexes that decide a card is that model (`must`) and not a neighbour (`exclude`) |
 
+**PACE: ≥ 20 s between searches, ≤ 40 per sitting, ≥ 3 h between sittings, stop at the first 403 — see
+TODO.md "eBay scraping pace". (Rapid 4–9 s gaps got search blocked on 2026-11-16.)**
+
 How it is pulled: Claude in Chrome, one search page loaded, the others fetched same-origin from that tab
 (~10 s apart), all kept in the page and saved as ONE download (Downloads → copied here). Plain HTTP from
 the PC is refused by eBay; the cloud shell can't reach eBay at all.
