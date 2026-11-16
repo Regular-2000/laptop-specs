@@ -257,6 +257,13 @@ OPEN (grey chips / blank serial = the to-do list, search `portunknown` or click 
 - Candidate extra fields if SM wants to filter on them: hot-swap battery, IP rating, touch/digitizer.
   For now they live in `note` (searchable).
 
+## ⚠ Build note — front-page version line (EVERY commit)
+`index.html` shows "Version YYYY.MM.DD · <what changed>" at the bottom, plus "published <time>" read
+from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
+`<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
+commits the same day, and a few words on what changed. That is how SM tells in the browser whether
+the newest version is live. Current: 2026.11.16.
+
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
