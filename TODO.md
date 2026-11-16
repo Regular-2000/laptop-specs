@@ -77,6 +77,13 @@ HD 8790M configs) — harvest during UB runs.
   folder first. Remaining: 80 searches (X1 Extreme Gen 4 → T14s Gen 6, all remaining HP, Dell 5xx1) =
   sittings 3 and 4.
 
+- **2026-11-16 16:38 sitting 3 (slow pace): 40 searches, no block.** ThinkPad X1 Extreme Gen 4/5, X1 Titanium,
+  T15p, E14 Gen 1, L13 Gen 1–5, X13s, T14s Gen 6; HP ProBook 640/650 G3–G7, 440/450 G4–G11, EliteBook 745/755,
+  8x5 G7–G11, 840 G4, 840 G11 (`ebay_raw/2026-11-16c-3_active.json`). Blank (< 10 usable listings): X1 Extreme
+  Gen 5, X1 Titanium, T15p Gen 1–3, L13 Gen 1, 440 G4, 745 G4, 650 G7 (zero — eBay serves 650 G8 instead).
+  FOUND: the site has NO ProBook 640 / 650 G8 rows, but they're plentiful on eBay — SM's call whether to add.
+  Remaining: 40 searches (HP 1020/1040/x360/Dragonfly/ZBook + Dell 5xx1) = sitting 4.
+
 ## 4. eBay "days on market" per model
 Where feasible: sold listings expose sold date; listing-start date is the hard
 part (sometimes visible on listing page). Research feasibility first — even a
@@ -335,7 +342,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.7.
+the newest version is live. Current: 2026.11.16.8.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
