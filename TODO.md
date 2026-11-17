@@ -84,6 +84,13 @@ HD 8790M configs) — harvest during UB runs.
   FOUND: the site has NO ProBook 640 / 650 G8 rows, but they're plentiful on eBay — SM's call whether to add.
   Remaining: 40 searches (HP 1020/1040/x360/Dragonfly/ZBook + Dell 5xx1) = sitting 4.
 
+- **2026-11-16 20:12 sitting 4 (slow pace): 40 searches, no block — batch 2 COMPLETE.** HP 1020/1040/x360/
+  Dragonfly/ZBook/Elite Folio + Dell 5xx1 (`ebay_raw/2026-11-16c-4_active.json`; the 5xx1 rows switch from benchmark
+  odds to eBay odds). 214 grid rows now have odds. Fix: a GB figure right after a graphics card ("RTX A3000 6GB",
+  "Quadro P1000 4GB") is video memory, not system RAM — workstation rows (P-series, X1 Extreme, ZBook) re-derived.
+  Rows in scope still blank (too few US eBay listings): dell 7380 · dell 3430 · dell 3530 · dell 7030 Rugged Tab. · dell Pro Rugged 13 · dell Pro Rugged 14 · thinkpad X13 Gen 5 · thinkpad X1 Carbon Gen 3 · thinkpad Z13 Gen 1 · thinkpad Z16 Gen 1 · thinkpad Z13 Gen 2 · thinkpad Z16 Gen 2 · thinkpad X1 Nano Gen 2 · thinkpad X1 Nano Gen 3 · thinkpad X1 Extreme Gen 1 · thinkpad X1 Extreme Gen 5 · thinkpad X1 Titanium Yoga · thinkpad T15p Gen 1 · thinkpad T15p Gen 2 · thinkpad T15p Gen 3 · thinkpad L13 Gen 1 / L13 Yoga Gen 1 · hp 650 G7 · hp 440 G4 / 450 G4 · hp 745 G4 / 755 G4 · hp Folio 1020 G1 · hp x360 1030 G3 / x360 1040 G5 · hp Elite Folio.
+  Next ideas: SOLD-listing comparison; ProBook 640/650 G8 rows don't exist yet (plentiful on eBay) — SM's call.
+
 ## 4. eBay "days on market" per model
 Where feasible: sold listings expose sold date; listing-start date is the hard
 part (sometimes visible on listing page). Research feasibility first — even a
@@ -342,7 +349,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.8.
+the newest version is live. Current: 2026.11.16.9.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

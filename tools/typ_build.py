@@ -49,10 +49,14 @@ RAM_TOK = re.compile(r'(?<![\d.])(\d{1,2})\s?gb\b(?!\s*(ssd|nvme|m\.?2|hdd|sata|
 RAM_OK = {2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 64}
 CAP_TOK = re.compile(r'(?<![\d.])(\d+(?:\.\d+)?)\s?(tb|gb|g)\b|(?<![\d.])(128|240|250|256|480|500|512|1000)\s?(nvme|ssd|m\.?2)', re.I)
 
+# a GB figure right after a graphics card (or followed by GDDR/VRAM) is video memory, not system RAM
+GPU_BEFORE = re.compile(r'((rtx|gtx|quadro|geforce|radeon)\s*(pro\s*)?[a-z]?\s?\d{0,4}\s*(ti|super|ada|max-q)?|\b[atpw]\d{3,4}m?|\bmx\s?\d{3}|\bnvidia|\bgpu)\s*[-,(]?\s*$', re.I)
+GPU_AFTER = re.compile(r'^\s?(gddr|vram|video|graphics|dedicated)', re.I)
 def ram_of(t):
     if NO_RAM.search(t): return 'none'
     for m in RAM_TOK.finditer(t):
         n = int(m.group(1))
+        if GPU_BEFORE.search(t[max(0, m.start() - 30):m.start()]) or GPU_AFTER.search(t[m.end():m.end() + 12]): continue
         if n in RAM_OK: return n
     return None
 
