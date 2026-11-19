@@ -78,7 +78,7 @@
   </div>
   <footer>Tap a brand, then tap any model for full specs, a photo and the official spec page. On mobile use your browser's "Add to Home Screen" for one-tap access.</footer>
   <!-- SITE VERSION: bump with EVERY commit that touches the site (date, then .2/.3 for more commits that day) -->
-  <div id="ver" data-v="2026.11.19.2" data-what="Precision: two-generation RAM chips (3570/3480/3580) shown half DDR4 green / half DDR5 orange">Version <b>2026.11.19.2</b> · Precision: 3570 / 3480 / 3580 come with DDR4 or DDR5 — chip now half green / half orange<span id="dep"></span></div>
+  <div id="ver" data-v="2026.11.19.3" data-what="Split-colour chips for models sold with two RAM generations, all brands; DDR4/DDR5 borderline rows re-checked">Version <b>2026.11.19.3</b> · all brands: models sold with two RAM generations get a split-colour chip; DDR4/DDR5 borderline rows re-checked and corrected<span id="dep"></span></div>
   <script>
   // When GitHub Pages last published THIS page (from the server's Last-Modified header) —
   // tells you whether the browser is showing the newest deploy. Skipped if the server sent none
@@ -104,7 +104,7 @@ const EXTRA_CSV=['getac.csv','panasonic.csv','precision.csv'];
 const q=document.getElementById('q'), res=document.getElementById('qres');
 let ALL=null, loading=null;
 function load(){
-  if(!loading) loading=import('./specdata.js?b=20261119b')
+  if(!loading) loading=import('./specdata.js?b=20261119c')
     .then(async m=>{const a=await m.loadAllBrands();const x=await Promise.all(EXTRA_CSV.map(f=>m.loadCSV(f).catch(()=>[])));return a.concat(...x);}).then(a=>{ALL=a;return a;});
   return loading;
 }

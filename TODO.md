@@ -378,14 +378,14 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.19.2.
+the newest version is live. Current: 2026.11.19.3.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20261119b (all six brand pages + index.html).
+visitors keep running the stale loader. Current stamp: 20261119c (all six brand pages + index.html).
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

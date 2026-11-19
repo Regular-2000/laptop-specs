@@ -133,6 +133,8 @@
     header h1{font-size:14px}
     #search{width:130px}
   }
+  .chip.mixg{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.65)}
+  .mixsw{display:inline-block;width:22px;height:11px;border-radius:3px;vertical-align:-1px;background:linear-gradient(135deg,var(--ddr4) 0 50%,var(--ddr5) 50% 100%)}
 </style>
 </head>
 <body>
@@ -161,7 +163,7 @@
       <span class="stf stall" id="stall" title="Toggle all storage filters at once">✕ clear</span>
       <span class="stf stall" id="clist" title="Compact one-screen view of the models matching the current filters, with save-as-HTML-report and copy-as-text">▤ report</span>
       <span class="stf stall" id="cmode" title="In ▦ All series: merge the series columns into one flowing row per year (like the report, but interactive). Click again for aligned columns.">▥ compact</span>
-      <span class="hint">⊶ = serial port · ⊶° = serial optional · grey = RAM type unverified · 🔒 = soldered · search: "-word" excludes · "portnone" = confirmed no serial</span>
+      <span class="hint">⊶ = serial port · ⊶° = serial optional · grey = RAM type unverified · 🔒 = soldered · search: "-word" excludes · "portnone" = confirmed no serial · <span class="mixsw"></span> split colour = sold with two RAM generations</span>
     </div>
   </div>
   <div class="laddercap">⊶ serial is shown on the chip · <span style="text-transform:none;letter-spacing:0">hover a tab for who it's for · blank = not verified yet, never a guess</span></div>
@@ -190,7 +192,7 @@
 // ===== Data lives in getac.csv (universal schema shared with dell.csv / thinkpad.csv) =====
 // Columns: brand,series,model,year,col,size,cpu,gen,ram,slots,max,sold,w11,tag,stor,os,note
 // cache-bust the loader import so a stale browser-cached specdata.js can't mask data/logic updates
-const {loadCSV,loadAllBrands,showCompactList,rsLabel,rpLabel}=await import('./specdata.js?b=20261119b');
+const {loadCSV,loadAllBrands,showCompactList,rsLabel,rpLabel}=await import('./specdata.js?b=20261119c');
 const ALL=await loadCSV('getac.csv');
 
 const GENLABEL={unk:"Not verified yet",sdr:"SDRAM (PC100/133)",ddr1:"DDR",ddr2:"DDR2",ddr3:"DDR3 / LPDDR3",ddr4:"DDR4 / LPDDR4x",ddr5:"DDR5 / LPDDR5(x)"};
@@ -258,9 +260,11 @@ function HAY(d){const sh=t=>t?t.split(String.fromCharCode(124,62))[0]:'';
    (d.w11?' win11':' no-win11')+(d.sold?' soldered':'')).toLowerCase();}
 function makeChip(d,sk){
   const ch=document.createElement('div');
-  ch.className='chip '+d.gen+(d.sold?' soldered':'');
+  const GS=String(d.gen).split('/');
+  ch.className='chip '+(GS.length>1?'mixg':d.gen)+(d.sold?' soldered':'');
+  if(GS.length>1) ch.style.background='linear-gradient(135deg,var(--'+GS[0]+') 0 50%,var(--'+GS[1]+') 50% 100%)';
   const rsm=d.rs232===1?'⊶ ':d.rs232===2?'⊶° ':d.rs232===0?'':'';
-  ch.innerHTML='<b>'+d.m+'</b><span>'+rsm+(d.sold?'🔒 ':'')+(d.gen==='unk'?'RAM ?':d.ram.split(' ')[0].replace(';',''))+' · '+d.tag+' · '+d.size+'</span>';
+  ch.innerHTML='<b>'+d.m+'</b><span>'+rsm+(d.sold?'🔒 ':'')+(d.gen==='unk'?'RAM ?':(GS.length>1?GS.map(g=>g.toUpperCase()).join('/'):d.ram.split(' ')[0].replace(';','')))+' · '+d.tag+' · '+d.size+'</span>';
   ch.onclick=()=>select(d,ch,sk);
   ch.dataset.model=HAY(d);
   ch.dataset.gen=d.gen; ch.dataset.w11=d.w11===0?0:1;
@@ -382,7 +386,7 @@ function select(d,el,sk){
     '<div class="row"><div class="k">🔧 CPU re-paste</div><div class="v'+(d.rp===undefined?' rsu':'')+'">'+rpLabel(d)+(d.rp_note?' · '+DEEP(d.rp_note):'')+'</div></div>'+
     (d.bat?'<div class="row"><div class="k">🔋 Battery</div><div class="v">'+DEEP(d.bat)+(d.bat_fam?' <button class="famBtn" onclick="FAMGO(&quot;bat&quot;,&quot;'+d.bat_fam+'&quot;)">⇄ same battery ('+d.bat_fam+')</button>':'')+(d.bat_note?'<br><span style="font-size:11.5px;color:var(--dim)">'+DEEP(d.bat_note)+'</span>':'')+'</div></div>':'')+
     (d.price?(()=>{const pn=d.price_note||'';const real=/^Real /.test(pn);const samp=/^Est\. cross-checked/.test(pn);const tag=real?'<span class="badge b-yes">real data</span>':samp?'<span class="badge b-sold">est · sampled</span>':'<span class="badge b-sold">estimate</span>';return '<div class="row"><div class="k">💰 eBay sold (mid-2026)*</div><div class="v">'+DEEP('<b>'+d.price+'</b> '+tag+'|>'+pn+UPG(d))+'</div></div>';})():'')+
-    (d.note?'':'')+'<div class="row"><div class="k">RAM generation</div><div class="v">'+GENLABEL[d.gen]+'</div></div>'+
+    (d.note?'':'')+'<div class="row"><div class="k">RAM generation</div><div class="v">'+String(d.gen).split('/').map(g=>GENLABEL[g]).join(' <b>or</b> ')+(String(d.gen).includes('/')?' — this model was sold with either; check the sticks / label on the unit':'')+'</div></div>'+
     '<div class="row"><div class="k">Shipped OS (typical)</div><div class="v">'+(d.os||YEAROS[d.y]||'—')+'</div></div>'+
     (d.note?'<div class="note">'+DEEP(d.note)+'</div>':'')+(d.st_note?'':'');
   panel.classList.add('show');
@@ -440,7 +444,7 @@ document.getElementById('clist').onclick=async function(){
     if(sTxt) extras.push('search: "'+sTxt+'"');
     if(famFilt) extras.push((famFilt.kind==='bat'?'battery family ':'charger ')+famFilt.key);
     showCompactList({
-      models:all.filter(d=>!genOff.has(d.gen)&&(!w11Only||d.w11!==0)&&rsPass(d)&&rpPass(d)&&sMatch(HAY(d),sTxt)&&stPass(d)&&famPass(d)),
+      models:all.filter(d=>genVis(d)&&(!w11Only||d.w11!==0)&&rsPass(d)&&rpPass(d)&&sMatch(HAY(d),sTxt)&&stPass(d)&&famPass(d)),
       brandLabel:'Getac rugged', ctxKind:famFilt?famFilt.kind:(rsMode?'rs232':(rpMax?'rp':null)),
       stOnKeys:[...stOn], allStOn:stOn.size===STKEYS.length, extras
     });
@@ -469,11 +473,12 @@ window.FAMGO=function(kind,key){
 };
 window.FAMCLEAR=function(){famFilt=null;famBar.style.display='none';apply();};
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&famFilt)FAMCLEAR();});
+function genVis(d){return String(d.gen).split('/').some(g=>!genOff.has(g));}
 function apply(){
   const s=q.value.trim().toLowerCase();
   let firstHit=null;
   allChips.forEach(({el,d})=>{
-    const genOk=!genOff.has(d.gen);
+    const genOk=genVis(d);
     const wOk=!w11Only||(d.w11!==0);
     const rOk=rsPass(d)&&rpPass(d);
     const sOk=sMatch(el.dataset.model,s);

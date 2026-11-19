@@ -102,6 +102,12 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   largest first; the chip shows the size). Name new rugged rows "<num> Rugged",
   "<num> Rugged Ext.", "<num> Rugged Tab." or "<model> XFR" and they land there
   automatically. Semi-rugged ATG variants are aliases on their base E/D rows, not chips.
+- **Mixed `gen` = model sold with two RAM generations (all pages, 2026-11-19):** write both keys, older first,
+  `gen = ddr4/ddr5` (also `ddr3/ddr4`, `ddr2/ddr3`). The chip is drawn split diagonally in both legend colours,
+  its face reads e.g. DDR4/DDR5, the panel says "DDR4 or DDR5 — check the sticks / label", and it hides only when
+  BOTH legend colours are off. Use it only when the vendor spec (Dell manual / Lenovo PSREF / HP QuickSpecs) lists
+  both, and say in `notes` which CPU/build gets which. Renderer patch: `tools/patch_mixed_gen.py` (idempotent);
+  report/overlay/canvas export handle it in `specdata.js` (`mixBg`).
 
 ## Rugged pages (Getac / Panasonic, added 2026-10-10)
 
@@ -144,8 +150,7 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   7550 → 7770, older Dell video modules on M40/M60/M70/M90/M6500/M6600; 0 = soldered; blank = unverified),
   `gpu_mxm_note`, `gpu_typ` / `gpu_typ_note` (likely GPU of a random unit — not filled yet), `scr` / `scr_note`
   (every panel Dell offered: resolution, touch, brightness, gamut, refresh, panel tech).
-- **Two RAM generations under one model** (3570, 3480, 3580 — Dell lists DDR4-3200 and DDR5 builds): `gen = ddr4/ddr5`;
-  the chip is drawn half green / half orange, the face says DDR4/DDR5, and it hides only when both legend colours are off.
+- **Two RAM generations under one model:** see Data conventions → mixed `gen` (3570 / 3480 / 3580 here).
 - **🎮 GPU filter:** any → ▣ removable card → soldered dGPU → integrated only. Search also matches GPU and panel
   text (`rtx a2000`, `t1000`, `oled`, `touch`, `uhd`) and tokens `mxm` / `removable-gpu` / `soldered-gpu` / `uma-only`.
 - **Sources:** Dell's own documents only for specs — Setup & Specifications / Owner's Manual HTML pages on

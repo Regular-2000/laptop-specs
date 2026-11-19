@@ -137,6 +137,8 @@ const ST_COL={bay25:'st_25sata',ide:'st_ide',msata:'st_msata',m2sata:'st_m2sata'
 // gen palette duplicated here so the exported report is self-contained (no CSS vars)
 const GENBG={sdr:'#8d6e63',ddr1:'#7d8799',ddr2:'#b07aa1',ddr3:'#4e79a7',ddr4:'#59a14f',ddr5:'#f28e2b'};
 
+// two-generation rows (gen = "ddr4/ddr5"): diagonal split of both palette colours
+const mixBg=g=>{const a=String(g).split('/');return a.length>1?'linear-gradient(135deg,'+(GENBG[a[0]]||'#666')+' 0 50%,'+(GENBG[a[1]]||'#666')+' 50% 100%)':null;};
 const stripTags=s=>String(s==null?'':s).replace(/<[^>]*>/g,'');
 const shortOf=s=>{const t=String(s==null?'':s);const j=t.indexOf(String.fromCharCode(124,62));return j<0?t:t.slice(0,j);};
 const escH=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -193,8 +195,8 @@ function buildReportHTML(o){
   const rows=yrs.map(yr=>{
     const chips=o.models.filter(d=>d.y===yr).map(d=>{
       const optional=o.single&&d[ST_COL[o.single]]===2;
-      return '<span class="c" style="background:'+(GENBG[d.gen]||GENBG[String(d.gen).split('/')[0]]||'#666')+
-        (d.gen==='ddr5'?';color:#1b1b1b':'')+(optional?';border:1.5px dashed rgba(0,0,0,.45)':'')+'">'+
+      return '<span class="c" style="background:'+(mixBg(d.gen)||GENBG[d.gen]||'#666')+
+        (d.gen==='ddr5'?';color:#1b1b1b':mixBg(d.gen)?';color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)':'')+(optional?';border:1.5px dashed rgba(0,0,0,.45)':'')+'">'+
         '<b>'+escH(d.m)+(optional?' °':'')+'</b><small>'+escH((d.y?d.y+' · ':'')+ctxOf(d,o.ctxKind))+'</small></span>';
     }).join('');
     return '<div class="yr"><div class="y">'+(yr||'—')+'</div><div class="cc">'+chips+'</div></div>';
@@ -286,7 +288,8 @@ function drawReportImage(o){
     else{ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}};
   for(const it of items){
     if(it.yearLabel){ctx.font=yF;ctx.fillStyle='#5b7185';ctx.fillText(it.yearLabel,it.x,it.y+28);continue;}
-    ctx.fillStyle=GENBG[it.gen]||'#666'; rr(it.x,it.y,it.w,chipH,7); ctx.fill();
+    {const mg=String(it.gen).split('/'); if(mg.length>1){const gr=ctx.createLinearGradient(it.x,it.y,it.x+it.w,it.y+chipH);gr.addColorStop(0,GENBG[mg[0]]||'#666');gr.addColorStop(.5,GENBG[mg[0]]||'#666');gr.addColorStop(.5,GENBG[mg[1]]||'#666');gr.addColorStop(1,GENBG[mg[1]]||'#666');ctx.fillStyle=gr;} else ctx.fillStyle=GENBG[it.gen]||'#666';}
+    rr(it.x,it.y,it.w,chipH,7); ctx.fill();
     if(it.optional){ctx.setLineDash([5,4]);ctx.strokeStyle=it.gen==='ddr5'?'rgba(0,0,0,.5)':'rgba(255,255,255,.7)';ctx.lineWidth=1.5;rr(it.x+1,it.y+1,it.w-2,chipH-2,6);ctx.stroke();ctx.setLineDash([]);}
     ctx.fillStyle=it.gen==='ddr5'?'#1b1b1b':'#ffffff';
     ctx.font=mF; ctx.fillText(it.name,it.x+10,it.y+21);
@@ -349,6 +352,7 @@ export function showCompactList(opts){
       const optional=single&&d[ST_COL[single]]===2;
       const ch=document.createElement('span');
       ch.className='cchip '+d.gen+(optional?' copt':'');
+      if(mixBg(d.gen)){ch.style.background=mixBg(d.gen);ch.style.color='#fff';}
       ch.textContent=d.m+(optional?' °':'');
       ch.title=(d.series?d.series+' · ':'')+ctxOf(d,opts.ctxKind)+' · '+d.ram+' · max '+d.max+
         (optional?' · '+ST_LABEL[single]+' optional/config-dependent':'');
