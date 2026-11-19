@@ -193,7 +193,7 @@ function buildReportHTML(o){
   const rows=yrs.map(yr=>{
     const chips=o.models.filter(d=>d.y===yr).map(d=>{
       const optional=o.single&&d[ST_COL[o.single]]===2;
-      return '<span class="c" style="background:'+(GENBG[d.gen]||'#666')+
+      return '<span class="c" style="background:'+(GENBG[d.gen]||GENBG[String(d.gen).split('/')[0]]||'#666')+
         (d.gen==='ddr5'?';color:#1b1b1b':'')+(optional?';border:1.5px dashed rgba(0,0,0,.45)':'')+'">'+
         '<b>'+escH(d.m)+(optional?' °':'')+'</b><small>'+escH((d.y?d.y+' · ':'')+ctxOf(d,o.ctxKind))+'</small></span>';
     }).join('');

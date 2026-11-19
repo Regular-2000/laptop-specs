@@ -144,6 +144,8 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   7550 → 7770, older Dell video modules on M40/M60/M70/M90/M6500/M6600; 0 = soldered; blank = unverified),
   `gpu_mxm_note`, `gpu_typ` / `gpu_typ_note` (likely GPU of a random unit — not filled yet), `scr` / `scr_note`
   (every panel Dell offered: resolution, touch, brightness, gamut, refresh, panel tech).
+- **Two RAM generations under one model** (3570, 3480, 3580 — Dell lists DDR4-3200 and DDR5 builds): `gen = ddr4/ddr5`;
+  the chip is drawn half green / half orange, the face says DDR4/DDR5, and it hides only when both legend colours are off.
 - **🎮 GPU filter:** any → ▣ removable card → soldered dGPU → integrated only. Search also matches GPU and panel
   text (`rtx a2000`, `t1000`, `oled`, `touch`, `uhd`) and tokens `mxm` / `removable-gpu` / `soldered-gpu` / `uma-only`.
 - **Sources:** Dell's own documents only for specs — Setup & Specifications / Owner's Manual HTML pages on

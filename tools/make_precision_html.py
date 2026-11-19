@@ -117,6 +117,19 @@ sub("const rt=document.getElementById('rs232toggle');",
     "const gt=document.getElementById('gputoggle');\ngt.onclick=()=>{gpuMode=(gpuMode+1)%4;gt.textContent=GPUMODES[gpuMode];gt.classList.toggle('on',gpuMode>0);apply();};\nconst rt=document.getElementById('rs232toggle');")
 sub('rpMax=0;syncRp();', 'rpMax=0;syncRp();gpuMode=0;var _g=document.getElementById("gputoggle");if(_g){_g.classList.remove("on");_g.textContent=GPUMODES[0];}')
 
+
+# ---- mixed RAM generation (gen = "ddr4/ddr5": Dell sells both builds under one model) ----
+sub("  .chip.unk{", "  .chip.mixg{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)}\n  .chip.unk{")
+sub("ch.className='chip '+d.gen+(d.sold?' soldered':'');",
+    "const GS=d.gen.split('/');\n  ch.className='chip '+(GS.length>1?'mixg':d.gen)+(d.sold?' soldered':'');\n"
+    "  if(GS.length>1) ch.style.background='linear-gradient(135deg,var(--'+GS[0]+') 0 50%,var(--'+GS[1]+') 50% 100%)';")
+sub("(d.gen==='unk'?'RAM ?':d.ram.split(' ')[0].replace(';',''))",
+    "(d.gen==='unk'?'RAM ?':GS.length>1?GS.map(g=>g.toUpperCase()).join('/'):d.ram.split(' ')[0].replace(';',''))")
+sub("'+GENLABEL[d.gen]+'", "'+d.gen.split('/').map(g=>GENLABEL[g]).join(' <b>or</b> ')+(d.gen.includes('/')?' — Dell sells both builds under this model; check the sticks / label on the unit':'')+'")
+sub("models:all.filter(d=>!genOff.has(d.gen)&&", "models:all.filter(d=>genVis(d)&&")
+sub("const genOk=!genOff.has(d.gen);", "const genOk=genVis(d);")
+sub("function rsPass(d){", "function genVis(d){return d.gen.split('/').some(g=>!genOff.has(g));}\nfunction rsPass(d){")
+
 # Toughbook part-number matcher is not needed (harmless) — leave it.
 assert 'Getac' not in out.split('<script')[0] or True
 left = [l for l in out.splitlines() if 'Getac' in l]
