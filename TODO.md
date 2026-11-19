@@ -335,6 +335,35 @@ OPEN / needs SM's call:
 - Not added: Latitude 3301 (2019, 13.3″ — ends in 1 but is an ordinary thin 3000, not a performance twin; no row on the site yet)
   and the Precision twins that share these boards (3530/3541/3551/3561/3571) — say if wanted.
 
+## 15. Dell Precision page (started 2026-11-19)
+DONE: `precision.html` + `precision.csv` (see README "Dell Precision page"). SM's scope (2026-11-19): own page; per model
+the GPU option list + VRAM, removable (MXM / Dell module) vs soldered, likely-GPU odds; screen options (what existed +
+value premium); go back ~20 years (M20/M65/M90 era) — older M40/M50/M60 included as chips too.
+How the data was gathered (reuse):
+- Dell product codes from the support site's catalog (precision-m4800-workstation, precision-15-7540-laptop,
+  dell-pro-max-mb16250-laptop …). Listing pages `/support/product-details/en-us/product/<code>/resources/manuals`
+  render client-side: open each in the **built-in browser** tab (navigate + read links, 12 per browser_batch) — an
+  iframe/popup/XHR shortcut is not available (iframe null, popups blocked, the internal POST API is off-limits).
+- HTML manuals (`/support/manuals/en-us/<code>/<doc>/<topic>?guid=…`) are server-rendered: same-origin `fetch()` +
+  DOMParser, content in `#divTopicContent`. TOC links = anchors with `guid=` under the same doc path (**compare
+  lowercase** — doc slugs change case) and **dedupe by full URL incl. guid** (Setup & Specs guides have two topics
+  both called "Display" / "Video": the BIOS-options page and the spec table).
+- Owner's Manuals (2013–2017) keep all specs in one "Technical Specification(s)" topic; Dell says "MXM type-A/B add-in
+  card" there for M4800/M6800/7510/7710/7520/7720.
+- Pre-2013 models: PDFs only → WebFetch `https://dl.dell.com/manuals/all-products/esuprt_laptop/esuprt_precision_mobile/<file>`
+  (lowercase `/manuals/`; specs sit ~60–90 % into the User's Guide → use `offset`). Service-manual TOC for the GPU question.
+- Pace: ~0.5–1 s between same-origin GETs on dell.com, no blocks seen (~1,500 page loads over ~90 min).
+OPEN / next:
+- **Likely-GPU odds (`gpu_typ`)**: UserBenchmark system pages list the benchmarked GPU split per model (≤ 30 loads per
+  sitting, captcha = stop); then slow eBay title pulls (TODO "eBay scraping pace") — GPU names are in most titles.
+- **Screen value premium**: needs eBay SOLD comps split by panel (FHD vs UHD/OLED/touch) per popular model — slow
+  scheduled sittings only; never estimate.
+- Prices, re-paste levels, bat_fam beyond 3541/3551 (3HWPP) and 3561/3571 (GRT01).
+- Rows whose cells are blank = Dell document didn't say (see the row note), e.g. M50 (no documents online), M6400 / M4500
+  / M4600 / M6500 screens, M4600 / M6300 / M6400 GPU module type.
+- Dell text oddities kept as-is with a note: 5510 manual says "GeForce GTX 960M" (XPS copy), 3510 says "Radeon R7 M370",
+  7530 lists the UHD panel as 1920×1080, M4400 sheet names only the FX 580M.
+
 ## ⚠ eBay scraping pace — NEVER do rapid searches (SM's rule, 2026-11-16)
 On 2026-11-16 ~110 eBay search loads in one session at 4–9 s gaps got eBay to answer **403 on search** for
 SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP depend on eBay — don't burn it.
@@ -349,14 +378,14 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.16.9.
+the newest version is live. Current: 2026.11.19.1.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
 buster, because GitHub Pages caches JS ~10 min without revalidating). CSV fetches use
 `{cache:'no-cache'}` so DATA edits show on a normal refresh with no stamp change. BUT
 whenever `specdata.js` ITSELF changes, bump the `?b=` stamp in all three HTML files or
-visitors keep running the stale loader. Current stamp: 20261116 (all five brand pages + index.html).
+visitors keep running the stale loader. Current stamp: 20261119 (all six brand pages + index.html).
 
 ## 9. Battery market research
 Fake-OEM problem: $20–35 "genuine" packs on eBay are counterfeit almost without

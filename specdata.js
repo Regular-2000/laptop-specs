@@ -52,6 +52,15 @@
 //            with tools/typ_from_ubm.py (never hand-edit — regenerate).
 //   typ_note - the evidence behind typ: UBM system name, PC count, date, RAM / SSD
 //            size split within the visible top-5, caveats. Shown behind the ⓘ.
+//   --- precision.csv only (2026-11-19, Dell Precision page) ---
+//   gpu    - every graphics option Dell sold on the model, short list with VRAM ("UMA (Intel UHD 630) ·
+//            Quadro T1000 4 GB · …"); starts with "UMA only" when no discrete GPU was offered.
+//            Supports `short |> deep`. gpu_note = extra detail behind the ⓘ (source, caveats).
+//   gpu_mxm - 1 = discrete GPU is an MXM module (removable), 0 = soldered, 2 = depends on config,
+//            blank = unverified. gpu_mxm_note = source / which configs.
+//   gpu_typ / gpu_typ_note - likely GPU of a random unit (odds) + evidence, same idea as typ.
+//   scr / scr_note - every screen panel Dell offered (resolution, touch, brightness, gamut, refresh,
+//            panel tech) + source / value notes.
 //   aliases- extra searchable model names (variants that share this row's platform,
 //            e.g. "X1 Yoga Gen 3" on the X1 Carbon Gen 6 row). Not displayed on the chip.
 //
@@ -433,6 +442,9 @@ export async function loadCSV(url){
     const rpn=get(r,'repaste_note'); if(rpn) o.rp_note=rpn;
     const tp=get(r,'typ'); if(tp) o.typ=tp;                    // blank = not harvested yet
     const tpn=get(r,'typ_note'); if(tpn) o.typ_note=tpn;
+    // Precision page (precision.csv) — graphics / screen columns; absent in the other CSVs = harmless
+    for(const k of ['gpu','gpu_note','gpu_mxm_note','gpu_typ','gpu_typ_note','scr','scr_note']){ const v=get(r,k); if(v) o[k]=v; }
+    const mx=get(r,'gpu_mxm'); if(mx!=='') o.gpu_mxm=+mx;       // undefined = unverified
     return o;
   });
 }

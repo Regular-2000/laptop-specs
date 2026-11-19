@@ -5,7 +5,7 @@ Live at **https://regular-2000.github.io/laptop-specs/**
 
 Covers **Dell Latitude**, **Lenovo ThinkPad** (incl. IBM era), **HP business laptops**
 (ProBook / EliteBook / Dragonfly / ZBook) and — since Oct 2026 — the rugged brands
-**Getac** and **Panasonic Toughbook** (separate pages; may be merged later). Per model: RAM type & max, upgradeability
+**Getac** and **Panasonic Toughbook** (separate pages; may be merged later), and — since Nov 2026 — **Dell Precision** mobile workstations (own page, GPU + screen options). Per model: RAM type & max, upgradeability
 (soldered vs SODIMM), storage interfaces, Windows 11 eligibility, typical shipped OS,
 typical eBay sold price, a photo and a link to the official spec page.
 
@@ -128,6 +128,31 @@ plus the time GitHub Pages published the page. Bump it with every commit — see
   RuggedPCReview.com spec tables (excellent per-generation tables; reachable from the built-in
   browser, not from the cloud fetcher), Kingston's memory configurator for slot counts.
 - No prices yet on either rugged page (needs a live sold-comps pull — never training data).
+
+## Dell Precision page (added 2026-11-19)
+
+- `precision.html` + `precision.csv` — Dell's mobile workstations, ~2001 → 2026, one chip per model (the xx1
+  H-series 3000s — 3541/3551/3561/3571/3581/3591 — are their own chips, like the Latitude 5xx1 rows).
+  Generated from `getac.html` by `tools/make_precision_html.py` (re-run it after a renderer fix in getac/panasonic).
+  `index.html` loads `precision.csv` via `EXTRA_CSV` (brand key `precision`).
+- **Tabs by lineage:** ③ 3000 (Latitude-based: M20 → M2300 → M2400 → M2800 → 3510 … → Pro Max 14/16) ·
+  ⑤ 5000 (XPS-based: M3800 → 5510 … 5690, 5470/5480/5490, 17″ 5750/5760/5770) · ⑦ 7000 15–16″
+  (M40/M50/M60/M70/M65 → M4300 … M4800 → 7510 … 7680) · ⑰ 7000 17–18″ (M90 → M6300 … M6800 → 7710 … 7780).
+- **Extra columns (precision.csv only; specdata.js passes them through, harmless elsewhere):**
+  `gpu` (every graphics option Dell sold, with VRAM; starts with "UMA only" when no dGPU was offered),
+  `gpu_note`, `gpu_mxm` (1 = removable card — MXM type-A/B on M4800 → 7540, Dell's own "GPU card" on
+  7550 → 7770, older Dell video modules on M40/M60/M70/M90/M6500/M6600; 0 = soldered; blank = unverified),
+  `gpu_mxm_note`, `gpu_typ` / `gpu_typ_note` (likely GPU of a random unit — not filled yet), `scr` / `scr_note`
+  (every panel Dell offered: resolution, touch, brightness, gamut, refresh, panel tech).
+- **🎮 GPU filter:** any → ▣ removable card → soldered dGPU → integrated only. Search also matches GPU and panel
+  text (`rtx a2000`, `t1000`, `oled`, `touch`, `uhd`) and tokens `mxm` / `removable-gpu` / `soldered-gpu` / `uma-only`.
+- **Sources:** Dell's own documents only for specs — Setup & Specifications / Owner's Manual HTML pages on
+  dell.com/support (harvested in the built-in browser, see TODO §15) and Dell PDFs on
+  `dl.dell.com/manuals/...` (lowercase path works with WebFetch; `/Manuals/` and downloads.dell.com are
+  robots-blocked). Removable-vs-soldered GPU comes from the service manual's table of contents ("Removing the
+  video/graphics/GPU card") or Dell's own "MXM type-A/B add-in card" wording. Where Dell's text contradicts
+  itself or other sources, the note says so instead of picking one.
+- No prices, no likely-GPU odds, no screen value premium yet — those need slow live pulls (TODO §15).
 
 ## Source-of-truth hierarchy (how much to trust a given cell)
 
