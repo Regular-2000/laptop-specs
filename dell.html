@@ -219,12 +219,14 @@ const COLS=[15,14,13,12,'R'];
 function ruggedOrder(a,b){return (b.sz||0)-(a.sz||0)||mnum(a.m)-mnum(b.m);}
 function mnum(m){const x=(m.replace(/[^0-9]/g,'').match(/\d+/)||[0])[0];return parseInt(x)||0;}
 // Which sub-column (tier) a model belongs to: 0=3000, 1=5000, 1.5=5xx1 performance twins (5491…5531: H/P-series CPU,
-// bigger charger, optional GeForce — a different board from the 5xx0), 2=6000 (legacy E6xxx), 3=7000/Pro Plus, 4=9000.
+// bigger charger, optional GeForce — a different board from the 5xx0), 2=6000 (legacy E6xxx), 3=7000/Pro Plus, 4=9000,
+// tier+0.6 = ***9 2016–17 convertibles/tablets (0.6 / 1.6 / 3.6).
 // Rugged and legacy (D/C/E4000) return -1 and simply flow after the aligned slots.
 function slotOf(d){
   if(/rugged/i.test(d.m)) return -1;
   if(/^5[45]\d1$/.test(d.m)) return 1.5;     // sits right beside its 5xx0 sibling, own aligned sub-column
   if(/^(5455|7455)$/.test(d.m)) return -1;   // ARM twins flow beside their Intel siblings
+  if(/^[357]\d\d9$/.test(d.m)) return {3:0,5:1,7:3}[d.m[0]]+0.6;  // ***9 = 2016–17 2-in-1s / tablets (3379, 5179, 5289, 7389): own sub-column right after the clamshell twin of the same year
   if(/pro plus/i.test(d.m)) return 3;
   const f=Math.floor(mnum(d.m)/1000);
   if(f===3) return 0; if(f===5) return 1; if(f===6) return 2; if(f===7) return 3; if(f===9) return 4;

@@ -335,6 +335,26 @@ OPEN / needs SM's call:
 - Not added: Latitude 3301 (2019, 13.3″ — ends in 1 but is an ordinary thin 3000, not a performance twin; no row on the site yet)
   and the Precision twins that share these boards (3530/3541/3551/3561/3571) — say if wanted.
 
+## 16. Latitude ***9 convertibles / tablet (2026-11-20)
+DONE: 4 Dell rows, each in its own aligned sub-column right after the clamshell twin (`slotOf()` → tier + 0.6 for
+`/^[357]\d\d9$/`: 3379 → 0.6 beside 3380, 5179 / 5289 → 1.6 beside E5270 / 5280, 7389 → 3.6 beside 7380).
+- 3379 (2016, 13.3″ 360°): 6th gen only, **2× SODIMM** DDR4-2133 max 16, one M.2 SATA, 45 W **4.5 mm** barrel (USB-C charging
+  not stated), WDX0R 42 Wh, re-paste L1 (fan separate). Source: Dell owner's manual `latitude-13-3379-2-in-1-laptop_owners-manual`
+  + Dell spec sheet.
+- 5289 (2017, 12.5″ 360°) / 7389 (2017, 13.3″ 360°): 7th gen U, LPDDR3-1866 soldered 4/8/16, M.2 SATA or NVMe (7389 manual:
+  2280), USB-C only 45/65 W, batteries 71TG4 45 Wh 11.4 V / K5XWW 60 Wh 7.6 V, re-paste L2. Source: Dell owner's manuals
+  (`latitude-12-5289-2-in-1-laptop_owners-manual2`, `latitude-13-7389-2-in-1-laptop_owners-manual`).
+- 5179 (2016, 10.8″ tablet, alias 5175): Core m 6th gen, LPDDR3-1600 soldered 4/8, M.2 SATA (NVMe on post-Mar-2016 builds per a
+  third-party guide), USB-C 20 V 1.5 A = 30 W. Source: Dell user's guide `latitude-5175-laptop_users-guide2`.
+- `rs232` = 0 on all four. No prices. eBay odds: 5179 / 5289 / 7389 appended to `ebay_raw/row_map.csv` (3379 is socketed + 2016 →
+  outside the odds scope).
+OPEN:
+- `bat_fam` left blank: WDX0R (3379) and K5XWW / 71TG4 (5289 / 7389 / 7390 2-in-1) rest on vendor lists only.
+- 5179: re-paste, battery FRU, M.2 length not verified; no support-page `url` pinned (DuckDuckGo redirect used).
+- 3379: M.2 length not stated by Dell.
+- 3189 stays an alias on the 31x0 education row (soldered, already covered).
+- Not ***9 but not searchable either (only mentioned in notes): 5285, 7275, 7285 detachables, 5290 2-in-1, 7390 2-in-1.
+
 ## 15. Dell Precision page (started 2026-11-19)
 DONE: `precision.html` + `precision.csv` (see README "Dell Precision page"). SM's scope (2026-11-19): own page; per model
 the GPU option list + VRAM, removable (MXM / Dell module) vs soldered, likely-GPU odds; screen options (what existed +
@@ -378,7 +398,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.19.3.
+the newest version is live. Current: 2026.11.20.1.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache

@@ -240,3 +240,6 @@ dell,5501,5501,\blatitude\b.*\b5501\b|\b5501\b.*\blatitude\b,\binspiron\b|\bvost
 dell,5401,5401,\blatitude\b.*\b5401\b|\b5401\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
 dell,5591,5591,\blatitude\b.*\b5591\b|\b5591\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
 dell,5491,5491,\blatitude\b.*\b5491\b|\b5491\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b|\b2[- ]?in[- ]?1\b
+dell,7389,7389,\blatitude\b.*\b7389\b|\b7389\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5179,5179,\blatitude\b.*\b5179\b|\b5179\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
+dell,5289,5289,\blatitude\b.*\b5289\b|\b5289\b.*\blatitude\b,\binspiron\b|\bvostro\b|\bprecision\b|\boptiplex\b|\bxps\b|\brugged\b
