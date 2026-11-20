@@ -338,8 +338,8 @@ OPEN / needs SM's call:
 ## 16. Latitude ***9 convertibles / tablet (2026-11-20)
 DONE: 4 Dell rows, each in its own aligned sub-column right after the clamshell twin (`slotOf()` → tier + 0.6 for
 `/^[357]\d\d9$/`: 3379 → 0.6 beside 3380, 5179 / 5289 → 1.6 beside E5270 / 5280, 7389 → 3.6 beside 7380).
-- 3379 (2016, 13.3″ 360°): 6th gen only, **2× SODIMM** DDR4-2133 max 16, one M.2 SATA, 45 W **4.5 mm** barrel (USB-C charging
-  not stated), WDX0R 42 Wh, re-paste L1 (fan separate). Source: Dell owner's manual `latitude-13-3379-2-in-1-laptop_owners-manual`
+- 3379 (2016, 13.3″ 360°): 6th gen only, **2× SODIMM** DDR4-2133, Dell max 16 but 🔬 SM confirmed 32 GB works (2026-11-20),
+  one M.2 SATA, 45 W **4.5 mm** barrel + USB-C charging (🔬 SM confirmed 2026-11-20; Dell's manual doesn't mention it), WDX0R 42 Wh, re-paste L1 (fan separate). Source: Dell owner's manual `latitude-13-3379-2-in-1-laptop_owners-manual`
   + Dell spec sheet.
 - 5289 (2017, 12.5″ 360°) / 7389 (2017, 13.3″ 360°): 7th gen U, LPDDR3-1866 soldered 4/8/16, M.2 SATA or NVMe (7389 manual:
   2280), USB-C only 45/65 W, batteries 71TG4 45 Wh 11.4 V / K5XWW 60 Wh 7.6 V, re-paste L2. Source: Dell owner's manuals
@@ -398,7 +398,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.20.1.
+the newest version is live. Current: 2026.11.20.2.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
