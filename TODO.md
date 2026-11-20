@@ -346,7 +346,7 @@ DONE: 4 Dell rows, each in its own aligned sub-column right after the clamshell 
   (`latitude-12-5289-2-in-1-laptop_owners-manual2`, `latitude-13-7389-2-in-1-laptop_owners-manual`).
 - 5179 (2016, 10.8″ tablet, alias 5175): Core m 6th gen, LPDDR3-1600 soldered 4/8, M.2 SATA (NVMe on post-Mar-2016 builds per a
   third-party guide), USB-C 20 V 1.5 A = 30 W. Source: Dell user's guide `latitude-5175-laptop_users-guide2`.
-- `rs232` = 0 on all four. No prices. eBay odds: 5179 / 5289 / 7389 appended to `ebay_raw/row_map.csv` (3379 is socketed + 2016 →
+- `rs232` = 0 on all four. Prices: 3379 = real sold IQR $88–124 (2026-11-20 pull, raw `ebay_raw/2026-11-20_sold_3379.csv`); 5179 / 5289 / 7389 none yet. eBay odds: 5179 / 5289 / 7389 appended to `ebay_raw/row_map.csv` (3379 is socketed + 2016 →
   outside the odds scope).
 OPEN:
 - `bat_fam` left blank: WDX0R (3379) and K5XWW / 71TG4 (5289 / 7389 / 7390 2-in-1) rest on vendor lists only.
@@ -398,7 +398,7 @@ SM's own Chrome (eBay home still worked). SM's own buying/selling account and IP
 from GitHub Pages' Last-Modified header (automatic). Bump `data-v` + the visible text in the
 `<div id="ver">` with every commit that touches the site — date of the commit, `.2` / `.3` for more
 commits the same day, and a few words on what changed. That is how SM tells in the browser whether
-the newest version is live. Current: 2026.11.20.2.
+the newest version is live. Current: 2026.11.20.3.
 
 ## ⚠ Build note — specdata.js cache stamp
 The three HTML pages import the loader via `import('./specdata.js?b=YYYYMMDD')` (a cache
